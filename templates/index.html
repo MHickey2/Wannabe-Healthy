@@ -2,15 +2,30 @@
 
 {% block content %}
 
-<div class="container-fluid">
-<div class="hero-image">
-    <div class="hero-text">
-      <h2>Wannabe Healthy, but don't <br>
-        know where to start?</h2>
-      <h4>Explore my Health Blog</h4>
-      <h4>and Read Healthy Recipes</h4>      
+<div class="d-flex min-vh-100">
+    <div class="container align-self-center">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 col-xl-6 text-center">
+                <div class="lc-block mb-2">
+                    <img class="img-fluid w-100" alt="Healthy Woman"
+                        src="https://res.cloudinary.com/dspwticaf/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1664628439/Woman_Health_uoejs2.jpg"
+                        <div class="lc-block mb-4">
+                    <div editable="rich">
+
+                        <h2 class="green">Welcome to Wannabe Healthy</h2>
+
+                        <p>We all aspire to have happy and healthy lives, but we can get caught
+                            up in life and start to develop unhealthy lifestyles. We want to change
+                            but don't know how or where to start. In this website I hope to share
+                            information and healthy recipes to inspire you to make simple changes or
+                            at least give you a starting point for your own Health journey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
 </div>
 
 <h1 class="bloghead">LIFESTYLE BLOG</h1>
@@ -36,7 +51,7 @@
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
+                            <a href="{% url 'post_detail' post.slug  %}">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
