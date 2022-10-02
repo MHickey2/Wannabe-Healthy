@@ -12,7 +12,7 @@
                         <div class="lc-block mb-4">
                     <div editable="rich">
 
-                        <h2 class="green">Welcome to Wannabe Healthy</h2>
+                        <h1 class="green">Welcome to Wannabe Healthy</h1>
 
                         <p>We all aspire to have happy and healthy lives, but we can get caught
                             up in life and start to develop unhealthy lifestyles. We want to change
@@ -28,7 +28,7 @@
 
 </div>
 
-<h1 class="bloghead">LIFESTYLE BLOG</h1>
+<h2 class="bloghead">LIFESTYLE BLOG</h2>
 
 <div class="container-fluid">
     <div class="row">
@@ -47,9 +47,13 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
+                                <div class="image-flash1">
+                                    <h3 class="category"> {{ post.category }}</h3>
+                                </div>
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
+                                
                             </div>
                             <a href="{% url 'post_detail' post.slug  %}">
                                 <h2 class="card-title">{{ post.title }}</h2>
