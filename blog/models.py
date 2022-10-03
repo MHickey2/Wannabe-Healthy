@@ -8,7 +8,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
@@ -18,7 +18,7 @@ class Category(models.Model):
 
 
 class Post(models.Model):
-    category = models.CharField(max_length=200)
+    category = models.CharField(max_length=50)
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -37,7 +37,6 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-
 
     def number_of_likes(self):
         return self.likes.count()
