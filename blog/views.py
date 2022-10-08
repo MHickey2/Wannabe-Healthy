@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views import generic, View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.contrib import messages
 from .models import Post
 from .forms import CommentForm
 
@@ -34,14 +35,14 @@ class PostDetail(View):
         )
 
 
-class AddPostView(CreateView):
+class AddPostView(generic.CreateView):
     model = Post
     template_name = "add_post.html"
-    fields = "__all__"
+    fields = ['title', 'slug', 'excerpt', 'status', 'content']
+    success_url = '/'
 
-    def add_item(request):
-        return render(
-            request,
-            'add_post.html',
-
-        )
+    def form_valid(self, form):
+        """ adding the username automatically for the post """
+        form.instance.author = self.request.user        
+        form.save()
+        return super().form_valid(form)
