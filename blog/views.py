@@ -4,6 +4,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib import messages
 from .models import Post
 from .forms import CommentForm
+# from .forms import PostForm
 
 
 class PostList(generic.ListView):
@@ -38,10 +39,23 @@ class PostDetail(View):
 class AddPostView(generic.CreateView):
     model = Post
     template_name = "add_post.html"
-    fields = ['title', 'slug', 'excerpt', 'status', 'content']
+    fields = ['category', 'title', 'slug', 'featured_image', 'excerpt',  'content', 'status']
     success_url = '/'
 
     def form_valid(self, form):
+        """ adding the username automatically for the post """
+        form.instance.author = self.request.user        
+        form.save()
+        return super().form_valid(form)
+
+
+class EditPostView(generic.UpdateView):
+    model = Post
+    template_name = "edit_post.html"
+    fields = ['category', 'title', 'slug', 'featured_image', 'excerpt',  'content', 'status']
+    success_url = 'post_details'
+
+    def form_valid(self, slug, form):           
         """ adding the username automatically for the post """
         form.instance.author = self.request.user        
         form.save()
