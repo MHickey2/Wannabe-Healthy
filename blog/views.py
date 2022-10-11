@@ -5,6 +5,7 @@ from django.contrib import messages
 from .models import Post
 from .forms import CommentForm
 # from .forms import PostForm
+from django.urls import reverse_lazy
 
 
 class PostList(generic.ListView):
@@ -52,8 +53,14 @@ class AddPostView(generic.CreateView):
 class EditPostView(generic.UpdateView):
     model = Post
     template_name = "edit_post.html"
-    fields = ['category', 'title', 'slug', 'featured_image', 'excerpt',  'content', 'status']
+    fields = ['category', 'title', 'featured_image', 'excerpt',  'content', 'status']
 
     def get_success_url(self):
         slug = self.kwargs["slug"]
         return reverse("post_detail", kwargs={"slug": slug})
+
+
+class DeletePostView(generic.DeleteView):
+    model = Post
+    template_name = "delete_post.html"
+    success_url = reverse_lazy('home')

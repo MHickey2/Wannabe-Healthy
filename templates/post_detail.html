@@ -1,5 +1,6 @@
-{% extends 'base.html' %} {% block content %}
-
+{% extends 'base.html' %} 
+{% block title %}Post Details{% endblock %}
+{% block content %}
 {% load crispy_forms_tags %}
 
 <h3 class="post-category">Category:{{ post.category }}</h1>
@@ -100,7 +101,9 @@
     </div>
 </div>
 
+<a href="{% url 'edit_post' post.slug  %}" class="btn-link">(Edit)</a> 
 
+<a href="{% url 'delete_post' post.slug  %}" class="btn-link">(Delete)</a> 
 
 <a href="{% url 'home' %}" class = "btn btn-secondary">Back</a>
 
