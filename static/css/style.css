@@ -261,3 +261,10 @@ footer {
     margin-right: auto;
     width: 150px;
   }
+
+  .btn-link {
+    text-align:right;
+    display:block;
+    
+    
+  }

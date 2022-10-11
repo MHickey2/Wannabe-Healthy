@@ -53,10 +53,7 @@ class EditPostView(generic.UpdateView):
     model = Post
     template_name = "edit_post.html"
     fields = ['category', 'title', 'slug', 'featured_image', 'excerpt',  'content', 'status']
-    success_url = 'post_details'
 
-    def form_valid(self, slug, form):           
-        """ adding the username automatically for the post """
-        form.instance.author = self.request.user        
-        form.save()
-        return super().form_valid(form)
+    def get_success_url(self):
+        slug = self.kwargs["slug"]
+        return reverse("post_detail", kwargs={"slug": slug})

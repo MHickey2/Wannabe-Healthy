@@ -1,6 +1,8 @@
-{% extends 'base.html' %} {% block content %}
+{% extends "base.html" %}
+{% block title %}Edit Post{% endblock %}
+{% block content %}
 
-{% load static %}
+{% load crispy_forms_tags %}
 
 <h1>edit page</h1>
 
@@ -14,14 +16,12 @@
                         <h1><strong>Edit your Post:</strong></h1>
                         <p>Ensure to complete all fields</p>
                         <br>                        
-                        <form class="form text-muted" method="POST" action="{% url 'add_post' %}"
-                            enctype="multipart/form-data">
-                            
+                        <form class="form text-muted" method="post" enctype="multipart/form-data">                            
                             {% csrf_token %}
-                           
+                            {{ form | crispy }}
                             <br>
                             <br>
-                            <button class="btn btn-success" type="submit">Edit Post</button>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Update</button>
                         </form>
                     </div>
                 </div>
@@ -35,7 +35,5 @@
 <a href="{% url 'home' %}" class = "btn btn-secondary">Back</a>
 
 
-    
-    
-    {% endblock content %}
-    
+{%endblock%}
+
