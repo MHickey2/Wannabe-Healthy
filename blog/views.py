@@ -37,15 +37,19 @@ class PostDetail(View):
         )
 
 
+def about(request):
+    return render(request, 'about.html', {})
+
+
 class AddPostView(generic.CreateView):
     model = Post
     template_name = "add_post.html"
     fields = ['category', 'title', 'slug', 'featured_image', 'excerpt',  'content', 'status']
-    success_url = '/'
+    success_url = 'home'
 
     def form_valid(self, form):
         """ adding the username automatically for the post """
-        form.instance.author = self.request.user        
+        form.instance.author = self.request.user
         form.save()
         return super().form_valid(form)
 
@@ -54,11 +58,11 @@ class EditPostView(generic.UpdateView):
     model = Post
     template_name = "edit_post.html"
     fields = ['category', 'title', 'featured_image', 'excerpt',  'content', 'status']
-    
+
     def get_success_url(self):
         slug = self.kwargs["slug"]
         return reverse("post_detail", kwargs={"slug": slug})
-    
+
 
 class DeletePostView(generic.DeleteView):
     model = Post

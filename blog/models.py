@@ -10,7 +10,7 @@ category_choices = (
     ("Health", "Health"),
     ("Diet", "Diet"),
     ("Exercise", "Exercise"),
-    ("Relaxation", "Relaxation"), 
+    ("Relaxation", "Relaxation"),
 )
 
 
@@ -25,7 +25,7 @@ class Category(models.Model):
 
 
 class Post(models.Model):
-    category = models.TextField(max_length=50, choices=category_choices)   
+    category = models.TextField(max_length=50, choices=category_choices)
     title = models.CharField(max_length=200, unique=True, blank=False)
     slug = models.SlugField(max_length=200, unique=True, blank=False,)
     author = models.ForeignKey(
@@ -66,4 +66,4 @@ class Comment(models.Model):
 
 
 class Photo(models.Model):
-  image = CloudinaryField('image')
+    image = CloudinaryField('image')
