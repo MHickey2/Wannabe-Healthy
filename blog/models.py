@@ -6,6 +6,13 @@ from django.urls import reverse
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+category_choices = (
+    ("Health", "Health"),
+    ("Diet", "Diet"),
+    ("Exercise", "Exercise"),
+    ("Relaxation", "Relaxation"), 
+)
+
 
 class Category(models.Model):
     name = models.CharField(max_length=50)
@@ -18,9 +25,9 @@ class Category(models.Model):
 
 
 class Post(models.Model):
-    category = models.CharField(max_length=50)
-    title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    category = models.TextField(max_length=50, choices=category_choices)   
+    title = models.CharField(max_length=200, unique=True, blank=False)
+    slug = models.SlugField(max_length=200, unique=True, blank=False,)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
@@ -56,3 +63,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+class Photo(models.Model):
+  image = CloudinaryField('image')

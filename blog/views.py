@@ -54,11 +54,11 @@ class EditPostView(generic.UpdateView):
     model = Post
     template_name = "edit_post.html"
     fields = ['category', 'title', 'featured_image', 'excerpt',  'content', 'status']
-
+    
     def get_success_url(self):
         slug = self.kwargs["slug"]
         return reverse("post_detail", kwargs={"slug": slug})
-
+    
 
 class DeletePostView(generic.DeleteView):
     model = Post

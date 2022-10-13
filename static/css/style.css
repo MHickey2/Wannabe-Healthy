@@ -249,7 +249,7 @@ footer {
    
   }
 
-  #newpost input, textarea {
+  #newpost input, textarea, .select {
     width: 50vw;
     line-height: 1.5vh;
     padding: 10px;
