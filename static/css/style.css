@@ -271,4 +271,7 @@ footer {
     display:block;        
   }
 
-  
+.text {
+    text-align: justify;
+    font-size: 110%
+}
