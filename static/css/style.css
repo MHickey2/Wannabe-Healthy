@@ -275,3 +275,8 @@ footer {
     text-align: justify;
     font-size: 110%
 }
+
+.navbar-item-right {
+    padding: 50px;
+}
+
