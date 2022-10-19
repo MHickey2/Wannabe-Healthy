@@ -13,9 +13,21 @@ category_choices = (
     ("Relaxation", "Relaxation"),
 )
 
+# category_choices = Category.objects.all().values_list('name', 'name')
+
+# choice_list = []
+
+# for item in category_choices:
+#     choice_list.append(item)
+
 
 class Category(models.Model):
     name = models.CharField(max_length=50)
+
+    class Meta:
+        ordering = ('name',)
+        verbose_name = 'category'
+        verbose_name_plural = 'categories'
 
     def __str__(self):
         return self.name
@@ -26,7 +38,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     category = models.TextField(max_length=50, choices=category_choices)
-    title = models.CharField(max_length=200, unique=True, blank=False)
+    title = models.CharField(max_length=200, unique=True, blank=False,)
     slug = models.SlugField(max_length=200, unique=True, blank=False,)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"

@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib import messages
 from django.db.models import Q
-from .models import Post
+from .models import Post, Category
 from .forms import CommentForm
 # from .forms import PostForm
 from django.urls import reverse_lazy
@@ -78,8 +78,14 @@ class DeletePostView(generic.DeleteView):
 class BlogSearchView(generic.ListView):
     model = Post
     template_name = "index.html"
-    context_object_name = 'posts'
+    context_object_name = "posts"
 
-    def get_queryset(self):
+    def get(self, request, *args, **kwargs):
         query = self.request.GET.get('q')
-        return Post.objects.filter(category=query).order_by('-created_on')
+        post_list = Post.objects.filter(
+            Q(category__icontains=query)
+        )
+
+        context = {"post_list": post_list}
+
+        return render(request, "index.html", context)

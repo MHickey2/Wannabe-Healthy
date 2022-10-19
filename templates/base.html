@@ -12,7 +12,10 @@
     <!--Required meta-tags-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A health related website where people can learn more about healthy living">
+    <meta name="keywords" content="Health, Diet, Exercise, Relaxation, Blog">
+    <meta name="author" content="Michelle Hickey">       
 {% endblock %}
 
 {% block extra_meta %}
@@ -53,7 +56,10 @@
         <div class="container-fluid" id="header">
                 <a class="navbar-brand" href="{% url 'home' %}">                    
                     <img id="logo" type="image/png" src="https://res.cloudinary.com/dspwticaf/image/upload/v1664291226/logo_frehe3.png"  class="img-fluid" alt="Responsive image">                    
-                </a>                
+                </a>
+                <!-- {% if user.is_authenticated %}
+                <span class="welcomeToSite">Welcome back, <strong class="text-light">{{ user.username }}</strong></span>
+                {% endif %}                     -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
