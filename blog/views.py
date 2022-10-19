@@ -83,7 +83,7 @@ class BlogSearchView(generic.ListView):
     def get(self, request, *args, **kwargs):
         query = self.request.GET.get('q')
         post_list = Post.objects.filter(
-            Q(category__icontains=query)
+            Q(category__icontains=query) | Q(title__icontains=query)
         )
 
         context = {"post_list": post_list}
