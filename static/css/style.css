@@ -241,22 +241,44 @@ footer {
   }
   
   #newpost {
-    background-color:rgb(128, 236, 128);
+    background-color:rgb(83, 212, 83); 
+    border: 1px solid black;
+    box-shadow: #175306;        
+    width: 70vw;
+    opacity: .9;
+    margin-bottom: 20px;
+       
+  }
+
+  #newpost1 {
+    background-color:rgb(83, 212, 83); 
     border: 1px solid black;
     box-shadow: #175306;
     padding: 10px;
-    text-align: center;
-    width: 80vw;
-   
+    width: 60vw;
+    opacity: .9;
+    margin-bottom: 20px;
+       
   }
 
-  #newpost input, textarea  {
+  #newpost input, textarea {
     width: 50vw;
-    line-height: 1.8vh;
-    padding: 10px;
+    line-height: 1.5vh;
+    padding: 10px 16px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
+    padding: 15px 15px;
+    display: block;
+    width: 100%;
+      
+  }
+
+  #newpost1 input, textarea {    
+    line-height: 1.5vh;    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 15px 10px;    
+    display: block;
+    width: 100%;
+    
   }
 
   #center {

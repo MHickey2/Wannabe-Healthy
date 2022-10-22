@@ -39,16 +39,11 @@ class PostDetail(View):
         )
 
 
-def about(request):
-    """ A view to return the about page """
-    return render(request, 'about.html', {})
-
-
 class AddPostView(generic.CreateView):
     model = Post
     template_name = "add_post.html"
     fields = ['category', 'title', 'slug', 'featured_image', 'excerpt',  'content', 'status']
-    success_url = 'home'
+    success_url = reverse_lazy('home')
 
     def form_valid(self, form):
         """ Adding a new Blog """
@@ -58,10 +53,15 @@ class AddPostView(generic.CreateView):
         return super().form_valid(form)
 
 
+def about(request):
+    """ A view to return the about page """
+    return render(request, 'about.html', {})
+
+
 class EditPostView(generic.UpdateView):
     model = Post
     template_name = "edit_post.html"
-    fields = ['category', 'title', 'featured_image', 'excerpt',  'content', 'status']
+    fields = ['category', 'title', 'slug', 'featured_image', 'excerpt',  'content', 'status']
 
     def get_success_url(self):
         """ Allows the Poster to edit their blog and see the changes """
