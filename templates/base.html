@@ -69,7 +69,7 @@
                     <!-- add the active class to the currently chosen page -->
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home |</a>
-                    </li>
+                    </li>                    
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'about' %}">About |</a>
                     </li>
@@ -107,11 +107,43 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
+    <footer id="footer" class="footer bg-setup main-bg-desktop main-bg-mobile">
+        <div class="overlay overlay-footer"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-text">                        
+                        <p class="footer-text">We all strive to be more healthy,this site offers some 
+                            direction information and recipes that you can adapt for your 
+                            own needs, and it may be a good starting point for your own health journey.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact">
+                    <h4>Contact</h4>                    
+                    <p><i class="fas fa-phone">&nbsp;</i>+ 01-4590808</p>
+                    <p><i class="far fa-envelope">&nbsp;</i>info@wannabehealthy.com</p>
+                    <p><i class="fas fa-home">&nbsp;</i>28 patricks street, Dublin 8</p>
+                </div>
+                </div>
+                <div class="col-md-4 footer-box">
+                    <div class="social">
+                    <h4>Follow Us</h4>
+                    <p><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Go to the facebook WannabeHealthy Site"><i class="fab fa-facebook-f" ></i>Facebook</a></p>
+                    <p><a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Go to the twitter WannabeHealthy page"><i class="fab fa-twitter"></i>Twitter</a></p>
+                    <p><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Go to the instagram WananbeHealthy page"><i class="fab fa-instagram"></i>Instagram</a>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+    <!-- <footer class="footer mt-auto py-3 dark-bg">-->
         <p class="m-0 text-center text-white">&copy; Wannabe Healthy 2022 </p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>            
+        <!-- <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
+            <i class="fab fa-twitter-square ms-3"></i>-->             
     </footer>
+
     <script>
         setTimeout(function () {
             let messages = document.getElementById('msg');

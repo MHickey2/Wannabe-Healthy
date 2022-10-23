@@ -200,7 +200,13 @@ footer {
     position: relative;
     width: 100%;
     left: 0;
-    bottom: 0;   
+    bottom: 0;
+    background-color: #175306;   
+    color: white;
+}
+
+.footer-text, .contact, .social {    
+    padding: 10px;
 }
 
 
