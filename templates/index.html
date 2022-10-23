@@ -45,7 +45,7 @@
     <div class="row">
         <div class="col-md-12">
             <nav class="center">
-                <div >
+                <div>
                     <form role="search" action="{% url 'search_blogs' %}" method="get">
                         {% csrf_token %}
                         <div class="input-group">
@@ -76,7 +76,7 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
-                <div class="col-md-4">
+                <div class="col-md-4" id="postlook">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">

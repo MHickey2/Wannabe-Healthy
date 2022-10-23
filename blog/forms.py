@@ -9,16 +9,16 @@ class CommentForm(forms.ModelForm):
         fields = ('body',)
 
 
-# class PostForm(forms.ModelForm):
-#     class Meta:
-#         model = Post
-#         fields = ('category', 'title', 'slug', 'featured_image', 'excerpt',  'content', 'status')
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ('category', 'title', 'slug', 'featured_image', 'excerpt',  'content', 'status')
 
-#         widgets = {
-#             'category': forms.TextInput(attrs={'class': 'form-control'}),
-#             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter Title'}),
-#             'slug': forms.TextInput(attrs={'class': 'form-control'}),
-#             'excerpt': forms.TextInput(attrs={'class': 'form-control'}),
-#             'content': forms.TextInput(attrs={'class': 'form-control'}),
-#             'status': forms.TextInput(attrs={'class': 'form-control'}),
-#         }
+        widgets = {
+            'category': forms.TextInput(attrs={'class': 'form-control'}),
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter Title'}),
+            'slug': forms.TextInput(attrs={'class': 'form-control'}),            
+            'excerpt': forms.TextInput(attrs={'class': 'form-control'}),
+            'content': forms.TextInput(attrs={'class': 'form-control'}),
+            'status': forms.TextInput(attrs={'class': 'form-control'}),
+        }

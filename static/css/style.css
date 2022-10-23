@@ -313,3 +313,11 @@ footer {
     padding-top: 10px;
     
 }
+
+#postlook {
+    min-height: 500px;
+    background-color: palegreen;
+    padding-top: 25px;
+    border: 5px solid white;
+    border-radius: 20px;
+}
