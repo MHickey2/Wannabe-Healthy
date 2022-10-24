@@ -60,6 +60,9 @@ class Post(models.Model):
     def number_of_likes(self):
         return self.likes.count()
 
+    def number_of_comments(self):
+        return self.comments.count()
+
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
@@ -75,6 +78,8 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+    
 
 
 class Photo(models.Model):

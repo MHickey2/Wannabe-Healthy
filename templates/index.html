@@ -36,7 +36,7 @@
 <form action="{% url 'search_blogs' %}" class="searchform" method="get">
     {% csrf_token %}
     <input type="text" name="q" placeholder="Search Blogs">
-    <button type="submit">Search</button>
+    <button class = "btn-success" type="submit">Search</button>
 </form>
 
     <!-- <tr><td colspan="6">Nothing found</td></tr> -->
@@ -82,7 +82,7 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1666609987/Default_wtmyse.jpg">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
@@ -100,7 +100,7 @@
                             </a>
                             <hr />
                             <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }}</p>
+                                {{ post.number_of_likes }} &nbsp;<i class="far fa-comments">&nbsp; </i>{{ post.number_of_comments }}</p>
                                 {% if user.is_authenticated %}
                                 {% if user.id == post.author.id %}    
                             <a href="{% url 'edit_post' post.slug  %}" class="btn-link">(Edit)</a>
@@ -110,6 +110,7 @@
                         </div>
                     </div>
                 </div>
+                
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
