@@ -61,6 +61,17 @@ body {
     vertical-align: center;
 }
 
+.image-flash2 {
+    position: absolute;
+    top: 25%;
+    min-width: 30%;
+    right: 15px;
+    color: green;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    vertical-align: center;
+}
+
 .author {
     color: white;
     margin: 4px;
@@ -107,6 +118,8 @@ body {
     width: 15%;
     padding: 5px;
 }
+
+
 
 .post-link {
     text-decoration: none;
@@ -323,6 +336,12 @@ textarea {
 .aboutpic {
     height: 240px;
     width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recipeintro {
     display: block;
     margin-left: auto;
     margin-right: auto;

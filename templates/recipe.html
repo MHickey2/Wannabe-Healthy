@@ -2,28 +2,17 @@
 {% block title %}Recipe Page{% endblock %}
 {% block content %}
 
-<div class="d-flex min-vh-100">
-    <div class="container align-self-center">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-8 col-xl-6 text-center">
-                <div class="lc-block mb-2">
-                    <img class="img-fluid w-100" alt="Healthy Woman"
-                        src="https://res.cloudinary.com/dspwticaf/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1664628439/Woman_Health_uoejs2.jpg"
-                        <div class="lc-block mb-4">
-                    <div editable="rich">
 
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<h2 class="green center">Recipe Collection</h2>
 
-</div>
+<p class="col-lg-8 col-xl-6 col-md-4 recipeintro">Browse through the recipes and find inspiration for diet changes. It
+    can be simple to adapt your present habits to include life enriching choices. Consider a vegetarian diet or start simpler,
+    try a flexitarian option, so it does not feel as daunting. You can find the recipes through categories and if you want to 
+    join in, please submit your own recipe, try to keep it healthy as you don't want to lead others astray. So stay a while around
+    and give your tastebuds a treat.
+</p>
 
-<h2>Recipe Collection</h2>
-
-<a href="{% url 'add_post' %}" class="btn btn-success" id="center">Add a Post</a>
+<!-- <a href="#" class="btn btn-success" id="center">Add a Post</a> -->
 
 <div class="container-fluid">
     <div class="row">
@@ -31,34 +20,35 @@
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for post in post_list %}
+                {% for recipe in recipe_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
+                                {% if "placeholder" in recipe.featured_image.url %}
                                 <img class="card-img-top"
                                     src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                <h2 class="card-title">{{ recipe.title }}</h2>
+                                <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
                                 {% endif %}
-                                <div class="image-flash1">
-                                    <h3 class="category"> {{ post.category }}</h3>
+                                <div class="image-flash2">
+                                    <h3 class="category"> {{ recipe.category }}</h3>
                                 </div>
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
+                                    <p class="author">Author: {{ recipe.author }}</p>
                                 </div>
                                    
                             </div>
-                            <a href="{% url 'post_detail' post.slug  %}">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
+                            <!-- <a href="#"" >-->
+                                
+                               
                             </a>
                             <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                            <p class="card-text text-muted h6">{{ recipe.created_on}} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}</p>
-                                <a href="{% url 'edit_post' post.slug  %}" class="btn-link">(Edit)</a> 
-                                <a href="{% url 'delete_post' post.slug  %}" class="btn-link">(Delete)</a> 
+                                <!-- <a href="#" class="btn-link">(Edit)</a> 
+                                <a href="#" class="btn-link">(Delete)</a>  -->
                         </div>
                     </div>
                 </div>
