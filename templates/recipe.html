@@ -38,12 +38,15 @@
                                 <div class="image-flash">
                                     <p class="author">Author: {{ recipe.author }}</p>
                                 </div>
+                                <br>
+                                <div class="">
+                                    <p class="">Difficulty Level: {{ recipe.difficultly }}</p>
+                                    <p class="">Cooking Time: {{ recipe.cooking_time }}</p>
+                                </div>
                                    
                             </div>
-                            <!-- <a href="#"" >-->
-                                
-                               
-                            </a>
+                            <a href="{% url 'recipe_detail' recipe.slug  %}">See Details</a>                       
+                                                       
                             <hr />
                             <p class="card-text text-muted h6">{{ recipe.created_on}} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}</p>

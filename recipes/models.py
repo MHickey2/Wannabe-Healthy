@@ -13,18 +13,25 @@ recipe_categories = (
 )
 
 
+difficulty_level = (
+    ("Easy", 'Easy'),
+    ("Medium", 'Medium'),
+    ("Hard", 'Hard')
+)    
+
+
 class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    category = models.TextField(max_length=50, choices=recipe_categories)
+    category = models.TextField(choices=recipe_categories)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="recipe_posts")
     created_on = models.DateTimeField(auto_now_add=True)
     featured_image = CloudinaryField('image', default='placeholder')
-    
+    difficulty = models.TextField(choices=difficulty_level, default="easy")
+    cooking_time = models.TextField(max_length=50, default=0)
     ingredients = models.TextField()
-    method = models.TextField()
-    time = models.TextField()    
+    method = models.TextField()      
     likes = models.ManyToManyField(
         User, related_name='recipe_likes', blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
