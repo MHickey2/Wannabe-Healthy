@@ -12,7 +12,7 @@ class CommentForm(forms.ModelForm):
 class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
-        fields = ('category', 'title', 'slug', 'difficulty', 'featured_image', 'status')
+        fields = ('category', 'title', 'description', 'slug', 'difficulty', 'method', 'ingredients', 'featured_image', 'likes', 'status')
 
         widgets = {
             'category': forms.TextInput(attrs={'class': 'form-control'}),

@@ -24,6 +24,7 @@ class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     category = models.TextField(choices=recipe_categories)
+    description = models.TextField(max_length=200, default="recipe")
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="recipe_posts")
     created_on = models.DateTimeField(auto_now_add=True)
@@ -33,7 +34,7 @@ class Recipe(models.Model):
     ingredients = models.TextField()
     method = models.TextField()      
     likes = models.ManyToManyField(
-        User, related_name='recipe_likes', blank=True)
+        User, related_name='recipe_likes', blank=True)    
     status = models.IntegerField(choices=STATUS, default=0)
 
     def save(self, *args, **kwargs):
