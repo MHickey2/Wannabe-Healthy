@@ -1,13 +1,11 @@
 body {
     background-color: #f9fafc;
-}
-
-.brand {
     font-family: Roboto, sans-serif;
     font-size: 1.6rm;
     font-weight: 700;
-    color: #f70f2d;
 }
+
+
 
 #header {
     background-color: rgb(255, 255, 255);    
@@ -19,12 +17,12 @@ body {
     padding: 10px;
 }
 
-/* .nav navbar-nav navbar-left {
+.nav navbar-nav navbar-left {
     font-family: Roboto, sans-serif;
     font-size: 1.6rm;
     font-weight: 700;
-    color: #f70f2d;
-} */
+    
+}
 
 /* Heading for index Page */
 .bloghead {
@@ -47,6 +45,8 @@ body {
 .card-img-top {
     border-radius: 5%;
     border: 4px solid rgb(35, 94, 35);
+    width: 250px;
+    height: 280px;
 }
 
 .image-flash {
@@ -70,13 +70,21 @@ body {
 
 .image-flash2 {
     position: absolute;
-    top: 25%;
+    top: 20%;
     min-width: 30%;
     right: 15px;
     color: green;
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     vertical-align: center;
+}
+
+.image-flash3 {
+    position: absolute;
+    bottom: 25%;
+    min-width: 30%;
+    left: 15px;
+    background-color: rgb(83, 212, 83, 0.8);
 }
 
 .author {
@@ -310,6 +318,7 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     width: 150px;
+    color: white;
 }
 
 .btn-link {
@@ -348,10 +357,17 @@ textarea {
     margin-right: auto;
 }
 
-.recipeintro {
+#recipeintro {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: 2px solid rgb(3, 46, 3);
+    border-radius: 15px;   
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgb(19, 163, 31);
+    color: white;
+    text-align: justify;
 }
 
 
@@ -388,14 +404,19 @@ textarea {
 .centeralign {
     display: block;
     margin-left: auto;
-    margin-right: auto;
-   
+    margin-right: auto;   
     width: 400px;
     margin-top: 10px;
     color: green;
     margin-bottom: 5px;
 }
 
-.ingredientsyle {
-    display: flex;
+
+.btn btn-danger{
+    background-color: deeppink;
+    color: white;
+}
+
+.method {
+    color: blue;
 }

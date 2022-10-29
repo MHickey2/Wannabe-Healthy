@@ -5,7 +5,7 @@
 
 <h2 class="green center">Recipe Collection</h2>
 
-<p class="col-lg-8 col-xl-6 col-md-4 recipeintro">Browse through the recipes and find inspiration for diet changes. It
+<p class="col-lg-8 col-xl-6 col-md-4" id="recipeintro">Browse through the recipes and find inspiration for diet changes. It
     can be simple to adapt your present habits to include life enriching choices. Consider a vegetarian diet or start simpler,
     try a flexitarian option, so it does not feel as daunting. You can find the recipes through categories and if you want to 
     join in, please submit your own recipe, try to keep it healthy as you don't want to lead others astray. So stay a while around
@@ -35,21 +35,20 @@
                                 <div class="image-flash2">
                                     <h3 class="category"> {{ recipe.category }}</h3>
                                 </div>
-                                <div class="image-flash">
+                                <div class="image-flash3">
                                     <p class="author">Author: {{ recipe.author }}</p>
                                 </div>
                                 <br>
-                                <div class="">
-                                    <p class="">Difficulty Level: {{ recipe.difficultly }}</p>
-                                    <p class="">Cooking Time: {{ recipe.cooking_time }}</p>
-                                </div>
+                                <h6 class="green"><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<i class="fas fa-clock">&nbsp</i>{{ recipe.cooking_time }}</h6>                                    
+                                <br>
+                                <p class="">{{ recipe.description}}</p>
                                    
                             </div>
-                            <a href="{% url 'recipe_detail' recipe.slug  %}">See Details</a>                       
+                            
+                            <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-danger" id="center">See Recipe</a>                       
                                                        
                             <hr />
-                            <p class="card-text text-muted h6">{{ recipe.created_on}} <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }}</p>
+                            <p class="card-text text-muted h5">{{ recipe.created_on}} <i class="far fa-heart"></i>{{ recipe.number_of_likes }}</p>&nbsp;<i class="far fa-comments">&nbsp; </i>{{ recipe.number_of_comments }}</p>
                                 <!-- <a href="#" class="btn-link">(Edit)</a> 
                                 <a href="#" class="btn-link">(Delete)</a>  -->
                         </div>

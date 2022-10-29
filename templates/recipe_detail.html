@@ -23,17 +23,21 @@
                     </a>
                     {% else %}
                     <img src=" {{ recipe.featured_image.url }}" class="centeralign" >
-
+<div>
                     <div class="centeralign">
-                        <p class=""><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<i class="fas fa-clock">&nbsp</i>{{ recipe.cooking_time }}</p>
+                        <p><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<i class="fas fa-clock">&nbsp</i>{{ recipe.cooking_time }}</p>
                     </div>
+</div>
 
-                    <h3 class="ingredientstyle">Ingredients:</h3>
+                    <h3>Ingredients:</h3>
                      {{ recipe.ingredients | safe }}
                     <hr>
-                    <br>
-                    <h3 class="methodstyle">Method:</h3>
-                    {{ recipe.method | safe}}
+                    <h3 >Method:</h3>
+                    <p>
+                        {{ recipe.method | safe }}
+                    </p>       
+                    
+                    
                     {% endif %}
                 </div>
             </div>
@@ -47,7 +51,7 @@
                     <!-- The post content goes inside the card-text. -->
                     <!-- Use the | safe filter inside the template tags -->
                     <p class="card-text ">
-                        <!-- {{ recipe.method | safe }} -->
+                       
                     </p>
                     <div class="row" >
 
