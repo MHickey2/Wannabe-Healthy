@@ -355,6 +355,7 @@ textarea {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
 }
 
 #recipeintro {
@@ -419,4 +420,15 @@ textarea {
 
 .method {
     color: blue;
+}
+
+.stylingtext {
+    color: green;
+    
+}
+
+.italic {
+    text-align: justify;    
+    font-style: italic;
+    color: green;
 }

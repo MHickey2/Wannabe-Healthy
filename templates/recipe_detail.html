@@ -28,11 +28,13 @@
                         <p><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<i class="fas fa-clock">&nbsp</i>{{ recipe.cooking_time }}</p>
                     </div>
 </div>
-
-                    <h3>Ingredients:</h3>
-                     {{ recipe.ingredients | safe }}
+                    <h3 class="stylingtext">Description:</h3>
+                    <p class="italic">{{ recipe.description | safe }} </p>
                     <hr>
-                    <h3 >Method:</h3>
+                    <h3 class="stylingtext">Ingredients:</h3>
+                    <p> {{ recipe.ingredients | safe }} </p>
+                    <hr>
+                    <h3 class="stylingtext">Method:</h3>
                     <p>
                         {{ recipe.method | safe }}
                     </p>       
