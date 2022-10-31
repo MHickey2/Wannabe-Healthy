@@ -12,7 +12,8 @@
     and give your tastebuds a treat.
 </p>
 
-<!-- <a href="#" class="btn btn-success" id="center">Add a Post</a> -->
+<a href="{% url 'add_recipe' %}" class="btn btn-success" id="center">Add a Post</a>
+
 
 <div class="container-fluid">
     <div class="row">
@@ -24,12 +25,13 @@
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
+                            <h2 class="card-title">{{ recipe.title }}</h2>
                             <div class="image-container">
                                 {% if "placeholder" in recipe.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg">
                                 {% else %}
-                                <h2 class="card-title">{{ recipe.title }}</h2>
+                                
                                 <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash2">

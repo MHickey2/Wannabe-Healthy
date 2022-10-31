@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 from django.contrib import messages
 from django.db.models import Q
 from .forms import CommentForm
@@ -11,11 +11,10 @@ from django.urls import reverse_lazy
 
 
 
-
 class RecipeList(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by("-created_on")
-    template_name = "recipe.html"
+    template_name = "recipes.html"
     paginate_by = 6
 
 
@@ -86,3 +85,19 @@ class RecipeLike(View):
             msg = 'Your have liked this Recipe'
             messages.add_message(self.request, messages.SUCCESS, msg)
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+
+class AddRecipeView(generic.CreateView):
+    model = Recipe
+    template_name = "add_recipe.html"
+    fields = ['category', 'title', 'featured_image', 'description',  'difficulty', 'cooking_time', 'ingredients', 'method', 'status']
+    success_url = reverse_lazy('recipes')
+
+    def form_valid(self, form):
+        """ Adding a new Recipe """
+        """ adding the username automatically for the recipe """
+        form.instance.author = self.request.user
+        form.save()
+        msg = 'Your Recipe has been added successfully'
+        messages.add_message(self.request, messages.SUCCESS, msg)
+        return super().form_valid(form)

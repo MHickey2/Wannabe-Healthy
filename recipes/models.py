@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.utils.text import slugify
+
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -22,23 +24,23 @@ difficulty_level = (
 
 class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=50, unique=True)
     category = models.TextField(choices=recipe_categories)
     description = models.TextField(max_length=200, default="recipe")
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="recipe_posts")
     created_on = models.DateTimeField(auto_now_add=True)
-    featured_image = CloudinaryField('image', default='placeholder')
+    featured_image = CloudinaryField('image', default='placeholder1')
     difficulty = models.TextField(choices=difficulty_level, default="easy")
-    cooking_time = models.TextField(max_length=50, default=0)
+    cooking_time = models.CharField(max_length=50, default=0)
     ingredients = models.TextField()
-    method = models.TextField()      
+    method = models.TextField()
     likes = models.ManyToManyField(
         User, related_name='recipe_likes', blank=True)    
     status = models.IntegerField(choices=STATUS, default=0)
 
     def save(self, *args, **kwargs):
-        # self.slug = slugify(self.title)
+        self.slug = slugify(self.title)
         super(Recipe, self).save(*args, **kwargs)
 
     class Meta:

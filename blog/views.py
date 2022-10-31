@@ -91,7 +91,7 @@ class AddPostView(generic.CreateView):
     template_name = "add_post.html"
     fields = ['category', 'title', 'slug', 'featured_image', 'excerpt',  'content', 'status']
     success_url = reverse_lazy('home')
-    
+
     def form_valid(self, form):
         """ Adding a new Blog """
         """ adding the username automatically for the post """
@@ -124,7 +124,6 @@ class DeletePostView(generic.DeleteView):
     model = Post
     template_name = "delete_post.html"
     success_url = reverse_lazy('home')
-    
 
 
 class BlogSearchView(generic.ListView):
