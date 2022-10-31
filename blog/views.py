@@ -110,14 +110,14 @@ def about(request):
 class EditPostView(generic.UpdateView):
     model = Post
     template_name = "edit_post.html"
-    fields = ['category', 'title', 'slug', 'featured_image', 'excerpt',  'content', 'status']
+    fields = ['category', 'title', 'featured_image', 'excerpt',  'content', 'status']
 
     def get_success_url(self):
         """ Allows the Poster to edit their blog and see the changes """
         slug = self.kwargs["slug"]
         msg = 'Your Post has been edited successfully'
         messages.add_message(self.request, messages.SUCCESS, msg)
-        return reverse("post_detail", kwargs={"slug": slug})
+        return reverse("home")
 
 
 class DeletePostView(generic.DeleteView):

@@ -1,11 +1,11 @@
 {% extends "base.html" %}
-{% block title %}Add Recipe{% endblock %}
+{% block title %}Edit Recipe{% endblock %}
 {% block content %}
 
 {% load crispy_forms_tags %}
 
 
-<h1><strong>Add a Recipe:</strong></h1>
+<h1><strong>Edit your Recipe:</strong></h1>
 <div class="container-fluid">
     <div class="row">
 
@@ -16,14 +16,13 @@
                         
                         <p>Ensure to complete all fields</p>
                         <br>                        
-                        <form class="form text-muted" method="POST" action="{% url 'add_recipe' %}"
-                            enctype="multipart/form-data">
+                        <form class="form text-muted" method="post" enctype="multipart/form-data">
                             
                             {% csrf_token %}
                             {{ form | crispy }}
                             <br>
                             <br>
-                            <button class="btn btn-success" type="submit">Add Post</button>
+                            <button class="btn btn-success" type="submit">Edit Recipe</button>
                         </form>
                     </div>
                 </div>

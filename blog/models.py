@@ -59,10 +59,14 @@ class Post(models.Model):
     def __str__(self):
         return self.title
     
+    # def save(self, *args, **kwargs):
+    #     if not self.slug:
+    #         self.slug = slugify(self.title + "-" + str(self.post_date))
+    #     return super().save(*args, **kwargs)
+    
     def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title + "-" + str(self.post_date))
-        return super().save(*args, **kwargs)
+        self.slug = slugify(self.title)
+        return super(Post, self).save(*args, **kwargs)
 
     def number_of_likes(self):
         return self.likes.count()

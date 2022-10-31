@@ -3,12 +3,11 @@ from django.shortcuts import render
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.contrib import messages
 from django.db.models import Q
 from .forms import CommentForm
 from django.urls import reverse_lazy
-
 
 
 class RecipeList(generic.ListView):
@@ -101,3 +100,17 @@ class AddRecipeView(generic.CreateView):
         msg = 'Your Recipe has been added successfully'
         messages.add_message(self.request, messages.SUCCESS, msg)
         return super().form_valid(form)
+
+
+class EditRecipeView(generic.UpdateView):
+    model = Recipe
+    template_name = "edit_recipe.html"
+    fields = ['category', 'title', 'featured_image', 'description',  'difficulty', 'cooking_time', 'ingredients', 'method', 'status']
+    
+    def get_success_url(self):
+        """ Allows the Poster to edit their recipe and see the changes """
+        slug = self.kwargs["slug"]
+        msg = 'Your Recipe has been edited successfully'
+        messages.add_message(self.request, messages.SUCCESS, msg)
+        return reverse("recipes")
+        
