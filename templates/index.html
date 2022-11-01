@@ -102,9 +102,12 @@
                             <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }} &nbsp;<i class="far fa-comments">&nbsp; </i>{{ post.number_of_comments }}</p>
                                 {% if user.is_authenticated %}
-                                {% if user.id == post.author.id %}    
-                            <a href="{% url 'edit_post' post.slug  %}" class="btn-link">(Edit)</a>
-                            <a href="{% url 'delete_post' post.slug  %}" class="btn-link">(Delete)</a>
+                                {% if user.id == post.author.id %} 
+                                <div class="buttongroup">
+                                    <a href="{% url 'edit_post' post.slug %}" class="btn btn-success">Edit</a>
+                                    <a href="{% url 'delete_post' post.slug %}" class="btn btn-danger">Delete</a>
+                                </div>   
+                            
                             {% endif %}
                             {% endif %} 
                         </div>

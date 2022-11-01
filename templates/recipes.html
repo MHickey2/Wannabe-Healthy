@@ -5,14 +5,18 @@
 
 <h2 class="green center">Recipe Collection</h2>
 
-<p class="col-lg-8 col-xl-6 col-md-4" id="recipeintro">Browse through the recipes and find inspiration for diet changes. It
-    can be simple to adapt your present habits to include life enriching choices. Consider a vegetarian diet or start simpler,
-    try a flexitarian option, so it does not feel as daunting. You can find the recipes through categories and if you want to 
-    join in, please submit your own recipe, try to keep it healthy as you don't want to lead others astray. So stay a while around
+<p class="col-lg-8 col-xl-6 col-md-4" id="recipeintro">Browse through the recipes and find inspiration for diet changes.
+    It
+    can be simple to adapt your present habits to include life enriching choices. Consider a vegetarian diet or start
+    simpler,
+    try a flexitarian option, so it does not feel as daunting. You can find the recipes through categories and if you
+    want to
+    join in, please submit your own recipe, try to keep it healthy as you don't want to lead others astray. So stay a
+    while around
     and give your tastebuds a treat.
 </p>
 
-<a href="{% url 'add_recipe' %}" class="btn btn-success" id="center">Add a Post</a>
+<a href="{% url 'add_recipe' %}" class="btn btn-success" id="center">Add a Recipe</a>
 
 
 <div class="container-fluid">
@@ -31,7 +35,7 @@
                                 <img class="card-img-top"
                                     src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg">
                                 {% else %}
-                                
+
                                 <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash2">
@@ -41,18 +45,26 @@
                                     <p class="author">Author: {{ recipe.author }}</p>
                                 </div>
                                 <br>
-                                <h6 class="green"><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<i class="fas fa-clock">&nbsp</i>{{ recipe.cooking_time }}</h6>                                    
+                                <h6 class="green"><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<i
+                                        class="fas fa-clock">&nbsp</i>{{ recipe.cooking_time }}</h6>
                                 <br>
                                 <p class="">{{ recipe.description}}</p>
-                                   
+
                             </div>
+
+                            <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-danger" id="center">See
+                                Recipe</a>
+
+                            <br>                     
+                            <p class="card-text text-muted h6">{{ recipe.created_on}} <i class="far fa-heart"></i>
+                                {{ recipe.number_of_likes }} &nbsp;<i class="far fa-comments">&nbsp; </i>{{ recipe.number_of_comments }}</p>
                             
-                            <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-danger" id="center">See Recipe</a>                       
-                                                       
                             <hr />
-                            <p class="card-text text-muted h5">{{ recipe.created_on}} <i class="far fa-heart"></i>{{ recipe.number_of_likes }}</p>&nbsp;<i class="far fa-comments">&nbsp; </i>{{ recipe.number_of_comments }}</p>
-                                <a href="{% url 'edit_recipe' recipe.slug %}" class="btn-link">(Edit)</a> 
-                                <a href="{% url 'delete_recipe' recipe.slug %}" class="btn-link">(Delete)</a> 
+                            <div class="buttongroup">
+                                <a href="{% url 'edit_recipe' recipe.slug %}" class="btn btn-success">Edit</a>
+                                <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-danger">Delete</a>
+                            </div>
+
                         </div>
                     </div>
                 </div>

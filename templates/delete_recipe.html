@@ -7,23 +7,22 @@
 {% if user.is_authenticated %}
 {% if user.id == recipe.author.id %}
 
-
+<h2 class="green"><strong>Delete your Recipe:</strong></h2>
 <div class="container-fluid">
     <div class="row">
-
         <section class="py-5 min-vh-80">
             <div class="container" id="newpost">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <h2><strong>Delete your Recipe:</strong></h2>
+                        <br>
                         <h3>Delete: {{ recipe.title }}</h3>
                         <br>
                         <form class="form text-muted" method="post">
                             {% csrf_token %}
-                            {{ form | crispy }}
+                            {{ form | crispy }}                            
+                            <button type="submit" class="btn btn-danger btn-lg btn-block">Delete</button>
                             <br>
                             <br>
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Delete</button>
                         </form>
                     </div>
                 </div>
