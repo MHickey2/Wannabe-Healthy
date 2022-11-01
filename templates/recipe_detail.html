@@ -3,69 +3,76 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<h3 class="recipe-category"><i class="fas fa-utensils" ></i>&nbsp;Category:&nbsp;{{ recipe.category }}</h3>
-    <div class="">
-        <hr>
-        <div class="container">
-            <div class="row g-0">
-                <div class="">
-                    <!-- Post title goes in these h1 tags -->
-                    <h1 class="recipe-title">{{ recipe.title }}</h1>
-                    <!-- Post author goes before the | the post's created date goes after -->
-                    <p class="recipe-subtitle">{{ recipe.author }} | {{ recipe.created_on }}</p>
-                </div>
-                <div class="e">
-                    <!-- The featured image URL goes in the src attribute -->
-                    <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder1" in post.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg">
-                                {% else %}                    
-                    <img src=" {{ recipe.featured_image.url }}" class="centeralign" >
-<div>
-                    <div class="centeralign">
-                        <p><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<i class="fas fa-clock">&nbsp</i>{{ recipe.cooking_time }}</p>
-                    </div>
-</div>
-                    <h3 class="stylingtext">Description:</h3>
-                    <p class="italic">{{ recipe.description | safe }} </p>
-                    <hr>
-                    <h3 class="stylingtext">Ingredients:</h3>
-                    <p> {{ recipe.ingredients | safe }} </p>
-                    <hr>
-                    <h3 class="stylingtext">Method:</h3>
-                    <p>
-                        {{ recipe.method | safe }}
-                    </p>       
-                    
-                    
-                    {% endif %}
-                </div>
+<h3 class="recipe-category"><i class="fas fa-utensils"></i>&nbsp;Category:&nbsp;{{ recipe.category }}</h3>
+<div class="">
+    <hr>
+    <div class="container">
+        <div class="row g-0">
+            <div class="">
+                <!-- Post title goes in these h1 tags -->
+                <h1 class="recipe-title">{{ recipe.title }}</h1>
+                <!-- Post author goes before the | the post's created date goes after -->
+                <p class="recipe-subtitle">{{ recipe.author }} | {{ recipe.created_on }}</p>
             </div>
+            <div class="">
+                
+                {% if "placeholder" in recipe.featured_image.url %}
+                <img id="Default" type="image/jpg"
+                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg"
+                     alt="Default image" width="300px" class="centeralign">
+               
+                {% else %}
+                <img src=" {{ recipe.featured_image.url }}" width="300px" class="centeralign">
+                {% endif %}
+                </div>
+                </div>
+
+                <div class="centeralign">
+                    <p><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<i
+                            class="fas fa-clock">&nbsp</i>{{ recipe.cooking_time }}</p>
+                </div>
+                <hr>
+            </div>
+            <h3 class="stylingtext">Description:</h3>
+            <p class="italic">{{ recipe.description | safe }} </p>
+            <hr>
+            <h3 class="stylingtext">Ingredients:</h3>
+            <p> {{ recipe.ingredients | safe }} </p>
+            <hr>
+            <h3 class="stylingtext">Method:</h3>
+            <p>
+                {{ recipe.method | safe }}
+            </p>
+
+
+
         </div>
     </div>
+</div>
+</div>
 
-    <div class="container" >
-        <div class="row">
-            <div class="col card mb-4  mt-3 left  top" id="border">
-                <div class="card-body" >
-                    <!-- The post content goes inside the card-text. -->
-                    <!-- Use the | safe filter inside the template tags -->
-                    <p class="card-text ">
-                       
-                    </p>
-                    <div class="row" >
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4  mt-3 left  top" id="border">
+            <div class="card-body">
+                <!-- The post content goes inside the card-text. -->
+                <!-- Use the | safe filter inside the template tags -->
+                <p class="card-text ">
 
-                        <div class="col-1" >
-                            <strong>
+                </p>
+                <div class="row">
+
+                    <div class="col-1">
+                        <strong>
                             {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'recipe_likes' recipe.slug %}" method="POST"> 
-                            {% csrf_token %}
-                                {% if liked %} --> 
-                            <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
+                            <form class="d-inline" action="{% url 'recipe_likes' recipe.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if liked %} -->
+                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i
+                                        class="fas fa-heart"></i></button>
                                 {% else %}
-                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
+                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i
+                                        class="far fa-heart"></i></button>
                                 {% endif %}
                             </form>
                             {% else %}
@@ -73,16 +80,16 @@
                             {% endif %}
                             <!-- The number of likes goes before the closing strong tag -->
                             <span class="text-secondary">{{ recipe.number_of_likes }} </span>
-                            </strong>
-                        </div>
+                        </strong>
+                    </div>
 
-                        <div class="col-1" >
+                    <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
-                        <!--Our total_comments variable goes before the closing strong tag -->
-                        {{ total_comments }}</strong>
+                            <!--Our total_comments variable goes before the closing strong tag -->
+                            {{ total_comments }}</strong>
                         <span class="text-secondary">{{ post.total_comments }} </span>
-                        </strong> 
+                        </strong>
                         {% endwith %}
                     </div>
                 </div>
@@ -137,11 +144,11 @@
             </div>
         </div>
     </div>
-    </div>
+</div>
 
 
 
-    <a href="{% url 'recipes' %}" class="btn btn-secondary">Back</a>
+<a href="{% url 'recipes' %}" class="btn btn-secondary">Back</a>
 
 
-    {% endblock content %}
+{% endblock content %}

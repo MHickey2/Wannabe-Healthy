@@ -52,7 +52,7 @@
                             <hr />
                             <p class="card-text text-muted h5">{{ recipe.created_on}} <i class="far fa-heart"></i>{{ recipe.number_of_likes }}</p>&nbsp;<i class="far fa-comments">&nbsp; </i>{{ recipe.number_of_comments }}</p>
                                 <a href="{% url 'edit_recipe' recipe.slug %}" class="btn-link">(Edit)</a> 
-                                <!--<a href="#" class="btn-link">(Delete)</a>  -->
+                                <a href="{% url 'delete_recipe' recipe.slug %}" class="btn-link">(Delete)</a> 
                         </div>
                     </div>
                 </div>

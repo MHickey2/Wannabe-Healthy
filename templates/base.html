@@ -22,7 +22,8 @@
     {% endblock %}
 
     {% block corecss %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
     {% endblock %}
 
     {% block extra_css %}
@@ -31,9 +32,9 @@
 
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300,400,900&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300,400,900;700&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Cloudinary-->
     <link rel="icon" type="images/png"
         href="https://res.cloudinary.com/dspwticaf/image/upload/v1664556486/favicon-16x16_t2w0oj.png">
@@ -43,10 +44,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
-    <!-- FONT-AWESOME -->    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- FONT-AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/regular.min.css">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon"
+        href="https://res.cloudinary.com/dspwticaf/image/upload/v1664556486/favicon-16x16_t2w0oj.png">
+
+
+
+
+
     <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
     <title>{% block title %}Wannabe Healthy{% endblock %}</title>
 
@@ -66,9 +74,7 @@
                     src="https://res.cloudinary.com/dspwticaf/image/upload/v1664291226/logo_frehe3.png"
                     class="img-fluid" alt="Responsive image">
             </a>
-            <!-- {% if user.is_authenticated %}
-                <span class="welcomeToSite">Welcome back, <strong class="text-light">{{ user.username }}</strong></span>
-                {% endif %}                     -->
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -104,6 +110,10 @@
             </div>
         </div>
     </nav>
+
+    <!-- {% if user.is_authenticated %}
+    <span class="welcomeToSite">Welcome back, <p>{{ recipe.author }}</p></span>
+    {% endif %} -->
 
     <div class="container">
         <div class="row">
@@ -153,10 +163,12 @@
                     <div class="social">
                         <h4>Follow Us</h4>
                         <!-- Facebook -->
-                        <a style="color: #3b5998;" href="#!" role="button"><i class="fab fa-facebook-f fa-2x"></i></a>&nbsp;
+                        <a style="color: #3b5998;" href="#!" role="button"><i
+                                class="fab fa-facebook-f fa-2x"></i></a>&nbsp;
 
                         <!-- Twitter -->
-                        <a style="color: #55acee;" href="#!" role="button"><i class="fab fa-twitter fa-2x"></i></a>&nbsp;
+                        <a style="color: #55acee;" href="#!" role="button"><i
+                                class="fab fa-twitter fa-2x"></i></a>&nbsp;
 
                         <!-- Instagram -->
                         <a style="color: #ac2bac;" href="#!" role="button"><i class="fab fa-instagram fa-2x"></i></a>
@@ -165,7 +177,7 @@
                 </div>
             </div>
             <hr>
-           
+
             <p class="m-0 text-center text-white">&copy; Wannabe Healthy 2022 </p>
             <!-- <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>-->

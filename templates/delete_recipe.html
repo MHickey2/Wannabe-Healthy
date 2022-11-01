@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Delete Recipe{% endblock %}
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+{% if user.is_authenticated %}
+{% if user.id == recipe.author.id %}
+
+
+<div class="container-fluid">
+    <div class="row">
+
+        <section class="py-5 min-vh-80">
+            <div class="container" id="newpost">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2><strong>Delete your Recipe:</strong></h2>
+                        <h3>Delete: {{ recipe.title }}</h3>
+                        <br>
+                        <form class="form text-muted" method="post">
+                            {% csrf_token %}
+                            {{ form | crispy }}
+                            <br>
+                            <br>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+</div>
+
+{% else %}
+You are not allowed to delete this recipe
+{% endif %}
+
+
+{% endif %}
+
+<a href="{% url 'recipes' %}" class="btn btn-secondary">Back</a>
+
+
+{%endblock%}
