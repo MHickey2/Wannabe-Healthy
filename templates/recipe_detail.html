@@ -3,7 +3,7 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<h3 class="recipe-category"><i class="fas fa-utensils"></i>&nbsp;Category:&nbsp;{{ recipe.category }}</h3>
+<h3 class="recipe-category"><iconify-icon icon="akar-icons:utensils"></iconify-icon>&nbsp;Category:&nbsp;{{ recipe.category }}</h3>
 <div class="">
     <hr>
     <div class="container">
@@ -34,7 +34,7 @@
                 <hr>
             </div>
             <h3 class="stylingtext">Description:</h3>
-            <p class="italic">{{ recipe.description | safe }} </p>
+            <p class="italic-bold">{{ recipe.description | safe }} </p>
             <hr>
             <h3 class="stylingtext">Ingredients:</h3>
             <p> {{ recipe.ingredients | safe }} </p>
@@ -68,15 +68,13 @@
                             <form class="d-inline" action="{% url 'recipe_likes' recipe.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %} -->
-                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i
-                                        class="fas fa-heart"></i></button>
+                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></button>
                                 {% else %}
-                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i
-                                        class="far fa-heart"></i></button>
+                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></button>
                                 {% endif %}
                             </form>
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            <span class="text-secondary"><iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></span>
                             {% endif %}
                             <!-- The number of likes goes before the closing strong tag -->
                             <span class="text-secondary">{{ recipe.number_of_likes }} </span>
@@ -85,7 +83,7 @@
 
                     <div class="col-1">
                         {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
+                        <strong class="text-secondary"><iconify-icon inline icon="fa-regular:comments" width="20"></iconify-icon>
                             <!--Our total_comments variable goes before the closing strong tag -->
                             {{ total_comments }}</strong>
                         <span class="text-secondary">{{ post.total_comments }} </span>
@@ -148,7 +146,8 @@
 
 
 
-<a href="{% url 'recipes' %}" class="btn btn-secondary">Back</a>
+<a href="{% url 'recipes' %}" class="btn btn-primary">Back</a>
 
+<br>
 
 {% endblock content %}

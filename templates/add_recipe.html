@@ -5,25 +5,24 @@
 {% load crispy_forms_tags %}
 
 
-<h1><strong>Add a Recipe:</strong></h1>
+<h1 class="green"><strong>Add a Recipe:</strong></h1>
+<p class="green">Ensure to complete all fields</p>
+
 <div class="container-fluid">
     <div class="row">
-
         <section class="py-5 min-vh-80">
-            <div class="container" id ="newpost">
+            <div class="container" id="newpost">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        
-                        <p>Ensure to complete all fields</p>
-                        <br>                        
+                        <br>
                         <form class="form text-muted" method="POST" action="{% url 'add_recipe' %}"
                             enctype="multipart/form-data">
-                            
+
                             {% csrf_token %}
                             {{ form | crispy }}
                             <br>
                             <br>
-                            <button class="btn btn-success" type="submit">Add Post</button>
+                            <button class="btn btn-primary" type="submit">Add Post</button>
                         </form>
                     </div>
                 </div>
@@ -34,7 +33,7 @@
     </div>
 </div>
 
-<a href="{% url 'recipes' %}" class = "btn btn-secondary">Back</a>
+<a href="{% url 'recipes' %}" class="btn btn-secondary">Back</a>
 
 
 {%endblock%}

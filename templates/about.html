@@ -34,51 +34,54 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
         <div class="card h-80">
-            <img src="https://res.cloudinary.com/dspwticaf/image/upload/v1666622744/diet_poof9n.jpg" class="aboutpic" alt="responsive-image">
+            <img src="https://res.cloudinary.com/dspwticaf/image/upload/v1666622744/diet_poof9n.jpg" class="aboutpic"
+                alt="responsive-image">
             <div class="card-body">
                 <h5 class="card-title">Diet</h5>
                 <p class="card-text">A healthy diet is essential for good health and nutrition. It protects you against
                     many diseases, such as heart disease, diabetes and cancer. Eating a variety
                     of foods and consuming less salt, sugars and saturated and industrially-produced trans-fats, are
                     essential for healthy diet. Diet choices can have a major impact on your wellbeing, see our Recipe
-                Section and find healthy recipes that are good for your health and share your own healthy recipes</p>
+                    Section and find healthy recipes that are good for your health and share your own healthy recipes
+                </p>
             </div>
-            <button class = "btn btn-danger">See Recipes</button>
+            <a href="{% url 'recipes' %}" class="btn btn-danger" id="block">See Recipes</a>
         </div>
     </div>
     <div class="col">
-        <div class="card h-80">                                   
-            <img src="https://res.cloudinary.com/dspwticaf/image/upload/v1666609987/Default_wtmyse.jpg" class="aboutpic" alt="responsive image">
+        <div class="card h-80">
+            <img src="https://res.cloudinary.com/dspwticaf/image/upload/v1666609987/Default_wtmyse.jpg" class="aboutpic"
+                alt="responsive image">
             <div class="card-body">
                 <h5 class="card-title">Exercise</h5>
                 <p class="card-text">Being physically active can improve your brain health, help manage weight, reduce
                     the risk of disease, strengthen bones and muscles, and improve your ability to do everyday
                     activities. Adults who sit less and do any amount of moderate-to-vigorous physical activity gain
-                    some health benefits. Check out our Blog for Exercise suggestions or if you have tried any and want 
+                    some health benefits. Check out our Blog for Exercise suggestions or if you have tried any and want
                     to share, please add a blog today, fitness can start with a single step.</p>
             </div>
-            <button class = "btn btn-danger">See Blog</button>
+            <a href="{% url 'home' %}" class="btn btn-danger" id="block">See Blog</a>
         </div>
     </div>
     <div class="col">
         <div class="card h-80">
-            <img src="https://res.cloudinary.com/dspwticaf/image/upload/v1666622745/rest_tqytni.jpg" class="aboutpic" alt="responsive-image">
+            <img src="https://res.cloudinary.com/dspwticaf/image/upload/v1666622745/rest_tqytni.jpg" class="aboutpic"
+                alt="responsive-image">
             <div class="card-body">
                 <h5 class="card-title">Rest</h5>
                 <p class="card-text">Rest is vital for better mental health, increased concentration and memory, a
                     healthier immune system, reduced stress, improved mood and even a better metabolism. Getting enough
-                sleep is important for recharging your body. Try to maintain and good Work Life balance and learn to listen
-            to your body, schedule in some downtime and prioritise what needs to be done. Check out our Blog for ways to build
-        relaxation into your life.</p>
-            </div>
-            <button class = "btn btn-danger">See Blog</button>            
+                    sleep is important for recharging your body. Try to maintain and good Work Life balance and learn to
+                    listen to your body, schedule in some downtime and prioritise what needs to be done. Check out our Blog for
+                    ways to build relaxation into your life.</p>
+            </div>            
+            <a href="{% url 'home' %}" class="btn btn-danger" id="block">See Blog</a>
         </div>
     </div>
 </div>
-
 <br>
-
-<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
-
+<a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+<br>
+<br>
 
 {%endblock%}

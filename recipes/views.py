@@ -120,3 +120,19 @@ class DeleteRecipeView(generic.DeleteView):
     template_name = "delete_recipe.html"
     success_url = reverse_lazy('recipes')
           
+
+class RecipeSearchView(generic.ListView):
+    model = Recipe
+    template_name = "recipes.html"
+    context_object_name = "recipes"
+
+    def get(self, request, *args, **kwargs):
+        query = self.request.GET.get('q')
+        recipe_list = Recipe.objects.filter(
+            Q(category__icontains=query) | Q(title__icontains=query)
+        )
+
+        context = {"recipe_list": recipe_list}
+
+        return render(request, "recipes.html", context)
+    

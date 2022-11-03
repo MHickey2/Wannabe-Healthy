@@ -7,14 +7,16 @@
 
 {% block content %}
 
+<h3 class="green">{% trans "Sign In" %}</h3>
+
+      <p class="text1">{% blocktrans %}Welcome back to Wannabe Healthy. To leave a comment or like a post, please log in. If you
+        have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
+        first.{% endblocktrans %}</p>
+
 <div class="container-fluid" id="newpost">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2 form-box">
-      <h3>{% trans "Sign In" %}</h3>
-
-      <p>{% blocktrans %}Welcome back to Wannabe Healthy. To leave a comment or like a post, please log in. If you
-        have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
-        first.{% endblocktrans %}</p>
+      
     </div>
   </div>
 

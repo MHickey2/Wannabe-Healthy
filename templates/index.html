@@ -99,8 +99,8 @@
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
                             <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }} &nbsp;<i class="far fa-comments">&nbsp; </i>{{ post.number_of_comments }}</p>
+                            <p class="card-text text-muted h6">{{ post.created_on}} <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon>
+                                {{ post.number_of_likes }} &nbsp;<iconify-icon inline icon="fa-regular:comments" width="20"></iconify-icon>{{ post.number_of_comments }}</p>
                                 {% if user.is_authenticated %}
                                 {% if user.id == post.author.id %} 
                                 <div class="buttongroup">

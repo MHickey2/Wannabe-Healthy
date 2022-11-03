@@ -1,11 +1,13 @@
+/**Type Fonts**/
+
 /* Lato */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,300;1,400;1,700&display=swap');
 
+/* Roboto */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
-body {
-    background-color: #f9fafc;
-    
+body {    
+    background-color:whitesmoke;
     
 }
 
@@ -283,11 +285,12 @@ a, a:visited, a:hover, a:active {
 
 #newpost {
     background-color: rgb(83, 212, 83);
-    border: 1px solid black;
-    box-shadow: #175306;
+    border: 1px solid black;   
     width: 70vw;
     opacity: .9;
     margin-bottom: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 15px 15px;
 
 }
 
@@ -303,14 +306,28 @@ a, a:visited, a:hover, a:active {
 }
 
 #newpost input,
-textarea {
+textarea  {
     width: 50vw;
     line-height: 1.5vh;
     padding: 10px 16px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 15px 15px;
     display: block;
-    width: 100%;
+    width: 100%;   
+}
+
+#newpost [type=checkbox] {
+    width: 20px;
+    display:inline;
+
+}
+
+
+
+#newpost label, #newpost1 label {
+    color: black;
+    margin: 10px;
+    font-weight: bold;
 
 }
 
@@ -444,10 +461,12 @@ textarea {
     
 }
 
-.italic {
+.italic-bold {
     text-align: justify;    
     font-style: italic;
     color: green;
+    font-size: larger;
+    text-align: center;
 }
 
 /* #newpost {
@@ -461,4 +480,23 @@ textarea {
     color: white;
     margin-top: 10px;
     
+}
+
+#block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    color: white;  
+    background-color: rgb(19, 163, 31);
+}
+
+.backbutton {
+    margin-left: 15px;
+    background-color:rgba(0, 0, 0, 0.2)
+}
+
+.btn btn-primary {
+    margin-left: 20px;
+   
 }

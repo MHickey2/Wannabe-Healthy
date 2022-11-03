@@ -45,6 +45,7 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
     <!-- FONT-AWESOME -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/solid.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/regular.min.css">
     <!-- FAVICON -->
@@ -111,9 +112,9 @@
         </div>
     </nav>
 
-    <!-- {% if user.is_authenticated %}
-    <span class="welcomeToSite">Welcome back, <p>{{ recipe.author }}</p></span>
-    {% endif %} -->
+    {% if user.is_authenticated %}
+    <span class="welcomeToSite">Welcome back, <p>{{ post.author }}</p></span>
+    {% endif %}
 
     <div class="container">
         <div class="row">
@@ -154,24 +155,22 @@
                 <div class="col-md-4">
                     <div class="contact">
                         <h4>Contact</h4>
-                        <p><i class="fas fa-phone">&nbsp;</i>+ 01-4590808</p>
-                        <p><i class="far fa-envelope">&nbsp;</i>info@wannabehealthy.com</p>
-                        <p><i class="fas fa-home">&nbsp;</i>28 Patrick's Street, Dublin 8.</p>
+                        <p><iconify-icon icon="cil:phone" width="20"></iconify-icon>+ 01-4590808</p>
+                        <p><iconify-icon icon="ci:mail" width="20"></iconify-icon>info@wannabehealthy.com</p>
+                        <p><iconify-icon icon="bi:house-heart" width="20"></iconify-icon>28 Patrick's Street, Dublin 8.</p>
                     </div>
                 </div>
                 <div class="col-md-4 footer-box text-white">
                     <div class="social">
                         <h4>Follow Us</h4>
                         <!-- Facebook -->
-                        <a style="color: #3b5998;" href="#!" role="button"><i
-                                class="fab fa-facebook-f fa-2x"></i></a>&nbsp;
+                        <a style="color: #3b5998;" href="#!" role="button"><iconify-icon icon="logos:facebook" width="40"></iconify-icon></a>&nbsp;
 
                         <!-- Twitter -->
-                        <a style="color: #55acee;" href="#!" role="button"><i
-                                class="fab fa-twitter fa-2x"></i></a>&nbsp;
+                        <a style="color: #55acee;" href="#!" role="button"><iconify-icon icon="logos:twitter" width="40"></iconify-icon></a>&nbsp;
 
                         <!-- Instagram -->
-                        <a style="color: #ac2bac;" href="#!" role="button"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a style="color: #ac2bac;" href="#!" role="button"><iconify-icon icon="icon-park:instagram" width="40"></iconify-icon></a>
 
                     </div>
                 </div>
