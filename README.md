@@ -20,50 +20,82 @@ Wannabe Healthy is the 4th Project for the Code Institute and the Project is a F
 
 # Table of Contents <a name="toc"></a>
 
-1. [UX Strategy](#uxstrategy)
-    1. [Business Goals](#businessgoals)
-    2. [Target Customer](#targetcustomer)
-2. [User Stories](#userstories)
-    1. [First Time User](#firsttimeuser)
-    2. [Regular User](#regularuser)
-    3. [Site Owner](#siteowner)
-3.  [Layout](#layout)
-    1. [Theme](#Theme)
-    2. [UX experience](#UX)
-    3. [Graphics](#graphics)
-4.  [Flow Chart for Game](#flowchart)        
-5.  [Features](#features)
-    1. [Home Page](#homepage)
-    2. [Blog Section](#blogsection) 
-    3. [Blog Search](#blogsearch)
-    4. [Add Blog](#addblog)
-    5. [Edit Blog](#editblog)
-    6. [Delete Blog](#deleteblog)
-    4. [Blog Detail Page](#blogdetailpage) 
-    5. [About Page](#aboutpage)
-    6. [Recipes Page](#recipespage)  
-    7. [Recipes Search](#recipessearch)
-    8. [Add Recipe](#addrecipe)
-    9. [Edit Recipe](#editrecipe)
-    10.[Delete Recipe](#deleterecipe)
-    11.[Recipe Detail Page](#recipedetailpage)
-6.  [Future Implementation](#future)
-7.  [Tools and Technology](#technology)
-8.  [Testing](#testing)
-    1. [Manual Testing](#manual)
-    2. [User Story Testing](#userstorytesting)
-    3. [General Testing](#general)
-    4. [Validation](#validation)
-9. [Bugs and Issues](#bugs)
-    1. [Resolved](#resolved)
-    2. [Unresolved](#unresolved)
-10. [Deployment](#deployment)
-    1. [Make Local Clone](#clone)
-    2. [Forking](#fork)
-    3. [Student Template](#studenttemplate)
-    4. [Deploying to Heroku](#heroku)
-11.  [Credits](#credits)
-12.  [Acknowledgements](#acknowledgements)
+- [Wannabe Healthy: Milestone 4 Project](#wannabe-healthy-milestone-4-project)
+  - [Introduction ](#introduction-)
+- [Table of Contents ](#table-of-contents-)
+  - [UX Strategy ](#ux-strategy-)
+    - [The Business Goals of the Website: ](#the-business-goals-of-the-website-)
+    - [The Target Customer: ](#the-target-customer-)
+      - [Return to Table of Contents](#return-to-table-of-contents)
+  - [User Stories  ](#user-stories--)
+    - [As a website User I can...](#as-a-website-user-i-can)
+    - [As a logged in User I can... ](#as-a-logged-in-user-i-can-)
+    - [As a website superuser, I can …..    ](#as-a-website-superuser-i-can-----)
+      - [Return to Table of Contents](#return-to-table-of-contents-1)
+  - [Layout  ](#layout--)
+  - [Colour  Scheme  ](#colour--scheme--)
+  - [Typography    ](#typography----)
+  - [Imagery    ](#imagery----)
+  - [Wireframes    ](#wireframes----)
+      - [Return to Table of Contents](#return-to-table-of-contents-2)
+    - [Database Diagram](#database-diagram)
+      - [Return to Table of Contents](#return-to-table-of-contents-3)
+  - [Features  ](#features--)
+    - [Home Page   ](#home-page---)
+    - [Blog Section      ](#blog-section------)
+    - [Blog Search   ](#blog-search---)
+    - [Add Blog     ](#add-blog-----)
+    - [Edit Blog     ](#edit-blog-----)
+    - [Delete Blog     ](#delete-blog-----)
+    - [Blog Detail Page      ](#blog-detail-page------)
+    - [About Page    ](#about-page----)
+    - [Recipes Page   ](#recipes-page---)
+    - [Recipes Search   ](#recipes-search---)
+    - [Add Recipe   ](#add-recipe---)
+    - [Edit Recipe   ](#edit-recipe---)
+    - [Delete Recipe   ](#delete-recipe---)
+    - [Recipe Detail Page   ](#recipe-detail-page---)
+    - [Signup Page   ](#signup-page---)
+    - [Login  Page   ](#login--page---)
+    - [Logout Page   ](#logout-page---)
+    - [Profile Page   ](#profile-page---)
+      - [Return to Table of Contents](#return-to-table-of-contents-4)
+  - [Future Implementation  ](#future-implementation--)
+      - [Return to Table of Contents](#return-to-table-of-contents-5)
+  - [Tools and Technology  ](#tools-and-technology--)
+    - [Language Used:](#language-used)
+    - [Technology Used:](#technology-used)
+      - [Django Packages](#django-packages)
+      - [Return to Table of Contents](#return-to-table-of-contents-6)
+  - [Testing  ](#testing--)
+    - [Manual Testing   ](#manual-testing---)
+      - [Feature being tested and Result](#feature-being-tested-and-result)
+    - [User Story Testing](#user-story-testing)
+      - [As a Website User I want to .....](#as-a-website-user-i-want-to-)
+      - [As a logged in User I want to …...](#as-a-logged-in-user-i-want-to-)
+      - [As a Superuser/Admin I want to …..](#as-a-superuseradmin-i-want-to-)
+    - [General Testing   ](#general-testing---)
+      - [Browser Testing](#browser-testing)
+      - [Responsive Testing](#responsive-testing)
+    - [Validation      ](#validation------)
+      - [HTML Checker](#html-checker)
+      - [Lighthouse Testing](#lighthouse-testing)
+      - [Return to Table of Contents](#return-to-table-of-contents-7)
+  - [Bugs and Issues  ](#bugs-and-issues--)
+    - [Resolved ](#resolved-)
+    - [Unresolved ](#unresolved-)
+      - [Return to Table of Contents](#return-to-table-of-contents-8)
+  - [Deployment ](#deployment-)
+      - [Creating the Django app  ](#creating-the-django-app--)
+    - [How to make a local Clone ](#how-to-make-a-local-clone-)
+    - [How to fork a GitHub Repository ](#how-to-fork-a-github-repository-)
+    - [Student Template ](#student-template-)
+    - [Deploying to Heroku ](#deploying-to-heroku-)
+      - [Return to Table of Contents](#return-to-table-of-contents-9)
+  - [Credits ](#credits-)
+      - [Return to Table of Contents](#return-to-table-of-contents-10)
+  - [Acknowledgements ](#acknowledgements-)
+      - [Return to Table of Contents](#return-to-table-of-contents-11)
 
 ----
 
@@ -78,11 +110,7 @@ Wannabe Healthy is the 4th Project for the Code Institute and the Project is a F
 
 ### The Target Customer: <a name="targetcustomer"></a>
 
-- The audience of the site could encompass a number of age groups and there would generally not be any   limitation on who could not play.   
-       
-- Would probably require some access to digital technology(not mobile).      
-- May be useful for a user who has spare time and enjoys using decision making to solve a mystery.      
-- Someone who likes interaction in their gaming.      
+Anyone with the desire to improve their health.
 
  <br/>  
 
@@ -99,83 +127,94 @@ The site allows the user to know the content of the site easily and can navigate
 The user will be able to use the search facility to find specific blogs by category and title.
 The user when logged in will be able to contribute to the site in regards to blogs and recipes, they will also be able to like and comment on individual blogs and recipes.
 The user will be able to add a profile to the site
+
 <br>
 
 ## User Stories  <a name="userstories"></a>
 
 <br>
 
-### As a first time user to this site, I want to …..<a name="firsttimeuser"></a>
-- 
-- 
-- 
+### As a website User I can...<a name="websiteuser"></a>
+1. Navigate around the site and easily view the type of content available.
+2. View a collection of Blogs in the blog Section.
+3. Search the blog section for particular categories or by title content.
+4. Click on a blog item and view more indepth content of the selected blog.
+5. Register for an account to avail of full features of the site.
+6. View the number of likes on a blog.
+7. View comments left for different blogs in the collection.
+8. View a collection of Recipes in the Recipe Page.
+9. Search through recipes for particular categories or by name in title.
+10. Click on a Recipe to see full details of that recipe.
+11. View the number of likes on a Recipe.
+12. View any comments left on a Recipe. 
+
   
 
   <br/>
 
-### As a regular user of the site, I want to …...  <a name="regularuser"></a>  
-- 
--         
--        
-   
+### As a logged in User I can... <a name="loggedinuser"></a>  
+-
+1. I can add a new post or a recipe.
+2. I can like/unlike a blog or recipe on the site.
+3. I can leave comments on particular blogs and recipes.
+4. Update my Profile for the site by adding a Bio and Image.
+5. I can edit a Blog or Recipe that I have submitted to the site.
+6. I can delete a Recipe or Blog that I have submitted to the site.
 
+ 
  <br/>
 
-### As the site owner, I want to …..    <a name="siteowner"></a>
-- 
-- 
-- 
--   
-- 
-  
+### As a website superuser, I can …..    <a name="superuser"></a>
+
+1. Create and publish a new blog or recipe.
+2. Create draft recipes and blog posts that can be finalised later.
+3. Create a new user, recipes, blogs and categories.
+4. Delete user, blogs, recipes, categories and comments.
+5. Can approve user's comments.
 
   <br/>  
+
 #### [Return to Table of Contents](#toc)  
 ----
 ## Layout  <a name="layout"></a> 
 
 <br/>
 
+## Colour  Scheme  <a name="colourscheme"></a>
 
-## Theme    <a name="theme"></a>  
 
+## Typography    <a name="typography"></a>
+
+The 'Roboto' font is the main font used for the whole project  
 
 
 <br>
 
-## UX Experience    <a name="ux"></a>
-
-- 
-- 
-- 
-- 
-- 
--  
-   
-<br>
 
 ## Imagery    <a name="imagery"></a>
 
 <br>
 
  
-[)]()
+## Wireframes    <a name="wireframes"></a>
 
 <br>
 
 
 <br>
-
-
-
-<br>
-
 
 
  #### [Return to Table of Contents](#toc)
 ----
 
+### Database Diagram
+<br>
 
+<p align ="center">      
+     <img src="assets/images/readme/images/"  alt="database diagram" />    
+</p>
+
+<br/> 
 
 
  #### [Return to Table of Contents](#toc)
@@ -187,127 +226,224 @@ The user will be able to add a profile to the site
 
 <br>
 
-###    <a name="startpage"></a>
+### Home Page   <a name="homepage"></a>
 
-
+The home page has an intro image and a short paragraph of text explaining the purpose of
+the site.  
   
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/starterscreen.png"  alt="Starting Screen Image" />    
+     <img src="assets/images/readme/images/"  alt="" />    
 </p>
 
 <br/> 
 
-### Instructions      <a name="instructions"></a>
+### Blog Section      <a name="blogsection"></a>
+
+On the home page there is a blog section which holds a collection of blogs ordered with the most recent blog at the top. The pagination allows for the blogs to be distributed according to the number of blogs it contains.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/"  alt="" />    
+</p>
+
+<br/> 
+
+### Blog Search   <a name="blogsearch"></a>
+
+The website user can use the search facility to find specific categories, that are presented to the user and they can also search by a name in the title.
+
+
+<p align ="center">      
+     <img src="assets/images/readme/images/"  alt="" />    
+</p>
+
+<br/> 
+
+###  Add Blog     <a name="addblog"></a>
+
+As a logged in User you can add a blog to the site, when you press on the add blog link it will take you to the add blog page, when this form is completed you will be redirected to the home page, where your new blog will be displayed.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/"  alt="" />    
+</p>
+
+<br/> 
+
+### Edit Blog     <a name="editblog"></a>
+
+As a logged in User you will be able to see the edit button below your submitted blogs, when you use the edit button you will be redirected to the edit blog page, where you can update your blog, when the form is completed you will be redirected to the home page.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/"  alt="" />    
+</p>
+
+<br/> 
+
+
+###  Delete Blog     <a name="deleteblog"></a>
+
+As a logged in User you will be able to see the delete button below your submitted blogs, when you use the delete button you will be redirected to the delete blog page, where you can delete your blog, when the form is completed you will be redirected to the home page.
 
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/instructions.png"  alt="Instructions for Player" />    
-</p>
-
-<br/> 
-
-### Intro To Game Story   <a name="intro"></a>
-
-
-<p align ="center">      
-     <img src="assets/images/readme/images/introtogame.png"  alt="Intro Story to Game" />    
-</p>
-
-<br/> 
-
-###       <a name="arrival"></a>
-
-
-
-<br>
-
-<p align ="center">      
-     <img src="assets/images/readme/images/arrival.png"  alt="Arrival information for player" />    
-</p>
-
-<br/> 
-
-### Introduction to Guests      <a name="guestintro"></a>
-
-
-
-<br>
-
-<p align ="center">      
-     <img src="assets/images/readme/images/guests.png"  alt="Introduction to other guests" />    
-</p>
-
-<br/> 
-
-
-###       <a name="warningletter"></a>
-
-
-
-
-<br>
-
-<p align ="center">      
-     <img src="assets/images/readme/images/letter.png"  alt="Warning letter for the player" />    
+     <img src="assets/images/readme/images/"  alt="" />    
 </p>
 
 <br/>
 
-###       <a name="guestdetails"></a>
+### Blog Detail Page      <a name="blogdetailpage"></a>
 
+When you select a blog, you will be redirected to the blog detail page, this page will show the full content for that specific blog. If you are a logged in user you can add a comment. This comment will have to be approved by the admin before it will be displayed on the site.
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/guestdetails.png"  alt="Guest details for the player" />    
+     <img src="assets/images/readme/images/"  alt="" />    
 </p>
 
 <br/> 
 
-###      <a name="random"></a>
+###  About Page    <a name="aboutpage"></a>
 
-
-
+The About Page again contains a brief synopsis of the site and contain information panels that display the main elements of the site. The accompanying links will take you to either the blog section or the recipe section of the site.
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/random.png"  alt="Random element in game" />    
+     <img src="assets/images/readme/images/"  alt="" />    
 </p>
 
 <br/> 
 
-###     <a name="paths"></a>
+###  Recipes Page   <a name="recipespage"></a>
 
-
+On the Recipes page there is a collection of Recipes ordered with the most recent Recipe at the top. The pagination allows for the Recipes to be distributed according to the number of recipes in the collection.
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/lusciousstory.png"  alt="Path for Luscious" />    
+     <img src="assets/images/readme/images/"  alt="" />    
 </p>
 
 <br/> 
 
+###  Recipes Search   <a name="recipessearch"></a>
+
+The website user can use the search facility to find specific categories ie Breakfast, Lunch, Dinner, Dessert and Soup/Salad. You can also search according to a specific word in the title.
+
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/survival.png"  alt="Survival/death Notification" />    
+     <img src="assets/images/readme/images/"  alt="" />    
+</p>
+
+<br/> 
+
+###  Add Recipe   <a name="addrecipe"></a>
+
+As a logged in User you can add a Recipe to the site, when you press on the add a Recipe  link it will take you to the 'add Recipe page', when this form is completed you will be redirected to the Recipes page, where your new Recipe will be displayed.
+
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/"  alt="" />    
+</p>
+
+<br/> 
+
+###  Edit Recipe   <a name="editrecipe"></a>
+
+As a logged in User you will be able to see the edit button below your submitted Recipe, when you use the edit button you will be redirected to the 'edit your Recipe page', where you can update your Recipe, when the form is completed you will be redirected to the Recipes page.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/"  alt="" />    
+</p>
+
+<br/> 
+
+###  Delete Recipe   <a name="deleterecipe"></a>
+
+As a logged in User you will be able to see the delete button below your submitted Recipe, when you use the delete button you will be redirected to the delete Recipe page, where you can delete your Recipe, when the form is completed you will be redirected to the Recipes page.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/"  alt="" />    
+</p>
+
+<br/> 
+
+###  Recipe Detail Page   <a name="recipedetailpage"></a>
+
+When you select a Recipe, you will be redirected to the Recipe detail page, this page will show the full content for that specific Recipe. If you are a logged in user you can add a comment. This comment will have to be approved by the admin before it will be displayed on the site.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/"  alt="" />    
+</p>
+
+<br/> 
+
+###  Signup Page   <a name="signuppage"></a>
+
+On the Signup Page, a new user can sign up for the Wannabe Healthy website by filling out and submitting the form.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/"  alt="" />    
 </p>
 
 <br/>
 
+###  Login  Page   <a name="loginpage"></a>
+
+A registered User can log in to the website by inputting the username and password and they will have full access to all the features of the site.
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/youdie.png"  alt="Dying Notification" />    
+     <img src="assets/images/readme/images/"  alt="" />    
 </p>
 
 <br/> 
+
+###  Logout Page   <a name="logoutpage"></a>
+
+In the Logout Page, the User can confirm that they want to exit the website.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/"  alt="" />    
+</p>
+
+<br/>  
+
+###  Profile Page   <a name="profilepage"></a>
+
+On the Profile Page, the User can have access to their own profile information and can update their information for the site, including adding a bio and a profile image. The profile will be created when they register for the site.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/"  alt="" />    
+</p>
+
+<br/> 
+
 
  #### [Return to Table of Contents](#toc)
 ----
@@ -327,6 +463,8 @@ The user will be able to add a profile to the site
 
 -   [Python 3.8.10](https://www.python.org/)
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)        &nbsp; [CSS3](https://en.wikipedia.org/wiki/CSS)
+-   [JavaScript](https://www.javascript.com/)
+-   [Django](https://www.python.org/)
 
 ### Technology Used:
 
@@ -340,7 +478,26 @@ The user will be able to add a profile to the site
 -   [PostgreSQL](https://www.postgresql.org/)
 -   [Bootstrap](https://getbootstrap.com/)
 -   [Draw.io](https://drawio-app.com/)
-  
+ 
+#### Django Packages
+
+* [Gunicorn](https://gunicorn.org/)<br>
+   As the server for Heroku
+* [Cloudinary](https://cloudinary.com/)<br>
+   Was used to host the static files and media
+* [Dj_database_url](https://pypi.org/project/dj-database-url/)<br>
+   To parse the database URL from the environment variables in Heroku
+* [Psycopg2](https://pypi.org/project/psycopg2/)<br>
+   As an adaptor for Python and PostgreSQL databases
+* [Summernote](https://summernote.org/)<br>
+   As a text editor
+* [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)<br>
+   For authentication, registration, account
+   management
+* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)<br>
+   To style the forms
+ 
+
  #### [Return to Table of Contents](#toc)
 ----
 ## Testing  <a name="testing"></a>
@@ -364,7 +521,7 @@ The user will be able to add a profile to the site
 
  <br/>
 
-#### As a first time user to the site
+#### As a Website User I want to .....
 
 - 
 - 
@@ -372,7 +529,7 @@ The user will be able to add a profile to the site
 
 <br>
 
-#### As a regular user of the site, I want to …...  
+#### As a logged in User I want to …...  
 
 -    
 -         
@@ -380,7 +537,7 @@ The user will be able to add a profile to the site
 
 <br>
 
-#### As the site owner, I want to …..    
+#### As a Superuser/Admin I want to …..    
 - 
 - 
 - 
@@ -397,8 +554,7 @@ The user will be able to add a profile to the site
 
 #### Browser Testing
 
-The site was tested on Google Chrome, Firefox and Microsoft edge, and there seemed to be no
-issues on any of the browsers.
+The site was tested on Google Chrome, Firefox and Microsoft edge, and there seemed to be no issues on any of the browsers.
 
 <br>
 
@@ -410,7 +566,7 @@ In regards to responsive testing
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/responsive2screen.png"  alt="Responsive Testing Image" />    
+     <img src="assets/images/readme/images/"  alt="Responsive Testing Image" />    
 </p>
 <br/> 
 
@@ -423,12 +579,12 @@ In regards to responsive testing
 I used pep8 validation 
 <p align ="center">  
     
-     <img src="assets/images/readme/images/pep8narration.png"  alt="pep8 for narration.py" />    
+     <img src="assets/images/readme/images/"  alt="" />    
 </p>
 <br/> 
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="pep8 for art.py" />    
+     <img src="assets/images/readme/images/"  alt="" />    
 </p>
 <br/> 
 
@@ -438,7 +594,7 @@ I used pep8 validation
 
 
 <p align ="center">      
-     <img src="assets/images/readme/images/htmlchecker.png"  alt="HTML Validation" />    
+     <img src="assets/images/readme/images/"  alt="HTML Validation" />    
 </p>
 <br/>
 
@@ -479,6 +635,8 @@ I used pep8 validation
 
  <br>
 
+#### Creating the Django app  <a name="django-app"></a>
+
  ### How to make a local Clone <a name="clone"></a>
 1. Navigate to the main page of the repository.
 2. Click the green Code Button at top right of the repository.
@@ -517,8 +675,7 @@ you would paste the JSON into the value field.
 - Under the deploy options, you can chose automatic deploys, this allow you to automatically deploy each
 time you push to your Repository.
 - To deploy, you would choose what branch you want to deploy and click on 'Deploy Branch'.
-- It takes a little time to build your app but when it is ready you can open your app by using the link
-provided
+- It takes a little time to build your app but when it is ready you can open your app by using the link provided
   
 <br> 
 
@@ -544,7 +701,7 @@ More information is available at [https://docs.github.com/en](https://docs.githu
 ----
  ## Acknowledgements <a name="acknowledgements"></a>
 
- Thank you to my mentor Brian Macharia for his guidance and support.
+ 
 
 <br>
 
@@ -552,111 +709,3 @@ More information is available at [https://docs.github.com/en](https://docs.githu
 ----
 
  
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome Michelle Hickey,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
