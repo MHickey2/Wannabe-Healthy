@@ -32,6 +32,12 @@ html * {
     padding: 10px;
 }
 
+.welcometosite {
+    color: darkgreen;
+    font-style: italic;
+    font-size: 130%;
+    font-weight: bolder;
+}
 .nav navbar-nav navbar-left {
     font-family: Roboto, sans-serif;
     font-size: 1.6rm;
@@ -508,3 +514,19 @@ textarea {
     margin-left: 20px;   
 }
 
+.col-md-6 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.labelling {
+    font-weight: bold;
+    color: green;
+}
+
+.profedit {
+    text-align: right;
+    margin-bottom: 10px;;
+    
+}

@@ -29,35 +29,32 @@
 </div>
 
 <h2 class="bloghead">LIFESTYLE BLOG</h2>
-{% if user.is_authenticated %}  
+{% if user.is_authenticated %}
 <a href="{% url 'add_post' %}" class="btn btn-success" id="center">Add a Post</a>
-{% endif %} 
+{% endif %}
 
-<form action="{% url 'search_blogs' %}" class="searchform" method="get">
+<!-- <form action="{% url 'search_blogs' %}" class="searchform" method="get">
     {% csrf_token %}
     <input type="text" name="q" placeholder="Search Blogs">
     <button class = "btn-success" type="submit">Search</button>
-</form>
+</form> -->
 
-    <!-- <tr><td colspan="6">Nothing found</td></tr> -->
-  
+<!-- <tr><td colspan="6">Nothing found</td></tr> -->
+<br />
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <nav class="center">
+        <div class="col-md-6">
+            <nav class="searchform">
                 <div>
                     <form role="search" action="{% url 'search_blogs' %}" method="get">
                         {% csrf_token %}
                         <div class="input-group">
                             <input type="text" name="q" class="form-control" />
                             <div class="input-group-btn">
-                                <button type="submit" class="btn btn-search btn-danger">
+                                <button type="submit" class="btn btn-search btn-success">
                                     <span class="glyphicon glyphicon-search"></span>
                                     <span class="label-icon">Search</span>
                                 </button>
-                                <button type="submit" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-                                    <span class="caret"></span>
-                                </button>                                
                                 </ul>
                             </div>
                         </div>
@@ -69,72 +66,74 @@
 
     <!-- <li>Sorry, there is no such Category.</li> -->
 
-<div class="container-fluid">
-    <div class="row">
+    <div class="container-fluid">
+        <div class="row">
 
-        <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for post in post_list %}
-                <div class="col-md-4" id="postlook">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1666609987/Default_wtmyse.jpg">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
-                                {% endif %}
-                                <div class="image-flash1">
-                                    <h3 class="category"> {{ post.category }}</h3>
-                                </div>
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div>
+            <!-- Blog Entries Column -->
+            <div class="col-12 mt-3 left">
+                <div class="row">
+                    {% for post in post_list %}
+                    <div class="col-md-4" id="postlook">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="image-container">
+                                    {% if "placeholder" in post.featured_image.url %}
+                                    <img class="card-img-top"
+                                        src="https://res.cloudinary.com/dspwticaf/image/upload/v1666609987/Default_wtmyse.jpg">
+                                    {% else %}
+                                    <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                    {% endif %}
+                                    <div class="image-flash1">
+                                        <h3 class="category"> {{ post.category }}</h3>
+                                    </div>
+                                    <div class="image-flash">
+                                        <p class="author">Author: {{ post.author }}</p>
+                                    </div>
 
-                            </div>
-                            <a href="{% url 'post_detail' post.slug  %}">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
-                            </a>
-                            <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon>
-                                {{ post.number_of_likes }} &nbsp;<iconify-icon inline icon="fa-regular:comments" width="20"></iconify-icon>{{ post.number_of_comments }}</p>
+                                </div>
+                                <a href="{% url 'post_detail' post.slug  %}">
+                                    <h2 class="card-title">{{ post.title }}</h2>
+                                    <p class="card-text">{{ post.excerpt }}</p>
+                                </a>
+                                <hr />
+                                <p class="card-text text-muted h6">{{ post.created_on}} <iconify-icon
+                                        icon="ant-design:heart-outlined" width="20"></iconify-icon>
+                                    {{ post.number_of_likes }} &nbsp;<iconify-icon inline icon="fa-regular:comments"
+                                        width="20"></iconify-icon>{{ post.number_of_comments }}</p>
                                 {% if user.is_authenticated %}
-                                {% if user.id == post.author.id %} 
+                                {% if user.id == post.author.id %}
                                 <div class="buttongroup">
                                     <a href="{% url 'edit_post' post.slug %}" class="btn btn-success">Edit</a>
                                     <a href="{% url 'delete_post' post.slug %}" class="btn btn-danger">Delete</a>
-                                </div>   
-                            
-                            {% endif %}
-                            {% endif %} 
+                                </div>
+
+                                {% endif %}
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
 
+                    {% if forloop.counter|divisibleby:3 %}
+                </div>
+                <div class="row">
+                    {% endif %}
+                    {% endfor %}
+
+                </div>
             </div>
         </div>
-    </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+        {% if is_paginated %}
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
 
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
-</div>
-{%endblock%}
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+    {%endblock%}

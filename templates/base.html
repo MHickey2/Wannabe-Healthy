@@ -67,13 +67,13 @@
     {% endblock %}
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid" bid="header">
             <a href="/" class="navbar-brand"></a>            
                 <img id="logo" type="image/png"
                     src="https://res.cloudinary.com/dspwticaf/image/upload/v1664291226/logo_frehe3.png">
                     <h3 class="green">Wannabe Healthy</h3>
-                <button class="navbar-toggler box-shadow" style="text-align: center;" type="button"
+                <button class="navbar-toggler box-shadow collapsed" style="text-align: center;" type="button"
                     data-bs-toggle="collapse" data-bs-target="#header"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
@@ -82,7 +82,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home </a>
+                            <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'about' %}">About </a>
@@ -126,7 +126,7 @@
 
     
     {% if user.is_authenticated %}
-    <span class="welcomeToSite">Welcome back, <p>{{ post.author }}</p></span>
+    <span class="welcometosite">Welcome back, {{ user.username }}</span>
     {% endif %}
 
     <div class="container">

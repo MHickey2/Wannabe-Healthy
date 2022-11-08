@@ -12,13 +12,32 @@
     while around and give your tastebuds a treat.
 </p>
 
+
 <a href="{% url 'add_recipe' %}" class="btn btn-success" id="center">Add a Recipe</a>
 
-<form action="{% url 'search_recipes' %}" class="searchform" method="get">
-    {% csrf_token %}
-    <input type="text" name="q" placeholder="Search Recipes">
-    <button class="btn-success" type="submit">Search</button>
-</form>
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <nav class="searchform">
+                <div>
+                    <form role="search" action="{% url 'search_recipes' %}" method="get">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" />
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-search btn-success">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                    <span class="label-icon">Search</span>
+                                </button>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
 
 
 <div class="container-fluid">
@@ -80,17 +99,17 @@
         </div>
     </div>
     {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
 
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
-</div>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
 {%endblock%}

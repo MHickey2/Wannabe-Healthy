@@ -3,24 +3,73 @@
 {% block content %}
 
 
+<!-- <img class="rounded-circle account-img" src="{{ profile.avatar.url }} " style="cursor: pointer;"/> -->
+<div class="col-sm-6 col-md-6 col-xs-6">
+    <div class="row">
 
-<div class="row my-3 p-3">
-    <h1>This is the profile page for {{profile.user}}</h1>
-    <p>User Bio:  {{ profile.bio }}</p>
-    <img src="{{ profile.avatar.url }}" alt="{{ profile.user}}">
-    <img class="" src=" {{ profile.avatar }}">
-    <p>User Pic:</p>
+        <!-- <div class="m-b-25"> <img class="rounded-circle account-img" id="profile-img" src="{{ profile.avatar.url }}"
+            class="img-radius" alt="User-Profile-Image"> </div> -->
 
-</div>
+        <!-- <div class="form-content ">
+        <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
 
-<body>
-    <ul>
-        {% for profile in profiles %}
-        <li>
-            <img src="{{ profile.avatar }}">
-        </li>
-        {% endfor %}
-    </ul>
-</body>
+        <div class="form-group">
+            <label class="labelling">Username:</label>  {{ profile.user }}
+            <br />
+            <label class="labelling">Bio:</label> {{ profile.bio }}
+        </div>
+    
+    
+</div> -->
 
-{% endblock content %}
+
+
+        <!-- </form>
+</div> -->
+
+        <section class="section mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        {% if "placeholder" in profile.avatar.url %}
+                        <div class="m-b-25"> <img class="rounded-circle account-img" id="profile-img"
+                                src="https://res.cloudinary.com/dspwticaf/image/upload/v1667936304/generic-profile_optkrd.jpg"
+                                class="img-radius" alt="User-Profile-Image"> </div>
+                            {% else %}
+                            <div class="m-b-25"> <img class="rounded-circle account-img" id="profile-img"
+                                    src="{{ profile.avatar.url }}" class="img-radius" alt="User-Profile-Image"> </div>
+                            {% endif %}
+                            <!-- <div>
+            <img alt="Web Studio" class="img-fluid" src="{{ profile.avatar.url }}" />
+          </div> -->
+                        </div>
+                        <div class="col-md-6 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
+                            <div>
+                                <div class="form-group">
+                                    <h2>Profile</h2>
+                                    <label class="labelling">Username:</label> {{ profile.user }}
+                                    <br /><br />
+                                    <label class="labelling">Bio:</label> {{ profile.bio }}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <div class="profedit">
+            <a href="#" class="btn btn-success">Edit Profile</a>
+        </div>
+
+        <!-- <div class="image-container">
+    {% if "placeholder" in profile.avatar.url %}
+    <img class="card-img-top"
+        src="https://res.cloudinary.com/dspwticaf/image/upload/v1667936304/generic-profile_optkrd.jpg">
+    {% else %}
+
+    <img class="" src=" {{ profile.avatar.url }}">
+    {% endif %} -->
+
+        {% endblock content %}

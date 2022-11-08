@@ -135,4 +135,3 @@ class RecipeSearchView(generic.ListView):
         context = {"recipe_list": recipe_list}
 
         return render(request, "recipes.html", context)
-    

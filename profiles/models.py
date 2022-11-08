@@ -9,7 +9,7 @@ class Profile(models.Model):
     Model for user profile
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    avatar = CloudinaryField('image', default='placeholder')
+    avatar = CloudinaryField('image', default='placeholder')    
     bio = models.TextField()
 
     def __str__(self):
@@ -26,6 +26,6 @@ def create_profile(instance, created, **kwargs):
     """
     if created:
         Profile.objects.create(user=instance)
-    
+
 
 post_save.connect(create_profile, sender=User)
