@@ -21,7 +21,9 @@ html * {
 
 
 #header {
-    background-color: rgb(255, 255, 255);    
+    background-color: rgb(255, 255, 255);
+    margin-left: 15px;
+       
 }
 
 #logo {
@@ -33,9 +35,15 @@ html * {
 .nav navbar-nav navbar-left {
     font-family: Roboto, sans-serif;
     font-size: 1.6rm;
-    font-weight: 700;
     
 }
+
+.nav-item {
+    margin-left: 20px;   
+    font-weight: bold;
+}
+
+
 
 /* Heading for index Page */
 .bloghead {
@@ -497,6 +505,6 @@ textarea {
 }
 
 .btn btn-primary {
-    margin-left: 20px;
-   
+    margin-left: 20px;   
 }
+

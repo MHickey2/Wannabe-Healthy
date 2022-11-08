@@ -29,4 +29,3 @@ def create_profile(instance, created, **kwargs):
     
 
 post_save.connect(create_profile, sender=User)
-    

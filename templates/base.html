@@ -67,55 +67,63 @@
     {% endblock %}
 
     <!-- Navigation -->
-
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid" id="header">
-            <a class="navbar-brand" href="{% url 'home' %}">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid" bid="header">
+            <a href="/" class="navbar-brand"></a>            
                 <img id="logo" type="image/png"
-                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1664291226/logo_frehe3.png"
-                    class="img-fluid" alt="Responsive image">
-            </a>
+                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1664291226/logo_frehe3.png">
+                <button class="navbar-toggler box-shadow" style="text-align: center;" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#header"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="header">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <h3 class="green">Wannabe Healthy</h3>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}">About |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'recipes' %}">Recipes |</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'profile' %}">Profile |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_logout' %}">Logout |</a>
+                        </li>
+                        {% else %}
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- <ul class ="navbar-nav pull-left">
+                        <li class="nav-item-right">
+                            <a class="nav-link" href="{% url 'account_signup' %}">Register |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        </li>
+                    </ul> -->
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-left">
-                    <!-- add the active class to the currently chosen page -->
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home |</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">About |</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'recipes' %}">Recipes |</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'profile' %}">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout |</a>
-                    </li>
-                    {% else %}
+                        {% endif %}
 
-                    <li class="nav-item-right">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register |</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                    </li>
+                    </ul>
 
-                    {% endif %}
-
-                </ul>
-
-            </div>
+                </div>
         </div>
     </nav>
 
+    
     {% if user.is_authenticated %}
     <span class="welcomeToSite">Welcome back, <p>{{ post.author }}</p></span>
     {% endif %}
@@ -159,22 +167,34 @@
                 <div class="col-md-4">
                     <div class="contact">
                         <h4>Contact</h4>
-                        <p><iconify-icon icon="cil:phone" width="20"></iconify-icon>+ 01-4590808</p>
-                        <p><iconify-icon icon="ci:mail" width="20"></iconify-icon>info@wannabehealthy.com</p>
-                        <p><iconify-icon icon="bi:house-heart" width="20"></iconify-icon>28 Patrick's Street, Dublin 8.</p>
+                        <p>
+                            <iconify-icon icon="cil:phone" width="20"></iconify-icon>+ 01-4590808
+                        </p>
+                        <p>
+                            <iconify-icon icon="ci:mail" width="20"></iconify-icon>info@wannabehealthy.com
+                        </p>
+                        <p>
+                            <iconify-icon icon="bi:house-heart" width="20"></iconify-icon>28 Patrick's Street, Dublin 8.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4 footer-box text-white">
                     <div class="social">
                         <h4>Follow Us</h4>
                         <!-- Facebook -->
-                        <a style="color: #3b5998;" href="#!" role="button"><iconify-icon icon="logos:facebook" width="40"></iconify-icon></a>&nbsp;
+                        <a style="color: #3b5998;" href="#!" role="button">
+                            <iconify-icon icon="logos:facebook" width="40"></iconify-icon>
+                        </a>&nbsp;
 
                         <!-- Twitter -->
-                        <a style="color: #55acee;" href="#!" role="button"><iconify-icon icon="logos:twitter" width="40"></iconify-icon></a>&nbsp;
+                        <a style="color: #55acee;" href="#!" role="button">
+                            <iconify-icon icon="logos:twitter" width="40"></iconify-icon>
+                        </a>&nbsp;
 
                         <!-- Instagram -->
-                        <a style="color: #ac2bac;" href="#!" role="button"><iconify-icon icon="icon-park:instagram" width="40"></iconify-icon></a>
+                        <a style="color: #ac2bac;" href="#!" role="button">
+                            <iconify-icon icon="icon-park:instagram" width="40"></iconify-icon>
+                        </a>
 
                     </div>
                 </div>
