@@ -4,6 +4,6 @@ from .views import editProfile
 
 urlpatterns = [
     path('profile/', views.profile, name='profile'),
-    path('<slug:slug>/edit_profile/', views.editProfile.as_view(), name='editprofile')
+    path('profile/edit_profile/', views.editProfile, name='editprofile')
     
 ]
