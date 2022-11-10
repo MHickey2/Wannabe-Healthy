@@ -75,7 +75,7 @@
                     {% for post in post_list %}
                     <div class="col-md-4" id="postlook">
                         <div class="card mb-4">
-                            <div class="card-body">
+                            <div class="card-body1">
                                 <div class="image-container">
                                     {% if "placeholder" in post.featured_image.url %}
                                     <img class="card-img-top"
@@ -92,7 +92,7 @@
 
                                 </div>
                                 <a href="{% url 'post_detail' post.slug  %}">
-                                    <h2 class="card-title">{{ post.title }}</h2>
+                                    <h3 class="card-title">{{ post.title }}</h3>
                                     <p class="card-text">{{ post.excerpt }}</p>
                                 </a>
                                 <hr />

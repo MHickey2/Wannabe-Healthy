@@ -10,6 +10,8 @@ body {
     background-color:whitesmoke;    
 }
 
+
+
 html * {
     font-family: Roboto, 'sans-serif';
     font-size: 1.6rm;
@@ -36,6 +38,14 @@ html * {
     width: 130px;
     padding: 10px;
 }
+
+.nav-item,.nav-link {
+    color: #a3d31c !important;
+    font-size: 120%;
+    letter-spacing: .2em;
+    font-family: 'Abril Fatface', cursive;
+    
+    }
 
 /* Styling for Welcome Message */
 .welcometosite {
@@ -66,6 +76,9 @@ html * {
     font-family: 'Abril Fatface', cursive;;
 }
 
+.card-body1 {
+    min-height: 510px;
+}
 
 .card-title {
     text-align: center;
@@ -327,6 +340,7 @@ a, a:visited, a:hover, a:active {
     margin-bottom: 20px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 15px 15px;
+    min-height:530px;
 
 }
 
@@ -344,12 +358,13 @@ a, a:visited, a:hover, a:active {
 #newpost input,
 textarea  {
     width: 50vw;
-    line-height: 1.5vh;
-    padding: 10px 16px;
+    line-height: 1.5vh;   
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 15px 15px;
     display: block;
-    width: 100%;   
+    width: 100%; 
+    margin-left: 5px;
+      
 }
 
 #newpost [type=checkbox] {
@@ -368,9 +383,10 @@ textarea  {
 textarea {
     line-height: 1.5vh;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    padding: 15px 10px;
+    padding: 15px 15px;
     display: block;
     width: 100%;
+    margin-left: 5px;
 
 }
 
