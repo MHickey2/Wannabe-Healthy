@@ -11,6 +11,7 @@ def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(Profile, user=request.user)    
     template = 'profile.html'
+    fields = ['user', 'profile_pic', 'bio']
     context = {
         'profile': profile,
     }    
@@ -22,8 +23,9 @@ def editProfile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(Profile, user=request.user) 
 
-    if request.method == 'POST': 
-        profile_form = ProfileForm(request.POST, instance=profile)      
+    if request.method == 'POST':
+        profile_form = ProfileForm(request.POST, request.FILES, instance=profile)
+        # profile_form = ProfileForm(request.POST, instance=profile)      
         if profile_form.is_valid():
             profile_form.save()                      
         messages.success(request, 'Profile updated successfully')

@@ -10,18 +10,10 @@
         <!-- <div class="m-b-25"> <img class="rounded-circle account-img" id="profile-img" src="{{ profile.avatar.url }}"
             class="img-radius" alt="User-Profile-Image"> </div> -->
 
-        <!-- <div class="form-content ">
-        <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-
-        <div class="form-group">
-            <label class="labelling">Username:</label>  {{ profile.user }}
-            <br />
-            <label class="labelling">Bio:</label> {{ profile.bio }}
-        </div>
+        
     
     
-</div> -->
+</div> 
 
 
 
@@ -32,17 +24,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        {% if "placeholder" in profile.avatar.url %}
+                        {% if "placeholder" in profile.profile_pic.url %}
                         <div class="m-b-25"> <img class="rounded-circle account-img" id="profile-img"
                                 src="https://res.cloudinary.com/dspwticaf/image/upload/v1667936304/generic-profile_optkrd.jpg"
                                 class="img-radius" alt="User-Profile-Image"> </div>
                             {% else %}
                             <div class="m-b-25"> <img class="rounded-circle account-img" id="profile-img"
-                                    src="{{ profile.avatar.url }}" class="img-radius" alt="User-Profile-Image"> </div>
+                                    src="{{ profile.profile_pic.url }}" class="img-radius" alt="User-Profile-Image"> </div>
                             {% endif %}
-                            <!-- <div>
-            <img alt="Web Studio" class="img-fluid" src="{{ profile.avatar.url }}" />
-          </div> -->
+                          
                         </div>
                         <div class="col-md-6 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
                             <div>
@@ -63,13 +53,6 @@
             <a href="{% url 'editprofile' %}" class="btn btn-success">Edit Profile</a>
         </div>
 
-        <!-- <div class="image-container">
-    {% if "placeholder" in profile.avatar.url %}
-    <img class="card-img-top"
-        src="https://res.cloudinary.com/dspwticaf/image/upload/v1667936304/generic-profile_optkrd.jpg">
-    {% else %}
-
-    <img class="" src=" {{ profile.avatar.url }}">
-    {% endif %} -->
+      
 
         {% endblock content %}

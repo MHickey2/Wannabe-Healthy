@@ -9,7 +9,7 @@ class Profile(models.Model):
     Model for user profile
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    avatar = CloudinaryField('image', default='placeholder')    
+    profile_pic = CloudinaryField('image', default='placeholder')        
     bio = models.TextField()
 
     def __str__(self):
@@ -29,3 +29,7 @@ def create_profile(instance, created, **kwargs):
 
 
 post_save.connect(create_profile, sender=User)
+
+
+class Photo(models.Model):
+    image = CloudinaryField('image')
