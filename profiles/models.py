@@ -33,3 +33,6 @@ post_save.connect(create_profile, sender=User)
 
 class Photo(models.Model):
     image = CloudinaryField('image')
+    
+    
+   

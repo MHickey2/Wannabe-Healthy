@@ -10,8 +10,6 @@ body {
     background-color:whitesmoke;    
 }
 
-
-
 html * {
     font-family: Roboto, 'sans-serif';
     font-size: 1.6rm;
@@ -33,17 +31,27 @@ html * {
     margin-left: 12px;       
 }
 
+/*hamburger*/
+i.fa.fa-bars {
+    color:  #a3d31c !important;
+}
+
+
 #logo {
     height: 120px;
     width: 130px;
     padding: 10px;
 }
 
+/*styling for Navigation items*/
 .nav-item,.nav-link {
     color: #a3d31c !important;
-    font-size: 120%;
+    font-size: 17px;
     letter-spacing: .2em;
     font-family: 'Abril Fatface', cursive;
+    margin-left: 10px;   
+    font-weight: bold;
+    font-style: capitalize;
     
     }
 
@@ -55,29 +63,21 @@ html * {
     font-weight: bold;
 }
 
-/* .nav navbar-nav navbar-left {
-    font-family: Roboto, sans-serif;
-    font-size: 1.8rm;    
-} */
-
-/* Styling for Nav Items */
-.nav-item {
-    margin-left: 20px;   
-    font-weight: bold;
-    font-style:oblique;
-}
-
 
 /* Heading for index Page */
 .bloghead {
     padding-top: 10px;
     text-align: center;
-    color: green;
+    color: darkgreen;
     font-family: 'Abril Fatface', cursive;;
 }
 
+/* Blog Section */
+
+/*blog content area*/
 .card-body1 {
-    min-height: 510px;
+    min-height: 500px;
+    background-color: rgb(164, 240, 164, 0.4);
 }
 
 .card-title {
@@ -87,12 +87,13 @@ html * {
 }
 /* alignment of blogs */
 .image-container {
-    position: relative;    
+    position: relative;
+    padding: 5px;    
 }
 
 .card-img-top {
-    border-radius: 25px;
-    border: 4px solid rgb(20, 88, 20);
+    border-radius: 5px;
+    border: 2px solid rgb(20, 88, 20);
     width: 250px;
     height: 280px;
 }
@@ -140,34 +141,51 @@ html * {
     margin: 4px;
     text-transform: uppercase;
 }
-
+.card-text {
+    text-align: centre;
+    padding: 5px;
+    margin:5px;
+}
 #postlook {
     min-height: 500px;
-    background-color: #48d31c;
+    background-color: #7dd661;
     padding-top: 25px;
-    border: 5px solid white;
-    border-radius: 20px;
+    border: 3px solid white;
+    border-radius: 25px;
 }
 
 #block {
     margin-bottom: 20px;
 }
 
-/* Styling for heading for Details Page */
+/*Styling for about page image*/
+.aboutpic {
+    height: 250px;
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+/* Styling for heading for Post Details Page */
 
 .masthead {
-    margin-top: 10px;    
+    margin: 20px;    
     overflow: hidden;
     position: relative;
     display: inline-block;
     height: 33vh;
     width: 100%;
+    text-align: center;
+    padding-bottom: 20px;   
 }
 
 .masthead-text {
     background-color: green;
     color: white;
     position: relative;
+    text-transform: Capitalize;
 }
 
 .masthead-image {
@@ -190,32 +208,30 @@ html * {
 }
 
 .post-category {
-    margin-left: 10%;
+    margin: 20px;      
     color: green;
     width: 15%;
-    padding: 5px;
+    padding: 10px;
 }
 
-
-
-.post-link {
+/* .post-link {
     text-decoration: none;
     color: black;
-}
+} */
 
-.post-link:hover,
+/* .post-link:hover,
 .page-link {
     color: grey;
-}
+} */
 
 .post-title {
     margin-top: 20%;
-    margin-left: 5%;
+    text-align: center;
 }
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: darkgray;
 }
 
 .btn-signup {
@@ -226,7 +242,7 @@ html * {
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #23BBBB;
+    color: #7b8181;
 }
 
 .link {
@@ -258,18 +274,9 @@ a:link:after {
 
 .btn-like:hover,
 .btn-like:active {
-    color: #0caf4b;
+    color: #4bb875;
     background: transparent;
     border: none;
-}
-
-.nav-link {
-    font-weight: 700;
-    font-size: 16px;
-    font-style: italic;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #175306;
-
 }
 
 footer {
@@ -277,7 +284,7 @@ footer {
     width: 100%;
     left: 0;
     bottom: 0;
-    background-color: #175306;
+    background-color: #337920;
     color: white;
 }
 
@@ -286,34 +293,6 @@ footer {
 .social {
     padding: 10px;
     color: white
-}
-
-
-
-/* The hero image */
-.hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/dspwticaf/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1664391715/healthywoman_nmhfnl.jpg");
-    margin-top: 10px;
-
-    /* Set a specific height */
-    height: 100vh;
-    width: auto;
-
-    /* Position and center the image to scale nicely on all screens */
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-/* Place text in the middle of the image */
-.hero-text {
-    text-align: center;
-    position: absolute;
-    top: 60%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    color: white;
 }
 
 .green {
@@ -331,6 +310,8 @@ a:hover {
 a, a:visited, a:hover, a:active {
     color: inherit;
   }
+
+/* Blog and recipe posts */
 
 #newpost {
     background-color: rgb(72, 143, 72);
@@ -352,7 +333,6 @@ a, a:visited, a:hover, a:active {
     width: 60vw;
     opacity: .9;
     margin-bottom: 20px;
-
 }
 
 #newpost input,
@@ -363,14 +343,12 @@ textarea  {
     padding: 15px 15px;
     display: block;
     width: 100%; 
-    margin-left: 5px;
-      
+    margin-left: 5px;      
 }
 
 #newpost [type=checkbox] {
     width: 20px;
     display:inline;
-
 }
 
 #newpost label, #newpost1 label {
@@ -387,9 +365,9 @@ textarea {
     display: block;
     width: 100%;
     margin-left: 5px;
-
 }
 
+/*Styling to centre elements in site*/
 #center {
     display: block;
     margin-left: auto;
@@ -398,6 +376,7 @@ textarea {
     color: white;
 }
 
+/*Styling to centre images*/
 #centerimage {
     display: block;
     margin-left: auto;
@@ -414,27 +393,13 @@ textarea {
     font-size: 110%
 }
 
-.navbar-item-right {
-    padding: 50px;
-}
 
 .searchform {
     padding-left: 20px;
     padding-top: 10px;
-
 }
 
-
-
-.aboutpic {
-    height: 250px;
-    width: 250px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-}
-
+/* Styling for Recipes in Recipes Page*/
 #recipeintro {
     display: block;
     margin-left: auto;
@@ -470,6 +435,13 @@ textarea {
     background-color: #0caf4b;
 }
 
+.card-body {
+    min-height: 520px;
+    background-color: rgb(148, 245, 177);
+    grid-row-gap: 50px;
+    padding: 10px;
+}
+
 .recipe-title  {
     text-align: center;
     color:rgb(35, 94, 35)
@@ -477,6 +449,12 @@ textarea {
 
 .recipe-subtitle {
     text-align: center;
+}
+
+#postlook1 {
+    min-height: 480px;    
+    padding-top: 25px;
+    border-radius: 25px;   
 }
 
 .centeralign {
