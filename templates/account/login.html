@@ -9,14 +9,16 @@
 
 <h3 class="green">{% trans "Sign In" %}</h3>
 
-      <p class="text1">{% blocktrans %}Welcome back to Wannabe Healthy. To leave a comment or like a post, please log in. If you
-        have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
-        first.{% endblocktrans %}</p>
+<h6 class="green">{% blocktrans %}Welcome back to Wannabe Healthy. To leave a comment or like a post, please log in.
+  <br>If you
+  have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
+  first.{% endblocktrans %}</h6>
+<br>
 
 <div class="container-fluid" id="newpost">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2 form-box">
-      
+
     </div>
   </div>
 
@@ -29,7 +31,7 @@
           {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
           {% endif %}
-          <button class="btn btn-success" type="submit">{% trans "Sign In" %}</button>
+          <button class="btn btn-success" type="submit">{% trans "Sign In" %} &raquo;</button>
           <br>
         </form>
       </div>

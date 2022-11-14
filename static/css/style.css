@@ -171,7 +171,7 @@ i.fa.fa-bars {
 /* Styling for heading for Post Details Page */
 
 .masthead {
-    margin: 20px;    
+    /* margin: 20px;     */
     overflow: hidden;
     position: relative;
     display: inline-block;
@@ -314,7 +314,7 @@ a, a:visited, a:hover, a:active {
 /* Blog and recipe posts */
 
 #newpost {
-    background-color: rgb(72, 143, 72);
+    background-color: #47d31c;
     border: 1px solid black;   
     width: 70vw;
     opacity: .9;
@@ -322,6 +322,7 @@ a, a:visited, a:hover, a:active {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 15px 15px;
     min-height:530px;
+    border-radius: 15px;
 
 }
 
@@ -337,13 +338,15 @@ a, a:visited, a:hover, a:active {
 
 #newpost input,
 textarea  {
-    width: 50vw;
-    line-height: 1.5vh;   
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 40vw;
+    line-height: 1.3vh;   
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
     padding: 15px 15px;
     display: block;
     width: 100%; 
-    margin-left: 5px;      
+    margin-left: 5px;
+    background-color: lightcyan;
+    border-radius: 15px;      
 }
 
 #newpost [type=checkbox] {
@@ -417,14 +420,14 @@ textarea {
 .recipe-category {
     margin-left: 10%;
     color: green;
-    width: 35%;
-    padding: 5px;
-    border: 2px solid green;
+    width: 50vw;
+    padding: 5px;   
     text-align: center;
     word-spacing: 1vw;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 15px;
 }
 
 #border {
@@ -479,7 +482,15 @@ textarea {
 
 .stylingtext {
     color: green;
+    width: 70vw;
+    margin: 10px;
+    padding: 10px;
+    text-indent: 10px;
     
+}
+
+.commentsection {
+    height: 90vh;    
 }
 
 .italic-bold {
@@ -532,3 +543,28 @@ textarea {
     
 }
 
+/* Forms */
+
+/* #form {
+    background-color: rgb(89, 168, 89);
+    border: 1px solid black;    
+    padding: 10px;   
+    width: 60vw;
+    opacity: .9;
+    margin-bottom: 10px; 
+    
+} */
+
+#logout {
+    background-color: #47d31c;
+    border: 1px solid black;   
+    width: 50vw;
+    opacity: .9;
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 10px;   
+    border-radius: 15px;
+    margin-top: 20px;
+    
+
+}

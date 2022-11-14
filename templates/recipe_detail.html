@@ -3,7 +3,11 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<h3 class="recipe-category"><iconify-icon icon="akar-icons:utensils"></iconify-icon>&nbsp;Category:&nbsp;{{ recipe.category }}</h3>
+<main class="flex-shrink-0 main-bg"></main>
+
+<h3 class="recipe-category">
+    <iconify-icon icon="akar-icons:utensils"></iconify-icon>&nbsp;Category:&nbsp;{{ recipe.category }}
+</h3>
 <div class="">
     <hr>
     <div class="container">
@@ -15,78 +19,70 @@
                 <p class="recipe-subtitle">{{ recipe.author }} | {{ recipe.created_on }}</p>
             </div>
             <div class="">
-                
+
                 {% if "placeholder" in recipe.featured_image.url %}
                 <img id="Default" type="image/jpg"
                     src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg"
-                     alt="Default image" width="300px" class="centeralign">
-               
+                    alt="Default image" width="300px" class="centeralign">
+
                 {% else %}
                 <img src=" {{ recipe.featured_image.url }}" width="300px" class="centeralign">
                 {% endif %}
-                </div>
-                </div>
-
-                <div class="centeralign">
-                    <p><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<i
-                            class="fas fa-clock">&nbsp</i>{{ recipe.cooking_time }}</p>
-                </div>
-                <hr>
             </div>
-            <h3 class="stylingtext">Description:</h3>
-            <p class="italic-bold">{{ recipe.description | safe }} </p>
-            <hr>
-            <h3 class="stylingtext">Ingredients:</h3>
-            <p> {{ recipe.ingredients | safe }} </p>
-            <hr>
-            <h3 class="stylingtext">Method:</h3>
-            <p>
-                {{ recipe.method | safe }}
-            </p>
-
-
-
         </div>
-    </div>
-</div>
-</div>
 
-<div class="container">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left  top" id="border">
-            <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">
-
+        <div class="centeralign">
+            <p><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<i
+                    class="fas fa-clock">&nbsp</i>{{ recipe.cooking_time }}</p>
+        </div>
+        <hr>
+    
+                <h3 class="stylingtext">Description:</h3>
+                <p class="italic-bold">{{ recipe.description | safe }} </p>
+                <hr>
+                <h3 class="stylingtext">Ingredients:</h3>
+                <p class="card-text"> {{ recipe.ingredients | safe }} </p>
+                <hr>
+                <h3 class="stylingtext">Method:</h3>
+                <p class="card-text">
+                    {{ recipe.method | safe }}
                 </p>
-                <div class="row">
+   
 
-                    <div class="col-1">
+       <div class="container">
+            <div class="row">
+                <div class="col card mb-4  mt-3 left  top">                    
+               
+                <div class="row">    
+
+                    <div class="col-2">
                         <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'recipe_likes' recipe.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %} -->
-                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></button>
+                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like">
+                                    <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon>
+                                </button>
                                 {% else %}
-                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></button>
+                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like">
+                                    <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon>
+                                </button>
                                 {% endif %}
                             </form>
                             {% else %}
-                            <span class="text-secondary"><iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></span>
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
-                            <!-- The number of likes goes before the closing strong tag -->
-                            <span class="text-secondary">{{ recipe.number_of_likes }} </span>
+                        <!-- The number of likes goes before the closing strong tag -->
+                        <span class="text-secondary">{{ recipe.number_of_likes }} </span>
                         </strong>
-                    </div>
-
-                    <div class="col-1">
+                    </div>                      
+                    <div class="col-2">
                         {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><iconify-icon inline icon="fa-regular:comments" width="20"></iconify-icon>
-                            <!--Our total_comments variable goes before the closing strong tag -->
+                        <strong class="text-secondary"><i class="far fa-comments"></i>
+                            <!-- Our total_comments variable goes before the closing strong tag -->
                             {{ total_comments }}</strong>
-                        <span class="text-secondary">{{ post.total_comments }} </span>
+                            <span class="text-secondary">{{ recipe.total_comments }} </span>
                         </strong>
                         {% endwith %}
                     </div>
@@ -94,6 +90,7 @@
             </div>
         </div>
     </div>
+    <br>
     <div class="row">
         <div class="col">
             <hr>
@@ -101,8 +98,8 @@
     </div>
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3">
-            <h3>Comments:</h3>
-            <div class="card-body">
+            <h3 class ="green">Comments:</h3>
+            <div class="commentsection">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
@@ -122,23 +119,24 @@
             </div>
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
-            <div class="card-body">
-                {% if commented %}
-                <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
-                </div>
-                {% else %}
-                {% if user.is_authenticated %}
+            <div class="card-body">             
+            {% if commented %}
+            <div class="alert alert-success" role="alert">
+                Your comment is awaiting approval
+            </div>
+            {% else %}
+            {% if user.is_authenticated %}
 
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
-                {% endif %}
-                {% endif %}
+            <h3>Leave a comment:</h3>
+            <p>Posting as: {{ user.username }}</p>
+            <form method="post" style="margin-top: 1.3em;">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <br>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+            {% endif %}
+            {% endif %}    
             </div>
         </div>
     </div>
@@ -146,8 +144,13 @@
 
 
 
+
+
+
 <a href="{% url 'recipes' %}" class="btn btn-primary">Back</a>
 
 <br>
+
+</main>
 
 {% endblock content %}

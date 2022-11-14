@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<div class="container-fluid" id="newpost">
+<div class="container-fluid" id="logout">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2 form-box">
       <h1>{% trans "Sign Out" %}</h1>
@@ -16,9 +16,11 @@
       <form method="post" action="{% url 'account_logout' %}">
         {% csrf_token %}
         {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        <section class="center">
+        <input type="hidden"  name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn btn-success" type="submit">{% trans 'Sign Out' %}</button>
+        <button class="btn btn-success"  type="submit">{% trans 'Sign Out' %}</button>
+        </section>
         <br>
       </form>
     </div>

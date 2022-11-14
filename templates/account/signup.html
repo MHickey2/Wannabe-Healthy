@@ -6,13 +6,21 @@
 
 {% block content %}
 
-<div class="container" id="newpost1">
-  <div class="row justify-content-center">
-    <div class="col-md-8 mt-3 offset-md-2 form-box">
-      <h1>{% trans "Sign Up" %}</h1>
 
-      <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
+<h1 class="green">{% trans "Sign Up" %}</h1>
+<h4 class="green">Welcome to Wannabe Healthy, please sign up</h4>
+
+      <p class="green">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
       </p>
+
+      <br>
+
+      <div class="container-fluid" id="newpost">
+        <div class="row">
+          <div class="col-md-8 mt-3 offset-md-2 form-box">
+        </div>
+      </div>
+      
 
       <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}

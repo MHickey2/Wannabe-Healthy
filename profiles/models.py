@@ -8,8 +8,8 @@ class Profile(models.Model):
     """
     Model for user profile
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    profile_pic = CloudinaryField('image', default='placeholder')        
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    profile_pic = CloudinaryField('image', default='placeholder')
     bio = models.TextField()
 
     def __str__(self):
