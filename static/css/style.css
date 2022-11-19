@@ -267,18 +267,17 @@ a:link:after {
 }
 
 .btn-like {
-    color: #21eb0f;
+    color: lightgreen;
     border: none;
     background: transparent;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #4bb875;
+    color: green;
     background: transparent;
     border: none;
 }
-
 footer {
     position: relative;
     width: 100%;
