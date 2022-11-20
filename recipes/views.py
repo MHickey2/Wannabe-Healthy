@@ -7,6 +7,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib import messages
 from django.db.models import Q
 from .forms import CommentForm
+from .forms import RecipeForm
 from django.urls import reverse_lazy
 
 

@@ -4,43 +4,30 @@
 
 {% load crispy_forms_tags %}
 
-{% if user.is_authenticated %}
-    {% if user.id == recipe.author.id %}
-
-<h1 class="green"><strong>Edit your Recipe:</strong></h1>
+<h1 class="green">Edit your Recipe:</h1>
 <p class="green">Ensure to complete all fields</p>
+
 <div class="container-fluid">
     <div class="row">
-
         <section class="py-5 min-vh-80">
-            <div class="container" id ="newpost">
+            <div class="container" id="newpost">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        
-                                             
                         <form class="form text-muted" method="post" enctype="multipart/form-data">
-                            
                             {% csrf_token %}
                             {{ form | crispy }}
                             <br>
                             <br>
-                            <button class="btn btn-success" type="submit">Edit Recipe</button>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Update</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
-
-
     </div>
 </div>
 
-{% else %}
-        You are not allowed to edit this post
-    {% endif %} 
-
-{% endif %}
-
 <a href="{% url 'recipes' %}" class="btn btn-primary">Back</a>
+
 
 {%endblock%}

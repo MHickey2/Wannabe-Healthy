@@ -144,8 +144,9 @@ i.fa.fa-bars {
 .card-text {
     text-align: centre;
     padding: 5px;
-    margin:5px;
+    margin:5px;   
 }
+
 #postlook {
     min-height: 500px;
     background-color: #7dd661;
