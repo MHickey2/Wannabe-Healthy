@@ -39,7 +39,7 @@ class Category(models.Model):
 
 
 class Post(models.Model):
-    category = models.TextField(max_length=50, choices=category_choices)
+    category = models.CharField(max_length=50, choices=category_choices)
     title = models.CharField(max_length=200, unique=True, blank=False,)
     slug = models.SlugField(max_length=200, unique=True, blank=False,)
     author = models.ForeignKey(
@@ -58,12 +58,7 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-    
-    # def save(self, *args, **kwargs):
-    #     if not self.slug:
-    #         self.slug = slugify(self.title + "-" + str(self.post_date))
-    #     return super().save(*args, **kwargs)
-    
+     
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         return super(Post, self).save(*args, **kwargs)
@@ -89,7 +84,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
-
-
-class Photo(models.Model):
-    image = CloudinaryField('image')

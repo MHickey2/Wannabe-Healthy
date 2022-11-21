@@ -94,14 +94,14 @@
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'profile' %}">Profile </a>
-
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout </a>
                     </li>
-                    <li class="nav-item">
+                    <div> <img class="nav-img" id="profile-img"
+                    src="{{ user.profile.profile_pic.url }}" class="img-radius" alt="User-Profile-Image"> </div>
 
-                    </li>
+                                        
                     {% else %}
                     <!-- <ul class="navbar-nav ms-auto"> -->
                         <li class="nav-item dropdown">
@@ -112,11 +112,7 @@
                                 <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
                             </ul>
                         </li>
-                    <!-- </ul> -->
-
-
-
-
+                    
                     {% endif %}
 
                 </ul>
