@@ -77,7 +77,7 @@ i.fa.fa-bars {
 /*blog content area*/
 .card-body1 {
     min-height: 500px;
-    background-color: rgb(164, 240, 164, 0.4);
+    background-color: rgb(164, 240, 164, 0.4);   
 }
 
 .card-title {
@@ -172,21 +172,14 @@ i.fa.fa-bars {
 /* Styling for heading for Post Details Page */
 
 .masthead {
-    /* margin: 20px;     */
+    margin: 20px;    
     overflow: hidden;
     position: relative;
     display: inline-block;
     height: 33vh;
     width: 100%;
     text-align: center;
-    padding-bottom: 20px;   
-}
-
-.masthead-text {
-    background-color: green;
-    color: white;
-    position: relative;
-    text-transform: Capitalize;
+    padding-bottom: 40px;   
 }
 
 .masthead-image {
@@ -194,18 +187,11 @@ i.fa.fa-bars {
     overflow: hidden;
 }
 
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 80%;
-    height: 100%;
-    width: 75%;
-    background: green;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(5deg);
-    transform: skew(15deg);
-    z-index: 100;
+.masthead-text {
+    background-color: white;
+    color: green;
+    position: relative;
+    text-transform: Capitalize;
 }
 
 .post-category {
@@ -226,12 +212,17 @@ i.fa.fa-bars {
 } */
 
 .post-title {
-    margin-top: 20%;
+    margin-top: 20px;
     text-align: center;
 }
 
 .post-subtitle {
     margin-left: 5%;
+    color: darkgray;
+}
+
+.post-subtitle1 {
+    text-align: center;
     color: darkgray;
 }
 
@@ -575,12 +566,21 @@ textarea {
     border-radius: 50px;
   }
 
-  .nav-img1 {
+  -img1 {
     /* float: left; */
     height: 60px;
     width: 60px;   
     border-radius: 50px;
-    /* margin-left: 20px;
-    margin-bottom: 20px; */
+    margin-left: 20px;
+    margin-bottom: 20px;
   }
+
+  .profile-title {
+  color: Green;
+  text-transform: capitalize;
+}
+
+
+
+
 
