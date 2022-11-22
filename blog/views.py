@@ -5,6 +5,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib import messages
 from django.db.models import Q
 from .models import Post, Category
+from profiles .models import Profile
 from .forms import CommentForm
 from .forms import PostForm
 from django.urls import reverse_lazy
@@ -24,6 +25,7 @@ class PostDetail(View):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
+        profile = Profile.objects.filter(user=post.author)[0]
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -36,7 +38,8 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked,
-                "comment_form": CommentForm()
+                "comment_form": CommentForm(),
+                "profile": profile
             },
         )
 
@@ -45,6 +48,7 @@ class PostDetail(View):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
+        profile = Profile.objects.filter(user=post.author)
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -68,7 +72,9 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": True,
                 "comment_form": comment_form,
-                "liked": liked
+                "liked": liked,
+                "profile": profile
+            
             },
         )
 

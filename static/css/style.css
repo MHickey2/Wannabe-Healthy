@@ -575,3 +575,12 @@ textarea {
     border-radius: 50px;
   }
 
+  .nav-img1 {
+    /* float: left; */
+    height: 60px;
+    width: 60px;   
+    border-radius: 50px;
+    /* margin-left: 20px;
+    margin-bottom: 20px; */
+  }
+
