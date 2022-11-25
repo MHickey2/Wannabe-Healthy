@@ -3,8 +3,6 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 
-
-
 <head>
 
     {% block meta %}
@@ -52,27 +50,28 @@
     <link rel="icon" type="image/x-icon"
         href="https://res.cloudinary.com/dspwticaf/image/upload/v1664556486/favicon-16x16_t2w0oj.png">
 
-
-
-
-
     <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
     <title>{% block title %}Wannabe Healthy{% endblock %}</title>
 
 </head>
 
+
+
+
+
+{% block page_header %}
+{% endblock %}
+
 <body class="d-flex flex-column h-100 main-bg">
 
-    {% block page_header %}
-    {% endblock %}
-
-
+   
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid" id="header">
+        <div class="container-fluid">
             <a href="{% url 'home' %}" class="navbar-brand">
-                <img id="logo" src="https://res.cloudinary.com/dspwticaf/image/upload/v1664291226/logo_frehe3.png" alt="wannabe logo"></a>
+                <img id="logo" src="https://res.cloudinary.com/dspwticaf/image/upload/v1664291226/logo_frehe3.png"
+                    alt="wannabe logo"></a>
             <h3 class="title">Wannabe Healthy</h3>
             <button class="navbar-toggler box-shadow collapsed" style="text-align: center;" type="button"
                 data-bs-toggle="collapse" data-bs-target="#header" aria-controls="navbarSupportedContent"
@@ -98,21 +97,21 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout </a>
                     </li>
-                    <div> <img class="nav-img" id="profile-img"
-                    src="{{ user.profile.profile_pic.url }}" class="img-radius" alt="User-Profile-Image"> </div>
+                    <div> <img class="nav-img" id="profile-img" src="{{ user.profile.profile_pic.url }}"
+                            class="img-radius" alt="User-Profile-Image"> </div>
 
-                                        
+
                     {% else %}
                     <!-- <ul class="navbar-nav ms-auto"> -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Account</a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
-                                <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
-                            </ul>
-                        </li>
-                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Account</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+                        </ul>
+                    </li>
+
                     {% endif %}
 
                 </ul>
@@ -146,73 +145,84 @@
         {% block content %}
 
         <!-- Content Goes here -->
-
+       
         {% endblock content %}
     </main>
 
-    <!-- Footer -->
-    <footer id="footer" class="footer bg-setup main-bg-desktop main-bg-mobile text-center">
-        <div class="overlay overlay-footer"></div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="footer-text">
-                        <h4>Wannabe Healthy</h4>
-                        <p class="footer-text">We all strive to be more healthy,this site offers some
-                            direction information and recipes that you can adapt for your
-                            own needs, and it may be a good starting point for your own health journey.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="contact">
-                        <h4>Contact</h4>
-                        <p>
-                            <iconify-icon icon="cil:phone" width="20"></iconify-icon>+ 01-4590808
-                        </p>
-                        <p>
-                            <iconify-icon icon="ci:mail" width="20"></iconify-icon>info@wannabehealthy.com
-                        </p>
-                        <p>
-                            <iconify-icon icon="bi:house-heart" width="20"></iconify-icon>28 Patrick's Street, Dublin 8.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4 footer-box text-white">
-                    <div class="social">
-                        <h4>Follow Us</h4>
-                        <!-- Facebook -->
-                        <a style="color: #3b5998;" href="#!" role="button">
-                            <iconify-icon icon="logos:facebook" width="40"></iconify-icon>
-                        </a>&nbsp;
+        <!-- Footer -->
+        <footer id="footer" class="footer bg-setup main-bg-desktop main-bg-mobile text-center">
+            <!-- <div class="overlay overlay-footer"> -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="footer-text">
+                                <h4>Wannabe Healthy</h4>
+                                <p class="footer-text">We all strive to be more healthy,this site offers some
+                                    direction information and recipes that you can adapt for your
+                                    own needs, and it may be a good starting point for your own health journey.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="contact">
+                                <h4>Contact</h4>
+                                <p>
+                                    <iconify-icon icon="cil:phone" width="20"></iconify-icon>+ 01-4590808
+                                </p>
+                                <p>
+                                    <iconify-icon icon="ci:mail" width="20"></iconify-icon>info@wannabehealthy.com
+                                </p>
+                                <p>
+                                    <iconify-icon icon="bi:house-heart" width="20"></iconify-icon>28 Patrick's Street,
+                                    Dublin 8.
+                                </p>
+                            </div>
+                        </div>
+                        
 
-                        <!-- Twitter -->
-                        <a style="color: #55acee;" href="#!" role="button">
-                            <iconify-icon icon="logos:twitter" width="40"></iconify-icon>
-                        </a>&nbsp;
+                        <div class="col-md-4 footer-box text-white">
+                            <div class="social">
+                                <h4>Follow Us</h4>
+                                <!-- Facebook -->
+                                <a style="color: #3b5998;" href="#!" role="button">
+                                    <iconify-icon icon="logos:facebook" width="40"></iconify-icon>
+                                </a>&nbsp;
 
-                        <!-- Instagram -->
-                        <a style="color: #ac2bac;" href="#!" role="button">
-                            <iconify-icon icon="icon-park:instagram" width="40"></iconify-icon>
-                        </a>
+                                <!-- Twitter -->
+                                <a style="color: #55acee;" href="#!" role="button">
+                                    <iconify-icon icon="logos:twitter" width="40"></iconify-icon>
+                                </a>&nbsp;
 
-                    </div>
+                                <!-- Instagram -->
+                                <a style="color: #ac2bac;" href="#!" role="button">
+                                    <iconify-icon icon="icon-park:instagram" width="40"></iconify-icon>
+                                </a>
+
+                            </div>
+                        </div>
+                   
                 </div>
-            </div>
+               
             <hr>
 
             <p class="m-0 text-center text-white">&copy; Wannabe Healthy 2022 </p>
-            <!-- <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>-->
-    </footer>
+            
+            
+        </div>
 
-    <script>
-        setTimeout(function () {
-            let messages = document.getElementById('msg');
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 2500);
-    </script>
+        </footer>
+
+        <script>
+            setTimeout(function () {
+                let messages = document.getElementById('msg');
+                let alert = new bootstrap.Alert(messages);
+                alert.close();
+            }, 2500);
+        </script>
+
+    
+
 </body>
 
 </html>

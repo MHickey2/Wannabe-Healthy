@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<h2 class="green center">Recipe Collection</h2>
+<h2 class="green">Recipe Collection</h2>
 
 <p class="col-lg-8 col-xl-6 col-md-4" id="recipeintro">Browse through the recipes and find inspiration for diet changes.
     It can be simple to adapt your present habits to include life enriching choices. Consider a vegetarian diet or start
@@ -15,7 +15,7 @@
 
 <a href="{% url 'add_recipe' %}" class="btn btn-success" id="center">Add a Recipe</a>
 
-<br />
+<br>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -24,13 +24,12 @@
                     <form role="search" action="{% url 'search_recipes' %}" method="get">
                         {% csrf_token %}
                         <div class="input-group">
-                            <input type="text" name="q" class="form-control" />
+                            <input type="text" name="q" class="form-control">
                             <div class="input-group-btn">
                                 <button type="submit" class="btn btn-search btn-success">
                                     <span class="glyphicon glyphicon-search"></span>
                                     <span class="label-icon">Search</span>
-                                </button>
-                                </ul>
+                                </button>                               
                             </div>
                         </div>
                     </form>
@@ -47,17 +46,17 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for recipe in recipe_list %}
-                <div class="col-md-4" id="postlook1">
+                <div class="col-md-4 postlook1" >
                     <div class="card mb-4">
                         <div class="card-body">
                             <h3 class="card-title">{{ recipe.title }}</h3>
                             <div class="image-container">
                                 {% if "placeholder" in recipe.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg">
+                                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg" alt="Generic Image">
                                 {% else %}
 
-                                <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ recipe.featured_image.url }}" alt="Recipe Image">
                                 {% endif %}
                                 <div class="image-flash2">
                                     <h3 class="category"> {{ recipe.category }}</h3>
@@ -66,13 +65,13 @@
                                     <p class="author">Author: {{ recipe.author }}</p>
                                 </div>
                                 <br>
-                                <h6 class="green"><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<iconify-icon inline icon="emojione:timer-clock" width="20"></iconify-icon>&nbsp</i>{{ recipe.cooking_time }}</h6>
+                                <h6 class="green"><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<iconify-icon inline icon="emojione:timer-clock" width="20"></iconify-icon>&nbsp;{{ recipe.cooking_time }}</h6>
                                
                                 <p class="card-text">{{ recipe.description}}</p>
 
                             </div>
 
-                            <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-danger" id="center">See
+                            <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-danger center">See
                                 Recipe</a>
 
                             <br>
@@ -80,7 +79,7 @@
                                 {{ recipe.number_of_likes }} &nbsp;<i class="far fa-comments">&nbsp;
                                 </i>{{ recipe.number_of_comments }}</p>
 
-                            <hr />
+                            <hr>
                             <div class="buttongroup">
                                 <a href="{% url 'edit_recipe' recipe.slug %}" class="btn btn-success">Edit</a>
                                 <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-danger">Delete</a>

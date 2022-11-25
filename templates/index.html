@@ -10,9 +10,9 @@
             <div class="col-12 col-lg-8 col-xl-6 text-center">
                 <div class="lc-block mb-2">
                     <img class="img-fluid w-100" alt="Healthy Woman"
-                        src="https://res.cloudinary.com/dspwticaf/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1664628439/Woman_Health_uoejs2.jpg"/>
+                        src="https://res.cloudinary.com/dspwticaf/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1664628439/Woman_Health_uoejs2.jpg">
 
-                    <div editable="rich">
+                    <div class ="rich">
 
                         <h1 class="green">Welcome to Wannabe Healthy</h1>
 
@@ -42,7 +42,7 @@
 </form> -->
 
 <!-- <tr><td colspan="6">Nothing found</td></tr> -->
-<br />
+<br>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -51,19 +51,20 @@
                     <form role="search" action="{% url 'search_blogs' %}" method="get">
                         {% csrf_token %}
                         <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search Blogs" />
+                            <input type="text" name="q" class="form-control" placeholder="Search Blogs">
                             <div class="input-group-btn">
                                 <button type="submit" class="btn btn-search btn-success">
                                     <span class="glyphicon glyphicon-search"></span>
                                     <span class="label-icon">Search</span>
                                 </button>
-                                </ul>
+                                
                             </div>
                         </div>
                     </form>
                 </div>
             </nav>
         </div>
+    </div>
     </div>
 
     <!-- <li>Sorry, there is no such Category.</li> -->
@@ -75,15 +76,15 @@
             <div class="col-12 mt-3 left">
                 <div class="row">
                     {% for post in post_list %}
-                    <div class="col-md-4" id="postlook">
+                    <div class="col-md-4 postlook" >
                         <div class="card mb-4">
                             <div class="card-body1">
                                 <div class="image-container">
                                     {% if "placeholder" in post.featured_image.url %}
-                                    <img class="card-img-top"
-                                        src="https://res.cloudinary.com/dspwticaf/image/upload/v1666609987/Default_wtmyse.jpg">
+                                    <img class="card-img-top img-fluid"
+                                        src="https://res.cloudinary.com/dspwticaf/image/upload/v1666609987/Default_wtmyse.jpg" alt="default image">
                                     {% else %}
-                                    <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                    <img class="card-img-top img-fluid" src=" {{ post.featured_image.url }}" alt="blog image">
                                     {% endif %}
                                     <div class="image-flash1">
                                         <h3 class="category"> {{ post.category }}</h3>
@@ -97,7 +98,7 @@
                                     <h3 class="card-title">{{ post.title }}</h3>
                                     <p class="card-text">{{ post.excerpt }}</p>
                                 </a>
-                                <hr />
+                                <hr>
                                 <p class="card-text text-muted h6">{{ post.created_on}} <iconify-icon
                                         icon="ant-design:heart-outlined" width="20"></iconify-icon>
                                     {{ post.number_of_likes }} &nbsp;<iconify-icon inline icon="fa-regular:comments"

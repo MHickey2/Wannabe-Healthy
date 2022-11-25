@@ -3,12 +3,12 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<main class="flex-shrink-0 main-bg"></main>
+<!-- <main class="flex-shrink-0 main-bg"></main> -->
 
 <h3 class="recipe-category">
     <iconify-icon icon="akar-icons:utensils"></iconify-icon>&nbsp;Category:&nbsp;{{ recipe.category }}
 </h3>
-<div class="">
+<div>
     <hr>
     <div class="container">
         <div class="row g-0">
@@ -18,49 +18,45 @@
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="recipe-subtitle">{{ recipe.author }} | {{ recipe.created_on }}</p>
             </div>
-            <div class="">
-
+            <div class>
                 {% if "placeholder" in recipe.featured_image.url %}
                 <img id="Default" type="image/jpg"
                     src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg"
-                    alt="Default image" width="300px" class="centeralign">
-
+                    alt="Default image" class="centeralign" alt="recipe image">
                 {% else %}
-                <img src=" {{ recipe.featured_image.url }}" width="300px" class="centeralign">
+                <img src=" {{ recipe.featured_image.url }}" class="centeralign" alt="user image">
                 {% endif %}
             </div>
         </div>
 
         <div class="centeralign">
             <p><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<i
-                    class="fas fa-clock">&nbsp</i>{{ recipe.cooking_time }}</p>
+                    class="fas fa-clock">&nbsp;</i>{{ recipe.cooking_time }}</p>
         </div>
         <hr>
-    
-                <h3 class="stylingtext">Description:</h3>
-                <p class="italic-bold">{{ recipe.description | safe }} </p>
-                <hr>
-                <h3 class="stylingtext">Ingredients:</h3>
-                <p class="card-text"> {{ recipe.ingredients | safe }} </p>
-                <hr>
-                <h3 class="stylingtext">Method:</h3>
-                <p class="card-text">
-                    {{ recipe.method | safe }}
-                </p>
-   
 
-       <div class="container">
-            <div class="row">
-                <div class="col card mb-4  mt-3 left  top">                    
-               
-                <div class="row">    
+        <h3 class="stylingtext">Description:</h3>
+        <p class="italic-bold">{{ recipe.description | safe }} </p>
+        <hr>
+        <h3 class="stylingtext">Ingredients:</h3>
+        <div class="card-text"> {{ recipe.ingredients | safe }} </div>
+        <hr>
+        <h3 class="stylingtext">Method:</h3>
+        <div class="card-text"> {{ recipe.method | safe }} </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col card mb-4  mt-3 left  top">
+
+                <div class="row">
 
                     <div class="col-2">
                         <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'recipe_likes' recipe.slug %}" method="POST">
                                 {% csrf_token %}
-                                {% if liked %} 
+                                {% if liked %}
                                 <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like">
                                     <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon>
                                 </button>
@@ -71,55 +67,54 @@
                                 {% endif %}
                             </form>
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
-                            {% endif %}
-                        <!-- The number of likes goes before the closing strong tag -->
-                        <span class="text-secondary">{{ recipe.number_of_likes }} </span>
-                        </strong>
-                    </div>                      
+                            <strong><span class="text-secondary"><i class="far fa-heart"></i></span>
+                                {% endif %}
+                                <!-- The number of likes goes before the closing strong tag -->
+                                <span class="text-secondary">{{ recipe.number_of_likes }} </span>
+                            </strong>
+                    </div>
                     <div class="col-2">
                         {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
+                        <strong><span class="text-secondary"><i class="far fa-comments"></i></span>
                             <!-- Our total_comments variable goes before the closing strong tag -->
-                            {{ total_comments }}</strong>
+                            {{ total_comments }}
                             <span class="text-secondary">{{ recipe.total_comments }} </span>
                         </strong>
-                        {% endwith %}
                     </div>
+                    {% endwith %}
+
                 </div>
+     
+<br>
+<div class="row">
+    <div class="col">
+        <hr>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8 card mb-4  mt-3">
+        <h3 class="green">Comments:</h3>
+        <div class="commentsection">
+            <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+            {% for comment in comments %}
+            <div class="comments" style="padding: 10px;">
+                <p class="font-weight-bold">
+                    <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+                    {{ comment.name }}
+                    <span class=" text-muted font-weight-normal">
+                        <!-- The comment's created date goes here -->
+                        {{ comment.created_on }}
+                    </span> wrote:
+                </p>
+                <!-- The body of the comment goes before the | -->
+                {{ comment.body | linebreaks }}
             </div>
+            <!-- Our for loop ends here -->
+            {% endfor %}
         </div>
     </div>
-    <br>
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 card mb-4  mt-3">
-            <h3 class ="green">Comments:</h3>
-            <div class="commentsection">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
-                {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                        {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
-                            <!-- The comment's created date goes here -->
-                            {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    <!-- The body of the comment goes before the | -->
-                    {{ comment.body | linebreaks }}
-                </div>
-                <!-- Our for loop ends here -->
-                {% endfor %}
-            </div>
-        </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
-            <div class="card-body">             
+    <div class="col-md-4 card mb-4  mt-3 ">
+        <div class="card-body">
             {% if commented %}
             <div class="alert alert-success" role="alert">
                 Your comment is awaiting approval
@@ -136,10 +131,10 @@
                 <button type="submit" class="btn btn-success">Submit</button>
             </form>
             {% endif %}
-            {% endif %}    
-            </div>
+            {% endif %}
         </div>
     </div>
+</div>
 </div>
 
 
@@ -151,6 +146,6 @@
 
 <br>
 
-</main>
+<!-- </main> -->
 
 {% endblock content %}
