@@ -4,16 +4,11 @@
 
 {% load crispy_forms_tags %}
 
-<!-- {% if user.is_authenticated %}
+{% if user.is_authenticated %}
 {% if user.id == recipe.author.id %}
 
 
-{% else %}
-You are not allowed to delete this recipe
-{% endif %}
 
-
-{% endif %} -->
 <h2 class="green">Delete your Recipe:</h2>
 <div class="container-fluid">
     <div class="row">
@@ -40,6 +35,12 @@ You are not allowed to delete this recipe
     </div>
 </div>
 
+{% else %}
+You are not allowed to delete this recipe
+{% endif %}
+
+
+{% endif %} 
 
 <a href="{% url 'recipes' %}" class="btn btn-primary">Back</a>
 

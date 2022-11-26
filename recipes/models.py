@@ -14,29 +14,28 @@ recipe_categories = (
     ("Soup/Salad", "Soup/Salad")
 )
 
-
 difficulty_level = (
     ("Easy", 'Easy'),
     ("Medium", 'Medium'),
     ("Hard", 'Hard')
-)    
+)
 
 
 class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=50, unique=True)
-    category = models.TextField(choices=recipe_categories)
-    description = models.TextField(max_length=200, default="recipe")
+    category = models.CharField(max_length=50, choices=recipe_categories)
+    description = models.TextField(blank=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="recipe_posts")
     created_on = models.DateTimeField(auto_now_add=True)
     featured_image = CloudinaryField('image', default='placeholder1')
     difficulty = models.TextField(choices=difficulty_level, default="easy")
-    cooking_time = models.CharField(max_length=50, default=0)
+    cooking_time = models.CharField(max_length=50)
     ingredients = models.TextField()
     method = models.TextField()
     likes = models.ManyToManyField(
-        User, related_name='recipe_likes', blank=True)    
+        User, related_name='recipe_likes', blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
     def save(self, *args, **kwargs):
@@ -51,13 +50,14 @@ class Recipe(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
-    
+
     def number_of_comments(self):
         return self.comments.count()
-    
+
+
 class Comment(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE,
-                             related_name="comments")
+                               related_name="comments")
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
@@ -69,6 +69,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
-
-    
-    

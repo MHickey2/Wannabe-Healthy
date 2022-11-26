@@ -21,8 +21,8 @@ class RecipeList(generic.ListView):
 class RecipeDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
-        """ Presents the details of individual recipe on recipe_detail Page """
-        queryset = Recipe.objects.filter(status=1)        
+        """ Presents the details of individual recipes on recipe_detail Page """
+        queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
         comments = recipe.comments.filter(approved=True).order_by("-created_on")
         liked = False
@@ -120,7 +120,7 @@ class DeleteRecipeView(generic.DeleteView):
     model = Recipe
     template_name = "delete_recipe.html"
     success_url = reverse_lazy('recipes')
-          
+
 
 class RecipeSearchView(generic.ListView):
     model = Recipe
@@ -128,6 +128,7 @@ class RecipeSearchView(generic.ListView):
     context_object_name = "recipes"
 
     def get(self, request, *args, **kwargs):
+        """ Allows the user to search through Recipes by category/title """
         query = self.request.GET.get('q')
         recipe_list = Recipe.objects.filter(
             Q(category__icontains=query) | Q(title__icontains=query)

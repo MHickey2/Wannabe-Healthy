@@ -12,8 +12,9 @@
     while around and give your tastebuds a treat.
 </p>
 
-
+{% if user.is_authenticated %}
 <a href="{% url 'add_recipe' %}" class="btn btn-success" id="center">Add a Recipe</a>
+{% endif %}
 
 <br>
 <div class="container">
@@ -80,10 +81,14 @@
                                 </i>{{ recipe.number_of_comments }}</p>
 
                             <hr>
-                            <div class="buttongroup">
+                            {% if user.is_authenticated %}
+                            {% if user.id == recipe.author.id %}<div class="buttongroup">
                                 <a href="{% url 'edit_recipe' recipe.slug %}" class="btn btn-success">Edit</a>
                                 <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-danger">Delete</a>
                             </div>
+
+                            {% endif %}
+                            {% endif %}
 
                         </div>
                     </div>

@@ -15,27 +15,20 @@ category_choices = (
     ("Relaxation", "Relaxation"),
 )
 
-# category_choices = Category.objects.all().values_list('name', 'name')
 
-# choice_list = []
+# class Category(models.Model):
+#     name = models.CharField(max_length=50)
 
-# for item in category_choices:
-#     choice_list.append(item)
+#     class Meta:
+#         ordering = ('name',)
+#         verbose_name = 'category'
+#         verbose_name_plural = 'categories'
 
+#     def __str__(self):
+#         return self.name
 
-class Category(models.Model):
-    name = models.CharField(max_length=50)
-
-    class Meta:
-        ordering = ('name',)
-        verbose_name = 'category'
-        verbose_name_plural = 'categories'
-
-    def __str__(self):
-        return self.name
-
-    def get_absolute_url(self):
-        return reverse('home')
+#     def get_absolute_url(self):
+#         return reverse('home')
 
 
 class Post(models.Model):

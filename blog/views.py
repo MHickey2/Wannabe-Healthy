@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib import messages
 from django.db.models import Q
-from .models import Post, Category
+from .models import Post
 from profiles .models import Profile
 from .forms import CommentForm
 from .forms import PostForm
@@ -74,7 +74,7 @@ class PostDetail(View):
                 "comment_form": comment_form,
                 "liked": liked,
                 "profile": profile
-            
+
             },
         )
 
@@ -99,7 +99,7 @@ class AddPostView(generic.CreateView):
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
-        """ Adding a new Blog """
+        """ Ensures form valid and new inputs are saved"""
         """ adding the username automatically for the post """
         form.instance.author = self.request.user
         form.save()
@@ -138,6 +138,7 @@ class BlogSearchView(generic.ListView):
     context_object_name = "posts"
 
     def get(self, request, *args, **kwargs):
+        """ allows user to search through blogs by category/title """
         query = self.request.GET.get('q')
         post_list = Post.objects.filter(
             Q(category__icontains=query) | Q(title__icontains=query)
@@ -146,4 +147,3 @@ class BlogSearchView(generic.ListView):
         context = {"post_list": post_list}
 
         return render(request, "index.html", context)
-       
