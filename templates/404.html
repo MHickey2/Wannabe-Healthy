@@ -3,12 +3,24 @@
 {% block content %}
 
 
-    <h2 class="green">Ooops!</h2>
+<h2 class="green">Ooops!</h2>
 
 <h3 class="green">I cannot find the file you requested!</h3>
 
-    <img class="img-fluid center" alt="Zen Moment" src="https://res.cloudinary.com/dspwticaf/image/upload/v1668886130/zenmoment_cdhzta.jpg"/>
+<img class="img-fluid w-60 center" alt="Zen Moment"
+    src="https://res.cloudinary.com/dspwticaf/image/upload/v1668886130/zenmoment_cdhzta.jpg">
+
+    <br>
+
+    <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+
+<br>
 
 
-    {% endblock content %}
 
+{% endblock content %}
+
+
+
+
+{% endblock content %}

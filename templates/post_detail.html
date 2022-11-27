@@ -198,12 +198,16 @@
 </div>
 
 
-
+{% if user.is_authenticated %}
+{% if user.id == post.author.id %}
 
 
 <a href="{% url 'edit_post' post.slug  %}" class="btn-link">(Edit)</a>
 
 <a href="{% url 'delete_post' post.slug  %}" class="btn-link">(Delete)</a>
+
+{% endif %}
+{% endif %}
 
 <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
 

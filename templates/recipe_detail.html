@@ -95,11 +95,11 @@
     <div class="col-md-8 card mb-4  mt-3">
         <h3 class="green">Comments:</h3>
         <div class="commentsection">
-            <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+            <!-- loop inside the empty control tags to iterate through each comment in comments -->
             {% for comment in comments %}
             <div class="comments" style="padding: 10px;">
                 <p class="font-weight-bold">
-                    <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+                    <!-- The commenter's name goes heres -->
                     {{ comment.name }}
                     <span class=" text-muted font-weight-normal">
                         <!-- The comment's created date goes here -->
@@ -137,10 +137,16 @@
 </div>
 </div>
 
+{% if user.is_authenticated %}
+{% if user.id == post.author.id %}
 
 
+<a href="{% url 'edit_recipe' post.slug  %}" class="btn-link">(Edit)</a>
 
+<a href="{% url 'delete_recipe' post.slug  %}" class="btn-link">(Delete)</a>
 
+{% endif %}
+{% endif %}
 
 <a href="{% url 'recipes' %}" class="btn btn-primary">Back</a>
 

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views import generic, View
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
+from django.utils.translation import gettext
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib import messages
 from django.db.models import Q
@@ -11,12 +12,17 @@ from .forms import PostForm
 from django.urls import reverse_lazy
 
 
+# def my_view(request):
+#     output = gettext("Welcome to my site.")
+#     return HttpResponse(output)
+
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
     paginate_by = 6
-
+ 
 
 class PostDetail(View):
 

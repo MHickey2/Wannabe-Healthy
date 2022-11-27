@@ -9,6 +9,8 @@
 /*FatFace Mahrey */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Marhey&display=swap');
 
+/*Global*/
+
 body {    
     background-color:whitesmoke;    
 }
@@ -18,6 +20,8 @@ html * {
     font-size: 1.6rm;
     font-weight: 300;     
 }
+
+/*Navbar*/
 
 /* Styling for Title */
 .title {
@@ -34,12 +38,12 @@ html * {
     margin-left: 12px;       
 }
 
-/*hamburger*/
+/*hamburger for smaller screens*/
 i.fa.fa-bars {
     color:  #a3d31c !important;
 }
 
-
+/*Logo*/
 #logo {
     height: 120px;
     width: 130px;
@@ -55,8 +59,7 @@ i.fa.fa-bars {
     margin-left: 10px;   
     font-weight: bold;
     font-style: capitalize;
-    
-    }
+}
 
 /* Styling for Welcome Message */
 .welcometosite {
@@ -66,34 +69,50 @@ i.fa.fa-bars {
     font-weight: bold;
 }
 
-
 /* Heading for index Page */
-.bloghead {
-    padding-top: 10px;
+.bloghead {   
     text-align: center;
     color: darkgreen;
     font-family: 'Abril Fatface', cursive;;
 }
 
-/* Blog Section */
-
-/*blog content area*/
-.card-body1 {
-    min-height: 500px;
-    background-color: rgb(164, 240, 164, 0.4);   
+.text {
+    text-align: justify;
+    font-size: 110%;
+    margin-top: 10px;
 }
 
+/*Search form styling*/
+.searchform {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+/* Blog Section */
+
+/*blog content for blogs*/
+
+/*Styling for individual blogs in blog section*/
+.card-body1 {
+    min-height: 500px;
+    background-color: rgb(164, 240, 164, 0.4);
+    border-radius: 15px;   
+}
+
+/*Styling for titles*/
 .card-title {
     text-align: center;
     color: #274b12;
     text-transform: capitalize;    
 }
+
 /* alignment of blogs */
 .image-container {
     position: relative;
     padding: 5px;    
 }
 
+/*Styling for the image in blogs*/
 .card-img-top {
     border-radius: 5px;
     border: 2px solid rgb(20, 88, 20);
@@ -101,6 +120,7 @@ i.fa.fa-bars {
     height: 280px;
 }
 
+/*Flash for author on image*/
 .image-flash {
     position: absolute;
     bottom: 5%;
@@ -109,6 +129,7 @@ i.fa.fa-bars {
     background-color: rgb(83, 212, 83, 0.8);
 }
 
+/*Flash for category on image*/
 .image-flash1 {
     position: absolute;
     top: 5%;
@@ -393,16 +414,9 @@ textarea {
     display: block;
 }
 
-.text {
-    text-align: justify;
-    font-size: 110%
-}
 
 
-.searchform {
-    padding-left: 20px;
-    padding-top: 10px;
-}
+
 
 /* Styling for Recipes in Recipes Page*/
 #recipeintro {
@@ -520,7 +534,22 @@ textarea {
 .buttongroup {
     text-align: center;
     color: white;
-    margin-top: 10px;    
+    margin-top: 10px; 
+    
+}
+
+.btnstyle {
+    width: 80px;    
+    color: white;
+    font-size: 16px;
+}
+
+.btnabout {
+    width: 130px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
 }
 
 #block {

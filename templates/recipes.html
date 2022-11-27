@@ -72,7 +72,7 @@
 
                             </div>
 
-                            <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-danger center">See
+                            <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-success btn-sm" id="center">See
                                 Recipe</a>
 
                             <br>
@@ -83,8 +83,8 @@
                             <hr>
                             {% if user.is_authenticated %}
                             {% if user.id == recipe.author.id %}<div class="buttongroup">
-                                <a href="{% url 'edit_recipe' recipe.slug %}" class="btn btn-success">Edit</a>
-                                <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-danger">Delete</a>
+                                <a href="{% url 'edit_recipe' recipe.slug %}" class="btn btn-info btn-sm btnstyle">Edit</a>
+                                <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-danger btn-sm btnstyle">Delete</a>
                             </div>
 
                             {% endif %}
