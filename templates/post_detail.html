@@ -52,7 +52,7 @@
                             class="fas fa-heart"></i></button>
                     {% endif %}
                 </form>
-                {% else %}
+                {% else %}                
                 <strong><span class=""><i class="far fa-heart"></i></span>
                     {% endif %}
                     <!-- The number of likes goes before the closing strong tag -->
@@ -105,47 +105,7 @@
     </div>
 </section>
 
-<!-- <section class="section mt-3">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-2">
-                    {% if "placeholder" in profile.profile_pic.url %}
-                    <div class=""> <img class="rounded-circle account-img" id="profile-img1"
-                            src="https://res.cloudinary.com/dspwticaf/image/upload/v1667936304/generic-profile_optkrd.jpg"
-                            class="img-radius" alt="User-Profile-Image"> </div>
-                    {% else %}
-                    <div class=""> <img class="rounded-circle account-img" id="profile-img1"
-                            src="{{ profile.profile_pic.url }}" class="img-radius" alt="User-Profile-Image"> </div>
-                    {% endif %}
 
-                    </div>
-                <div class="col-md-3 align-items-center">
-                    <div>
-                        <div class="form-group">
-                            <h4 class="profile-title"> {{ profile.user }} </h4>
-                            <label class="labelling">Bio:</label> {{ profile.bio }}
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-<!-- <div class="container">
-
-            Have tried using post.author.profile.profile_pic.url, but didnt work, context process.py within blog
-            {% if "placeholder" in profile.profile_pic.url %}
-            <div class="row row-align"> <img class="col-sm-6 " id="profile-img"
-                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1667936304/generic-profile_optkrd.jpg"
-                    class="img-radius" alt="User-Profile-Image"> 
-            {% else %}
-            <img class="nav-img1" id="profile-img" src="{{ profile.profile_pic.url }}" class="img-radius"
-                alt="User-Profile-Image">
-            {% endif %}
-            
-                <p class="col-sm-6 "><strong> Bio:</strong> {{ profile.bio }} </p>
-            </div>
-    </div> -->
 
 <div class="row">
     <div class="col">
@@ -209,8 +169,10 @@
 {% endif %}
 {% endif %}
 
+<br>
 <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+<br>
+<br>
 
-<!-- </body> -->
 
 {% endblock content %}

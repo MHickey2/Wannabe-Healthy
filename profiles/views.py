@@ -38,7 +38,8 @@ def editProfile(request):
     profile = get_object_or_404(Profile, user=request.user)
 
     if request.method == 'POST':
-        profile_form = ProfileForm(request.POST, request.FILES, instance=profile)
+        profile_form = ProfileForm(request.POST, request.FILES,
+                                   instance=profile)
         if profile_form.is_valid():
             profile_form.save()
         messages.success(request, 'Profile updated successfully')

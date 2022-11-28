@@ -50,7 +50,7 @@
                 <div class="col-md-4 postlook1" >
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h3 class="card-title">{{ recipe.title }}</h3>
+                            <h5 class="card-title">{{ recipe.title }}</h5>
                             <div class="image-container">
                                 {% if "placeholder" in recipe.featured_image.url %}
                                 <img class="card-img-top"
@@ -60,7 +60,7 @@
                                 <img class="card-img-top" src=" {{ recipe.featured_image.url }}" alt="Recipe Image">
                                 {% endif %}
                                 <div class="image-flash2">
-                                    <h3 class="category"> {{ recipe.category }}</h3>
+                                    <h4 class="category"> {{ recipe.category }}</h4>
                                 </div>
                                 <div class="image-flash3">
                                     <p class="author">Author: {{ recipe.author }}</p>

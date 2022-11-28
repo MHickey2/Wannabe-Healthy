@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views import generic, View
 from django.http import HttpResponseRedirect, HttpResponse
 from django.utils.translation import gettext
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import DeleteView
 from django.contrib import messages
 from django.db.models import Q
 from .models import Post
@@ -22,7 +23,7 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
     paginate_by = 6
- 
+
 
 class PostDetail(View):
 
@@ -68,7 +69,7 @@ class PostDetail(View):
             comment.save()
         else:
             comment_form = CommentForm()
-        msg = 'You have left a comment successfully'
+        msg = 'Your comment was added successfully and is awaiting approval!'
         messages.add_message(self.request, messages.SUCCESS, msg)
         return render(
             request,
@@ -101,7 +102,8 @@ class PostLike(View):
 class AddPostView(generic.CreateView):
     model = Post
     template_name = "add_post.html"
-    fields = ['category', 'title', 'slug', 'featured_image', 'excerpt',  'content', 'status']
+    fields = ['category', 'title', 'slug', 'featured_image', 'excerpt',
+              'content', 'status']
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
@@ -122,7 +124,8 @@ def about(request):
 class EditPostView(generic.UpdateView):
     model = Post
     template_name = "edit_post.html"
-    fields = ['category', 'title', 'featured_image', 'excerpt',  'content', 'status']
+    fields = ['category', 'title', 'featured_image', 'excerpt',  'content',
+              'status']
 
     def get_success_url(self):
         """ Allows the Poster to edit their blog and see the changes """

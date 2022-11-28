@@ -14,7 +14,7 @@ class Profile(models.Model):
 
     def __str__(self):
         return f'{self.user.username} Profile'
-    
+
     def create_profile(instance, created, **kwargs):
         if created:
             Profile.objects.create(user=instance)
@@ -29,10 +29,3 @@ def create_profile(instance, created, **kwargs):
 
 
 post_save.connect(create_profile, sender=User)
-
-
-class Photo(models.Model):
-    image = CloudinaryField('image')
-    
-    
-   

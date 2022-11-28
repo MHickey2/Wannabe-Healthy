@@ -3,7 +3,9 @@ from django.shortcuts import render
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from profiles .models import Profile
+from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import UpdateView, DeleteView
 from django.contrib import messages
 from django.db.models import Q
 from .forms import CommentForm
@@ -21,10 +23,12 @@ class RecipeList(generic.ListView):
 class RecipeDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
-        """ Presents the details of individual recipes on recipe_detail Page """
+        """ Presents details of one recipe on recipe_detail Page """
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
-        comments = recipe.comments.filter(approved=True).order_by("-created_on")
+        comments = recipe.comments.filter(approved=True).order_by
+        profile = Profile.objects.filter(user=recipe.author)[0]
+        ("-created_on")
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -37,7 +41,8 @@ class RecipeDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked,
-                "comment_form": CommentForm()
+                "comment_form": CommentForm(),
+                "profile": profile
             },
         )
 
@@ -45,7 +50,8 @@ class RecipeDetail(View):
         """ allows user to post comments on recipes """
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
-        comments = recipe.comments.filter(approved=True).order_by("-created_on")
+        comments = recipe.comments.filter(approved=True).order_by
+        ("-created_on")
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -59,7 +65,7 @@ class RecipeDetail(View):
             comment.save()
         else:
             comment_form = CommentForm()
-        msg = 'You have left a comment successfully'
+        msg = 'Your comment was sent successfully and is awaiting approval!'
         messages.add_message(self.request, messages.SUCCESS, msg)
         return render(
             request,
@@ -90,7 +96,8 @@ class RecipeLike(View):
 class AddRecipeView(generic.CreateView):
     model = Recipe
     template_name = "add_recipe.html"
-    fields = ['category', 'title', 'featured_image', 'description',  'difficulty', 'cooking_time', 'ingredients', 'method', 'status']
+    fields = ['category', 'title', 'featured_image', 'description',
+              'difficulty', 'cooking_time', 'ingredients', 'method', 'status']
     success_url = reverse_lazy('recipes')
 
     def form_valid(self, form):
@@ -106,7 +113,8 @@ class AddRecipeView(generic.CreateView):
 class EditRecipeView(generic.UpdateView):
     model = Recipe
     template_name = "edit_recipe.html"
-    fields = ['category', 'title', 'featured_image', 'description',  'difficulty', 'cooking_time', 'ingredients', 'method', 'status']
+    fields = ['category', 'title', 'featured_image', 'description',
+              'difficulty', 'cooking_time', 'ingredients', 'method', 'status']
 
     def get_success_url(self):
         """ Allows the Poster to edit their recipe and see the changes """

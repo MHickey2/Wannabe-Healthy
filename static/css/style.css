@@ -88,7 +88,7 @@ i.fa.fa-bars {
     padding-top: 10px;
 }
 
-/* Blog Section */
+/* Blog Section on index page*/
 
 /*blog content for blogs*/
 
@@ -103,7 +103,8 @@ i.fa.fa-bars {
 .card-title {
     text-align: center;
     color: #274b12;
-    text-transform: capitalize;    
+    text-transform: capitalize; 
+    min-height: 50px;   
 }
 
 /* alignment of blogs */
@@ -120,7 +121,7 @@ i.fa.fa-bars {
     height: 280px;
 }
 
-/*Flash for author on image*/
+/*Flash for author on image in blogs*/
 .image-flash {
     position: absolute;
     bottom: 5%;
@@ -129,7 +130,7 @@ i.fa.fa-bars {
     background-color: rgb(83, 212, 83, 0.8);
 }
 
-/*Flash for category on image*/
+/*Flash for category on image in blogs*/
 .image-flash1 {
     position: absolute;
     top: 5%;
@@ -141,36 +142,42 @@ i.fa.fa-bars {
     vertical-align: center;
 }
 
+/*Flash for category on image in recipes*/
 .image-flash2 {
     position: absolute;
-    top: 10px;
-    min-width: 30%;
+    top: 15px;
+    min-width: 35%;
     right: 15px;
     color: green;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.5);
     text-align: center;
-    vertical-align: center;
+    vertical-align: center;   
 }
 
+/*Flash for author on image in recipes*/
 .image-flash3 {
     position: absolute;    
-    min-width: 30%;
-    bottom:30%;
+    min-width: 40%;
+    bottom:40%;
     left: 25px;
-    background-color: rgb(83, 212, 83, 0.8);
+    background-color: rgb(83, 212, 83, 0.7);   
 }
 
+/*Styliing for author*/
 .author {
     color: white;
     margin: 4px;
     text-transform: uppercase;
 }
+
+/*Styling for excerpt in blog*/
 .card-text {
     text-align: centre;
     padding: 5px;
     margin:5px;   
 }
 
+/*Styling for blog look*/
 .postlook {
     min-height: 500px;
     background-color: #7dd661;
@@ -179,6 +186,7 @@ i.fa.fa-bars {
     border-radius: 25px;
 }
 
+/* ? */
 .block {
     margin-bottom: 20px;
 }
@@ -194,7 +202,6 @@ i.fa.fa-bars {
 }
 
 /* Styling for heading for Post Details Page */
-
 .masthead {
     margin: 20px;    
     overflow: hidden;
@@ -206,7 +213,7 @@ i.fa.fa-bars {
     padding-bottom: 40px;   
 }
 
-.masthead-image {
+/* .masthead-image {
     position: relative;
     overflow: hidden;
 }
@@ -216,8 +223,9 @@ i.fa.fa-bars {
     color: green;
     position: relative;
     text-transform: Capitalize;
-}
+} */
 
+/*Styling for Category Title*/
 .post-category {
     margin: 20px;      
     color: green;
@@ -235,39 +243,47 @@ i.fa.fa-bars {
     color: grey;
 } */
 
+/*Styling for Post Detail Title*/
 .post-title {
     margin-top: 20px;
-    text-align: center;
+    text-align: center;    
 }
 
+/*Styling for the subtitle of Post Detail blog*/
 .post-subtitle {
     margin-left: 5%;
-    color: darkgray;
+    color: darkslategray;
 }
 
+/*Styling for the subtitle of Recipe Detail page*/
 .post-subtitle1 {
     text-align: center;
-    color: darkgray;
+    color: darkslategray;
 }
 
-.btn-signup {
-    background-color: green;
+/* .btn-signup {
+    background-color: purple;
     color: #fff;
-}
+} */
 
-.btn-signup:hover,
+/* .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
     color: #7b8181;
-}
+} */
 
-.link {
-    color: black;
+/* .link {
+    color: red;
+    text-decoration: none;
+} */
+
+a:link {
+    color: grey;
     text-decoration: none;
 }
 
-a:link {
-    color: black;
+.link {
+    color: darkgrey;
     text-decoration: none;
 }
 
@@ -280,13 +296,24 @@ a:link:after {
 .link:active {
     color: black;
     text-decoration: none;
+} 
+
+a,
+a:hover {
+    color: rgb(255, 254, 254);
+    text-decoration: none;
 }
 
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
+
+/* Styling for like button*/
 .btn-like {
     color: lightgreen;
     border: none;
     background: transparent;
-}
+} */
 
 .btn-like:hover,
 .btn-like:active {
@@ -294,6 +321,8 @@ a:link:after {
     background: transparent;
     border: none;
 }
+
+/*Styling for Footer*/
 footer {
     position: relative;
     width: 100%;
@@ -310,21 +339,13 @@ footer {
     color: white
 }
 
+/*Styling for headings on vararious pages*/
 .green {
     margin-top: 10px;
     color: green;
     text-align: center;
 }
 
-a,
-a:hover {
-    color: rgb(255, 254, 254);
-    text-decoration: none;
-}
-
-a, a:visited, a:hover, a:active {
-    color: inherit;
-  }
 
 /* Blog and recipe posts */
 
@@ -338,7 +359,6 @@ a, a:visited, a:hover, a:active {
     padding: 15px 15px;
     min-height:530px;
     border-radius: 15px;
-
 }
 
 #newpost1 {
@@ -351,6 +371,7 @@ a, a:visited, a:hover, a:active {
     margin-bottom: 20px;
 }
 
+/*Styling for input and textareas for forms*/
 #newpost input,
 textarea  {
     width: 40vw;
@@ -364,6 +385,7 @@ textarea  {
     border-radius: 15px;      
 }
 
+/*Styling for checkbox in form*/
 #newpost [type=checkbox] {
     width: 20px;
     display:inline;
@@ -415,9 +437,6 @@ textarea {
 }
 
 
-
-
-
 /* Styling for Recipes in Recipes Page*/
 #recipeintro {
     display: block;
@@ -432,7 +451,7 @@ textarea {
     text-align: justify;
 }
 
-
+/*Styling for Recipe Category*/
 .recipe-category {
     margin-left: 10%;
     color: green;
@@ -492,10 +511,12 @@ textarea {
     color: white;
 }
 
+/*Styling for method*/
 .method {
     color: blue;
 }
 
+/*Styling for recipe details headings*/
 .stylingtext {
     color: green;
     width: 70vw;
@@ -506,6 +527,7 @@ textarea {
     
 }
 
+/*Styling for comment section*/
 .commentsection {
     height: 90vh;
        
@@ -516,10 +538,9 @@ textarea {
     align-content: center;
 }
 
+/*Styling for profile section in recipe detail page*/
 .profilesection {
-    height:fit-content;
-   
-    
+    height:fit-content;    
 }
 
 .italic-bold {
@@ -530,20 +551,21 @@ textarea {
     text-align: center;
 }
 
-
+/* Styling for button groups*/
 .buttongroup {
     text-align: center;
     color: white;
-    margin-top: 10px; 
-    
+    margin-top: 10px;     
 }
 
+/*Styling for Buttons*/
 .btnstyle {
     width: 80px;    
     color: white;
     font-size: 16px;
 }
 
+/*Styling for buttons in about page to blog and recipes*/
 .btnabout {
     width: 130px;
     display: block;
@@ -561,6 +583,7 @@ textarea {
     background-color: rgb(19, 163, 31);
 }
 
+/*Styling for back buttons on pages*/
 .backbutton {
     margin-left: 15px;
     background-color:rgba(0, 0, 0, 0.2)
@@ -581,10 +604,10 @@ textarea {
     color: green;
 }
 
+/* Styling for text in profile page*/
 .profedit {
     text-align: right;
-    margin-bottom: 10px;;
-    
+    margin-bottom: 10px;    
 }
 
 /* Forms */
@@ -599,6 +622,7 @@ textarea {
     
 } */
 
+/* Styling for logout page */
 #logout {
     background-color: #47d31c;
     border: 1px solid black;   
@@ -612,6 +636,7 @@ textarea {
 
 }
 
+/* Styling for User image in navbar */
 .nav-img {
     float: right;
     height: 60px;
@@ -619,7 +644,8 @@ textarea {
     border-radius: 50px;
   }
 
-  #profile-img1 {
+/* Styling for Profile image */
+#profile-img1 {
     display: block; 
     margin-left: auto;
     margin-right: auto;
@@ -627,30 +653,29 @@ textarea {
     width: 130px;   
     border-radius: 50px;
     border:solid green 4px;   
-    position:relative;
-     
+    position:relative;     
   }
 
-  .profile-title {
-  color: Green;
-  text-transform: capitalize;
-}
+/* Styling for Profile Title */  
+.profile-title {
+    color: Green;
+    text-transform: capitalize;
+  }
 
+/* Styling for unordered lists in blogs and Recipes */  
 .unordered {
     line-height: 2;
-    font-family: 'Marhey', cursive;
-     
+    font-family: 'Marhey', cursive;     
 }
 
 
-
+/* Styling for ordered lists in blogs and Recipes */ 
 .ordered {
-    line-height: 2;
-   
+    line-height: 2;   
 }
 
-ul li {   
-    
+/* Styling for List items in blogs and Recipes */ 
+ul li, ol li {       
     font-weight:400;
     font-size: 110%;
     margin: 5px;
