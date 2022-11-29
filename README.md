@@ -1,14 +1,14 @@
 # Wannabe Healthy: Milestone 4 Project
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+   <img src="media/readme/wannaberesp.png"  alt="AmIResponsive" />       
 </p>
 <br/>  
 
  
 ## Introduction <a name="introduction"></a>  
 
-Wannabe Healthy is the 4th Project for the Code Institute and the Project is a Full Stack website using the Django Framework. The website's content deals with health related topics. It encompasses a Blog with various health categories and a Recipe section which concentrates on health enhancing recipes.
+Wannabe Healthy is the 4th Project for the Code Institute and the Project is a Full Stack website using the Django Framework. The website's content deals with health related topics. It encompasses a Blog with various health categories and a Recipe section which concentrates on health enhancing recipes.  When logged in a User can add, edit or delete their own submitted Blog/Recipe. A logged in User can like/unlike a post or recipe or add comments for either. A logged in User can also view and Update their own Profile with an uploaded image and a Bio. 
 
 <br/>
 
@@ -16,13 +16,12 @@ Wannabe Healthy is the 4th Project for the Code Institute and the Project is a F
 
 [Visit the WannabeHealthy Repository](https://github.com/MHickey2/)
 
-<br/>    
+<br/>  
 
-# Table of Contents <a name="toc"></a>
+
 
 - [Wannabe Healthy: Milestone 4 Project](#wannabe-healthy-milestone-4-project)
   - [Introduction ](#introduction-)
-- [Table of Contents ](#table-of-contents-)
   - [UX Strategy ](#ux-strategy-)
     - [The Business Goals of the Website: ](#the-business-goals-of-the-website-)
     - [The Target Customer: ](#the-target-customer-)
@@ -32,7 +31,7 @@ Wannabe Healthy is the 4th Project for the Code Institute and the Project is a F
     - [As a logged in User I can... ](#as-a-logged-in-user-i-can-)
     - [As a website superuser, I can …..    ](#as-a-website-superuser-i-can-----)
       - [Return to Table of Contents](#return-to-table-of-contents-1)
-  - [Layout  ](#layout--)
+  - [Design  ](#design--)
   - [Colour  Scheme  ](#colour--scheme--)
   - [Typography    ](#typography----)
   - [Imagery    ](#imagery----)
@@ -99,18 +98,21 @@ Wannabe Healthy is the 4th Project for the Code Institute and the Project is a F
 
 ----
 
+
 ## UX Strategy <a name="uxstrategy"></a>
+----
 
 <br/> 
 
 ### The Business Goals of the Website: <a name="businessgoals"></a>
-- No commercial goals, but the site's goal is to to provide a resource for those seeking to improve their health.
+- No commercial goals, but the site's goal is to to provide a resource for those seeking to improve their health and learn about health topics.
   
   <br/> 
 
 ### The Target Customer: <a name="targetcustomer"></a>
 
 Anyone with the desire to improve their health.
+Anyone who wants to improve their Diet with healthy Recipes.
 
  <br/>  
 
@@ -120,13 +122,13 @@ Anyone with the desire to improve their health.
 
 Site User
 
-The user is really anyone who wants to gain a healthier lifestyle. They can not only view present blogs and recipes but can play more of an interactive role and contribute their own blogs and recipes.  In this way the stite will grow organically and will be open to evolving depending on the user interaction. There will also be a contact where users can recommend ideas for expanding the site.
+The user is really anyone who wants to gain a healthier lifestyle. They can not only view present blogs and recipes but can play more of an interactive role and contribute their own blogs and recipes.  In this way the stite will grow organically and will be open to evolving dependg on the latest health trends. 
 
 Site Goals
 The site allows the user to know the content of the site easily and can navigate through it easily.
 The user will be able to use the search facility to find specific blogs by category and title.
 The user when logged in will be able to contribute to the site in regards to blogs and recipes, they will also be able to like and comment on individual blogs and recipes.
-The user will be able to add a profile to the site
+The user will be able to maintain a profile on the site and they can update their Profile details and Users can learn more about them.
 
 <br>
 
@@ -152,8 +154,8 @@ The user will be able to add a profile to the site
 
   <br/>
 
-### As a logged in User I can... <a name="loggedinuser"></a>  
--
+### As a logged in User I can... <a name="loggedinuser"></a> 
+
 1. I can add a new post or a recipe.
 2. I can like/unlike a blog or recipe on the site.
 3. I can leave comments on particular blogs and recipes.
@@ -176,7 +178,7 @@ The user will be able to add a profile to the site
 
 #### [Return to Table of Contents](#toc)  
 ----
-## Layout  <a name="layout"></a> 
+## Design  <a name="design"></a> 
 
 <br/>
 
