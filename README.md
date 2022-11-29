@@ -22,76 +22,77 @@ Wannabe Healthy is the 4th Project for the Code Institute and the Project is a F
 
 - [Wannabe Healthy: Milestone 4 Project](#wannabe-healthy-milestone-4-project)
   - [Introduction ](#introduction-)
-  - [UX Strategy ](#ux-strategy-)
-    - [The Business Goals of the Website: ](#the-business-goals-of-the-website-)
-    - [The Target Customer: ](#the-target-customer-)
+  - [1. UX Strategy ](#1-ux-strategy-)
+    - [1. The Business Goals of the Website: ](#1-the-business-goals-of-the-website-)
+    - [2. The Target Customer: ](#2-the-target-customer-)
       - [Return to Table of Contents](#return-to-table-of-contents)
-  - [User Stories  ](#user-stories--)
-    - [As a website User I can...](#as-a-website-user-i-can)
-    - [As a logged in User I can... ](#as-a-logged-in-user-i-can-)
-    - [As a website superuser, I can …..    ](#as-a-website-superuser-i-can-----)
+  - [2. User Stories  ](#2-user-stories--)
+    - [1. As a website User I can...](#1-as-a-website-user-i-can)
+    - [2. As a logged in User I can... ](#2-as-a-logged-in-user-i-can-)
+    - [3. As a website superuser, I can …..    ](#3-as-a-website-superuser-i-can-----)
       - [Return to Table of Contents](#return-to-table-of-contents-1)
-  - [Design  ](#design--)
-  - [Colour  Scheme  ](#colour--scheme--)
-  - [Typography    ](#typography----)
-  - [Imagery    ](#imagery----)
-  - [Wireframes    ](#wireframes----)
+  - [3. Design  ](#3-design--)
+    - [1. Colour  Scheme  ](#1-colour--scheme--)
+    - [2. Typography    ](#2-typography----)
+    - [3. Imagery    ](#3-imagery----)
+    - [4. Wireframes    ](#4-wireframes----)
       - [Return to Table of Contents](#return-to-table-of-contents-2)
-    - [Database Diagram](#database-diagram)
+  - [4. Database Diagram](#4-database-diagram)
       - [Return to Table of Contents](#return-to-table-of-contents-3)
-  - [Features  ](#features--)
-    - [Home Page   ](#home-page---)
-    - [Blog Section      ](#blog-section------)
-    - [Blog Search   ](#blog-search---)
-    - [Add Blog     ](#add-blog-----)
-    - [Edit Blog     ](#edit-blog-----)
-    - [Delete Blog     ](#delete-blog-----)
-    - [Blog Detail Page      ](#blog-detail-page------)
-    - [About Page    ](#about-page----)
-    - [Recipes Page   ](#recipes-page---)
-    - [Recipes Search   ](#recipes-search---)
-    - [Add Recipe   ](#add-recipe---)
-    - [Edit Recipe   ](#edit-recipe---)
-    - [Delete Recipe   ](#delete-recipe---)
-    - [Recipe Detail Page   ](#recipe-detail-page---)
-    - [Signup Page   ](#signup-page---)
-    - [Login  Page   ](#login--page---)
-    - [Logout Page   ](#logout-page---)
-    - [Profile Page   ](#profile-page---)
+  - [5. Features  ](#5-features--)
+    - [1. Home Page   ](#1-home-page---)
+    - [2. Blog Section      ](#2-blog-section------)
+    - [3. Blog Search   ](#3-blog-search---)
+    - [4. Add Blog     ](#4-add-blog-----)
+    - [5. Edit Blog     ](#5-edit-blog-----)
+    - [6. Delete Blog     ](#6-delete-blog-----)
+    - [7. Blog Detail Page      ](#7-blog-detail-page------)
+    - [8. About Page    ](#8-about-page----)
+    - [9. Recipes Page   ](#9-recipes-page---)
+    - [10. Recipes Search   ](#10-recipes-search---)
+    - [11. Add Recipe   ](#11-add-recipe---)
+    - [12. Edit Recipe   ](#12-edit-recipe---)
+    - [13. Delete Recipe   ](#13-delete-recipe---)
+    - [14. Recipe Detail Page   ](#14-recipe-detail-page---)
+    - [15. Profile Page   ](#15-profile-page---)
+    - [16. Edit Profile  Page   ](#16-edit-profile--page---)
+    - [17. Signup Page   ](#17-signup-page---)
+    - [18. Login Page   ](#18-login-page---)
+    - [19. Logout Page   ](#19-logout-page---)
       - [Return to Table of Contents](#return-to-table-of-contents-4)
-  - [Future Implementation  ](#future-implementation--)
+  - [6. Future Implementation  ](#6-future-implementation--)
       - [Return to Table of Contents](#return-to-table-of-contents-5)
-  - [Tools and Technology  ](#tools-and-technology--)
+  - [7. Tools and Technology  ](#7-tools-and-technology--)
     - [Language Used:](#language-used)
     - [Technology Used:](#technology-used)
       - [Django Packages](#django-packages)
       - [Return to Table of Contents](#return-to-table-of-contents-6)
-  - [Testing  ](#testing--)
-    - [Manual Testing   ](#manual-testing---)
+  - [8. Testing  ](#8-testing--)
+    - [1. Manual Testing   ](#1-manual-testing---)
       - [Feature being tested and Result](#feature-being-tested-and-result)
-    - [User Story Testing](#user-story-testing)
+    - [2. User Story Testing](#2-user-story-testing)
       - [As a Website User I want to .....](#as-a-website-user-i-want-to-)
       - [As a logged in User I want to …...](#as-a-logged-in-user-i-want-to-)
       - [As a Superuser/Admin I want to …..](#as-a-superuseradmin-i-want-to-)
-    - [General Testing   ](#general-testing---)
+    - [3. General Testing   ](#3-general-testing---)
       - [Browser Testing](#browser-testing)
       - [Responsive Testing](#responsive-testing)
     - [Validation      ](#validation------)
       - [HTML Checker](#html-checker)
       - [Lighthouse Testing](#lighthouse-testing)
       - [Return to Table of Contents](#return-to-table-of-contents-7)
-  - [Bugs and Issues  ](#bugs-and-issues--)
+  - [9. Bugs and Issues  ](#9-bugs-and-issues--)
     - [Resolved ](#resolved-)
     - [Unresolved ](#unresolved-)
       - [Return to Table of Contents](#return-to-table-of-contents-8)
-  - [Deployment ](#deployment-)
+  - [10. Deployment ](#10-deployment-)
       - [Creating the Django app  ](#creating-the-django-app--)
     - [How to make a local Clone ](#how-to-make-a-local-clone-)
     - [How to fork a GitHub Repository ](#how-to-fork-a-github-repository-)
     - [Student Template ](#student-template-)
     - [Deploying to Heroku ](#deploying-to-heroku-)
       - [Return to Table of Contents](#return-to-table-of-contents-9)
-  - [Credits ](#credits-)
+- [Credits ](#credits-)
       - [Return to Table of Contents](#return-to-table-of-contents-10)
   - [Acknowledgements ](#acknowledgements-)
       - [Return to Table of Contents](#return-to-table-of-contents-11)
@@ -99,17 +100,17 @@ Wannabe Healthy is the 4th Project for the Code Institute and the Project is a F
 ----
 
 
-## UX Strategy <a name="uxstrategy"></a>
+## 1. UX Strategy <a name="uxstrategy"></a>
 ----
 
 <br/> 
 
-### The Business Goals of the Website: <a name="businessgoals"></a>
+### 1. The Business Goals of the Website: <a name="businessgoals"></a>
 - No commercial goals, but the site's goal is to to provide a resource for those seeking to improve their health and learn about health topics.
   
   <br/> 
 
-### The Target Customer: <a name="targetcustomer"></a>
+### 2. The Target Customer: <a name="targetcustomer"></a>
 
 Anyone with the desire to improve their health.
 Anyone who wants to improve their Diet with healthy Recipes.
@@ -132,11 +133,11 @@ The user will be able to maintain a profile on the site and they can update thei
 
 <br>
 
-## User Stories  <a name="userstories"></a>
+## 2. User Stories  <a name="userstories"></a>
 
 <br>
 
-### As a website User I can...<a name="websiteuser"></a>
+### 1. As a website User I can...<a name="websiteuser"></a>
 1. Navigate around the site and easily view the type of content available.
 2. View a collection of Blogs in the blog Section.
 3. Search the blog section for particular categories or by title content.
@@ -154,7 +155,7 @@ The user will be able to maintain a profile on the site and they can update thei
 
   <br/>
 
-### As a logged in User I can... <a name="loggedinuser"></a> 
+### 2. As a logged in User I can... <a name="loggedinuser"></a> 
 
 1. I can add a new post or a recipe.
 2. I can like/unlike a blog or recipe on the site.
@@ -166,7 +167,7 @@ The user will be able to maintain a profile on the site and they can update thei
  
  <br/>
 
-### As a website superuser, I can …..    <a name="superuser"></a>
+### 3. As a website superuser, I can …..    <a name="superuser"></a>
 
 1. Create and publish a new blog or recipe.
 2. Create draft recipes and blog posts that can be finalised later.
@@ -178,14 +179,14 @@ The user will be able to maintain a profile on the site and they can update thei
 
 #### [Return to Table of Contents](#toc)  
 ----
-## Design  <a name="design"></a> 
+## 3. Design  <a name="design"></a> 
 
 <br/>
 
-## Colour  Scheme  <a name="colourscheme"></a>
+### 1. Colour  Scheme  <a name="colourscheme"></a>
 
 
-## Typography    <a name="typography"></a>
+### 2. Typography    <a name="typography"></a>
 
 The 'Roboto' font is the main font used for the whole project  
 
@@ -193,12 +194,12 @@ The 'Roboto' font is the main font used for the whole project
 <br>
 
 
-## Imagery    <a name="imagery"></a>
+### 3. Imagery    <a name="imagery"></a>
 
 <br>
 
  
-## Wireframes    <a name="wireframes"></a>
+### 4. Wireframes    <a name="wireframes"></a>
 
 <br>
 
@@ -209,11 +210,11 @@ The 'Roboto' font is the main font used for the whole project
  #### [Return to Table of Contents](#toc)
 ----
 
-### Database Diagram
+## 4. Database Diagram
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="database diagram" />    
+     <img src="media/readme/"  alt="database diagram" />    
 </p>
 
 <br/> 
@@ -224,11 +225,11 @@ The 'Roboto' font is the main font used for the whole project
 
 <br>
 
-## Features  <a name="features"></a>
+## 5. Features  <a name="features"></a>
 
 <br>
 
-### Home Page   <a name="homepage"></a>
+### 1. Home Page   <a name="homepage"></a>
 
 The home page has an intro image and a short paragraph of text explaining the purpose of
 the site.  
@@ -237,60 +238,60 @@ the site.
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/"  alt="" />    
 </p>
 
 <br/> 
 
-### Blog Section      <a name="blogsection"></a>
+### 2. Blog Section      <a name="blogsection"></a>
 
 On the home page there is a blog section which holds a collection of blogs ordered with the most recent blog at the top. The pagination allows for the blogs to be distributed according to the number of blogs it contains.
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/"  alt="" />    
 </p>
 
 <br/> 
 
-### Blog Search   <a name="blogsearch"></a>
+### 3. Blog Search   <a name="blogsearch"></a>
 
 The website user can use the search facility to find specific categories, that are presented to the user and they can also search by a name in the title.
 
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/images/"  alt="" />    
 </p>
 
 <br/> 
 
-###  Add Blog     <a name="addblog"></a>
+###  4. Add Blog     <a name="addblog"></a>
 
 As a logged in User you can add a blog to the site, when you press on the add blog link it will take you to the add blog page, when this form is completed you will be redirected to the home page, where your new blog will be displayed.
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/"  alt="" />    
 </p>
 
 <br/> 
 
-### Edit Blog     <a name="editblog"></a>
+### 5. Edit Blog     <a name="editblog"></a>
 
 As a logged in User you will be able to see the edit button below your submitted blogs, when you use the edit button you will be redirected to the edit blog page, where you can update your blog, when the form is completed you will be redirected to the home page.
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/"  alt="" />    
 </p>
 
 <br/> 
 
 
-###  Delete Blog     <a name="deleteblog"></a>
+###  6. Delete Blog     <a name="deleteblog"></a>
 
 As a logged in User you will be able to see the delete button below your submitted blogs, when you use the delete button you will be redirected to the delete blog page, where you can delete your blog, when the form is completed you will be redirected to the home page.
 
@@ -298,59 +299,59 @@ As a logged in User you will be able to see the delete button below your submitt
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/"  alt="" />    
 </p>
 
 <br/>
 
-### Blog Detail Page      <a name="blogdetailpage"></a>
+### 7. Blog Detail Page      <a name="blogdetailpage"></a>
 
 When you select a blog, you will be redirected to the blog detail page, this page will show the full content for that specific blog. If you are a logged in user you can add a comment. This comment will have to be approved by the admin before it will be displayed on the site.
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/"  alt="" />    
 </p>
 
 <br/> 
 
-###  About Page    <a name="aboutpage"></a>
+###  8. About Page    <a name="aboutpage"></a>
 
 The About Page again contains a brief synopsis of the site and contain information panels that display the main elements of the site. The accompanying links will take you to either the blog section or the recipe section of the site.
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/"  alt="" />    
 </p>
 
 <br/> 
 
-###  Recipes Page   <a name="recipespage"></a>
+###  9. Recipes Page   <a name="recipespage"></a>
 
 On the Recipes page there is a collection of Recipes ordered with the most recent Recipe at the top. The pagination allows for the Recipes to be distributed according to the number of recipes in the collection.
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/"  alt="" />    
 </p>
 
 <br/> 
 
-###  Recipes Search   <a name="recipessearch"></a>
+###  10. Recipes Search   <a name="recipessearch"></a>
 
 The website user can use the search facility to find specific categories ie Breakfast, Lunch, Dinner, Dessert and Soup/Salad. You can also search according to a specific word in the title.
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/"  alt="" />    
 </p>
 
 <br/> 
 
-###  Add Recipe   <a name="addrecipe"></a>
+###  11. Add Recipe   <a name="addrecipe"></a>
 
 As a logged in User you can add a Recipe to the site, when you press on the add a Recipe  link it will take you to the 'add Recipe page', when this form is completed you will be redirected to the Recipes page, where your new Recipe will be displayed.
 
@@ -358,98 +359,109 @@ As a logged in User you can add a Recipe to the site, when you press on the add 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/"  alt="" />    
 </p>
 
 <br/> 
 
-###  Edit Recipe   <a name="editrecipe"></a>
+###  12. Edit Recipe   <a name="editrecipe"></a>
 
 As a logged in User you will be able to see the edit button below your submitted Recipe, when you use the edit button you will be redirected to the 'edit your Recipe page', where you can update your Recipe, when the form is completed you will be redirected to the Recipes page.
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/"  alt="" />    
 </p>
 
 <br/> 
 
-###  Delete Recipe   <a name="deleterecipe"></a>
+###  13. Delete Recipe   <a name="deleterecipe"></a>
 
 As a logged in User you will be able to see the delete button below your submitted Recipe, when you use the delete button you will be redirected to the delete Recipe page, where you can delete your Recipe, when the form is completed you will be redirected to the Recipes page.
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/"  alt="" />    
 </p>
 
 <br/> 
 
-###  Recipe Detail Page   <a name="recipedetailpage"></a>
+###  14. Recipe Detail Page   <a name="recipedetailpage"></a>
 
 When you select a Recipe, you will be redirected to the Recipe detail page, this page will show the full content for that specific Recipe. If you are a logged in user you can add a comment. This comment will have to be approved by the admin before it will be displayed on the site.
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/"  alt="" />    
 </p>
 
 <br/> 
 
-###  Signup Page   <a name="signuppage"></a>
+###  15. Profile Page   <a name="profilepage"></a>
+
+On the Profile Page, the User can have access to their own profile information. The profile will be automatically created when they register for the site.
+
+
+<br>
+
+<p align ="center">      
+     <img src="media/readme"  alt="" />    
+</p>
+
+###  16. Edit Profile  Page   <a name="editprofile"></a>
+
+The logged in user can access the Edit Profile Page and can upload an image and add a Bio to their Profile. 
+<br>
+
+<p align ="center">      
+     <img src="media/readme/"  alt="" />    
+</p>
+
+
+
+###  17. Signup Page   <a name="signuppage"></a>
 
 On the Signup Page, a new user can sign up for the Wannabe Healthy website by filling out and submitting the form.
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme"  alt="" />    
 </p>
 
 <br/>
 
-###  Login  Page   <a name="loginpage"></a>
+###  18. Login Page   <a name="loginpage"></a>
 
 A registered User can log in to the website by inputting the username and password and they will have full access to all the features of the site.
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme"  alt="" />    
 </p>
 
 <br/> 
 
-###  Logout Page   <a name="logoutpage"></a>
+###  19. Logout Page   <a name="logoutpage"></a>
 
 In the Logout Page, the User can confirm that they want to exit the website.
 
 <br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
+     <img src="media/readme/"  alt="" />    
 </p>
 
 <br/>  
 
-###  Profile Page   <a name="profilepage"></a>
-
-On the Profile Page, the User can have access to their own profile information and can update their information for the site, including adding a bio and a profile image. The profile will be created when they register for the site.
-
-<br>
-
-<p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
-</p>
-
-<br/> 
 
 
  #### [Return to Table of Contents](#toc)
 ----
- ## Future Implementation  <a name="future"></a>
+ ## 6. Future Implementation  <a name="future"></a>
 
  <br>
 
@@ -459,7 +471,7 @@ On the Profile Page, the User can have access to their own profile information a
 
  #### [Return to Table of Contents](#toc)
 ----
- ## Tools and Technology  <a name="technology"></a>
+ ## 7. Tools and Technology  <a name="technology"></a>
 
 ### Language Used:
 
@@ -502,10 +514,10 @@ On the Profile Page, the User can have access to their own profile information a
 
  #### [Return to Table of Contents](#toc)
 ----
-## Testing  <a name="testing"></a>
+## 8. Testing  <a name="testing"></a>
 <br>
 
-### Manual Testing   <a name="manual"></a>
+### 1. Manual Testing   <a name="manual"></a>
 
 <br>
 
@@ -519,7 +531,7 @@ On the Profile Page, the User can have access to their own profile information a
 
 <br>
 
-### User Story Testing<a name="userstorytesting"></a>
+### 2. User Story Testing<a name="userstorytesting"></a>
 
  <br/>
 
@@ -550,7 +562,7 @@ On the Profile Page, the User can have access to their own profile information a
 
 <br>
 
-### General Testing   <a name="general"></a>
+### 3. General Testing   <a name="general"></a>
 
 <br>
 
@@ -613,7 +625,7 @@ I used pep8 validation
  #### [Return to Table of Contents](#toc)
 ----
 
- ## Bugs and Issues  <a name="bugs"></a>
+ ## 9. Bugs and Issues  <a name="bugs"></a>
 
 <br>
 
@@ -633,7 +645,7 @@ I used pep8 validation
 ----
 
 
- ## Deployment <a name="deployment"></a>
+ ## 10. Deployment <a name="deployment"></a>
 
  <br>
 
@@ -686,7 +698,7 @@ More information is available at [https://docs.github.com/en](https://docs.githu
  
 #### [Return to Table of Contents](#toc)
 ----
- ## Credits <a name="credits"></a>
+ # Credits <a name="credits"></a>
      
 
  I also used the following online resources:
