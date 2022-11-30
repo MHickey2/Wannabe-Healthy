@@ -4,19 +4,14 @@
 
 {% load crispy_forms_tags %}
 
-
-
 <div class="container-fluid">
     <div class="row">
-
         <h1 class="green"><strong>Edit your Profile:</strong></h1>
         <p class="green">Ensure to complete all fields</p>
-
         <section class="py-5 min-vh-80">
             <div class="container" id="newpost">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-
                         <form action="{% url 'editprofile' %}" class="form text-muted" method="post" enctype="multipart/form-data">
                             {% csrf_token %}
                             {{ form | crispy }}
@@ -28,11 +23,7 @@
                 </div>
             </div>
         </section>
-
-
     </div>
 </div>
-
-
 
 {%endblock%}

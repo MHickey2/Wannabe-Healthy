@@ -1,12 +1,12 @@
 {% extends "base.html" %}
-{% block title %}WannabeHealthy/Add Recipe{% endblock %}
+{% block title %}WannabeHealthy/Delete Post{% endblock %}
 {% block content %}
 
 {% load crispy_forms_tags %}
 
+{% if user.is_authenticated %}
+{% if user.id == post.author.id %}
 
-<h1 class="green"><strong>Add a Recipe:</strong></h1>
-<p class="green">Ensure to complete all fields</p>
 
 <div class="container-fluid">
     <div class="row">
@@ -14,26 +14,29 @@
             <div class="container" id="newpost">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
+                        <h2><strong>Delete your Post:</strong></h2>
+                        <h3>Delete: {{ post.title }}</h3>
                         <br>
-                        <form class="form text-muted" method="POST" action="{% url 'add_recipe' %}"
-                            enctype="multipart/form-data">
-
+                        <form class="form text-muted" method="post">
                             {% csrf_token %}
                             {{ form | crispy }}
                             <br>
                             <br>
-                            <button class="btn btn-primary" type="submit">Add Post</button>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Delete</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
-
-
     </div>
 </div>
 
-<a href="{% url 'recipes' %}" class="btn btn-secondary">Back</a>
+{% else %}
+You are not allowed to delete this post
+{% endif %}
+{% endif %}
+
+<a href="{% url 'home' %}" class="btn btn-primary">Back</a>
 
 
 {%endblock%}

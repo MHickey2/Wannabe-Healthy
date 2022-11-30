@@ -21,7 +21,7 @@ from django.urls import reverse_lazy
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
-    template_name = "index.html"
+    template_name = "blog/index.html"
     paginate_by = 6
 
 
@@ -39,7 +39,7 @@ class PostDetail(View):
 
         return render(
             request,
-            "post_detail.html",
+            "blog/post_detail.html",
             {
                 "post": post,
                 "comments": comments,
@@ -101,10 +101,10 @@ class PostLike(View):
 
 class AddPostView(generic.CreateView):
     model = Post
-    template_name = "add_post.html"
+    template_name = "blog/add_post.html"
     fields = ['category', 'title', 'slug', 'featured_image', 'excerpt',
               'content', 'status']
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('blog/home')
 
     def form_valid(self, form):
         """ Ensures form valid and new inputs are saved"""
@@ -123,7 +123,7 @@ def about(request):
 
 class EditPostView(generic.UpdateView):
     model = Post
-    template_name = "edit_post.html"
+    template_name = "blog/edit_post.html"
     fields = ['category', 'title', 'featured_image', 'excerpt',  'content',
               'status']
 
@@ -137,13 +137,13 @@ class EditPostView(generic.UpdateView):
 
 class DeletePostView(generic.DeleteView):
     model = Post
-    template_name = "delete_post.html"
+    template_name = "blog/delete_post.html"
     success_url = reverse_lazy('home')
 
 
 class BlogSearchView(generic.ListView):
     model = Post
-    template_name = "index.html"
+    template_name = "blog/index.html"
     context_object_name = "posts"
 
     def get(self, request, *args, **kwargs):
@@ -156,4 +156,4 @@ class BlogSearchView(generic.ListView):
 
         context = {"post_list": post_list}
 
-        return render(request, "index.html", context)
+        return render(request, "blog/index.html", context)

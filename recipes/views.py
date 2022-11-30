@@ -16,7 +16,7 @@ from django.urls import reverse_lazy
 class RecipeList(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by("-created_on")
-    template_name = "recipes.html"
+    template_name = "recipes/recipes.html"
     paginate_by = 6
 
 
@@ -35,7 +35,7 @@ class RecipeDetail(View):
 
         return render(
             request,
-            "recipe_detail.html",
+            "recipes/recipe_detail.html",
             {
                 "recipe": recipe,
                 "comments": comments,
@@ -69,7 +69,7 @@ class RecipeDetail(View):
         messages.add_message(self.request, messages.SUCCESS, msg)
         return render(
             request,
-            "recipe_detail.html",
+            "recipes/recipe_detail.html",
             {
                 "recipe": recipe,
                 "comments": comments,
@@ -95,7 +95,7 @@ class RecipeLike(View):
 
 class AddRecipeView(generic.CreateView):
     model = Recipe
-    template_name = "add_recipe.html"
+    template_name = "recipes/add_recipe.html"
     fields = ['category', 'title', 'featured_image', 'description',
               'difficulty', 'cooking_time', 'ingredients', 'method', 'status']
     success_url = reverse_lazy('recipes')
@@ -112,7 +112,7 @@ class AddRecipeView(generic.CreateView):
 
 class EditRecipeView(generic.UpdateView):
     model = Recipe
-    template_name = "edit_recipe.html"
+    template_name = "recipes/edit_recipe.html"
     fields = ['category', 'title', 'featured_image', 'description',
               'difficulty', 'cooking_time', 'ingredients', 'method', 'status']
 
@@ -126,13 +126,13 @@ class EditRecipeView(generic.UpdateView):
 
 class DeleteRecipeView(generic.DeleteView):
     model = Recipe
-    template_name = "delete_recipe.html"
+    template_name = "recipes/delete_recipe.html"
     success_url = reverse_lazy('recipes')
 
 
 class RecipeSearchView(generic.ListView):
     model = Recipe
-    template_name = "recipes.html"
+    template_name = "recipes/recipes.html"
     context_object_name = "recipes"
 
     def get(self, request, *args, **kwargs):
@@ -144,4 +144,4 @@ class RecipeSearchView(generic.ListView):
 
         context = {"recipe_list": recipe_list}
 
-        return render(request, "recipes.html", context)
+        return render(request, "recipes/recipes.html", context)

@@ -11,7 +11,7 @@ from django.core.files.storage import FileSystemStorage
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(Profile, user=request.user)
-    template = 'profile.html'
+    template = 'profiles/profile.html'
     fields = ['user', 'profile_pic', 'bio']
     context = {
         'profile': profile,
@@ -48,7 +48,7 @@ def editProfile(request):
     else:
         profile_form = ProfileForm(instance=profile)
 
-    template = 'edit_profile.html'
+    template = 'profiles/edit_profile.html'
 
     context = {
        'profile': profile,

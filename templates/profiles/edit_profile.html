@@ -1,47 +1,29 @@
 {% extends "base.html" %}
-{% block title %}WannabeHealthy/Delete Post{% endblock %}
+{% block title %}WannabeHealthy/Edit Profile{% endblock %}
 {% block content %}
 
 {% load crispy_forms_tags %}
 
-{% if user.is_authenticated %}
-{% if user.id == post.author.id %}
-
-
 <div class="container-fluid">
     <div class="row">
-
+        <h1 class="green"><strong>Edit your Profile:</strong></h1>
+        <p class="green">Ensure to complete all fields</p>
         <section class="py-5 min-vh-80">
             <div class="container" id="newpost">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <h2><strong>Delete your Post:</strong></h2>
-                        <h3>Delete: {{ post.title }}</h3>
-                        <br>
-                        <form class="form text-muted" method="post">
+                        <form action="{% url 'editprofile' %}" class="form text-muted" method="post" enctype="multipart/form-data">
                             {% csrf_token %}
                             {{ form | crispy }}
                             <br>
                             <br>
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Delete</button>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Update</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
-
-
     </div>
 </div>
-
-{% else %}
-You are not allowed to delete this post
-{% endif %}
-
-
-{% endif %}
-
-<a href="{% url 'home' %}" class="btn btn-primary">Back</a>
-
 
 {%endblock%}

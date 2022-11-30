@@ -7,8 +7,6 @@
 {% if user.is_authenticated %}
 {% if user.id == recipe.author.id %}
 
-
-
 <h2 class="green">Delete your Recipe:</h2>
 <div class="container-fluid">
     <div class="row">
@@ -30,15 +28,12 @@
                 </div>
             </div>
         </section>
-
-
     </div>
 </div>
 
 {% else %}
 You are not allowed to delete this recipe
 {% endif %}
-
 
 {% endif %} 
 

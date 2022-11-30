@@ -55,17 +55,10 @@
 
 </head>
 
-
-
-
-
 {% block page_header %}
 {% endblock %}
 
 <body class="d-flex flex-column h-100 main-bg">
-
-   
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -80,7 +73,6 @@
             </button>
             <div class="collapse navbar-collapse" id="header">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{% url 'home' %}" aria-label="Go to the home page">Home </a>
                     </li>
@@ -99,8 +91,6 @@
                     </li>
                     <div> <img class="nav-img" id="profile-img" src="{{ user.profile.profile_pic.url }}"
                             class="img-radius" alt="User-Profile-Image"> </div>
-
-
                     {% else %}
                     <!-- <ul class="navbar-nav ms-auto"> -->
                     <li class="nav-item dropdown">
@@ -111,20 +101,14 @@
                             <li><a class="dropdown-item" href="{% url 'account_signup' %}" aria-label="Go to the signup page">Register</a></li>
                         </ul>
                     </li>
-
                     {% endif %}
-
                 </ul>
-
             </div>
         </div>
     </nav>
 
-
     {% if user.is_authenticated %}
-    <span class="welcometosite">Welcome back, {{ user.username }}</span>
-    
-   
+    <span class="welcometosite">Welcome back, {{ user.username }}</span>   
     {% endif %}
 
     <div class="container">
@@ -141,7 +125,6 @@
     </div>
 
     <main class="flex-shrink-0 main-bg">
-
         {% block content %}
 
         <!-- Content Goes here -->
@@ -162,8 +145,7 @@
                                     own needs, and it may be a good starting point for your own health journey.
                                 </p>
                             </div>
-                        </div>
-                        
+                        </div>                        
                         <div class="col-md-4">
                             <div class="contact">
                                 <h4>Contact</h4>
@@ -179,8 +161,6 @@
                                 </p>
                             </div>
                         </div>
-                        
-
                         <div class="col-md-4 footer-box text-white">
                             <div class="social">
                                 <h4>Follow Us</h4>
@@ -188,31 +168,21 @@
                                 <a style="color: #3b5998;" href="#!" role="button">
                                     <iconify-icon icon="logos:facebook" width="40"></iconify-icon>
                                 </a>&nbsp;
-
                                 <!-- Twitter -->
                                 <a style="color: #55acee;" href="#!" role="button">
                                     <iconify-icon icon="logos:twitter" width="40"></iconify-icon>
                                 </a>&nbsp;
-
                                 <!-- Instagram -->
                                 <a style="color: #ac2bac;" href="#!" role="button">
                                     <iconify-icon icon="icon-park:instagram" width="40"></iconify-icon>
                                 </a>
-
                             </div>
-                        </div>
-                   
-                </div>
-               
+                        </div>                   
+                </div>               
             <hr>
-
-            <p class="m-0 text-center text-white">&copy; Wannabe Healthy 2022 </p>
-            
-            
+            <p class="m-0 text-center text-white">&copy; Wannabe Healthy 2022 </p>            
         </div>
-
         </footer>
-
         <script>
             setTimeout(function () {
                 let messages = document.getElementById('msg');
@@ -220,9 +190,5 @@
                 alert.close();
             }, 2500);
         </script>
-
-    
-
 </body>
-
 </html>
