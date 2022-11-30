@@ -11,8 +11,7 @@
                     <img class="img-fluid w-110" alt="Healthy Woman"
                         src="https://res.cloudinary.com/dspwticaf/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1664628439/Woman_Health_uoejs2.jpg">
 
-                    <div class ="rich">
-                        
+                    <div class="rich">
                         <p class="text">We all aspire to have happy and healthy lives, but we can get caught
                             up in life and start to develop unhealthy habits. We want to change
                             but don't know how or where to start. In this website I hope to share
@@ -30,9 +29,13 @@
 {% if user.is_authenticated %}
 <a href="{% url 'add_post' %}" class="btn btn-success" id="center">Add a Post</a>
 {% endif %}
-
-
 <br>
+
+<!-- {# if messages #}
+{# for message in messages #}
+<p style="background-color: #f1a9a9; height: 30px; width: auto;">{{ message }}</p>
+{# endfor #}
+{# endif #} -->
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -46,7 +49,7 @@
                                 <button type="submit" class="btn btn-search btn-success">
                                     <span class="glyphicon glyphicon-search"></span>
                                     <span class="label-icon">Search</span>
-                                </button>                                
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -56,79 +59,76 @@
     </div>
 </div>
 
-<!-- <tr><td colspan="6">Nothing found</td></tr> -->
-
-
-    <div class="container-fluid">
-        <div class="row">
-
-            <!-- Blog Entries Column -->
-            <div class="col-12 mt-3 left">
-                <div class="row">
-                    {% for post in post_list %}
-                   
-                    <div class="col-md-4 col-sm-6 postlook" >
-                        <div class="card mb-4 ">
-                            <div class="card-body1">
-                                <div class="image-container">
-                                    {% if "placeholder" in post.featured_image.url %}
-                                    <img class="card-img-top img-fluid"
-                                        src="https://res.cloudinary.com/dspwticaf/image/upload/v1666609987/Default_wtmyse.jpg" alt="default image">
-                                    {% else %}
-                                    <img class="card-img-top img-fluid" src=" {{ post.featured_image.url }}" alt="blog image">
-                                    {% endif %}
-                                    <div class="image-flash1">
-                                        <h3 class="category"> {{ post.category }}</h3>
-                                    </div>
-                                    <div class="image-flash">
-                                        <p class="author">Author: {{ post.author }}</p>
-                                    </div>
-
-                                </div>
-                                <a href="{% url 'post_detail' post.slug  %}">
-                                    <h3 class="card-title">{{ post.title }}</h3>
-                                    <p class="card-text">{{ post.excerpt }}</p>
-                                </a>
-                                <hr>
-                                <p class="card-text text-muted h6">{{ post.created_on}} <iconify-icon
-                                        icon="ant-design:heart-outlined" width="20"></iconify-icon>
-                                    {{ post.number_of_likes }} &nbsp;<iconify-icon inline icon="fa-regular:comments"
-                                        width="20"></iconify-icon>{{ post.number_of_comments }}</p>
-                                {% if user.is_authenticated %}
-                                {% if user.id == post.author.id %}
-                                <div class="buttongroup">
-                                    <a href="{% url 'edit_post' post.slug %}" class="btn btn-success btnstyle">Edit</a>
-                                    <a href="{% url 'delete_post' post.slug %}" class="btn btn-danger btnstyle">Delete</a>
-                                </div>
-                                
+<div class="container-fluid">
+    <div class="row">
+        <!--Blog Entries Column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for post in post_list %}
+                <div class="col-md-4 col-sm-6 postlook">
+                    <div class="card mb-4 ">
+                        <div class="card-body1">
+                            <div class="image-container">
+                                {% if "placeholder" in post.featured_image.url %}
+                                <img class="card-img-top img-fluid"
+                                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1666609987/Default_wtmyse.jpg"
+                                    alt="default image">
+                                {% else %}
+                                <img class="card-img-top img-fluid" src=" {{ post.featured_image.url }}"
+                                    alt="blog image">
                                 {% endif %}
-                                {% endif %}
+                                <div class="image-flash1">
+                                    <h3 class="category"> {{ post.category }}</h3>
+                                </div>
+                                <div class="image-flash">
+                                    <p class="author">Author: {{ post.author }}</p>
+                                </div>
                             </div>
+                            <a href="{% url 'post_detail' post.slug  %}">
+                                <h3 class="card-title">{{ post.title }}</h3>
+                                <p class="card-text">{{ post.excerpt }}</p>
+                            </a>
+                            <hr>
+                            <p class="card-text text-muted h6">{{ post.created_on}} <iconify-icon
+                                    icon="ant-design:heart-outlined" width="20"></iconify-icon>
+                                {{ post.number_of_likes }} &nbsp;<iconify-icon inline icon="fa-regular:comments"
+                                    width="20">
+                                </iconify-icon>{{ post.number_of_comments }}</p>
+                            {% if user.is_authenticated %}
+                            {% if user.id == post.author.id %}
+                            <div class="buttongroup">
+                                <a href="{% url 'edit_post' post.slug %}" class="btn btn-success btnstyle">Edit</a>
+                                <a href="{% url 'delete_post' post.slug %}" class="btn btn-danger btnstyle">Delete</a>
+                            </div>
+                            {% endif %}
+                            {% endif %}
                         </div>
-                    </div>  
-
+                    </div>
                     {% if forloop.counter|divisibleby:3 %}
-                </div>
-                <div class="row">
                     {% endif %}
-                    {% endfor %}
-
                 </div>
+                {% empty %}
+                <tr><td colspan="6">There are no results</td></tr>
+                {% endfor %}
             </div>
-        </div>
-        <br>
-        {% if is_paginated %}
-        <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-                {% if page_obj.has_previous %}
-                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-                {% endif %}
-                {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
-                {% endif %}
-            </ul>
-        </nav>
-        {% endif %}
+            <!-- <div class="row">
+            </div> -->
+        </div>       
     </div>
-    {%endblock%}
+    <br>
+    
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
+{%endblock%}
