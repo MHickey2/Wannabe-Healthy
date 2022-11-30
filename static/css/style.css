@@ -174,7 +174,8 @@ i.fa.fa-bars {
 .card-text {
     text-align: centre;
     padding: 5px;
-    margin:5px;   
+    margin:5px; 
+    min-height: 100px;  
 }
 
 /*Styling for blog look*/
@@ -679,6 +680,13 @@ ul li, ol li {
     font-weight:400;
     font-size: 110%;
     margin: 5px;
+  }
+
+
+  .img-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
 /* Medium devices (tablets, 768px and up) */

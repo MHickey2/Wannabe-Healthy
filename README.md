@@ -6,7 +6,7 @@
 <br/>  
 
  
-## Introduction <a name="introduction"></a>  
+# Introduction <a name="introduction"></a>
 
 Wannabe Healthy is the 4th Project for the Code Institute and the Project is a Full Stack website using the Django Framework. The website's content deals with health related topics. It encompasses a Blog with various health categories and a Recipe section which concentrates on health enhancing recipes.  When logged in a User can add, edit or delete their own submitted Blog/Recipe. A logged in User can like/unlike a post or recipe or add comments for either. A logged in User can also view and Update their own Profile with an uploaded image and a Bio. 
 
@@ -18,10 +18,11 @@ Wannabe Healthy is the 4th Project for the Code Institute and the Project is a F
 
 <br/>  
 
-
+# Table of Contents <a name="toc"></a>
 
 - [Wannabe Healthy: Milestone 4 Project](#wannabe-healthy-milestone-4-project)
-  - [Introduction ](#introduction-)
+- [Introduction ](#introduction-)
+- [Table of Contents ](#table-of-contents-)
   - [1. UX Strategy ](#1-ux-strategy-)
     - [1. The Business Goals of the Website: ](#1-the-business-goals-of-the-website-)
     - [2. The Target Customer: ](#2-the-target-customer-)
@@ -92,7 +93,7 @@ Wannabe Healthy is the 4th Project for the Code Institute and the Project is a F
     - [Student Template ](#student-template-)
     - [Deploying to Heroku ](#deploying-to-heroku-)
       - [Return to Table of Contents](#return-to-table-of-contents-9)
-- [Credits ](#credits-)
+  - [Credits ](#credits-)
       - [Return to Table of Contents](#return-to-table-of-contents-10)
   - [Acknowledgements ](#acknowledgements-)
       - [Return to Table of Contents](#return-to-table-of-contents-11)
@@ -152,7 +153,6 @@ The user will be able to maintain a profile on the site and they can update thei
 12. View any comments left on a Recipe. 
 
   
-
   <br/>
 
 ### 2. As a logged in User I can... <a name="loggedinuser"></a> 
@@ -188,13 +188,19 @@ The user will be able to maintain a profile on the site and they can update thei
 
 ### 2. Typography    <a name="typography"></a>
 
-The 'Roboto' font is the main font used for the whole project  
+The 'Roboto' font is the main font used for the whole project, both for regular text and headings. Sans serif is the fallback font in case other font is not available. See below for example of font in use.
+
+Other Fonts were used within the Recipe Details Section and the main heading use the Marhey Font, as they gave a certain quirky touch to the Recipes.
 
 
 <br>
 
 
 ### 3. Imagery    <a name="imagery"></a>
+
+The imagery of the site focuses on a healthy theme, the images were souced from the Pexels site and supplement either the blog or the recipe. The images are all self sourced, but the user can update images to supplement their own blog/recipe.
+
+There are also images sporadically throughout the site, The home page has an image of a healthy woman, conveying a person with a healthy lifestyle. The about page again, shows a healthy woman living her best life and the information panels show images focuses on the main themes within the site.
 
 <br>
 
@@ -257,7 +263,7 @@ On the home page there is a blog section which holds a collection of blogs order
 
 ### 3. Blog Search   <a name="blogsearch"></a>
 
-The website user can use the search facility to find specific categories, that are presented to the user and they can also search by a name in the title.
+The website user can use the search facility to find specific categories, and they can also search by a word in the title.
 
 
 <p align ="center">      
@@ -306,7 +312,7 @@ As a logged in User you will be able to see the delete button below your submitt
 
 ### 7. Blog Detail Page      <a name="blogdetailpage"></a>
 
-When you select a blog, you will be redirected to the blog detail page, this page will show the full content for that specific blog. If you are a logged in user you can add a comment. This comment will have to be approved by the admin before it will be displayed on the site.
+When you select a blog, you will be redirected to the blog detail page, this page will show the full content for that specific blog. If you are a logged in user you can add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can also like/unlike the post. You can also see the Profile Picture and Bio for the Author of the Post.
 
 <br>
 
@@ -390,7 +396,7 @@ As a logged in User you will be able to see the delete button below your submitt
 
 ###  14. Recipe Detail Page   <a name="recipedetailpage"></a>
 
-When you select a Recipe, you will be redirected to the Recipe detail page, this page will show the full content for that specific Recipe. If you are a logged in user you can add a comment. This comment will have to be approved by the admin before it will be displayed on the site.
+When you select a Recipe, you will be redirected to the Recipe detail page, this page will show the full content for that specific Recipe. If you are a logged in user you can add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can also like/unlike the Recipe. You can also see the Profile Picture and Bio for the Author of the Post.
 
 <br>
 
@@ -424,7 +430,7 @@ The logged in user can access the Edit Profile Page and can upload an image and 
 
 ###  17. Signup Page   <a name="signuppage"></a>
 
-On the Signup Page, a new user can sign up for the Wannabe Healthy website by filling out and submitting the form.
+On the Signup Page, a new user can sign up for the Wannabe Healthy website by filling out and submitting the form. On registering they will be assigned a Profile for the site.
 
 <br>
 
@@ -436,7 +442,7 @@ On the Signup Page, a new user can sign up for the Wannabe Healthy website by fi
 
 ###  18. Login Page   <a name="loginpage"></a>
 
-A registered User can log in to the website by inputting the username and password and they will have full access to all the features of the site.
+A registered User can log in to the website by inputting the username and password and they will have full access to all the features of the site. Logged in Users have full acess to all the features within the site.
 <br>
 
 <p align ="center">      
@@ -464,6 +470,8 @@ In the Logout Page, the User can confirm that they want to exit the website.
  ## 6. Future Implementation  <a name="future"></a>
 
  <br>
+
+ The site in it's present form offers a basic blog and recipe site, which is a good foundation but could be developed further to offer more options to the user.
 
  
 
@@ -698,7 +706,7 @@ More information is available at [https://docs.github.com/en](https://docs.githu
  
 #### [Return to Table of Contents](#toc)
 ----
- # Credits <a name="credits"></a>
+ ## Credits <a name="credits"></a>
      
 
  I also used the following online resources:
