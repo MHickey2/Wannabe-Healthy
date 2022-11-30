@@ -156,3 +156,5 @@ class BlogSearchView(generic.ListView):
         context = {"post_list": post_list}
 
         return render(request, "index.html", context)
+    
+   
