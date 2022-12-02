@@ -7,8 +7,10 @@
 
 <p class="col-lg-8 col-xl-6 col-md-4" id="recipeintro">Browse through the recipes and find inspiration for diet changes.
     It can be simple to adapt your present habits to include life enriching choices. Consider a vegetarian diet or start
-    simpler, try a flexitarian option, so it does not feel as daunting. You can find the recipes through categories and if you
-    want to join in, please submit your own recipe, try to keep it healthy as you don't want to lead others astray. So stay a
+    simpler, try a flexitarian option, so it does not feel as daunting. You can find the recipes through categories and
+    if you
+    want to join in, please submit your own recipe, try to keep it healthy as you don't want to lead others astray. So
+    stay a
     while around and give your tastebuds a treat.
 </p>
 
@@ -18,10 +20,9 @@
 
 <br>
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <nav class="searchform">
-                <div>
+        <div class="row">
+            <div class="col-md-6">
+                <nav class="searchform">                
                     <form role="search" action="{% url 'search_recipes' %}" method="get">
                         {% csrf_token %}
                         <div class="input-group">
@@ -30,76 +31,82 @@
                                 <button type="submit" class="btn btn-search btn-success">
                                     <span class="glyphicon glyphicon-search"></span>
                                     <span class="label-icon">Search</span>
-                                </button>                               
+                                </button>
                             </div>
                         </div>
-                    </form>
-                </div>
-            </nav>
+                    </form>                
+                </nav>
+            </div>
         </div>
     </div>
+        
 
 
-<div class="container-fluid">
-    <div class="row">
 
-        <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for recipe in recipe_list %}
-                <div class="col-md-4 postlook1" >
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ recipe.title }}</h5>
-                            <div class="image-container">
-                                {% if "placeholder" in recipe.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg" alt="Generic Image">
-                                {% else %}
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="col-12 mt-3 left">
+                <div class="row">
+                    {% for recipe in recipe_list %}
+                    <div class="col-md-4 postlook1">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ recipe.title }}</h5>
+                                <div class="image-container">
+                                    {% if "placeholder" in recipe.featured_image.url %}
+                                    <img class="card-img-top"
+                                        src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg"
+                                        alt="Generic Image">
+                                    {% else %}
 
-                                <img class="card-img-top" src=" {{ recipe.featured_image.url }}" alt="Recipe Image">
-                                {% endif %}
-                                <div class="image-flash2">
-                                    <h4 class="category"> {{ recipe.category }}</h4>
+                                    <img class="card-img-top" src=" {{ recipe.featured_image.url }}" alt="Recipe Image">
+                                    {% endif %}
+                                    <div class="image-flash2">
+                                        <h4 class="category"> {{ recipe.category }}</h4>
+                                    </div>
+                                    <div class="image-flash3">
+                                        <p class="author">Author: {{ recipe.author }}</p>
+                                    </div>
+                                    <br>
+                                    <h6 class="green"><strong>Difficulty Level:</strong> {{ recipe.difficulty }} |
+                                        &nbsp;<iconify-icon inline icon="emojione:timer-clock" width="20">
+                                        </iconify-icon>&nbsp;{{ recipe.cooking_time }}</h6>
+                                    <p class="card-text">{{ recipe.description}}</p>
                                 </div>
-                                <div class="image-flash3">
-                                    <p class="author">Author: {{ recipe.author }}</p>
+                                <div class="center">
+                                    <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-success">See
+                                        Recipe</a>
                                 </div>
                                 <br>
-                                <h6 class="green"><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<iconify-icon inline icon="emojione:timer-clock" width="20"></iconify-icon>&nbsp;{{ recipe.cooking_time }}</h6>
-                               
-                                <p class="card-text">{{ recipe.description}}</p>
-
+                                <p class="card-text text-muted h6">{{ recipe.created_on}} <i class="far fa-heart"></i>
+                                    {{ recipe.number_of_likes }} &nbsp;<i class="far fa-comments">&nbsp;
+                                    </i>{{ recipe.number_of_comments }}</p>
+                                <hr>
+                                {% if user.is_authenticated %}
+                                {% if user.id == recipe.author.id %}<div class="buttongroup">
+                                    <a href="{% url 'edit_recipe' recipe.slug %}"
+                                        class="btn btn-info btn-sm btnstyle">Edit</a>
+                                    <a href="{% url 'delete_recipe' recipe.slug %}"
+                                        class="btn btn-danger btn-sm btnstyle">Delete</a>
+                                </div>
+                                {% endif %}
+                                {% endif %}
                             </div>
-                            <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-success btn-sm" id="center">See
-                                Recipe</a>
-                            <br>
-                            <p class="card-text text-muted h6">{{ recipe.created_on}} <i class="far fa-heart"></i>
-                                {{ recipe.number_of_likes }} &nbsp;<i class="far fa-comments">&nbsp;
-                                </i>{{ recipe.number_of_comments }}</p>
-                            <hr>
-                            {% if user.is_authenticated %}
-                            {% if user.id == recipe.author.id %}<div class="buttongroup">
-                                <a href="{% url 'edit_recipe' recipe.slug %}" class="btn btn-info btn-sm btnstyle">Edit</a>
-                                <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-danger btn-sm btnstyle">Delete</a>
-                            </div>
-
-                            {% endif %}
-                            {% endif %}
-
                         </div>
                     </div>
+                    {% if forloop.counter|divisibleby:3 %}
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
+                <div class="row">
+                    {% endif %}
+                    {% endfor %}
 
+                </div>
             </div>
         </div>
-    </div>
-    {% if is_paginated %}
+        
+        
+        {% if is_paginated %}
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
@@ -113,4 +120,5 @@
         </nav>
         {% endif %}
     </div>
-{%endblock%}
+
+    {%endblock%}

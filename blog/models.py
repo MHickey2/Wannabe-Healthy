@@ -15,22 +15,6 @@ category_choices = (
     ("Relaxation", "Relaxation"),
 )
 
-
-# class Category(models.Model):
-#     name = models.CharField(max_length=50)
-
-#     class Meta:
-#         ordering = ('name',)
-#         verbose_name = 'category'
-#         verbose_name_plural = 'categories'
-
-#     def __str__(self):
-#         return self.name
-
-#     def get_absolute_url(self):
-#         return reverse('home')
-
-
 class Post(models.Model):
     category = models.CharField(max_length=50, choices=category_choices)
     title = models.CharField(max_length=200, unique=True, blank=False,)

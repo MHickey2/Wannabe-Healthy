@@ -643,6 +643,7 @@ textarea {
     height: 60px;
     width: 60px;   
     border-radius: 50px;
+    border: 2px solid #a3d31c;
   }
 
 /* Styling for Profile image */
