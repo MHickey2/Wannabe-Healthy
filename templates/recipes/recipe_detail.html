@@ -30,8 +30,9 @@
         </div>
 
         <div class="centeralign">
-            <p><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<i
-                    class="fas fa-clock">&nbsp;</i>{{ recipe.cooking_time }}</p>
+            <p><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;
+                <iconify-icon inline icon="emojione:timer-clock" width="20">
+            </iconify-icon>&nbsp; {{ recipe.cooking_time }}</p>
         </div>
         <hr>
 
@@ -51,7 +52,7 @@
 
                 <div class="row">
 
-                    <div class="col-1">
+                    <div class="col-2">
                         <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'recipe_likes' recipe.slug %}" method="POST">
@@ -66,19 +67,18 @@
                                 </button>
                                 {% endif %}
                             </form>
-                            {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            {% else %}                            
                             {% endif %}
                             <!-- The number of likes goes before the closing strong tag -->
                             <span class="text-secondary">{{ recipe.number_of_likes }} </span>
                         </strong>
                     </div>
-                    <div class="col-1">
+                    <div class="col-2">
                         {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
+                        <strong><span class="text-secondary"><iconify-icon icon="uil:comments" width="23"></iconify-icon>
                             <!-- Our total_comments variable goes before the closing strong tag -->
                             {{ total_comments }}
-                            {{ recipe.total_comments }}</strong>
+                            {{ recipe.total_comments }}</span></strong>
                         {% endwith %}
                     </div>
                 </div>

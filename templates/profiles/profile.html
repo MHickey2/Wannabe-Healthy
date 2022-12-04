@@ -2,14 +2,16 @@
 {% block title %}WannabeHealthy/Profile Page{% endblock %}
 {% block content %}
 
-<h1 class="green">Profile Page</h1>
+
+
+<h1 class="green"><iconify-icon icon="healthicons:ui-user-profile-negative" class="greenicon"></iconify-icon>&nbsp;Profile Page</h1>
 <div class="col-sm-6 col-md-6 col-xs-6">
         <section class="section mt-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-xs-4">
                         {% if "placeholder" in profile.profile_pic.url %}
-                        <div class="m-b-25"> <img class="rounded-circle account-img img-radius" id="profile-img"
+                        <div class="m-b-20"> <img class="rounded-circle account-img img-radius" id="profile-img"
                                 src="https://res.cloudinary.com/dspwticaf/image/upload/v1667936304/generic-profile_optkrd.jpg"
                                  alt="User-Profile-Image">
                         </div>
@@ -22,10 +24,11 @@
                         <div class="col-md-6 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
                             <div>
                                 <div class="form-group">                                    
-                                    <label class="labelling">Username:</label> {{ profile.user }}
-                                    <br>
-                                    <br>
-                                    <label class="labelling">Bio:</label> {{ profile.bio }}
+                                    <label class="labelling">Username:</label>
+                                    <p> {{ profile.user }} </p>
+                                    
+                                    <label class="labelling">Bio:</label> 
+                                    <p>{{ profile.bio }} </p>
                                 </div>
                             </div>
                         </div>
@@ -33,8 +36,10 @@
                 </div>
         </section>
 
+    
+
         <div class="profedit">
-            <a href="{% url 'editprofile' %}" class="btn btn-success">Edit Profile</a>
+            <a href="{% url 'editprofile' %}" class="btn btn-success label-icon">Edit Profile</a>
         </div>
 
       

@@ -8,13 +8,13 @@
 {% if user.id == post.author.id %}
 
 
+<h2 class="green"><iconify-icon inline icon="material-symbols:delete-outline-rounded" class="greenicon"></iconify-icon>&nbsp;Delete your Post:</h2>
 <div class="container-fluid">
     <div class="row">
-        <section class="py-5 min-vh-80">
+        <section class="py-5 min-vh-30">            
             <div class="container" id="newpost">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <h2><strong>Delete your Post:</strong></h2>
+                    <div class="col-lg-8">                        
                         <h3>Delete: {{ post.title }}</h3>
                         <br>
                         <form class="form text-muted" method="post">
