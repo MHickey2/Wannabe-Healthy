@@ -14,11 +14,11 @@
     <div>
         <!-- The featured image URL goes in the src attribute -->
         {% if "placeholder" in post.featured_image.url %}
-        <img type="image/jpg" src="https://res.cloudinary.com/dspwticaf/image/upload/v1666609987/Default_wtmyse.jpg"
-            class="img-fluid" alt="Default image">
-        </a>
+        <img type="image/jpg" src="https://res.cloudinary.com/dspwticaf/image/upload/v1664552676/po7sj5nr75pw0p9maekl.jpg"
+             alt="Default image" id="centerimage" width="300" height="250">
+        
         {% else %}
-        <img src=" {{ post.featured_image.url }}" id="centerimage">
+        <img src=" {{ post.featured_image.url }}" id="centerimage" width="300" height="250">
         {% endif %}
     </div>
 </div>

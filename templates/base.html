@@ -81,9 +81,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}" aria-label="Go to the logout page">Logout </a>
                     </li>
-                    <li>
-                    <img class="nav-img img-radius" id="profile-img" src="{{ user.profile.profile_pic.url }}"
-                        alt="User-Profile-Image">
+                    <li>                       
+                        {% if "placeholder" in profile.profile_pic.url %}
+                       <img class="nav-img img-radius" id="profile-img"
+                                src="https://res.cloudinary.com/dspwticaf/image/upload/v1667936304/generic-profile_optkrd.jpg"
+                                 alt="User-Profile-Image">
+                                                     
+                            {% else %} 
+                        <img class="nav-img img-radius" id="profile-img" src="{{ user.profile.profile_pic.url }}"
+                            alt="User-Profile-Image">
+                         {% endif %}   
                     </li>
                     {% else %}
                     <!-- <ul class="navbar-nav ms-auto"> -->

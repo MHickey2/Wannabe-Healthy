@@ -28,6 +28,7 @@ def profilePicDisplay(request):
     context = {
         'profile': profile,
         'form': profile_form,
+        
     }
 
     return render(request, template, context)

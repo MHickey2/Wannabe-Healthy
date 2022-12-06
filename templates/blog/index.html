@@ -70,11 +70,11 @@
                         <div class="card-body1">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top img-fluid"
-                                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1666609987/Default_wtmyse.jpg"
-                                    alt="default image">
+                                <img class="card-img-top "
+                                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1664552676/po7sj5nr75pw0p9maekl.jpg"
+                                    alt="default image" width="300" height="250">
                                 {% else %}
-                                <img class="card-img-top img-fluid" src=" {{ post.featured_image.url }}"
+                                <img class="card-img-top " src=" {{ post.featured_image.url }}" width="300" height="250"
                                     alt="blog image">
                                 {% endif %}
                                 <div class="image-flash1">

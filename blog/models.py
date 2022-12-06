@@ -15,6 +15,7 @@ category_choices = (
     ("Relaxation", "Relaxation"),
 )
 
+
 class Post(models.Model):
     category = models.CharField(max_length=50, choices=category_choices)
     title = models.CharField(max_length=200, unique=True, blank=False,)

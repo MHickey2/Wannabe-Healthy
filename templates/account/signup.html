@@ -29,11 +29,23 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn btn-success" type="submit">{% trans "Sign Up" %} &raquo;</button>
+        <button class="btn btn-success" id="greet" type="submit">{% trans "Sign Up" %} &raquo;</button>
         <br>
       </form>
     </div>
   </div>
 </div>
+
+<script>
+
+let greet = document.getElementById("greet");
+  // function to greet user (homepage)
+button.addEventListener ("click", greetingUser);
+
+  function greetingUser(event) {
+  event.preventDefault();
+  greet.textContent = `Nice to meet you, ${input.value}!`
+}
+</script>
 
 {% endblock %}
