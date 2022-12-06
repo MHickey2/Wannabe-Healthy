@@ -31,12 +31,14 @@ Wannabe Healthy is the 4th Project for the Code Institute and the Project is a F
     - [1. As a website User I can...](#1-as-a-website-user-i-can)
     - [2. As a logged in User I can... ](#2-as-a-logged-in-user-i-can-)
     - [3. As a website superuser, I can …..    ](#3-as-a-website-superuser-i-can-----)
+  - [3. Agile Methodology](#3-agile-methodology)
       - [Return to Table of Contents](#return-to-table-of-contents-1)
   - [3. Design  ](#3-design--)
     - [1. Colour  Scheme  ](#1-colour--scheme--)
     - [2. Typography    ](#2-typography----)
     - [3. Imagery    ](#3-imagery----)
-    - [4. Wireframes    ](#4-wireframes----)
+    - [4. Website Structure    ](#4-website-structure----)
+    - [5. Wireframes    ](#5-wireframes----)
       - [Return to Table of Contents](#return-to-table-of-contents-2)
   - [4. Database Diagram](#4-database-diagram)
       - [Return to Table of Contents](#return-to-table-of-contents-3)
@@ -175,20 +177,32 @@ The user will be able to maintain a profile on the site and they can update thei
 4. Delete user, blogs, recipes, categories and comments.
 5. Can approve user's comments.
 
-  <br/>  
+  <br/> 
+
+## 3. Agile Methodology
+
+The project was developed using Agile Methodology and it was by use of the GitHub Projects functionality within the GitHub Repository. The issues can be found [Here](https://github.com/MHickey2/Wannabe-Healthy/issues) and this is the link for the [WannabeProject Board](https://github.com/users/MHickey2/projects/1)
+
+<br/> 
 
 #### [Return to Table of Contents](#toc)  
 ----
+
 ## 3. Design  <a name="design"></a> 
 
 <br/>
 
 ### 1. Colour  Scheme  <a name="colourscheme"></a>
 
+The colour scheme has primarily a green colour, research has shown that green has a strong link with health related topics and it also relates to nature and I felt it was a natural choice for the content of the site.
+
+<br>
 
 ### 2. Typography    <a name="typography"></a>
 
-The 'Roboto' font is the main font used for the whole project, both for regular text and headings. Sans serif is the fallback font in case other font is not available. See below for example of font in use.
+Google Fonts were used within the website. The 'Roboto' font is the main font used for the whole project, both for regular text and headings. Sans serif is the fallback font in case other font is not available. See below for example of font in use.
+
+The font color was #313131, which is a good font to help counter eye strain.
 
 Other Fonts were used within the Recipe Details Section and the main heading use the Marhey Font, as they gave a certain quirky touch to the Recipes.
 
@@ -198,17 +212,40 @@ Other Fonts were used within the Recipe Details Section and the main heading use
 
 ### 3. Imagery    <a name="imagery"></a>
 
+The Logo was created on a Logo Website, as the theme was health related, I used predominantly green in the logo iteself and the logo had a strong influence on the overall website theme going forward.
+
 The imagery of the site focuses on a healthy theme, the images were souced from the Pexels site and supplement either the blog or the recipe. The images are all self sourced, but the user can update images to supplement their own blog/recipe.
 
 There are also images sporadically throughout the site, The home page has an image of a healthy woman, conveying a person with a healthy lifestyle. The about page again, shows a healthy woman living her best life and the information panels show images focuses on the main themes within the site.
 
 <br>
 
+### 4. Website Structure    <a name="structure"></a>
+
+The website follows the standard website structure. The Logo and the website name are on the left hand side, and the naigation to the right, on the top of all pages. Within the Account Nav Link the user can either register or login to the site. When the user logs in they can see the Profile link and the logout button. The logged in user's image will also be visible. When the website is on smaller screens, there is a hamburger meu, with dropdown navigation items. The footer element is also available on all pages, with site information, contact details and social media icons.
  
-### 4. Wireframes    <a name="wireframes"></a>
+ The website consists of the following Pages:
+ - The Home Page, with an introduction to the site and holds the blog section and the search bar.
+ - The Post Detail Page, that shows the information for individual blogs.
+ - The Add Post Page, which is a form that allows the logged in User to add a blog.
+ - The Edit Post Page, which is a form that allows the user to edit their own post.
+ - The Delete Post Page, which is a form that allows the user to delete their own post.
+ - The About Page, which gives more information on the site and specific panels that shows information on main topics.
+ - The Recipe Page, with an introduction to Recipes and holds the recipe section and the search bar.
+ - The Recipe Detail Page, that shows the information for individual Recipes.
+ - The Add Recipe Page, which is a form that allows the logged in User to add a Recipe.
+ - The Edit Recipe Page, which is a form that allows the user to edit their own Recipe.
+ - The Delete Recipe Page, which is a form that allows the user to delete their own Recipe.
+ - The Profile Page, which contains profile information on the registered User.
+ - The Edit Profile Page, which contains a form that allows the User to add/update their profile information.
+ - The Sign Up Page, consists of a form where a new user can register for the site.
+ - The LogIn Page, consists of a form where the user can login to the site.
+ - The logout Page, consists of a form where the user can logout of the site.
 
-<br>
+### 5. Wireframes    <a name="wireframes"></a>
 
+The Wireframes for the site were created in Figma, I concentrated on the standard websize and the mobile size. The midlevel sizes were generally in keeping with the main websize but just on a smaller scale. The Wireframes can be found
+[here]()
 
 <br>
 
@@ -233,12 +270,26 @@ There are also images sporadically throughout the site, The home page has an ima
 
 ## 5. Features  <a name="features"></a>
 
+There are features common to all pages in the site and these are foundin the base.html page. These include:
+
+- The Logo and Site Title:
+  
+
+- The Navigation Bar:
+  The navigation exists in different forms, for a general user the navigation contains home, about, recipes and an account dropdown with register and login options. For a logged in user the naviation contains, home, about, recipes, profile and logout. When logged in you will also see your profile picture to the right of the other options.
+
+  Ons smaller screens, there is a hamburger menu where the navitation items appear in a collapsable dropdown menu.
+
+
+- The Footer:
+  The Footer contains a blurb on the site, some contact details and social media icons, also the copyright information on the WannabeHealthy site.  
+
 <br>
 
 ### 1. Home Page   <a name="homepage"></a>
 
-The home page has an intro image and a short paragraph of text explaining the purpose of
-the site.  
+The home page has an introductory image and a short paragraph of text explaining the purpose of
+the site, helping the user find out the theme of the site up front. 
   
 
 <br>
@@ -264,6 +315,7 @@ On the home page there is a blog section which holds a collection of blogs order
 ### 3. Blog Search   <a name="blogsearch"></a>
 
 The website user can use the search facility to find specific categories, and they can also search by a word in the title.
+If there are results, they will be displayed to the user and if not the user will be given the message that there are no results, they can either search again or they can return to the home page blog display.
 
 
 <p align ="center">      
@@ -299,7 +351,7 @@ As a logged in User you will be able to see the edit button below your submitted
 
 ###  6. Delete Blog     <a name="deleteblog"></a>
 
-As a logged in User you will be able to see the delete button below your submitted blogs, when you use the delete button you will be redirected to the delete blog page, where you can delete your blog, when the form is completed you will be redirected to the home page.
+As a logged in User you will be able to see the delete button below your submitted blogs, when you use the delete button you will be redirected to the delete blog page, where you can delete your blog, when the form is completed you will be redirected to the home page and your blog will be deleted.
 
 
 <br>
@@ -312,7 +364,7 @@ As a logged in User you will be able to see the delete button below your submitt
 
 ### 7. Blog Detail Page      <a name="blogdetailpage"></a>
 
-When you select a blog, you will be redirected to the blog detail page, this page will show the full content for that specific blog. If you are a logged in user you can add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can also like/unlike the post. You can also see the Profile Picture and Bio for the Author of the Post.
+When you select a blog, you will be redirected to the blog detail page, this page will show the full content for that specific blog. If you are a logged in user you can add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can also like/unlike the post. You will also be able to see the Profile Picture and Bio for the Author of the Post.
 
 <br>
 
@@ -347,7 +399,7 @@ On the Recipes page there is a collection of Recipes ordered with the most recen
 
 ###  10. Recipes Search   <a name="recipessearch"></a>
 
-The website user can use the search facility to find specific categories ie Breakfast, Lunch, Dinner, Dessert and Soup/Salad. You can also search according to a specific word in the title.
+The website user can use the search facility to find specific categories ie Breakfast, Lunch, Dinner, Dessert and Soup/Salad. You can also search according to a specific word in the title.If there are results, they will be displayed to the user and if not the user will be given the message that there are no results, they can either search again or they can return to the recipes page.
 
 <br>
 
@@ -372,7 +424,7 @@ As a logged in User you can add a Recipe to the site, when you press on the add 
 
 ###  12. Edit Recipe   <a name="editrecipe"></a>
 
-As a logged in User you will be able to see the edit button below your submitted Recipe, when you use the edit button you will be redirected to the 'edit your Recipe page', where you can update your Recipe, when the form is completed you will be redirected to the Recipes page.
+As a logged in User you will be able to see the edit button below your submitted Recipe, when you use the edit button you will be redirected to the 'edit your Recipe page', where you can update your Recipe, when the form is completed you will be redirected to the Recipes page and your updated recipe will be displayed.
 
 <br>
 
@@ -384,7 +436,7 @@ As a logged in User you will be able to see the edit button below your submitted
 
 ###  13. Delete Recipe   <a name="deleterecipe"></a>
 
-As a logged in User you will be able to see the delete button below your submitted Recipe, when you use the delete button you will be redirected to the delete Recipe page, where you can delete your Recipe, when the form is completed you will be redirected to the Recipes page.
+As a logged in User you will be able to see the delete button below your submitted Recipe, when you use the delete button you will be redirected to the delete Recipe page, where you can delete your Recipe, when the form is completed you will be redirected to the Recipes page and your recipe will be deleted.
 
 <br>
 
@@ -396,7 +448,7 @@ As a logged in User you will be able to see the delete button below your submitt
 
 ###  14. Recipe Detail Page   <a name="recipedetailpage"></a>
 
-When you select a Recipe, you will be redirected to the Recipe detail page, this page will show the full content for that specific Recipe. If you are a logged in user you can add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can also like/unlike the Recipe. You can also see the Profile Picture and Bio for the Author of the Post.
+When you select a Recipe, you will be redirected to the Recipe detail page, this page will show the full content for that specific Recipe. If you are a logged in user you can add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can also like/unlike the Recipe. You can also see the Profile Picture and Bio for the Author of the Recipe.
 
 <br>
 
@@ -408,7 +460,7 @@ When you select a Recipe, you will be redirected to the Recipe detail page, this
 
 ###  15. Profile Page   <a name="profilepage"></a>
 
-On the Profile Page, the User can have access to their own profile information. The profile will be automatically created when they register for the site.
+On the Profile Page, the User can have access to their own profile information. The profile will be automatically created when they register for the site. Initially the user will have a generic photo.
 
 
 <br>
@@ -442,7 +494,7 @@ On the Signup Page, a new user can sign up for the Wannabe Healthy website by fi
 
 ###  18. Login Page   <a name="loginpage"></a>
 
-A registered User can log in to the website by inputting the username and password and they will have full access to all the features of the site. Logged in Users have full acess to all the features within the site.
+A registered User can log in to the website by inputting the username and password and they will have full access to all the features of the site. 
 <br>
 
 <p align ="center">      
@@ -471,7 +523,7 @@ In the Logout Page, the User can confirm that they want to exit the website.
 
  <br>
 
- The site in it's present form offers a basic blog and recipe site, which is a good foundation but could be developed further to offer more options to the user.
+ The site in it's present form offers a basic blog and recipe site, which is a good foundation but could be developed further to offer more options to the user. Within in the blog area, I would like to add some features in future iterations such as adding favourites and highlighting the blogs that have received the most likes. In regards to the recipes, there are a number of extra optionns I would like to introduce including vegetarian, and vegan options, the present recipes are not categorised in this way. I would like to introudce more interaction into the site, possibly using a forum where users can document their own experiences when adopting a vegetarian/vegan lifestyle. This would increase the social aspect of the site and would fully utilize the social media platforms fully. The present profiles could be expanded to include more information, such as the user's own links so that users can also interact with each other outside of the site. At present there is no contact page and this would also be introduced, to encourage users to contact the web owner with messages, and it would be hoped their interaction would help the site owner to develop new ideas based on this interaction. 
 
  
 
@@ -484,40 +536,38 @@ In the Logout Page, the User can confirm that they want to exit the website.
 ### Language Used:
 
 -   [Python 3.8.10](https://www.python.org/)
--   [HTML5](https://en.wikipedia.org/wiki/HTML5)        &nbsp; [CSS3](https://en.wikipedia.org/wiki/CSS)
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)    
+-   [CSS3](https://en.wikipedia.org/wiki/CSS)
 -   [JavaScript](https://www.javascript.com/)
 -   [Django](https://www.python.org/)
 
 ### Technology Used:
 
--   [Git:](https://git-scm.com/) used for version control, updated changes and commited changes and this in turn updated in Heroku 
+-   [Am I Responsive](http://ami.responsivedesign.is/) was used to create the multi-device mock-up above.
+-   [Bootstrap v5.2.3](https://getbootstrap.com/)
+-   [Git:](https://git-scm.com/) used for version control, updated and commited changes (this in turn updated in Heroku). 
 -   [GitHub:](https://github.com/) is the respository for all the git pushes.
--   [Gitpod](https://gitpod.io/) was the IDE Editor
+-   [Gitpod](https://gitpod.io/) was the IDE Editor.
 -   [Heroku:](https://heroku.com) used to deploy the application.
 -   [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)
 -   [Markdown](https://markdown-guide.readthedocs.io/en/latest/)
--   [Cloudinary](https://cloudinary.com/)
--   [PostgreSQL](https://www.postgresql.org/)
--   [Bootstrap](https://getbootstrap.com/)
--   [Draw.io](https://drawio-app.com/)
- 
+-   [Cloudinary](https://cloudinary.com/) - used for images for the site.
+-   [Elephant SQL](https://www.elephantsql.com/) – deployed project on Heroku uses an Elephant SQL database. 
+-   [Draw.io](https://drawio-app.com/) - used for the database diagram.
+-   [Iconify.Design](https://iconify.design/) -Icons used for the site
+-   [Favicon.io](https://favicon.io) for making the site favicon.
+-   [Figma]()- used for making the wireframes for the site.
+
 #### Django Packages
 
-* [Gunicorn](https://gunicorn.org/)<br>
-   As the server for Heroku
-* [Cloudinary](https://cloudinary.com/)<br>
-   Was used to host the static files and media
-* [Dj_database_url](https://pypi.org/project/dj-database-url/)<br>
-   To parse the database URL from the environment variables in Heroku
-* [Psycopg2](https://pypi.org/project/psycopg2/)<br>
-   As an adaptor for Python and PostgreSQL databases
-* [Summernote](https://summernote.org/)<br>
-   As a text editor
-* [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)<br>
-   For authentication, registration, account
+* [Gunicorn](https://gunicorn.org/) - As a server for Heroku
+* [Cloudinary](https://cloudinary.com/) - Was used to host the static files and media
+* [Dj_database_url](https://pypi.org/project/dj-database-url/) - To parse the database URL from the environment variables in Heroku
+* [Psycopg2](https://pypi.org/project/psycopg2/) - As an adaptor for Python and PostgreSQL databases
+* [Summernote](https://summernote.org/) - As a text editor for adding content
+* [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) - For authentication, registration, account
    management
-* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)<br>
-   To style the forms
+* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - To style the forms used in the site
  
 
  #### [Return to Table of Contents](#toc)
