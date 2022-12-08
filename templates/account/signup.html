@@ -27,24 +27,22 @@
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" id="usrname" />
         {% endif %}
-        <button class="btn btn-success" id="greet" type="submit">{% trans "Sign Up" %} &raquo;</button>
+        <button class="btn btn-success" type="submit">{% trans "Sign Up" %} &raquo;</button>
         <br>
       </form>
     </div>
   </div>
 </div>
 
+<div id="outputDiv"></div>
+
 <script>
-
-let greet = document.getElementById("greet");
-  // function to greet user (homepage)
-button.addEventListener ("click", greetingUser);
-
-  function greetingUser(event) {
+  function displayGreeting(event) {
   event.preventDefault();
-  greet.textContent = `Nice to meet you, ${input.value}!`
+  let usrname = document.getElementById('usrname').value;
+  document.getElementById('outputDiv').innerHTML = 'Hello ' + usrname + ', Welcome to WannabeHealthy Site' + '<br> ' + 'You are officially a WannabeHealthy member ' + usrname + '!';
 }
 </script>
 

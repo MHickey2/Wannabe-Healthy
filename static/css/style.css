@@ -19,7 +19,8 @@
 
 body {    
     background-color:whitesmoke;
-    max-width: 1500px;
+    max-width: 1500px;   
+    overflow-x: hidden;
     height: 100vh;    
 }
 
@@ -676,6 +677,17 @@ textarea {
     border: 2px solid #a3d31c;
   }
 
+
+  .profile-img {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    height: 130px;
+    width: 130px;   
+    border-radius: 50px;
+    border:solid green 4px;   
+    position:relative;     
+  }  
 /* Styling for Profile image */
 #profile-img1 {
     display: block; 

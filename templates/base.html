@@ -108,9 +108,7 @@
         </div>
     </nav>
 
-    {% if user.is_authenticated %}
-    <span class="welcometosite">Welcome back, {{ user.username }}</span>   
-    {% endif %}
+    
 
     <div class="container">
         <div class="row">
@@ -134,16 +132,15 @@
     </main>
 
         <!-- Footer -->
-        <footer id="footer" class="footer bg-setup main-bg-desktop main-bg-mobile text-center">
-             <div class="overlay overlay-footer"> 
+        <footer id="footer" class="footer bg-setup main-bg-desktop main-bg-mobile text-center">             
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="footer-text">
                                 <h4 class="footer-text">Wannabe Healthy</h4>
                                 <p class="footer-text">We all strive to be more healthy,this site offers some
-                                    direction information and recipes that you can adapt for your
-                                    own needs, and it may be a good starting point for your own health journey.
+                                    direction, information and recipes that you can adapt for your
+                                    own needs, and it may be a good starting point for your own healthy lifestyle journey.
                                 </p>
                             </div>
                         </div>                        
@@ -166,15 +163,18 @@
                             <div class="social">
                                 <h4 class="footer-text">Follow Us</h4>
                                 <!-- Facebook -->
-                                <a style="color: #3b5998;" href="#" role="button">
+                                <a href="https://facebook.com" style="color: #3b5998;" target="_blank" rel="noopener"
+                                aria-label="Visit us at our facebook page (opens in a new tab)" role="button">                                
                                     <iconify-icon icon="logos:facebook" width="40"></iconify-icon>
                                 </a>&nbsp;
                                 <!-- Twitter -->
-                                <a style="color: #55acee;" href="#" role="button">
+                                <a style="color: #55acee;" href="https://twitter.com" target="_blank" rel="noopener"
+                                aria-label="Visit us at our twitter page (opens in a new tab)" role="button">
                                     <iconify-icon icon="logos:twitter" width="40"></iconify-icon>
                                 </a>&nbsp;
                                 <!-- Instagram -->
-                                <a style="color: #ac2bac;" href="#" role="button">
+                                <a style="color: #ac2bac;" href="https://instagram.com" target="_blank" rel="noopener"
+                                aria-label="Visit us at our instagram page (opens in a new tab)" role="button">    
                                     <iconify-icon icon="icon-park:instagram" width="40"></iconify-icon>
                                 </a>
                             </div>
