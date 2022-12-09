@@ -92,6 +92,8 @@ class PostLike(View):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
+            msg = 'Your have unliked this Post'
+            messages.add_message(self.request, messages.SUCCESS, msg)
         else:
             post.likes.add(request.user)
             msg = 'Your have liked this Post'

@@ -52,7 +52,7 @@
                     <div class="col-md-4 postlook1">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h5 class="card-title">{{ recipe.title }}</h5>
+                                <h3 class="card-title">{{ recipe.title }}</h3>
                                 <div class="image-container">
                                     {% if "placeholder" in recipe.featured_image.url %}
                                     <img class="card-img-top"
@@ -60,7 +60,7 @@
                                         alt="Generic Image">
                                     {% else %}
 
-                                    <img class="card-img-top" src=" {{ recipe.featured_image.url }}" alt="Recipe Image">
+                                    <img class="card-img-top" src=" {{ recipe.featured_image.url }}" alt="{{ recipe.title }} image">
                                     {% endif %}
                                     <div class="image-flash2">
                                         <h4 class="category"> {{ recipe.category }}</h4>
@@ -69,20 +69,21 @@
                                         <p class="author">Author: {{ recipe.author }}</p>
                                     </div>
                                     <br>
-                                    <h6 class="green"><strong>Difficulty Level:</strong> {{ recipe.difficulty }} |
+                                    <h6 class="green"><strong>Difficulty Level: {{ recipe.difficulty }} |
                                         &nbsp;<iconify-icon inline icon="emojione:timer-clock" width="20">
-                                        </iconify-icon>&nbsp;{{ recipe.cooking_time }}</h6>
+                                        </iconify-icon>&nbsp;{{ recipe.cooking_time }}</h6></strong>
                                     <p class="card-text">{{ recipe.description}}</p>
                                 </div>
                                 <div class="center">
-                                    <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-success">See
-                                        Recipe</a>
+                                    <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-success">SEE RECIPE</a>
                                 </div>
                                 <br>
-                                <p class="card-text text-muted h6">{{ recipe.created_on}} <i class="far fa-heart"></i>
-                                    {{ recipe.number_of_likes }} &nbsp;<i class="far fa-comments">&nbsp;
-                                    </i>{{ recipe.number_of_comments }}</p>
                                 <hr>
+                                <p class="card-text h6">{{ recipe.created_on}} <iconify-icon
+                                    icon="ant-design:heart-outlined" width="20"></iconify-icon>
+                                {{ recipe.number_of_likes }} &nbsp;<iconify-icon inline icon="fa-regular:comments"
+                                    width="23"></iconify-icon>&nbsp;{{ recipe.number_of_comments }}</p>                               
+                                
                                 {% if user.is_authenticated %}
                                 {% if user.id == recipe.author.id %}<div class="buttongroup">
                                     <a href="{% url 'edit_recipe' recipe.slug %}"

@@ -73,7 +73,7 @@
             <div class="row">
                 {% for post in post_list %}
                 <div class="col-md-4 col-sm-6 postlook">
-                    <div class="card mb-4 ">
+                    <div class="card mb-4">
                         <div class="card-body1">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
@@ -118,10 +118,10 @@
                 <tr><td colspan="6">There are no results</td></tr>
                 {% endfor %}
             </div>
-            <!-- <div class="row">
-            </div> -->
+           
         </div>       
     </div>
+    <br>
     <br>
     
     {% if is_paginated %}

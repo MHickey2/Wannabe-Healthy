@@ -204,6 +204,8 @@ Google Fonts were used within the website. The 'Roboto' font is the main font us
 
 The font color was #313131, which is a good font to help counter eye strain.
 
+The main title for the site and the navbar links use the 'Abril Fatface' font, A font it displays both neutrality and a strong presence on the page which helps to attract reader attention with the measured tension of its curves, good color and high contrast.
+
 Other Fonts were used within the Recipe Details Section and the main heading use the Marhey Font, as they gave a certain quirky touch to the Recipes.
 
 

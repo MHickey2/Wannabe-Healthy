@@ -39,26 +39,27 @@
                 <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                     {% csrf_token %}
                     {% if liked %}
-                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                            class="fas fa-heart"></i></button>
+                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
+                        <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></button>
                     {% else %}
-                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                            class="fas fa-heart"></i></button>
+                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
+                        <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></button>
                     {% endif %}
                 </form>
                 {% else %}                
-                <strong><span class=""><i class="far fa-heart"></i></span>
+                <strong><span class=""><iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></span>
                     {% endif %}
                     <!-- The number of likes goes before the closing strong tag -->
-                    <span class="text-secondary">{{ post.number_of_likes }} </span>
+                    <strong><span class="text-secondary">{{ post.number_of_likes }} </span>
                 </strong>
             </div>
             <div class="col-2">
                 {% with comments.count as total_comments %}
-                <strong><i class="far fa-comments"></i>
+                <strong>&nbsp;<iconify-icon inline icon="fa-regular:comments"
+                    width="23"></iconify-icon>
                     <!-- total_comments variable goes before the closing strong tag -->
                     {{ total_comments }}
-                    <span class="text-secondary">{{ post.total_comments }} </span>
+                    <strong><span class="text-secondary">{{ post.total_comments }} </span>
                 </strong>
                 {% endwith %}
             </div>

@@ -7,10 +7,10 @@ from django.db.models.signals import post_save
 class Profile(models.Model):
     """
     Model for user profile
-    """
+    """    
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
     profile_pic = CloudinaryField('image', default='placeholder')
-    bio = models.TextField() 
+    bio = models.TextField()
     related_name = "profile"
 
     def __str__(self):
