@@ -56,11 +56,11 @@
                                 <div class="image-container">
                                     {% if "placeholder" in recipe.featured_image.url %}
                                     <img class="card-img-top"
-                                        src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg"
+                                        src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg" 
                                         alt="Generic Image">
                                     {% else %}
 
-                                    <img class="card-img-top" src=" {{ recipe.featured_image.url }}" alt="{{ recipe.title }} image">
+                                    <img class="card-img-top" src=" {{ recipe.featured_image.url }}"  alt="{{ recipe.title }} image">
                                     {% endif %}
                                     <div class="image-flash2">
                                         <h4 class="category"> {{ recipe.category }}</h4>
@@ -72,14 +72,14 @@
                                     <h6 class="green"><strong>Difficulty Level: {{ recipe.difficulty }} |
                                         &nbsp;<iconify-icon inline icon="emojione:timer-clock" width="20">
                                         </iconify-icon>&nbsp;{{ recipe.cooking_time }}</h6></strong>
-                                    <p class="card-text">{{ recipe.description}}</p>
+                                    <p class="textual">{{ recipe.description}}</p>
                                 </div>
                                 <div class="center">
                                     <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-success">SEE RECIPE</a>
                                 </div>
                                 <br>
                                 <hr>
-                                <p class="card-text h6">{{ recipe.created_on}} <iconify-icon
+                                <p class="card-text">{{ recipe.created_on}} <iconify-icon
                                     icon="ant-design:heart-outlined" width="20"></iconify-icon>
                                 {{ recipe.number_of_likes }} &nbsp;<iconify-icon inline icon="fa-regular:comments"
                                     width="23"></iconify-icon>&nbsp;{{ recipe.number_of_comments }}</p>                               

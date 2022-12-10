@@ -19,9 +19,11 @@
 
 body {    
     background-color:whitesmoke;
-    max-width: 1500px;   
-    overflow-x: hidden;
-    height: 100vh;    
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;       
+    /* height: 100vh; */
+     
 }
 
 html * {
@@ -44,18 +46,20 @@ html * {
 
 /*Navbar in base.html but on all pages*/
 
-/* Styling for Title */
+/* Styling for Title Wannabe Healthy*/
 .title {
     color: #a3d31c;
     text-transform: capitalize;
-    -webkit-text-stroke-color: #fff;    
+    /* -webkit-text-stroke-color: #fff;     */
     font-family: 'Abril Fatface', cursive;    
     border-bottom:2px solid #a3d31c;
     font-weight: Bold; 
 }
 
 #header {    
-    margin-left: 12px;       
+    margin-left: 12px;
+    left: 0;
+    top: 0;       
 }
 
 /*hamburger for smaller screens*/
@@ -110,8 +114,7 @@ footer {
 .page-link {
     font-weight:bolder;
     color: darkgreen !important;
-    font-style:oblique !important;
-    
+    font-style:oblique !important;    
 }
 
 /* Heading for index Page */
@@ -123,8 +126,7 @@ footer {
 
 .text {   
     font-size: 110%;
-    margin: 5vh;
-   
+    margin: 5vh;   
 }
 
 /*Search form styling*/
@@ -139,8 +141,8 @@ footer {
 
 /*Styling for individual blogs in blog section*/
 .card-body1 {
-    min-height: 450px;
-    background-color: rgba(244, 247, 244, 0.4);
+    min-height: 420px;
+    background-color: rgba(244, 247, 244, 0.4);    
     border-radius: 15px;   
 }
 
@@ -165,8 +167,6 @@ footer {
     width: 240px;
     height: 250px; 
 }
-
-
 
 /*Flash for author on image in blogs*/
 .image-flash {
@@ -219,10 +219,16 @@ footer {
 
 /*Styling for excerpt in blog*/
 .card-text {
-    text-align: centre;
+    text-align: center;
     padding: 5px;
     margin:5px; 
-    min-height: 100px;  
+    /* min-height: 120px;   */
+}
+
+.textual {
+    min-height: 100px;
+    padding: 5px;
+    text-align: center;
 }
 
 /*Styling for blog look*/
@@ -361,16 +367,7 @@ a, a:visited, a:hover, a:active {
     color: lightgreen;
     border: none;
     background: transparent;
-} */
-
-.btn-like:hover,
-.btn-like:active {
-    color: green;
-    background: transparent;
-    border: none;
-}
-
-
+} 
 
 .white {
     color: white;
@@ -393,7 +390,6 @@ a, a:visited, a:hover, a:active {
 
 
 /* Blog and recipe posts */
-
 #newpost {
     background-color: #47d31c;
     border: 1px solid black;   
@@ -413,8 +409,7 @@ a, a:visited, a:hover, a:active {
     width: 60vw;
     opacity: .9;
     margin-bottom: 20px;
-    border-radius: 15px;
-   
+    border-radius: 15px;   
 }
 
 /*Styling for input and textareas for forms*/
@@ -452,8 +447,6 @@ textarea {
     width: 100%;
     margin-left: 5px;
 }
-
-
 
 /*Styling to centre elements in site*/
 #center {
@@ -496,8 +489,7 @@ textarea {
     line-height: 1.5;
     font-size: 110%;
     text-align: center;
-    color: darkgreen;
-    
+    color: darkgreen;    
 }
 
 /*Styling for Recipe Category*/
@@ -524,12 +516,12 @@ textarea {
 
 /*Recipe body*/
 .card-body {
-    min-height: 500px;
+    min-height: 420px;
     background-color: white;
-    grid-row-gap: 50px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 15px;
+    grid-row-gap: 60px;
+    padding: 5px;
+    border: 2px solid green;
+    border-radius: 15px;    
     
 }
 
@@ -550,7 +542,7 @@ textarea {
 .postlook1 {
     min-height: 480px;    
     padding-top: 25px;
-    border-radius: 25px;   
+    border-radius: 25px;      
 }
 
 .centeralign {
@@ -581,14 +573,12 @@ textarea {
     margin: 10px;
     padding: 10px;
     text-indent: 10px;
-    font-family: 'Marhey', cursive;
-    
+    font-family: 'Marhey', cursive;    
 }
 
 /*Styling for comment section*/
 .commentsection {
-    height: 90vh;
-       
+    height: 90vh;       
 }
 
 .poster {
@@ -658,8 +648,6 @@ textarea {
 .btn btn-success {
     padding: 10px;
 }
-
-
 
 .col-md-6 {
     display: block;
@@ -788,6 +776,9 @@ ul li, ol li {
     min-height: 300px;
     text-align: center;
     line-height: 1.5;
+    padding: 5px;
+    text-align: justify;
+    
 }
 
 .btn-danger {

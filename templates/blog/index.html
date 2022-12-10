@@ -16,7 +16,7 @@
                 <h1 class="green">Welcome to Wannabe Healthy</h1>
                 <div class="lc-block mb-2">
                     <img class="img-fluid w-110" alt="Healthy Woman"
-                        src="https://res.cloudinary.com/dspwticaf/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1664628439/Woman_Health_uoejs2.jpg">
+                        src="https://res.cloudinary.com/dspwticaf/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1664628439/Woman_Health_uoejs2.jpg" width="300" height="300">
 
                     <div class="rich">
                         <p class="text">We all aspire to have happy and healthy lives, but we can get caught
@@ -79,9 +79,9 @@
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
                                     src="https://res.cloudinary.com/dspwticaf/image/upload/v1664552676/po7sj5nr75pw0p9maekl.jpg"
-                                    alt="generic-image" width="300" height="250">
+                                    alt="generic-image" width="300" height="200">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}" width="300" height="250"
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}" width="300" height="200"
                                     alt="{{ post.title }} image">
                                 {% endif %}
                                 <div class="image-flash1">
@@ -93,7 +93,7 @@
                             </div>
                             <a href="{% url 'post_detail' post.slug  %}">
                                 <h3 class="card-title">{{ post.title }}</h3>
-                                <p class="card-text">{{ post.excerpt }}</p>
+                                <p class="textual">{{ post.excerpt }}</p>
                             </a>
                             <hr>
                             <p class="card-text text-muted h6">{{ post.created_on}} <iconify-icon
