@@ -732,7 +732,7 @@ textarea {
 
 /* Styling for unordered lists in blogs and Recipes */  
 .unordered {
-    line-height: 2;
+    line-height: 1.5;
     font-family: 'Marhey', cursive;     
 }
 
@@ -747,6 +747,13 @@ ul li, ol li {
     font-weight:400;
     font-size: 110%;
     margin: 5px;
+  }
+
+  .content {
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    color: #313131;
+    font-size: 110%;
   }
 
 
@@ -764,13 +771,11 @@ ul li, ol li {
     color: white !important;
   }
 
-  .img-fluid {
+   .img-fluid {
     width: 90vw;
-    height: auto;
+    height: auto; 
 
-    
-
-}
+} 
 
 .card-body2 {
     min-height: 300px;

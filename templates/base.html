@@ -18,25 +18,26 @@
     {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endblock %}
-    <!-- BOOTSTRAP CSS -->    
+    <!-- BOOTSTRAP CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">      
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- FAVICON -->
     <link rel="icon" type="image/x-icon"
-    href="https://res.cloudinary.com/dspwticaf/image/upload/v1664556486/favicon-16x16_t2w0oj.png">
+        href="https://res.cloudinary.com/dspwticaf/image/upload/v1664556486/favicon-16x16_t2w0oj.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--Cloudinary-->
     <link rel="icon" type="images/png"
         href="https://res.cloudinary.com/dspwticaf/image/upload/v1664556486/favicon-16x16_t2w0oj.png">
     <!-- FONT-AWESOME -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Marhey&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
-    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Marhey&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/solid.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/regular.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/regular.min.css">
     <!-- <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script> -->
     <!--Title-->
     <title>{% block title %}Wannabe Healthy{% endblock %}</title>
@@ -53,16 +54,16 @@
                 <img id="logo" src="https://res.cloudinary.com/dspwticaf/image/upload/v1664291226/logo_frehe3.png"
                     alt="wannabe logo"></a>
             <h3 class="title">Wannabe Healthy</h3>
-            
             <button class="navbar-toggler box-shadow collapsed" style="text-align: center;" type="button"
-                data-bs-toggle="collapse" data-bs-target="#header" aria-controls="header"
-                aria-expanded="false" aria-label="Toggle navigation">
+                data-bs-toggle="collapse" data-bs-target="#header" aria-controls="header" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <iconify-icon inline icon="fa-solid:bars" class="bars"></iconify-icon>
             </button>
             <div class="collapse navbar-collapse" id="header">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{% url 'home' %}" aria-label="Go to the home page">Home </a>
+                        <a class="nav-link" aria-current="page" href="{% url 'home' %}"
+                            aria-label="Go to the home page">Home </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'about' %}" aria-label="Go to the about page">About </a>
@@ -75,18 +76,18 @@
                         <a class="nav-link" href="{% url 'profile' %}" aria-label="Go to the profile page">Profile </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}" aria-label="Go to the logout page">Logout </a>
+                        <a class="nav-link" href="{% url 'account_logout' %}" aria-label="Go to the logout page">Logout
+                        </a>
                     </li>
                     <li>
-                        
-                                             
-                        {% if "placeholder" in request.user.profile.profile_pic.url  %}                        
-                       <img class="nav-img img-radius" id="profile-img" img src="https://res.cloudinary.com/dspwticaf/image/upload/v1667936304/generic-profile_optkrd.jpg"                                
-                                 alt="User-Profile-Image">                                                      
-                            {% else %} 
-                        <img class="nav-img img-radius" id="profile-img" src="{{ request.user.profile.profile_pic.url }}"
+                        {% if "placeholder" in request.user.profile.profile_pic.url  %}
+                        <img class="nav-img img-radius" id="profile-img" img
+                            src="https://res.cloudinary.com/dspwticaf/image/upload/v1667936304/generic-profile_optkrd.jpg"
                             alt="User-Profile-Image">
-                         {% endif %}   
+                        {% else %}
+                        <img class="nav-img img-radius" id="profile-img"
+                            src="{{ request.user.profile.profile_pic.url }}" alt="User-Profile-Image">
+                        {% endif %}
                     </li>
                     {% else %}
                     <!-- <ul class="navbar-nav ms-auto"> -->
@@ -94,8 +95,10 @@
                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">Account</a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{% url 'account_login' %}" aria-label="Go to the login page">Login</a></li>
-                            <li><a class="dropdown-item" href="{% url 'account_signup' %}" aria-label="Go to the signup page">Register</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_login' %}"
+                                    aria-label="Go to the login page">Login</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_signup' %}"
+                                    aria-label="Go to the signup page">Register</a></li>
                         </ul>
                     </li>
                     {% endif %}
@@ -103,8 +106,6 @@
             </div>
         </div>
     </nav>
-
-    
 
     <div class="container">
         <div class="row">
@@ -123,73 +124,76 @@
         {% block content %}
 
         <!-- Content Goes here -->
-       
+
         {% endblock content %}
     </main>
 
-        <!-- Footer -->
-        <footer id="footer" class="footer bg-setup main-bg-desktop main-bg-mobile text-center">             
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="footer-text">
-                                <h4 class="footer-text">Wannabe Healthy</h4>
-                                <p class="footer-text">We all strive to be more healthy,this site offers some
-                                    direction, information and recipes that you can adapt for your
-                                    own needs, and it may be a good starting point for your own healthy lifestyle journey.
-                                </p>
-                            </div>
-                        </div>                        
-                        <div class="col-md-4">
-                            <div class="contact">
-                                <h4 class="footer-text">Contact</h4>                                
-                                <p class="footer-text">
-                                    <iconify-icon icon="cil:phone" width="20" class="white"></iconify-icon>&nbsp;+ 01-4590808
-                                </p>
-                                <p class="footer-text">
-                                    <iconify-icon icon="ci:mail" width="20" class="white"></iconify-icon>&nbsp;info@wannabehealthy.com
-                                </p>
-                                <p class="footer-text">
-                                    <iconify-icon icon="bi:house-heart" width="20" class="white"></iconify-icon>&nbsp;28 Patrick's Street,
-                                    Dublin 8.
-                                </p>                           
-                            </div>
-                        </div>
-                        <div class="col-md-4 footer-box text-white">
-                            <div class="social">
-                                <h4 class="footer-text">Follow Us</h4>
-                                <!-- Facebook -->
-                                <a href="https://facebook.com" style="color: #3b5998;" target="_blank" rel="noopener"
-                                aria-label="Visit us at our facebook page (opens in a new tab)" role="button">                                
-                                    <iconify-icon icon="logos:facebook" width="40"></iconify-icon>
-                                </a>&nbsp;
-                                <!-- Twitter -->
-                                <a style="color: #55acee;" href="https://twitter.com" target="_blank" rel="noopener"
-                                aria-label="Visit us at our twitter page (opens in a new tab)" role="button">
-                                    <iconify-icon icon="logos:twitter" width="40"></iconify-icon>
-                                </a>&nbsp;
-                                <!-- Instagram -->
-                                <a style="color: #ac2bac;" href="https://instagram.com" target="_blank" rel="noopener"
-                                aria-label="Visit us at our instagram page (opens in a new tab)" role="button">    
-                                    <iconify-icon icon="icon-park:instagram" width="40"></iconify-icon>
-                                </a>
-                            </div>
-                        </div>                   
-                </div>               
+    <!-- Footer -->
+    <footer id="footer" class="footer bg-setup main-bg-desktop main-bg-mobile text-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-text">
+                        <h4 class="footer-text">Wannabe Healthy</h4>
+                        <p class="footer-text">We all strive to be more healthy,this site offers a selection of blogs
+                            and recipes that you can adapt for your
+                            own needs, and it may be a good starting point for your own healthy lifestyle journey.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact">
+                        <h4 class="footer-text">Contact</h4>
+                        <p class="footer-text">
+                            <iconify-icon icon="cil:phone" width="20" class="white"></iconify-icon>&nbsp;+ 01-4590808
+                        </p>
+                        <p class="footer-text">
+                            <iconify-icon icon="ci:mail" width="20" class="white"></iconify-icon>
+                            &nbsp;info@wannabehealthy.com
+                        </p>
+                        <p class="footer-text">
+                            <iconify-icon icon="bi:house-heart" width="20" class="white"></iconify-icon>&nbsp;28
+                            Patrick's Street,
+                            Dublin 8.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-box text-white">
+                    <div class="social">
+                        <h4 class="footer-text">Follow Us</h4>
+                        <!-- Facebook -->
+                        <a href="https://facebook.com" style="color: #3b5998;" target="_blank" rel="noopener"
+                            aria-label="Visit us at our facebook page (opens in a new tab)" role="button">
+                            <iconify-icon icon="logos:facebook" width="40"></iconify-icon>
+                        </a>&nbsp;
+                        <!-- Twitter -->
+                        <a style="color: #55acee;" href="https://twitter.com" target="_blank" rel="noopener"
+                            aria-label="Visit us at our twitter page (opens in a new tab)" role="button">
+                            <iconify-icon icon="logos:twitter" width="40"></iconify-icon>
+                        </a>&nbsp;
+                        <!-- Instagram -->
+                        <a style="color: #ac2bac;" href="https://instagram.com" target="_blank" rel="noopener"
+                            aria-label="Visit us at our instagram page (opens in a new tab)" role="button">
+                            <iconify-icon icon="icon-park:instagram" width="40"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <hr>
-            <p class="m-0 text-center text-white">&copy; Wannabe Healthy 2022 </p>            
+            <p class="m-0 text-center text-white">&copy; Wannabe Healthy 2022 </p>
         </div>
-        </footer>
-        <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-        <script>
-            setTimeout(function () {
-                let messages = document.getElementById('msg');
-                let alert = new bootstrap.Alert(messages);
-                alert.close();
-            }, 2500);
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    </footer>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script>
+        setTimeout(function () {
+            let messages = document.getElementById('msg');
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 2500);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-        </script>  
-</body>
+    </script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    </body>
 </html>

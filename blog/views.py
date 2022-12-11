@@ -106,14 +106,14 @@ class AddPostView(generic.CreateView):
     template_name = "blog/add_post.html"
     fields = ['category', 'title', 'slug', 'featured_image', 'excerpt',
               'content', 'status']
-    success_url = reverse_lazy('blog/home')
+    success_url = reverse_lazy('home')
 
     def form_valid(self, form):
         """ Ensures form valid and new inputs are saved"""
         """ adding the username automatically for the post """
         form.instance.author = self.request.user
         form.save()
-        msg = 'Your Post has been added successfully'
+        msg = 'Your Post has been created successfully'
         messages.add_message(self.request, messages.SUCCESS, msg)
         return super().form_valid(form)
 
