@@ -6,7 +6,7 @@
 <!-- <main class="flex-shrink-0 main-bg"></main> -->
 
 <h3 class="recipe-category">
-    <iconify-icon icon="akar-icons:utensils"></iconify-icon>&nbsp;Category:&nbsp;{{ recipe.category }}
+    <iconify-icon icon="akar-icons:utensils" class="greenicon"></iconify-icon>&nbsp;Category:{{ recipe.category }}
 </h3>
 <div>
     <hr>
@@ -51,7 +51,8 @@
             <div class="col card mb-4  mt-3 left  top">
 
                 <div class="row">
-                    <div class="col-2">                        
+                    <div class="col-2">
+                        <strong>                        
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'recipe_likes' recipe.slug %}" method="POST">
                                 {% csrf_token %}
@@ -67,61 +68,24 @@
                             </form>
                             {% else %}                               
                             <!-- The number of likes goes before the closing strong tag -->
-                            <strong><span class="text-secondary"><iconify-icon icon= "ant-design:heart-outlined" width="20"></iconify-icon>
+                            <span class="text-secondary"><iconify-icon icon= "ant-design:heart-outlined" width="20"></iconify-icon>
                                 {% endif %}
-                            <span class="text-secondary">{{ recipe.number_of_likes }} </span></strong>
+                            <span class="text-secondary">{{ recipe.number_of_likes }} </span>
+                        </strong>
                     </div>
                     <div class="col-2">
                         {% with comments.count as total_comments %}
-                        <strong>&nbsp;<iconify-icon inline icon="fa-regular:comments"
+                        <strong class="text-secondary">&nbsp;<iconify-icon inline icon="fa-regular:comments"
                             width="23"></iconify-icon>
                             <!-- total_comments variable goes before the closing strong tag -->
-                            {{ total_comments }}
-                            <strong><span class="text-secondary">{{ recipe.total_comments }} </span>
+                            {{ total_comments }}                           
                         </strong>                        
                         {% endwith %}
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- <div class="row">
-
-                    <div class="col-2">
-                        <strong>
-                            {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'recipe_likes' recipe.slug %}" method="POST">
-                                {% csrf_token %}
-                                {% if liked %}
-                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like">
-                                    <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon>
-                                </button>
-                                {% else %}
-                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like">
-                                    <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon>
-                                </button>
-                                {% endif %}
-                            </form>
-                            {% else %}
-                            <strong><span class="text-secondary"><i class="far fa-heart"></i></span>
-                                {% endif %}
-                                The number of likes goes before the closing strong tag
-                                <span class="text-secondary">{{ recipe.number_of_likes }} </span>
-                            </strong>
-                    </div>
-                    <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong><span class="text-secondary"><i class="far fa-comments"></i></span>
-                            Our total_comments variable goes before the closing strong tag 
-                            {{ total_comments }}
-                            <span class="text-secondary">{{ recipe.total_comments }} </span>
-                        </strong>
-                    </div>
-                    {% endwith %}
-                </div>
-      -->
-
+    </div>    
       <section class="profilesection">
         <div class="container">
             <div class="row">

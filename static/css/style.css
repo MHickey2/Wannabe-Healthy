@@ -1,14 +1,3 @@
-/**Type Fonts**/
-
-/* Lato */
-/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,300;1,400;1,700&display=swap'); */
-
-/* Roboto */
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"); */
-
-/*FatFace Mahrey */
-/* @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Marhey&display=swap'); */
-
 /*Global*/
 
 * {
@@ -22,8 +11,7 @@ body {
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;       
-    /* height: 100vh; */
-     
+    /* height: 100vh; */     
 }
 
 html * {
@@ -43,14 +31,14 @@ html * {
 .btn {
     font-weight: bold !important;
 }
-
+/*-------------------------------------*/
 /*Navbar in base.html but on all pages*/
+/*-----------------------------------*/
 
 /* Styling for Title Wannabe Healthy*/
 .title {
     color: #a3d31c;
-    text-transform: capitalize;
-    /* -webkit-text-stroke-color: #fff;     */
+    text-transform: capitalize;   
     font-family: 'Abril Fatface', cursive;    
     border-bottom:2px solid #a3d31c;
     font-weight: Bold; 
@@ -102,6 +90,10 @@ footer {
     color: white;
 }
 
+/*-------------------------------------*/
+/* Styling for the Index Page */
+/*-----------------------------------*/
+
 /* Styling for Welcome Message */
 .welcometosite {
     color: darkgreen;
@@ -121,7 +113,7 @@ footer {
 .bloghead {   
     text-align: center;
     color: darkgreen;
-    font-family: 'Abril Fatface', cursive;;
+    font-family: 'Abril Fatface', cursive;
 }
 
 .text {   
@@ -129,14 +121,13 @@ footer {
     margin: 5vh;   
 }
 
-/*Search form styling*/
+/*Search form for blogs styling*/
 .searchform {
     padding-left: 20px;
     padding-top: 10px;
 }
 
 /* Blog Section on index page*/
-
 /*blog content for blogs*/
 
 /*Styling for individual blogs in blog section*/
@@ -154,18 +145,17 @@ footer {
     min-height: 50px;   
 }
 
-/* alignment of blogs */
+/* alignment of images in blogs */
 .image-container {
     position: relative;
     padding: 10px;    
 }
 
-/*Styling for the image in blogs*/
 .card-img-top {
     border-radius: 5px;
     border: 2px solid rgb(20, 88, 20);
-    width: 240px;
-    height: 250px; 
+    /* width: 240px;
+    height: 250px;  */
 }
 
 /*Flash for author on image in blogs*/
@@ -189,28 +179,7 @@ footer {
     vertical-align: center;
 }
 
-/*Flash for category on image in recipes*/
-.image-flash2 {
-    position: absolute;
-    top: 15px;
-    min-width: 35%;
-    right: 15px;
-    color: green;
-    background-color: rgba(255, 255, 255, 0.5);
-    text-align: center;
-    vertical-align: center;   
-}
-
-/*Flash for author on image in recipes*/
-.image-flash3 {
-    position: absolute;    
-    min-width: 40%;
-    bottom:40%;
-    left: 25px;
-    background-color: rgb(83, 212, 83, 0.7);   
-}
-
-/*Styliing for author*/
+/*Styling for author*/
 .author {
     color: white;
     margin: 4px;
@@ -225,6 +194,7 @@ footer {
     /* min-height: 120px;   */
 }
 
+/*Styling for excerpt in blogs*/
 .textual {
     min-height: 100px;
     padding: 5px;
@@ -244,6 +214,10 @@ footer {
 .block {
     margin-bottom: 20px;
 }
+
+/*-------------------------------------*/
+/* Styling for the About Page */
+/*-----------------------------------*/
 
 /*Styling for about page image*/
 .aboutpic {
@@ -267,18 +241,6 @@ footer {
     padding-bottom: 40px;   
 }
 
-/* .masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.masthead-text {
-    background-color: white;
-    color: green;
-    position: relative;
-    text-transform: Capitalize;
-} */
-
 /*Styling for Category Title*/
 .post-category {
     margin: 20px;      
@@ -286,16 +248,6 @@ footer {
     width: 15%;
     padding: 10px;
 }
-
-/* .post-link {
-    text-decoration: none;
-    color: black;
-} */
-
-/* .post-link:hover,
-.page-link {
-    color: grey;
-} */
 
 /*Styling for Post Detail Title*/
 .post-title {
@@ -315,34 +267,39 @@ footer {
     color: darkslategray;
 }
 
-/* .btn-signup {
+ .post-link {
+    text-decoration: none;
+    color: black;
+} 
+
+.post-link:hover,
+.page-link {
+    color: grey;
+} 
+
+ .btn-signup {
     background-color: purple;
     color: #fff;
-} */
+} 
 
-/* .btn-signup:hover,
+ .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
     color: #7b8181;
-} */
-
-/* .link {
-    color: red;
-    text-decoration: none;
-} */
+}  
 
 a:link {
-    color: grey;
+    color: black;
     text-decoration: none;
 }
 
 .link {
-    color: darkgrey;
+    color: rgb(12, 11, 11);
     text-decoration: none;
 }
 
 a:link:after {
-    color: black;
+    color: rgb(19, 18, 18);
     text-decoration: none;
 }
 
@@ -354,20 +311,26 @@ a:link:after {
 
 a,
 a:hover {
-    color: rgb(255, 254, 254);
+    color: rgb(128, 123, 123);
     text-decoration: none;
 }
 
-a, a:visited, a:hover, a:active {
+/* a, a:visited, a:hover, a:active {
     color: inherit;
-  }
+} */
 
 /* Styling for like button*/
-.btn-like {
-    color: lightgreen;
+.btn-like, .btn-comment {
+    color: rgb(65, 224, 65);
     border: none;
     background: transparent;
 } 
+
+.btn-like:hover,
+.btn-like:active {
+    color: rgb(5, 97, 5);   
+    border: none;
+}
 
 .white {
     color: white;
@@ -387,7 +350,6 @@ a, a:visited, a:hover, a:active {
     color: green;
     text-align: center;
 }
-
 
 /* Blog and recipe posts */
 #newpost {
@@ -477,6 +439,9 @@ textarea {
     display: block;
 }
 
+/*-------------------------------------*/
+/* Styling for the Recipes Page */
+/*-----------------------------------*/
 
 /* Styling for Recipes in Recipes Page*/
 #recipeintro {
@@ -521,8 +486,7 @@ textarea {
     grid-row-gap: 60px;
     padding: 5px;
     border: 2px solid green;
-    border-radius: 15px;    
-    
+    border-radius: 15px;     
 }
 
 .recipe-title  {
@@ -545,6 +509,27 @@ textarea {
     border-radius: 25px;      
 }
 
+/*Flash for category on image in recipes*/
+.image-flash2 {
+    position: absolute;
+    top: 15px;
+    min-width: 35%;
+    right: 15px;
+    color: green;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    vertical-align: center;   
+}
+
+/*Flash for author on image in recipes*/
+.image-flash3 {
+    position: absolute;    
+    min-width: 40%;
+    bottom:40%;
+    left: 25px;
+    background-color: rgb(83, 212, 83, 0.7);   
+}
+
 .centeralign {
     display: block;
     margin-left: auto;
@@ -556,10 +541,13 @@ textarea {
 }
 
 
-.btn btn-danger{
-    background-color: rgb(187, 4, 102);
-    color: white;
+.btn btn-danger, .btn-warning{    
+    color: black;
 }
+
+/*-------------------------------------*/
+/* Styling for the Recipe Detail Page */
+/*-----------------------------------*/
 
 /*Styling for method*/
 .method {
@@ -602,8 +590,7 @@ textarea {
 /* Styling for button groups*/
 .buttongroup {
     text-align: center;
-    color: white;
-    
+    color: white;    
 }
 
 /*Styling for Buttons*/
@@ -645,8 +632,9 @@ textarea {
     background-color: lightblue !important; 
 }
 
-.btn btn-success {
+.btn-success, .btn-danger {
     padding: 10px;
+    color: white !important;
 }
 
 .col-md-6 {
@@ -689,7 +677,6 @@ textarea {
     padding: 10px;   
     border-radius: 15px;
     margin-top: 20px;  
-
 }
 
 /* Styling for User image in navbar */
@@ -699,7 +686,7 @@ textarea {
     width: 60px;   
     border-radius: 50px;
     border: 2px solid #a3d31c;
-  }
+}
 
 
   .profile-img {
@@ -711,7 +698,8 @@ textarea {
     border-radius: 50px;
     border:solid green 4px;   
     position:relative;     
-  }  
+} 
+
 /* Styling for Profile image */
 #profile-img1 {
     display: block; 
@@ -722,20 +710,23 @@ textarea {
     border-radius: 50px;
     border:solid green 4px;   
     position:relative;     
-  }
+}
 
 /* Styling for Profile Title */  
 .profile-title {
     color: Green;
     text-transform: capitalize;
-  }
+}
+
+  /*-------------------------------------*/
+/* Styling for the content in the blogs */
+/*-----------------------------------*/
 
 /* Styling for unordered lists in blogs and Recipes */  
 .unordered {
     line-height: 1.5;
     font-family: 'Marhey', cursive;     
 }
-
 
 /* Styling for ordered lists in blogs and Recipes */ 
 .ordered {
@@ -747,34 +738,30 @@ ul li, ol li {
     font-weight:400;
     font-size: 110%;
     margin: 5px;
-  }
+}
 
   .content {
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
     color: #313131;
     font-size: 110%;
-  }
+}
 
 
-  .img-fluid {   
-    object-fit: cover;
-  }
-
+  /*Styling for the icons with Headings on relevant pages*/
   .greenicon {
     color: green;
-    margin-top: 8px;
-       
-  }
+    margin-top: 8px;       
+}
 
   .label-icon{
     color: white !important;
-  }
+}
 
    .img-fluid {
     width: 90vw;
-    height: auto; 
-
+    height: auto;
+    object-fit: cover; 
 } 
 
 .card-body2 {
@@ -782,15 +769,19 @@ ul li, ol li {
     text-align: center;
     line-height: 1.5;
     padding: 5px;
-    text-align: justify;
-    
+    text-align: justify;    
 }
 
 .btn-danger {
-    background-color: rgb(221, 107, 126) !important;
+    
     font-weight: bold;
 }
 
+.likecom {
+    color:rgb(19, 163, 31);
+    font-weight: bold;
+    font-size: 110%;
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 991.98px){ 

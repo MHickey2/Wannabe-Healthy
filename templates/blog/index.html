@@ -79,10 +79,10 @@
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
                                     src="https://res.cloudinary.com/dspwticaf/image/upload/v1664552676/po7sj5nr75pw0p9maekl.jpg"
-                                    alt="generic-image" width="300" height="200">
+                                    alt="{{ post.title }} generic" width="100%">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}" width="300" height="200"
-                                    alt="{{ post.title }} image">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}" 
+                                    alt="{{ post.title }} photo" width="100%" >
                                 {% endif %}
                                 <div class="image-flash1">
                                     <h3 class="category"> {{ post.category }}</h3>
@@ -96,10 +96,10 @@
                                 <p class="textual">{{ post.excerpt }}</p>
                             </a>
                             <hr>
-                            <p class="card-text text-muted h6">{{ post.created_on}} <iconify-icon
-                                    icon="ant-design:heart-outlined" width="20"></iconify-icon>
+                            <p class="card-text h6 likecom">{{ post.created_on}} <iconify-icon
+                                    icon="ant-design:heart-outlined" class="btn-like" width="20"></iconify-icon>
                                 {{ post.number_of_likes }} &nbsp;<iconify-icon inline icon="fa-regular:comments"
-                                    width="23">
+                                    width="23" class="btn-comment">
                                 </iconify-icon>&nbsp;{{ post.number_of_comments }}</p>
                             {% if user.is_authenticated %}
                             {% if user.id == post.author.id %}
