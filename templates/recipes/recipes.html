@@ -52,26 +52,24 @@
                     <div class="col-md-4 postlook1">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h3 class="card-title">{{ recipe.title }}</h3>
+                                <h4 class="card-title">{{ recipe.title }}</h4>
                                 <div class="image-container">
                                     {% if "placeholder" in recipe.featured_image.url %}
-                                    <img class="card-img-top"
-                                        src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg" 
-                                        alt="Generic Image">
+                                    <img class="card-img-top1 img-fluid"
+                                        src="https://res.cloudinary.com/dspwticaf/image/upload/v1670945104/genericfood_kmhyp0.jpg" 
+                                        alt="Generic Image" width="300" height="200">
                                     {% else %}
 
-                                    <img class="card-img-top" src=" {{ recipe.featured_image.url }}"  alt="{{ recipe.title }} image">
+                                    <img class="card-img-top1 img-fluid" src=" {{ recipe.featured_image.url }}"  alt="{{ recipe.title }} image" width="300" height="200">
                                     {% endif %}
                                     <div class="image-flash2">
                                         <h4 class="category"> {{ recipe.category }}</h4>
                                     </div>
                                     <div class="image-flash3">
                                         <p class="author">Author: {{ recipe.author }}</p>
-                                    </div>
-                                    <br>
+                                    </div>                                    
                                     <h6 class="green"><strong>Difficulty Level: {{ recipe.difficulty }} |
-                                        &nbsp;<iconify-icon inline icon="emojione:timer-clock" width="20">
-                                        </iconify-icon>&nbsp;{{ recipe.cooking_time }}</h6></strong>
+                                        Cooking Time: {{ recipe.cooking_time }}</h6></strong>
                                     <p class="textual">{{ recipe.description}}</p>
                                 </div>
                                 <div class="center">

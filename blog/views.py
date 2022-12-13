@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect, HttpResponse
 from django.utils.translation import gettext
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import DeleteView
 from django.contrib import messages
 from django.db.models import Q
@@ -68,7 +69,7 @@ class PostDetail(View):
             comment.post = post
             comment.save()
         else:
-            comment_form = CommentForm()
+            comment_form = CommentForm(data=request.POST)
         msg = 'Your comment was added successfully and is awaiting approval!'
         messages.add_message(self.request, messages.SUCCESS, msg)
         return render(
@@ -81,7 +82,6 @@ class PostDetail(View):
                 "comment_form": comment_form,
                 "liked": liked,
                 "profile": profile
-
             },
         )
 

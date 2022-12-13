@@ -28,7 +28,6 @@ def profilePicDisplay(request):
     context = {
         'profile': profile,
         'form': profile_form,
-        
     }
 
     return render(request, template, context)
@@ -41,7 +40,7 @@ def editProfile(request):
     if request.method == 'POST':
         profile_form = ProfileForm(request.POST, request.FILES,
                                    instance=profile)
-        if profile_form.is_valid():            
+        if profile_form.is_valid():
             profile_form.save()
         messages.success(request, 'Profile updated successfully')
         return redirect('profile')

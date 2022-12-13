@@ -15,17 +15,18 @@
         <!-- The featured image URL goes in the src attribute -->
         {% if "placeholder" in post.featured_image.url %}
         <img type="image/jpg" src="https://res.cloudinary.com/dspwticaf/image/upload/v1664552676/po7sj5nr75pw0p9maekl.jpg"
-             alt="Default image" id="centerimage" width="300" height="250">
+             alt="Default image" id="centerimage" width="100%">
         
         {% else %}
-        <img src=" {{ post.featured_image.url }}" id="centerimage" width="300" height="250">
+        <img src=" {{ post.featured_image.url }}" id="centerimage" width="100%">
         {% endif %}
     </div>
 </div>
+<br>
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body2">
+            <div class="card-body3">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <div class="card-text1">

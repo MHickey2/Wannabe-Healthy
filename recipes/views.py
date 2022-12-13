@@ -6,6 +6,7 @@ from .models import Recipe
 from profiles .models import Profile
 from django.views.generic import ListView, DetailView, CreateView
 from django.views.generic import UpdateView, DeleteView
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.db.models import Q
 from .forms import CommentForm
@@ -21,9 +22,8 @@ class RecipeList(generic.ListView):
 
 
 class RecipeDetail(View):
-
+    """ Presents details of one recipe on recipe_detail Page """
     def get(self, request, slug, *args, **kwargs):
-        """ Presents details of one recipe on recipe_detail Page """
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
         comments = recipe.comments.filter(approved=True).order_by
@@ -64,7 +64,7 @@ class RecipeDetail(View):
             comment.recipe = recipe
             comment.save()
         else:
-            comment_form = CommentForm()
+            comment_form = CommentForm(data=request.POST)
         msg = 'Your comment was sent successfully and is awaiting approval!'
         messages.add_message(self.request, messages.SUCCESS, msg)
         return render(
@@ -75,7 +75,8 @@ class RecipeDetail(View):
                 "comments": comments,
                 "commented": True,
                 "comment_form": comment_form,
-                "liked": liked
+                "liked": liked,
+                "profile": profile
             },
         )
 
@@ -124,10 +125,11 @@ class EditRecipeView(generic.UpdateView):
         return reverse("recipes")
 
 
-class DeleteRecipeView(generic.DeleteView):
+class DeleteRecipeView(SuccessMessageMixin, generic.DeleteView):
     model = Recipe
     template_name = "recipes/delete_recipe.html"
     success_url = reverse_lazy('recipes')
+    success_message = 'Recipe was deleted successfully.'
 
 
 class RecipeSearchView(generic.ListView):
