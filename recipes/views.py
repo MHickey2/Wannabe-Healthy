@@ -52,6 +52,7 @@ class RecipeDetail(View):
         recipe = get_object_or_404(queryset, slug=slug)
         comments = recipe.comments.filter(approved=True).order_by
         ("-created_on")
+        profile = Profile.objects.filter(user=recipe.author)[0]
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True

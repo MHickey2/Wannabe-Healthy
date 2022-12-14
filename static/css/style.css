@@ -138,9 +138,10 @@ footer {
 
 /*Styling for individual blogs in blog section*/
 .card-body1 {
-    min-height: 420px;
+    min-height: 460px;   
     background-color: rgba(244, 247, 244, 0.4);    
-    border-radius: 15px;   
+    border-radius: 5px;
+    transition: all 1.5s ease;   
 }
 
 /*Styling for titles*/
@@ -148,7 +149,7 @@ footer {
     text-align: center;
     color: #274b12;
     text-transform: capitalize; 
-    min-height: 50px;   
+    min-height: 30px;   
 }
 
 /* alignment of images in blogs */
@@ -196,23 +197,21 @@ footer {
 
 /*Styling for excerpt in blog*/
 .card-text {
-    text-align: center;
-    padding: 5px;
+    text-align: center;    
     margin:5px; 
     /* min-height: 120px;   */
 }
 
 /*Styling for excerpt in blogs*/
 .textual {
-    min-height: 100px;
-    padding: 5px;
+    min-height: 90px;    
     text-align: center;
 }
 
 /*Styling for blog look*/
 .postlook {
-    min-height: 560px;
-    background-color: #7dd661;
+    min-height: 580px;
+    /* background-color: #7dd661; */
     padding-top: 15px;
     border: 1px solid white;
     border-radius: 15px;   
@@ -577,7 +576,7 @@ textarea {
 
 /*Styling for comment section*/
 .commentsection {
-    height: 90vh;       
+    height: fit-content;       
 }
 
 .poster {
@@ -601,7 +600,8 @@ textarea {
 /* Styling for button groups*/
 .buttongroup {
     text-align: center;
-    color: white;    
+    color: white;
+     
 }
 
 /*Styling for Buttons*/
@@ -751,6 +751,20 @@ ul li, ol li {
     margin: 5px;
 }
 
+ol {
+    list-style: none;
+    counter-reset: num;
+}
+
+ol li {
+    counter-increment: num;
+}
+
+ol li::before {
+    content: counter(num) ". ";
+    color: green;
+}
+
   .content {
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
@@ -797,7 +811,23 @@ ul li, ol li {
 .likecom {
     color:rgb(19, 163, 31);
     font-weight: bold;
-    font-size: 110%;
+    font-size: 110%;   
+}
+
+.inner {
+    overflow: hidden;
+}
+
+.inner img {
+    transition: all .3s ease;
+}
+
+.inner:hover img {
+    transform: scale(1.2);
+}
+
+.card-body1:hover {
+    transform: scale(1.05);
 }
 
 /* Medium devices (tablets, 768px and up) */

@@ -77,11 +77,11 @@
                         <div class="card-body1">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top"
+                                <img class="card-img-top img-fluid"
                                     src="https://res.cloudinary.com/dspwticaf/image/upload/v1664552676/po7sj5nr75pw0p9maekl.jpg"
                                     alt="{{ post.title }} generic"  >
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}" 
+                                <img class="card-img-top img-fluid" src=" {{ post.featured_image.url }}" 
                                     alt="{{ post.title }} photo"  >
                                 {% endif %}
                                 <div class="image-flash1">
@@ -92,21 +92,22 @@
                                 </div>
                             </div>
                             <a href="{% url 'post_detail' post.slug  %}">
-                                <h3 class="card-title">{{ post.title }}</h3>
-                                <p class="textual">{{ post.excerpt }}</p>
-                            </a>
+                                <h4 class="card-title">{{ post.title }}</h4>
+                                <p class="textual text-justify-center">{{ post.excerpt }}</p></a>                                
                             <hr>
                             <p class="card-text h6 likecom">{{ post.created_on}} <iconify-icon
                                     icon="ant-design:heart-outlined" class="btn-like" width="20"></iconify-icon>
                                 {{ post.number_of_likes }} &nbsp;<iconify-icon inline icon="fa-regular:comments"
                                     width="23" class="btn-comment">
                                 </iconify-icon>&nbsp;{{ post.number_of_comments }}</p>
+                                <br>
                             {% if user.is_authenticated %}
                             {% if user.id == post.author.id %}
                             <div class="buttongroup">
                                 <a href="{% url 'edit_post' post.slug %}" class="btn btn-success btnstyle">Edit</a>
                                 <a href="{% url 'delete_post' post.slug %}" class="btn btn-danger btnstyle">Delete</a>
                             </div>
+                            <br>
                             {% endif %}
                             {% endif %}
                         </div>
