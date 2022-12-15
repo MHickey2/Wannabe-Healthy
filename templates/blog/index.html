@@ -116,7 +116,11 @@
                     {% endif %}
                 </div>
                 {% empty %}
-                <tr><td colspan="6">There are no results</td></tr>
+                <h3 class="nosearchresults col-md-3">oops, there are no results, try again or return to main page</h3>
+                                
+                    <a href="{% url 'home' %}" class="btn btn-success center">BACK</a>
+                    <br>
+                
                 {% endfor %}
             </div>           
         </div>       

@@ -774,6 +774,7 @@ More information is available at [https://docs.github.com/en](https://docs.githu
 
  I also used the following online resources:
 
+- [Create a Simple Blog with Python and Django with Codemy](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
 - [Code Institute](https://codeinstitute.net/ie/)
 - [Slack](https://slack.com/intl/en-ie/) 
 - [Stack OverFlow](https://stackoverflow.com)

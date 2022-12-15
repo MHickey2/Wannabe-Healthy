@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.utils.translation import gettext
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import DeleteView
 from django.contrib import messages
 from django.db.models import Q
