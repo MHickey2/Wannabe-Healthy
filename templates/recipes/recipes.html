@@ -5,7 +5,7 @@
 
 <h2 class="green"><iconify-icon icon="mdi:cook" class="greenicon"></iconify-icon>&nbsp;Recipe Collection</h2>
 
-<p class="col-lg-8 col-xl-6 col-md-4" id="recipeintro">Browse through the recipes and find inspiration for diet changes.
+<p class="col-lg-8 col-xl-6 justify-content-center" id="recipeintro">Browse through the recipes and find inspiration for diet changes.
     It can be simple to adapt your present habits to include life enriching choices. Consider a vegetarian diet or start
     simpler, try a flexitarian option, so it does not feel as daunting. You can find the recipes through categories and
     if you
@@ -26,7 +26,7 @@
                     <form role="search" action="{% url 'search_recipes' %}" method="get">
                         {% csrf_token %}
                         <div class="input-group">
-                            <input type="text" name="q" class="form-control">
+                            <input type="text" name="q" class="form-control" placeholder="Search Recipes">
                             <div class="input-group-btn">
                                 <button type="submit" class="btn btn-search btn-success">
                                     <span class="glyphicon glyphicon-search"></span>
@@ -55,12 +55,12 @@
                                 <h4 class="card-title">{{ recipe.title }}</h4>
                                 <div class="image-container">
                                     {% if "placeholder" in recipe.featured_image.url %}
-                                    <img class="card-img-top1 img-fluid"
+                                    <img class="card-img-top1 "
                                         src="https://res.cloudinary.com/dspwticaf/image/upload/v1670945104/genericfood_kmhyp0.jpg" 
-                                        alt="Generic Image" width="300" height="200">
+                                        alt="Generic Image" >
                                     {% else %}
 
-                                    <img class="card-img-top1 img-fluid" src=" {{ recipe.featured_image.url }}"  alt="{{ recipe.title }} image" width="300" height="200">
+                                    <img class="card-img-top1 " src=" {{ recipe.featured_image.url }}"  alt="{{ recipe.title }} image" >
                                     {% endif %}
                                     <div class="image-flash2">
                                         <h4 class="category"> {{ recipe.category }}</h4>

@@ -525,7 +525,11 @@ In the Logout Page, the User can confirm that they want to exit the website.
 
  <br>
 
- The site in it's present form offers a basic blog and recipe site, which is a good foundation but could be developed further to offer more options to the user. Within in the blog area, I would like to add some features in future iterations such as adding favourites and highlighting the blogs that have received the most likes. In regards to the recipes, there are a number of extra optionns I would like to introduce including vegetarian, and vegan options, the present recipes are not categorised in this way. I would like to introudce more interaction into the site, possibly using a forum where users can document their own experiences when adopting a vegetarian/vegan lifestyle. This would increase the social aspect of the site and would fully utilize the social media platforms fully. The present profiles could be expanded to include more information, such as the user's own links so that users can also interact with each other outside of the site. At present there is no contact page and this would also be introduced, to encourage users to contact the web owner with messages, and it would be hoped their interaction would help the site owner to develop new ideas based on this interaction. 
+ The site in it's present form offers a basic blog and recipe site, which is a good foundation but could be developed further to offer more options to the user. Within in the blog area, I would like to add some features in future iterations such as adding favourites and highlighting the blogs that have received the most likes. In regards to the recipes, there are a number of extra optionns I would like to introduce including vegetarian, and vegan options, the present recipes are not categorised in this way. I would like to introudce more interaction into the site, possibly using a forum where users can document their own experiences when adopting a vegetarian/vegan lifestyle. This would increase the social aspect of the site and would fully utilize the social media platforms fully. 
+ 
+ The present profiles could be expanded to include more information, such as the user's own links so that users can also interact with each other outside of the site. At present there is no contact page and this would also be introduced, to encourage users to contact the web owner with messages, and it would be hoped their interaction would help the site owner to develop new ideas based on this suggestions. 
+
+ The about page mentions relaxation as a factor, so I would like to add a section on the site dedicated to relaxation techniques and offering resources to the user in relation to stress relief and mindfulness.
 
  
 
@@ -558,6 +562,7 @@ In the Logout Page, the User can confirm that they want to exit the website.
 -   [Draw.io](https://drawio-app.com/) - used for the database diagram.
 -   [Iconify.Design](https://iconify.design/) -Icons used for the site
 -   [Favicon.io](https://favicon.io) for making the site favicon.
+-   [tinyPNG](https://tinyjpg.com/) for image compression.
 -   [Figma]()- used for making the wireframes for the site.
 
 #### Django Packages
@@ -759,6 +764,12 @@ More information is available at [https://docs.github.com/en](https://docs.githu
 #### [Return to Table of Contents](#toc)
 ----
  ## Credits <a name="credits"></a>
+
+ - All Recipes and Recipe Images came from [Lidl Recipes Ireland](https://recipes.lidl.ie/)
+ - All images for the site, including blog images come from [Pexel]()
+ - The logo and Favicon were built with online tools
+ - All Blog content was self produced
+ 
      
 
  I also used the following online resources:

@@ -9,7 +9,7 @@
     
 <div id="outputDiv"></div>
 
-<div class="d-flex min-vh-100">
+<div class="d-flex ">
     <div class="container align-self-center">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8 col-xl-6 text-center">
@@ -118,12 +118,10 @@
                 {% empty %}
                 <tr><td colspan="6">There are no results</td></tr>
                 {% endfor %}
-            </div>
-           
+            </div>           
         </div>       
     </div>
-    <br>
-        
+          
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
