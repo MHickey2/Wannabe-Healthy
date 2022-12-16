@@ -1,0 +1,216 @@
+
+Back to the [README](README.md)
+
+Testing has taken place continuously throughout the development of the project. When faults were detected they were fixed on an ongoing basis. These were fixed locally and commited to github on an ongoing basis. Faults fixed and outstanding can be found in the README.md
+
+# Table of Contents <a name="toc"></a>
+1. [Cross Browser Testing](#browsertesting)
+2. [Responsive Testing](#responsivetesting)
+3. [Validator Testing](#validatortesting)
+     1. [W3C Validator](#w3c)
+     2. [CSS Validator](#css)
+     3. [Python](#python)
+     4. [Lighthouse](#lighthouse)
+     5. [Contrast Checker](#contrastchecker)
+     6. [WAVE](#wave)
+4. [Manual Testing](#manualtesting)
+5. [User Story Testing](#userstorytesting)  
+
+#### [Return to README.md](README.md)
+----
+
+
+## Cross Browser Testing<a name="browsertesting"></a>
+
+  The site was tested in Google Chrome, Microsoft Edge, Mozilla Firefox and Brave Browser on the Desktop.
+  The site was tested on a Lenovo Laptop, and a Xiomai Redmie. 
+
+<br/>
+
+
+#### [Return to Table of Contents](#toc)
+
+----
+## Responsive Testing<a name="responsivetesting"></a>
+
+   I regularly tested the responsiveness of the site using Google Chrome Developer tools, information on this can be found [here](https://developer.chrome.com/docs/devtools/). I also used Window Resizer and a Responsive Design Tester Application available in the Google Chrome Store. The devices I tested for are in the image below. 
+     
+#### [Return to Table of Contents](#toc)
+
+----
+## Validator Testing<a name="validatortesting"></a>
+
+1. W3C Validator <a name="w3c"></a>
+
+Using [https://validator.w3.org/](https://validator.w3.org/)   
+There are more issues in the Bug section in the [README.md](README.md). The results of the HTML validation can be seen below:
+
+
+<br/>
+
+<p align ="center">      
+     <img src="assets/images/readme/htmlcheck.jpg"  alt="HTML Validation results"/>   
+</p>
+<br/>  
+  
+2. Jigsaw CSS Validator   <a name="css"></a>
+ 
+
+Using [https://jigsaw.w3.org/css-validator/](https://jigsaw.w3.org/css-validator/) 
+The result can be seen below:
+
+<br/>
+<p align ="center">      
+     <img src="assets/images/readme/"  alt="CSS Validation results"/>   
+</p>
+<br/>
+
+3. Python Validation   <a name="python"></a>
+  Python testing was done without the use of Pep8 as the site was down, instead an extension was added which highlighted errors and showed them in the problems panel within gitpod. Most errors related to long lines, but there were some syntax errors.
+
+
+4. Lighthouse Testing
+
+
+<p align ="center">      
+     <img src="assets/images/readme/images/"  alt="lighouse testing specs" />    
+</p>
+<br/> 
+
+5. Contrast Checker  <a name="contrastchecker"></a>
+  
+  Using [https://color.a11y.com/](https://color.a11y.com/)  See images Below.
+
+<br/>
+  <p align ="center">      
+     <img src="assets/images/readme/contrast.jpg"  alt="contrast results"/>   
+  </p>
+  
+  
+
+6. Wave (Web Accesability Evaluation tool)   <a name="wave"></a>
+  
+  Using [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh), this is a web accesability tool developed by WebAIM.org. It provides visual feedback about the accessibility of your web content, it highlights any errors and gives you possible suggestions for improvements. 
+
+  <br/>
+  <p align ="center">      
+     <img src="assets/images/readme/wave.jpg"  alt="wave test result"/>   
+  </p>
+  
+ #### [Return to Table of Contents](#toc)
+----
+
+### 4. Manual Testing   <a name="manual"></a>
+
+
+<h3 align ="center">      
+    Feature being Tested and Result   
+</h3>
+
+
+### On the Site:
+- Start Screen displays when Heroku link is used.   :heavy_check_mark:
+- The index page displays correctly with the functionality expected for a user that is not logged in. :heavy_check_mark:
+- The navbar displays correctly for a user that is not logged in, the account link in navbar is present.  :heavy_check_mark:
+- The sign up link opens up the sign up form and allows a User to register for the site.  :heavy_check_mark:
+- The Login Link opens up the login form and allows the User to login into the site.  :heavy_check_mark:
+- The navbar displays the Profile link when the user has logged in.  :heavy_check_mark:
+- The navbar displays the profile image of the logged in user in the navbar.  :heavy_check_mark:
+- The navbar displays the Logout link when the user has logged in.  :heavy_check_mark:
+- The add blog button is displayed when the User logs in.  :heavy_check_mark:
+- The home page displays the collection of blogs (6 blogs per page) and pagination is working to display those in excess of that number.  :heavy_check_mark:
+- The logged in user can see the edit and delete buttons for any blog they have submitted.  :heavy_check_mark:
+- The Title and excerpt of each blog can be used as a link to the post_detail page of each blog, when used the User is redirected to this page successfully.  :heavy_check_mark:
+- The Post_detail page displays correctly.  :heavy_check_mark:
+- When the logged in user click the like button, they receive a message that they have liked a blog, if they press again, they receive a message that they have unliked the blog.  :heavy_check_mark:
+- The comment form displays for a logged in user, and if they submit a comment, they receive a message that their comment is awaiting approval of the admin. When this is approved it is displayed within the comment section.  :heavy_check_mark:
+- The like icon shows the number of likes the blog has received.  :heavy_check_mark:
+- The comment icon shows the number of comments that the blog has received. :heavy_check_mark:
+- The profile image and bio of the blog author displays correctly in the post_detail page.  :heavy_check_mark:
+- In the home page, within each blog(that user has submitted) the edit button when used will open up the edit_post Form, when this form is submitted, any changes are updated within the blog post, and the user is redirected to the home page.  :heavy_check_mark:
+- In the home page, within each blog(that user has submitted) the delete button when used will open up the delete_post Form, the title of the post is displayed and the user is asked whether they are sure they want to delete the post,if this is confirmed the blog post will be deleted and the user will be redirected to the home page.   :heavy_check_mark:
+- The about page displays correctly.  :heavy_check_mark:
+- The add recipe button displays correctly for the logged in user.  :heavy_check_mark:
+- The recipes page displays the collection of recipes (6 recipes per page) and pagination is working to display those in excess of that number.  :heavy_check_mark:
+- The logged in user can see the edit and delete buttons for any recipe they have submitted.  :heavy_check_mark:
+- The 'see details' button directs the user to the recipe-detail page for each recipe.  :heavy_check_mark:
+- The recipe_detail page displays correctly.  :heavy_check_mark:
+- When the logged in user click the like button, they receive a message that they have liked a recipe, if they press again, they receive a message that they have unliked the recipe.  :heavy_check_mark:
+- The comment form displays for a logged in user, and if they submit a comment, they receive a message that their comment is awaiting approval of the admin. When this is approved it is displayed within the comment section.  :heavy_check_mark:
+- The like icon shows the number of likes the recipe has received.  :heavy_check_mark:
+- The comment icon shows the number of comments that the recipe has received. :heavy_check_mark:
+- The profile image and bio of the recipe author displays correctly in the recipe_detail page.  :heavy_check_mark:
+- In the recipes page, within each recipe(that user has submitted) the edit button when used will open up the edit_recipe Form, when this form is submitted, any changes are updated within the recipe, and the user is redirected to the recipes page.  :heavy_check_mark:
+- In the recipes page, within each recipe(that user has submitted) the delete button when used will open up the delete_recipe Form, the title of the recipe is displayed and the user is asked whether they are sure they want to delete the recipe,if this is confirmed the recipe will be deleted and the user will be redirected to the recipes page.  :heavy_check_mark:
+- When the profile link in navbar is chosen the profile page displays correctly.  :heavy_check_mark:
+- A Profile is created automatically when a User registers for the site.  :heavy_check_mark:
+- The username of the new user is displayed in the profile page.
+- A generic image is automatically generated until the user uploads an image of their own.  This can be displayed in the navbar profile image and blog/recipe detail pages, if user does not upload a new image of their own.  :heavy_check_mark:
+- When user uses edit button on profile page, the edit_profile form is displayed and the user can add bio details and an image. THe user is then redirected back to the profile page, to see these changes. :heavy_check_mark:
+- When the user uses the logout link the logout form is displayed and the user can logout, The user is asked whether they want to leave the site.  :heavy_check_mark:
+
+### Admin Panel:
+- Managed to create, update and delete data in all models, during the entire project, and all seems to be working as expected when logged in as the admin.  :heavy_check_mark:
+- When a User comments on a post, Admin needs to approve before it is displayed on the site, this is working as expected, when logged in as the admin.  :heavy_check_mark:
+- All required fields need to be filled in when posting a new recipe and blog, and the user is advised on these requirements when filling these forms.  :heavy_check_mark:  
+
+
+  
+#### [Return to Table of Contents](#toc)
+----
+
+<br>
+
+### 5. User Story Testing<a name="userstorytesting"></a>
+
+ <br/>
+
+#### As a Website User I can....
+
+1. Navigate around the site and easily view the type of content available.
+2. View a collection of Blogs in the blog Section.
+3. Search the blog section for particular categories or by title content.
+4. Click on a blog item and view more indepth content of the selected blog.
+5. Register for an account to avail of full features of the site.
+6. View the number of likes on a blog.
+7. View comments left for different blogs in the collection.
+8. View a collection of Recipes in the Recipe Page.
+9. Search through recipes for particular categories or by name in title.
+10. Click on a Recipe to see full details of that recipe.
+11. View the number of likes on a Recipe.
+12. View any comments left on a Recipe. 
+
+
+
+
+<br>
+
+#### As a logged in User I can…...  
+
+1. I can add a new post or a recipe.
+2. I can like/unlike a blog or recipe on the site.
+3. I can leave comments on particular blogs and recipes.
+4. I can update my Profile for the site by adding a Bio and Image.
+5. I can edit a Blog or Recipe that I have submitted to the site.
+6. I can delete a Recipe or Blog that I have submitted to the site.
+
+
+<br>
+
+#### As a Superuser/Admin I want to...
+
+1. Create and publish a new blog or recipe.
+2. Create draft recipes and blog posts that can be finalised later.
+3. Create a new user, recipes, blogs and categories.
+4. Delete user, blogs, recipes, categories and comments.
+5. Can approve user's comments.
+
+
+
+<br>
+
+#### [Return to Table of Contents](#toc)
+#### [Return to README.md](README.md)
+
+----
+

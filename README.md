@@ -71,34 +71,21 @@ Wannabe Healthy is the 4th Project for the Code Institute and the Project is a F
       - [Django Packages](#django-packages)
       - [Return to Table of Contents](#return-to-table-of-contents-6)
   - [8. Testing  ](#8-testing--)
-    - [1. Manual Testing   ](#1-manual-testing---)
-      - [Feature being tested and Result](#feature-being-tested-and-result)
-    - [2. User Story Testing](#2-user-story-testing)
-      - [As a Website User I want to .....](#as-a-website-user-i-want-to-)
-      - [As a logged in User I want to …...](#as-a-logged-in-user-i-want-to-)
-      - [As a Superuser/Admin I want to …..](#as-a-superuseradmin-i-want-to-)
-    - [3. General Testing   ](#3-general-testing---)
-      - [Browser Testing](#browser-testing)
-      - [Responsive Testing](#responsive-testing)
-    - [Validation      ](#validation------)
-      - [HTML Checker](#html-checker)
-      - [Lighthouse Testing](#lighthouse-testing)
-      - [Return to Table of Contents](#return-to-table-of-contents-7)
   - [9. Bugs and Issues  ](#9-bugs-and-issues--)
     - [Resolved ](#resolved-)
     - [Unresolved ](#unresolved-)
-      - [Return to Table of Contents](#return-to-table-of-contents-8)
+      - [Return to Table of Contents](#return-to-table-of-contents-7)
   - [10. Deployment ](#10-deployment-)
       - [Creating the Django app  ](#creating-the-django-app--)
     - [How to make a local Clone ](#how-to-make-a-local-clone-)
     - [How to fork a GitHub Repository ](#how-to-fork-a-github-repository-)
     - [Student Template ](#student-template-)
     - [Deploying to Heroku ](#deploying-to-heroku-)
-      - [Return to Table of Contents](#return-to-table-of-contents-9)
+      - [Return to Table of Contents](#return-to-table-of-contents-8)
   - [Credits ](#credits-)
-      - [Return to Table of Contents](#return-to-table-of-contents-10)
+      - [Return to Table of Contents](#return-to-table-of-contents-9)
   - [Acknowledgements ](#acknowledgements-)
-      - [Return to Table of Contents](#return-to-table-of-contents-11)
+      - [Return to Table of Contents](#return-to-table-of-contents-10)
 
 ----
 
@@ -162,7 +149,7 @@ The user will be able to maintain a profile on the site and they can update thei
 1. I can add a new post or a recipe.
 2. I can like/unlike a blog or recipe on the site.
 3. I can leave comments on particular blogs and recipes.
-4. Update my Profile for the site by adding a Bio and Image.
+4. I can update my Profile for the site by adding a Bio and Image.
 5. I can edit a Blog or Recipe that I have submitted to the site.
 6. I can delete a Recipe or Blog that I have submitted to the site.
 
@@ -579,116 +566,11 @@ In the Logout Page, the User can confirm that they want to exit the website.
 
  #### [Return to Table of Contents](#toc)
 ----
+
 ## 8. Testing  <a name="testing"></a>
 <br>
 
-### 1. Manual Testing   <a name="manual"></a>
-
-<br>
-
-#### Feature being tested and Result                                                    
-
-
-- Start Screen displays when Heroku link is used.   :heavy_check_mark:
-
- 
-
-
-<br>
-
-### 2. User Story Testing<a name="userstorytesting"></a>
-
- <br/>
-
-#### As a Website User I want to .....
-
-- 
-- 
-- 
-
-<br>
-
-#### As a logged in User I want to …...  
-
--    
--         
-- 
-
-<br>
-
-#### As a Superuser/Admin I want to …..    
-- 
-- 
-- 
-- 
- 
-- 
-
-
-<br>
-
-### 3. General Testing   <a name="general"></a>
-
-<br>
-
-#### Browser Testing
-
-The site was tested on Google Chrome, Firefox and Microsoft edge, and there seemed to be no issues on any of the browsers.
-
-<br>
-
-
-#### Responsive Testing
-
-In regards to responsive testing
-
-<br>
-
-<p align ="center">      
-     <img src="assets/images/readme/images/"  alt="Responsive Testing Image" />    
-</p>
-<br/> 
-
-<br>
-
-### Validation      <a name="validation"></a>
-
-<br>
-
-I used pep8 validation 
-<p align ="center">  
-    
-     <img src="assets/images/readme/images/"  alt="" />    
-</p>
-<br/> 
-
-<p align ="center">      
-     <img src="assets/images/readme/images/"  alt="" />    
-</p>
-<br/> 
-
-<br>
-
-#### HTML Checker     
-
-
-<p align ="center">      
-     <img src="assets/images/readme/images/"  alt="HTML Validation" />    
-</p>
-<br/>
-
-
-#### Lighthouse Testing
-
-
-<p align ="center">      
-     <img src="assets/images/readme/images/"  alt="lighouse testing specs" />    
-</p>
-<br/> 
-
-
- #### [Return to Table of Contents](#toc)
-----
+Go to the [TESTING SECTION](TESTING.md)
 
  ## 9. Bugs and Issues  <a name="bugs"></a>
 
