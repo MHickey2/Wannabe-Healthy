@@ -113,10 +113,10 @@ class AddPostView(generic.CreateView):
     def form_valid(self, form):
         """ Ensures form valid and new inputs are saved"""
         """ adding the username automatically for the post """
-        form.instance.author = self.request.user
-        form.save()
         msg = 'Your Post has been created successfully'
         messages.add_message(self.request, messages.SUCCESS, msg)
+        form.instance.author = self.request.user
+        form.save()
         return super().form_valid(form)
 
 
@@ -150,9 +150,8 @@ class BlogSearchView(generic.ListView):
     template_name = "blog/index.html"
     context_object_name = "posts"
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request, *args, **kwargs,):
         """ allows user to search through blogs by category/title """
-
         query = self.request.GET.get('q')
         post_list = Post.objects.filter(
             Q(category__icontains=query) | Q(title__icontains=query)

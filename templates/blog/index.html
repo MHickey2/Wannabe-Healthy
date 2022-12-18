@@ -13,7 +13,7 @@
     <div class="container align-self-center">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8 col-xl-6 text-center">
-                <h1 class="green">Welcome to Wannabe Healthy</h1>
+                <h1 class="bloghead">Welcome to Wannabe Healthy</h1>
                 <div class="lc-block mb-2">
                     <img class="img-fluid" alt="Healthy Woman"
                         src="https://res.cloudinary.com/dspwticaf/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1664628439/Woman_Health_uoejs2.jpg" >
@@ -37,12 +37,7 @@
 <a href="{% url 'add_post' %}" class="btn btn-success" id="center">Add a Post</a>
 {% endif %}
 <br>
-
-<!-- {# if messages #}
-{# for message in messages #}
-<p style="background-color: #f1a9a9; height: 30px; width: auto;">{{ message }}</p>
-{# endfor #}
-{# endif #} -->
+<br>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -51,7 +46,7 @@
                     <form role="search" action="{% url 'search_blogs' %}" method="get">
                         {% csrf_token %}
                         <div class="input-group">                                                     
-                            <input type="text" name="q" id="q" class="form-control" placeholder="Search Blogs">
+                            <input type="text" name="q" id="q" class="form-control" placeholder="Search Blogs by Category or name in Title">
                             <div class="input-group-btn">
                                 <button type="submit" class="btn btn-search btn btn-success">
                                     <span class="glyphicon glyphicon-search"></span>
@@ -79,10 +74,10 @@
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top img-fluid"
                                     src="https://res.cloudinary.com/dspwticaf/image/upload/v1664552676/po7sj5nr75pw0p9maekl.jpg"
-                                    alt="{{ post.title }} generic"  >
+                                    alt="{{ post.title }} generic">
                                 {% else %}
                                 <img class="card-img-top img-fluid" src=" {{ post.featured_image.url }}" 
-                                    alt="{{ post.title }} photo"  >
+                                    alt="{{ post.title }} photo">
                                 {% endif %}
                                 <div class="image-flash1">
                                     <h3 class="category"> {{ post.category }}</h3>
@@ -119,8 +114,7 @@
                 <h3 class="nosearchresults col-md-3">oops, there are no results, try again or return to main page</h3>
                                 
                     <a href="{% url 'home' %}" class="btn btn-success center">BACK</a>
-                    <br>
-                
+                    <br>                
                 {% endfor %}
             </div>           
         </div>       

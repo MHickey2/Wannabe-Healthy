@@ -169,53 +169,51 @@ The result can be seen below:
 
 1. Navigate around the site and easily view the type of content available.
 
-** The Navbar is available on each page of the wbsite, it contains links to all areas in the site. There is introductory text on the home page, which clearly indicates the theme of the site, and the type of information that will be available within the site. **
+**The Navbar is available on each page of the wbsite, it contains links to all areas in the site. There is introductory text on the home page, which clearly indicates the theme of the site, and the type of information that will be available within the site.**
 
 2. View a collection of Blogs in the blog Section.
 
-** The Home page contains a collection of blogs and they are classified in a selection of categories. **
+**The Home page contains a collection of blogs and they are classified in a selection of categories.**
 
 3. Search the blog section for particular categories or by title content.
 
-** Above the blogs, there is a search bar where the User can search by category type, or a word within a blog title. **
+**Above the blogs, there is a search bar where the User can search by category type, or a word within a blog title.**
 
 4. Click on a blog item and view more indepth content of the selected blog.
 
-** When a User clicks on a blog, they are taken to the post_detail page, where they can see the full details of the Blog on a seperate page. **
+**When a User clicks on a blog, they are taken to the post_detail page, where they can see the full details of the Blog on a seperate page.**
 
 5. Register for an account to avail of full features of the site.
 
-** When a User registers on the site, they have access to full functionality within the site.  They are able to add,edit or delete a blog or recipe. They can like/unlike a blog/recipe, They can leave a comment for a blog/recipe. They will have their own Profile on the site and they can update the details within this profile. **
+**When a User registers on the site, they have access to full functionality within the site.  They are able to add,edit or delete a blog or recipe. They can like/unlike a blog/recipe, They can leave a comment for a blog/recipe. They will have their own Profile on the site and they can update the details within this profile.**
 
 6. View the number of likes on a blog.
 
-** Below individual blog posts there is a heart icon and a number which relates to the number of like that the blog has received. This can be seen on the home and the post_detail pages. **
+**Below individual blog posts there is a heart icon and a number which relates to the number of like that the blog has received. This can be seen on the home and the post_detail pages.**
 
 7. View comments left for different blogs in the collection.
 
-** to be completed  ** 
+**The general User can see comments that have been added to any blog, when not logged in.** 
 
-8. View a collection of Recipes in the Recipe Page.
+1. View a collection of Recipes in the Recipe Page.
 
-** The Recipes page contains a collection of Recipes and they are classified in a number of categories including Breakfast, Lunch, Dinner, Desserts and Soups/Salad. **
+**The Recipes page contains a collection of Recipes and they are classified in a number of categories including Breakfast, Lunch, Dinner, Desserts and Soups/Salad.**
 
 9. Search through recipes for particular categories or by name in title.
 
-** Above the recipes, there is a search bar where the User can search by category type, or a word within a Recipe title. **
+**Above the recipes, there is a search bar where the User can search by category type, or a word within a Recipe title.**
 
 10. Click on a Recipe to see full details of that recipe.
 
-** When a User clicks on the 'see detail' button, they are taken to the recipe_detail page, where they can see the full recipe on a seperate page. **
+**When a User clicks on the 'see detail' button, they are taken to the recipe_detail page, where they can see the full recipe on a seperate page.**
 
 11. View the number of likes on a Recipe.
 
-** Below individual recipe posts there is a heart icon and a number which relates to the number of like that the recipehas received. This can be seen on the home and the recipe_detail pages. **
+**Below individual recipe posts there is a heart icon and a number which relates to the number of like that the recipehas received. This can be seen on the home and the recipe_detail pages.**
 
 12.  View any comments left on a Recipe. 
 
-** to be completed **
-
-
+**The general User can see comments that have been added to any recipe, when not logged in.** 
 
 
 <br>
@@ -224,34 +222,39 @@ The result can be seen below:
 
 1. I can add a new post or a recipe.
 
-** When logged in, a User can see the button for adding a blog, this is only visible to the logged in user. The button to add a recipe is also only visible to a logged in User. **
+**When logged in, a User can see the button for adding a blog, this is only visible to the logged in user. The button to add a recipe is also only visible to a logged in User. The User can either publish or draft a blog/recipe, if drafted, the addition will not be visible, until the status has been changed to published.**
 
 2. I can like/unlike a blog or recipe on the site.
 
-** As a logged in User you can like/unlike a blog/recipe and this will added to the number of like that
-the blog/recipe has. **
+**As a logged in User you can like or unlike a blog or recipe and this will added to the number of like that the blog/recipe has.**
 
-3. I can leave comments on particular blogs and recipes.
+1. I can leave comments on particular blogs and recipes.
 
-** As a logged in User you will be able to see the comment submission form under the blog/recipe in the post_detail page and the recipe_detail page. **
+**As a logged in User you will be able to see the comment submission form under the blog/recipe in the post_detail page and the recipe_detail page. You can submit a comment, but it will not be added until the admin approves it, this is to ensure any comment is suitable for inclusion.**
 
 4. I can update my Profile for the site by adding a Bio and Image.
 
-** As a logged in User, the profile link is available within the navbar and their profile image will be displayed to the right of the navbar. They will be able to access the profile page and review the profile details. They will also be able to access the edit_profile page and be able to update their bio details and upload an image. **
+**As a logged in User, the profile link is available within the navbar and their profile image will be displayed to the right of the navbar. They will be able to access the profile page and review the profile details. They will also be able to access the edit_profile page and be able to update their bio details and upload an image.**
 
 5. I can edit a Blog or Recipe that I have submitted to the site.
 
-** As a logged in User, they have access to an edit button below their blog in the blog sections, this allows them to update the details of the blog in the edit_post page. When this form is submitted they will be redirected to the home page and the changes will be applied. There is also an edit button below their submitted recipes, and this will allow them to access the edit_recipe page. When this form is submitted they will be redirected to the recipes page and the changes will be applied. **
+**As a logged in User, they have access to an edit button below their blog in the blog sections, this allows them to update the details of the blog in the edit_post page. When this form is submitted they will be redirected to the home page and the changes will be applied. There is also an edit button below their submitted recipes, and this will allow them to access the edit_recipe page. When this form is submitted they will be redirected to the recipes page and the changes will be applied.**
 
 6. I can delete a Recipe or Blog that I have submitted to the site.
 
-** As a logged in User, they have access to an delete button below their blog in the blog section, this allows them to delete their blog in the delete_post page. When this form is submitted, their blog will be deleted.. There is also an delete button below their submitted recipes, and this will allow them to delete their recipe. When this form is submitted they will be redirected to the recipes page and the recipe will be deleted. **
+**As a logged in User, they have access to an delete button below their blog in the blog section, this allows them to delete their blog in the delete_post page. When this form is submitted, their blog will be deleted.. There is also an delete button below their submitted recipes, and this will allow them to delete their recipe. When this form is submitted they will be redirected to the recipes page and the recipe will be deleted.**
 <br>
 
 #### As a Superuser/Admin I want to...
 
 1. Create and publish a new blog or recipe.
+
+**As an Admin you can publish a new blog or recipe for the site, initially before building the frontend this was how blogs were added to the site, but now any logged in user can add blogs/recipes.**
+
 2. Create draft recipes and blog posts that can be finalised later.
+
+**The Admin can either publish or draft a blog/recipe, if drafted, the addition will not be visible on the site, until the status has been changed to published.**
+
 3. Create a new user, recipes, blogs and categories.
 4. Delete user, blogs, recipes, categories and comments.
 5. Can approve user's comments.
