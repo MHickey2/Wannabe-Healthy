@@ -233,10 +233,134 @@ The website follows the standard website structure. The Logo and the website nam
 
 ### 5. Wireframes    <a name="wireframes"></a>
 
-The Wireframes for the site were created in Figma, I concentrated on the standard websize and the mobile size. The midlevel sizes were generally in keeping with the main websize but just on a smaller scale. The Wireframes can be found
-[here]()
+The Wireframes for the site were created in Figma, I concentrated on the standard websize and the mobile size. The midlevel sizes were generally in keeping with the main websize but just on a smaller scale. The Wireframes can be found below:
 
-<br>
+<details>
+  <summary>1. Home Page Wireframes</summary>
+  <p align="center">
+     <img src="assets/readme/wireframes/Home Page Wireframes.png"  alt="Home Page Wireframe" />    
+</p>
+</details>
+
+<details>
+  <summary>2. Add Post Page Wireframe</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/Add Post Wireframes.png" alt="Add Post Page Wireframe"/>
+</p>
+</details>
+
+<details>
+  <summary>3. Edit Post Page Wireframe</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/Edit Post Wireframes.png" alt="Edit Post Page Wireframe" />
+</p>
+</details>
+
+<details>
+  <summary>4. Delete Page Wireframe</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/Delete Post Wireframes.png" alt="Delete Page Wireframe" />
+</p>
+</details>
+
+<details>
+  <summary>4. Post Detail Page</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/Post Detail Wireframes.png" alt="Post Detail Page Wireframe" />
+</p>
+</details>
+
+<details>
+  <summary>4. About Page</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/About Page Wireframes.png" alt="About Page Wireframe" />
+</p>
+</details>
+
+<details>
+  <summary>4. Recipes Page</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/Recipes Page Wireframes.png" alt="Recipes Page Wireframe" />
+</p>
+</details>
+
+<details>
+  <summary>4. Add Recipe Page</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/Add Recipe Page Wireframes.png" alt="Add Recipe Page Wireframe" />
+</p>
+</details>
+
+<details>
+  <summary>4. Edit Recipe Page</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/Edit Recipe Page Wireframes.png" alt="Edit Recipe Page Wireframe" />
+</p>
+</details>
+
+<details>
+  <summary>4. Delete Recipe Page</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/Delete Recipe Page Wireframes.png" alt="Delete Recipe Page Wireframe" />
+</p>
+</details>
+
+<details>
+  <summary>4. Recipe Detail Page</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/Recipe Detail Page Wireframes.png" alt="Recipe Detail Page Wireframe" />
+</p>
+</details>
+
+<details>
+  <summary>4. Profile Page</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/Profile Page Wireframes.png" alt="Profile Page Wireframe" />
+</p>
+</details>
+
+<details>
+  <summary>4. Edit Profile Page</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/Edit Profile Page Wireframes.png" alt="Edit Profile Page Wireframe" />
+</p>
+</details>
+
+<details>
+  <summary>4. Registration Page</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/Registration Page Wireframes.png" alt="Registration Page Wireframe" />
+</p>
+</details>
+
+<details>
+  <summary>4. Login Page</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/Login Page Wireframes.png" alt="Login Page Wireframe" />
+</p>
+</details>
+
+<details>
+  <summary>4. Logout Page</summary>
+  <br/>
+<p align="center">
+  <img src="assets/readme/wireframes/Logout Page Wireframes.png" alt="Logout Page Wireframe" />
+</p>
+</details>
 
 
  #### [Return to Table of Contents](#toc)
