@@ -386,16 +386,47 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 There are features common to all pages in the site and these are foundin the base.html page. These include:
 
 - The Logo and Site Title:
+
+<br>
+
+<p align ="center">      
+     <img src="assets/readme/images/logotitle.png"  alt="Logo and Title" />    
+</p>
+
+<br/> 
   
 
 - The Navigation Bar:
   The navigation exists in different forms, for a general user the navigation contains home, about, recipes and an account dropdown with register and login options. For a logged in user the naviation contains, home, about, recipes, profile and logout. When logged in you will also see your profile picture to the right of the other options.
 
-  Ons smaller screens, there is a hamburger menu where the navitation items appear in a collapsable dropdown menu.
+  <br>
 
+<p align ="center">      
+     <img src="assets/readme/images/navbar.png"  alt="Navbar" />    
+</p>
+
+<br/> 
+
+  Ons smaller screens, there is a hamburger menu where the navigation items appear in a collapsable dropdown menu.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/readme/images/navmobile.png"  width="300" height="250" alt="navbar mobile" />    
+</p>
+
+<br/> 
 
 - The Footer:
-  The Footer contains a blurb on the site, some contact details and social media icons, also the copyright information on the WannabeHealthy site.  
+  The Footer contains a blurb on the site, some contact details and social media icons, also the copyright information on the WannabeHealthy site. 
+
+ <br>
+
+<p align ="center">      
+     <img src="assets/readme/images/footer.png"  alt="footer" />    
+</p>
+
+<br/> 
 
 <br>
 
@@ -404,11 +435,10 @@ There are features common to all pages in the site and these are foundin the bas
 The home page has an introductory image and a short paragraph of text explaining the purpose of
 the site, helping the user find out the theme of the site up front. 
   
-
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/intro.png"  alt="Intro to Site" />    
 </p>
 
 <br/> 
@@ -420,7 +450,7 @@ On the home page there is a blog section which holds a collection of blogs order
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/blog1.png"  width="700" height="700" alt="blog section" />    
 </p>
 
 <br/> 
@@ -432,7 +462,13 @@ If there are results, they will be displayed to the user and if not the user wil
 
 
 <p align ="center">      
-     <img src="media/readme/images/"  alt="" />    
+     <img src="assets/readme/images/blogsearch.png"  alt="blogsearch" />    
+</p>
+
+<br/> 
+
+<p align ="center">      
+     <img src="assets/readme/images/noresults.png"  alt="search no results" />    
 </p>
 
 <br/> 
@@ -444,19 +480,31 @@ As a logged in User you can add a blog to the site, when you press on the add bl
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/add post.png"  alt="add post button" />    
+</p>
+
+<br/> 
+
+<p align ="center">      
+     <img src="assets/readme/images/addpost1.jpg" width="500" height="500"  alt="add post form" />    
 </p>
 
 <br/> 
 
 ### 5. Edit Blog     <a name="editblog"></a>
 
-As a logged in User you will be able to see the edit button below your submitted blogs, when you use the edit button you will be redirected to the edit blog page, where you can update your blog, when the form is completed you will be redirected to the home page.
+As a logged in User you will be able to see the edit button below your submitted blogs, when you use the edit button you will be redirected to the edit blog page, where you can update your blog, when the form is completed the user will be redirected to the home page.
 
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/editbutton.png"  alt="edit button" />    
+</p>
+
+<br/> 
+
+<p align ="center">      
+     <img src=""  alt="edit form" />    
 </p>
 
 <br/> 
