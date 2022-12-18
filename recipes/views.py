@@ -142,7 +142,7 @@ class RecipeSearchView(generic.ListView):
         """ Allows the user to search through Recipes by category/title """
         query = self.request.GET.get('q')
         recipe_list = Recipe.objects.filter(
-            Q(category__icontains=query) | Q(title__icontains=query)
+            Q(category__icontains=query) | Q(title__icontains=query), status=1
         )
 
         context = {"recipe_list": recipe_list}

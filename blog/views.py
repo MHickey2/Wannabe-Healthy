@@ -154,7 +154,7 @@ class BlogSearchView(generic.ListView):
         """ allows user to search through blogs by category/title """
         query = self.request.GET.get('q')
         post_list = Post.objects.filter(
-            Q(category__icontains=query) | Q(title__icontains=query)
+            Q(category__icontains=query) | Q(title__icontains=query), status=1
         )
 
         context = {"post_list": post_list}

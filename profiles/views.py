@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Profile
+from blog .models import Post
 from django.views import generic, View
 from django.views.generic import UpdateView
 from django.contrib import messages
@@ -10,7 +11,7 @@ from django.core.files.storage import FileSystemStorage
 
 def profile(request):
     """ Display the user's profile. """
-    profile = get_object_or_404(Profile, user=request.user)
+    profile = get_object_or_404(Profile, user=request.user)   
     template = 'profiles/profile.html'
     fields = ['user', 'profile_pic', 'bio']
     context = {
@@ -56,3 +57,17 @@ def editProfile(request):
     }
 
     return render(request, template, context)
+
+
+# def postDisplay(request):
+#     """  """
+#     post = get_object_or_404(Post, user=request.user)
+#     post = Post.objects.filter(user=post.author)[0]
+#     template = 'profiles/profile.html'
+#     fields = ['category', 'title', 'featured_image', 'excerpt',  'content']
+#     context = {
+#         'post': post,
+#         'form': PostForm,
+#     }
+
+#     return render(request, template, context)
