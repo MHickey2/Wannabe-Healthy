@@ -49,11 +49,11 @@ There are more issues in the Bug section in the [README.md](README.md). The resu
 <br/>
 
 <p align ="center">      
-     <img src="assets/images/readme/htmlcheck.jpg"  alt="HTML Validation results"/>   
+     <img src="assets/readme/images/html validation.png"  alt="HTML Validation results"/>   
 </p>
 <br/>  
   
-2. Jigsaw CSS Validator   <a name="css"></a>
+1. Jigsaw CSS Validator   <a name="css"></a>
  
 
 Using [https://jigsaw.w3.org/css-validator/](https://jigsaw.w3.org/css-validator/) 

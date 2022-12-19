@@ -72,10 +72,10 @@ navbar {
 /*styling for Navigation items*/
 .nav-item,.nav-link {
     color: #a3d31c !important;
-    font-size: 17px;
+    font-size: 22px;
     letter-spacing: .2em;
     font-family: 'Abril Fatface', cursive;
-    margin-left: 10px;   
+    margin-left: 8px;   
     font-weight: bold;
     text-transform: capitalize;
 }
@@ -109,14 +109,14 @@ footer {
     font-weight: bold;
 }
 
-/*included in pagination options in blogs and recipes*/
+/*included in pagination options in blogs and recipe pages*/
 .page-link {
     font-weight:bolder;
     color: darkgreen !important;
     font-style:oblique !important;    
 }
 
-/* Heading for index Page */
+/* Headings for index Page */
 .bloghead { 
     padding: 10px;  
     text-align: center;
@@ -129,7 +129,7 @@ footer {
     margin: 5vh;   
 }
 
-/*Search form for blogs styling*/
+/*Search form for blogs and recipes styling*/
 .searchform {
     padding-left: 20px;
     padding-top: 10px;
@@ -281,7 +281,8 @@ footer {
 /*Styling for the subtitle of Recipe Detail page*/
 .post-subtitle1 {
     text-align: center;
-    color: darkslategray;
+    color: rgb(5, 41, 20);
+    font-weight: 700;
 }
 
  .post-link {
@@ -824,9 +825,9 @@ ol li::before {
 }
 
 .likecom {
-    color:rgb(19, 163, 31);
-    font-weight: bold;
-    font-size: 110%;   
+    color:#05420A;
+    font-weight:bolder;
+    font-size: 20px;  
 }
 
 .inner {
@@ -864,6 +865,10 @@ ol li::before {
     margin-left: auto;
     margin-right: auto;
     
+}
+
+.btn-warning {
+    align-items: center;
 }
 
 

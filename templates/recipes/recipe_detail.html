@@ -22,9 +22,9 @@
                 {% if "placeholder" in recipe.featured_image.url %}
                 <img id="Default" type="image/jpg"
                     src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg"
-                    alt="Default image" class="centeralign" alt="recipe image">
+                    alt="{{ recipe.title }} generic" class="centeralign" alt="recipe image">
                 {% else %}
-                <img src=" {{ recipe.featured_image.url }}" class="centeralign" alt="user image">
+                <img src=" {{ recipe.featured_image.url }}" class="centeralign" alt="{{ recipe.title }} image">
                 {% endif %}
             </div>
         </div>

@@ -5,7 +5,7 @@ def handler404(request, exception):
     """
     Custom 404 page
     """
-    return render(request, "errors/404.html", status=404)
+    return render(request, "errors/400.html", status=404)
 
 
 def handler500(request):

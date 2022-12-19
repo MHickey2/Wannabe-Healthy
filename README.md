@@ -1,7 +1,7 @@
 # Wannabe Healthy: Milestone 4 Project
 
 <p align ="center">      
-   <img src="media/readme/wannaberesp.png"  alt="AmIResponsive" />       
+   <img src="assets/readme/images/wannaberesp.png"  alt="AmIResponsive" />       
 </p>
 <br/>  
 
@@ -181,19 +181,26 @@ The project was developed using Agile Methodology and it was by use of the GitHu
 
 ### 1. Colour  Scheme  <a name="colourscheme"></a>
 
-The colour scheme has primarily a green colour, research has shown that green has a strong link with health related topics and it also relates to nature and I felt it was a natural choice for the content of the site.
+The colour scheme has primarily a green colour, research has shown that green has a strong link with health related topics and it also relates to nature and I felt it was a natural choice for the content of the site. I had used more colour earlier in the development, but I stripped it back in the end, as I thought simplicity was key in highlighting the content without too much distraction. The following image highlights the main colours in the site, and are mostly variations within the green hues.
 
 <br>
+<p align ="center">      
+   <img src="assets/readme/images/combo.png"  alt="Colour Combo" />        
+</p>
+<p align ="center">      
+   #337920    #A3D31C    #274612    #7DD661    #47D31C    #0CAF46      
+</p>
+<br/> 
 
 ### 2. Typography    <a name="typography"></a>
 
 Google Fonts were used within the website. The 'Roboto' font is the main font used for the whole project, both for regular text and headings. Sans serif is the fallback font in case other font is not available. See below for example of font in use.
 
-The font color was #313131, which is a good font to help counter eye strain.
+The font color is #313131, which is a good font to help counter eye strain.
 
 The main title for the site and the navbar links use the 'Abril Fatface' font, A font it displays both neutrality and a strong presence on the page which helps to attract reader attention with the measured tension of its curves, good color and high contrast.
 
-Other Fonts were used within the Recipe Details Section and the main heading use the Marhey Font, as they gave a certain quirky touch to the Recipes.
+Other Fonts were used within the Recipe Details Section and the main headings use the 'Marhey' Font, as it gives a certain quirky touch to the Recipes, that gives the recipes their own unique styles.
 
 
 <br>
@@ -201,7 +208,7 @@ Other Fonts were used within the Recipe Details Section and the main heading use
 
 ### 3. Imagery    <a name="imagery"></a>
 
-The Logo was created on a Logo Website, as the theme was health related, I used predominantly green in the logo iteself and the logo had a strong influence on the overall website theme going forward.
+The Logo was created on a Logo Website, as the theme was health related, I used predominantly green in the logo iteself and the logo had a strong influence on the overall website colour theme going forward.
 
 The imagery of the site focuses on a healthy theme, the images were souced from the Pexels site and supplement either the blog or the recipe. The images are all self sourced, but the user can update images to supplement their own blog/recipe.
 
@@ -383,9 +390,10 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 
 ## 5. Features  <a name="features"></a>
 
-There are features common to all pages in the site and these are foundin the base.html page. These include:
+There are features common to all pages in the site and these are found in the base.html page. These include:
 
 - The Logo and Site Title:
+  The logo was the first asset I created, and developed it with a view of promoting the healthy lifestyle vibe, it conveys a simple image with healthy food and a simple tag line. The Title is used to further promote the Wannabe Brand.
 
 <br>
 
@@ -397,12 +405,22 @@ There are features common to all pages in the site and these are foundin the bas
   
 
 - The Navigation Bar:
-  The navigation exists in different forms, for a general user the navigation contains home, about, recipes and an account dropdown with register and login options. For a logged in user the naviation contains, home, about, recipes, profile and logout. When logged in you will also see your profile picture to the right of the other options.
 
+
+The navigation exists in different forms, for a general user the navigation contains home, about, recipes and an account dropdown with register and login options. 
   <br>
 
 <p align ="center">      
-     <img src="assets/readme/images/navbar.png"  alt="Navbar" />    
+     <img src="assets/readme/images/nav.png"  alt="Navbar not logged in" />    
+</p>
+
+<br/> 
+
+For a logged in user the naviation contains, home, about, recipes, profile and logout. When logged in you will also see your profile picture to the right of the other options.
+
+
+<p align ="center">      
+     <img src="assets/readme/images/navbar.png"  alt="Navbar logged in" />    
 </p>
 
 <br/> 
@@ -438,7 +456,7 @@ the site, helping the user find out the theme of the site up front.
 <br>
 
 <p align ="center">      
-     <img src="assets/readme/images/intro.png"  alt="Intro to Site" />    
+     <img src="assets/readme/images/intro.png" width="400" alt="Intro to Site" />    
 </p>
 
 <br/> 
@@ -493,7 +511,7 @@ As a logged in User you can add a blog to the site, when you press on the add bl
 
 ### 5. Edit Blog     <a name="editblog"></a>
 
-As a logged in User you will be able to see the edit button below your submitted blogs, when you use the edit button you will be redirected to the edit blog page, where you can update your blog, when the form is completed the user will be redirected to the home page.
+As a logged in User you will be able to see the edit button below your submitted blogs, when you use the edit button you will be redirected to the edit blog page, where you can update your blog, when the form is completed the user will be redirected to the home page. The edit button will only be visible on posts that the logged in User has submitted.
 
 <br>
 
@@ -512,7 +530,7 @@ As a logged in User you will be able to see the edit button below your submitted
 
 ###  6. Delete Blog     <a name="deleteblog"></a>
 
-As a logged in User you will be able to see the delete button below your submitted blogs, when you use the delete button you will be redirected to the delete blog page, where you can delete your blog, when the form is completed you will be redirected to the home page and your blog will be deleted.
+As a logged in User you will be able to see the delete button below your submitted blogs, when you use the delete button you will be redirected to the delete blog page, where you can delete your blog, when the form is completed you will be redirected to the home page and your blog will be deleted. The delete button will only be visible on blogs that the logged in User has submitted.
 
 
 <br>
@@ -537,7 +555,7 @@ When you select a blog, you will be redirected to the blog detail page, this pag
 
 ###  8. About Page    <a name="aboutpage"></a>
 
-The About Page again contains a brief synopsis of the site and contain information panels that display the main elements of the site. The accompanying links will take you to either the blog section or the recipe section of the site.
+The About Page again contains a brief synopsis of the site and contain information panels that display the main elements of the site. The accompanying links will take you to either the blog section or the recipe section of the site. I would hope to expand the project by adding an area for relaxation, but this is not in present iteration, so there are 2 links to same area in the meantime.
 <br>
 
 <p align ="center">      
@@ -548,16 +566,23 @@ The About Page again contains a brief synopsis of the site and contain informati
 
 ###  9. Recipes Page   <a name="recipespage"></a>
 
-On the Recipes page there is a collection of Recipes ordered with the most recent Recipe at the top. The pagination allows for the Recipes to be distributed according to the number of recipes in the collection.
+At the top of the Recipes pages, there is a brief introduction to the Recipes feature. 
 
 <br>
 
 <p align ="center">      
-     <img src="assets/readme/images/recipes.jpg" width="600" alt="Recipe Page" />    
+     <img src="assets/readme/images/recipeintro.png" width="500" alt="Recipe Intro" />    
 </p>
 
 <br/> 
 
+On the Recipes page there is a collection of Recipes ordered with the most recent Recipe at the top. The pagination allows for the Recipes to be distributed according to the number of recipes in the collection.
+
+<p align ="center">      
+     <img src="assets/readme/images/recipes.jpg" width="600" alt="Recipe Section" />    
+</p>
+
+<br/> 
 ###  10. Recipes Search   <a name="recipessearch"></a>
 
 The website user can use the search facility to find specific categories ie Breakfast, Lunch, Dinner, Dessert and Soup/Salad. You can also search according to a specific word in the title.If there are results, they will be displayed to the user and if not the user will be given the message that there are no results, they can either search again or they can return to the recipes page.
@@ -578,8 +603,7 @@ The website user can use the search facility to find specific categories ie Brea
 
 ###  11. Add Recipe   <a name="addrecipe"></a>
 
-As a logged in User you can add a Recipe to the site, when you press on the add a Recipe  link it will take you to the 'add Recipe page', when this form is completed you will be redirected to the Recipes page, where your new Recipe will be displayed.
-
+As a logged in User you can add a Recipe to the site, when you press on the add a Recipe button, it will take you to the 'Add Recipe page', when this form is completed the User will be redirected to the Recipes page, where the new Recipe will be displayed.
 
 <br>
 
@@ -591,7 +615,7 @@ As a logged in User you can add a Recipe to the site, when you press on the add 
 
 ###  12. Edit Recipe   <a name="editrecipe"></a>
 
-As a logged in User you will be able to see the edit button below your submitted Recipe, when you use the edit button you will be redirected to the 'edit your Recipe page', where you can update your Recipe, when the form is completed you will be redirected to the Recipes page and your updated recipe will be displayed.
+As a logged in User you will be able to see the edit button below your submitted Recipe, when you use the edit button you will be redirected to the 'edit your Recipe page', where you can update your Recipe, when the form is completed you will be redirected to the Recipes page and your updated recipe will be displayed. The edit button will only be visible on Recipes that the logged in User has submitted.
 
 <br>
 
@@ -603,7 +627,7 @@ As a logged in User you will be able to see the edit button below your submitted
 
 ###  13. Delete Recipe   <a name="deleterecipe"></a>
 
-As a logged in User you will be able to see the delete button below your submitted Recipe, when you use the delete button you will be redirected to the delete Recipe page, where you can delete your Recipe, when the form is completed you will be redirected to the Recipes page and your recipe will be deleted.
+As a logged in User you will be able to see the delete button below your submitted Recipe, when you use the delete button you will be redirected to the delete Recipe page, where you can delete your Recipe, when the form is completed you will be redirected to the Recipes page and your recipe will be deleted. The delete button will only be visible on recipes that the logged in User has submitted.
 
 <br>
 
@@ -638,14 +662,16 @@ On the Profile Page, the User can have access to their own profile information. 
 
 ###  16. Edit Profile  Page   <a name="editprofile"></a>
 
-The logged in user can access the Edit Profile Page and can upload an image and add a Bio to their Profile. 
+The logged in user can access the Edit Profile Page and can upload an image and add a Bio to their Profile. They will then be redirected to the profile page.
+
+
 <br>
 
 <p align ="center">      
      <img src="assets/readme/images/editprofile.jpg" width="500" alt="Edit Profile Page" />    
 </p>
 
-
+<br>
 
 ###  17. Signup Page   <a name="signuppage"></a>
 
@@ -662,10 +688,12 @@ On the Signup Page, a new user can sign up for the Wannabe Healthy website by fi
 ###  18. Login Page   <a name="loginpage"></a>
 
 A registered User can log in to the website by inputting the username and password and they will have full access to all the features of the site. 
+
+
 <br>
 
 <p align ="center">      
-     <img src="assets/readme/images/registerpage.jpg" width="500" alt="Login Page" />    
+     <img src="assets/readme/images/loginpage.jpg" width="500" alt="Login Page" />    
 </p>
 
 <br/> 
@@ -677,11 +705,10 @@ In the Logout Page, the User can confirm that they want to exit the website.
 <br>
 
 <p align ="center">      
-     <img src="assets/readme/images/registerpage.jpg" width="500" alt="Logout Page" />    
+     <img src="assets/readme/images/logout.jpg" width="500" alt="Logout Page" />    
 </p>
 
 <br/>  
-
 
 
  #### [Return to Table of Contents](#toc)
@@ -690,9 +717,13 @@ In the Logout Page, the User can confirm that they want to exit the website.
 
  <br>
 
- The site in it's present form offers a basic blog and recipe site, which is a good foundation but could be developed further to offer more options to the user. Within in the blog area, I would like to add some features in future iterations such as adding favourites and highlighting the blogs that have received the most likes. In regards to the recipes, there are a number of extra optionns I would like to introduce including vegetarian, and vegan options, the present recipes are not categorised in this way. I would like to introudce more interaction into the site, possibly using a forum where users can document their own experiences when adopting a vegetarian/vegan lifestyle. This would increase the social aspect of the site and would fully utilize the social media platforms fully. 
+ The site in it's present form offers a basic blog and recipe site, which is a good foundation but could be developed further to offer more options to the user. Within in the blog area, I would like to add some features in future iterations such as adding favourites and highlighting the blogs that have received the most likes. In regards to the recipes, there are a number of extra optionns I would like to introduce including vegetarian, and vegan options, the present recipes are not categorised in this way. 
  
- The present profiles could be expanded to include more information, such as the user's own links so that users can also interact with each other outside of the site. At present there is no contact page and this would also be introduced, to encourage users to contact the web owner with messages, and it would be hoped their interaction would help the site owner to develop new ideas based on this suggestions. 
+ I would like to introudce more interaction into the site, possibly using a forum where users can document their own experiences when adopting a vegetarian/vegan lifestyle. This would increase the social aspect of the site and would fully utilize the social media platforms fully. 
+ 
+ The present profiles could be expanded to include more information, such as the user's own links so that users can also interact with each other outside of the site. I was going to add blogs and recipes that the user has created within the profile page, but have not included this within the present site.
+ 
+ At present there is no contact page and this would also be introduced, to encourage users to contact the web owner with messages, and it would be hoped their interaction would help the site owner to develop new ideas based on their suggestions. 
 
  The about page mentions relaxation as a factor, so I would like to add a section on the site dedicated to relaxation techniques and offering resources to the user in relation to stress relief and mindfulness.
 
@@ -825,10 +856,10 @@ More information is available at [https://docs.github.com/en](https://docs.githu
 ----
  ## Credits <a name="credits"></a>
 
- - All Recipes and Recipe Images came from [Lidl Recipes Ireland](https://recipes.lidl.ie/)
- - All images for the site, including blog images come from [Pexel]()
- - The logo and Favicon were built with online tools
- - All Blog content was self produced
+- All Recipes and Recipe Images came from [Lidl Recipes Ireland](https://recipes.lidl.ie/)
+- All images for the site, including blog images come from [Pexel]()
+- The logo and Favicon were built with online tools
+- All Blog content was self produced
  
      
 
