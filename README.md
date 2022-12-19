@@ -486,7 +486,7 @@ As a logged in User you can add a blog to the site, when you press on the add bl
 <br/> 
 
 <p align ="center">      
-     <img src="assets/readme/images/addpost1.jpg" width="500" height="500"  alt="add post form" />    
+     <img src="assets/readme/images/addpost1.jpg" width="600"   alt="add post form" />    
 </p>
 
 <br/> 
@@ -504,7 +504,7 @@ As a logged in User you will be able to see the edit button below your submitted
 <br/> 
 
 <p align ="center">      
-     <img src=""  alt="edit form" />    
+     <img src="assets/readme/images/editform.jpg" width="600" alt="edit form" />    
 </p>
 
 <br/> 
@@ -518,7 +518,7 @@ As a logged in User you will be able to see the delete button below your submitt
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/deleteform.jpg" width="600" alt="Delete Form" />    
 </p>
 
 <br/>
@@ -530,7 +530,7 @@ When you select a blog, you will be redirected to the blog detail page, this pag
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/editform.jpg" width="600" alt="Post Detail Page" />    
 </p>
 
 <br/> 
@@ -541,7 +541,7 @@ The About Page again contains a brief synopsis of the site and contain informati
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/about.jpg" width="600" alt="About Page" />    
 </p>
 
 <br/> 
@@ -553,7 +553,7 @@ On the Recipes page there is a collection of Recipes ordered with the most recen
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/recipes.jpg" width="600" alt="Recipe Page" />    
 </p>
 
 <br/> 
@@ -565,7 +565,13 @@ The website user can use the search facility to find specific categories ie Brea
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/recipesearch.png"  alt="Recipe Search" />    
+</p>
+
+<br/> 
+
+<p align ="center">      
+     <img src="assets/readme/images/noresults.png"  alt="search no results" />    
 </p>
 
 <br/> 
@@ -578,7 +584,7 @@ As a logged in User you can add a Recipe to the site, when you press on the add 
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/addrecipe.jpg" width="500" alt="Add Recipe Form" />    
 </p>
 
 <br/> 
@@ -590,7 +596,7 @@ As a logged in User you will be able to see the edit button below your submitted
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/editrecipe.jpg"  width="500" alt="Edit Recipe Form" />    
 </p>
 
 <br/> 
@@ -602,7 +608,7 @@ As a logged in User you will be able to see the delete button below your submitt
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/deleterecipe.jpg" width="500" alt="Delete Recipe Page" />    
 </p>
 
 <br/> 
@@ -614,7 +620,7 @@ When you select a Recipe, you will be redirected to the Recipe detail page, this
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/reciedetails.jpg" width="500" alt="Recipe Detail Page" />    
 </p>
 
 <br/> 
@@ -627,7 +633,7 @@ On the Profile Page, the User can have access to their own profile information. 
 <br>
 
 <p align ="center">      
-     <img src="media/readme"  alt="" />    
+     <img src="assets/readme/images/profile page.jpg" width="500" alt="Profile Page" />    
 </p>
 
 ###  16. Edit Profile  Page   <a name="editprofile"></a>
@@ -636,7 +642,7 @@ The logged in user can access the Edit Profile Page and can upload an image and 
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/editprofile.jpg" width="500" alt="Edit Profile Page" />    
 </p>
 
 
@@ -648,7 +654,7 @@ On the Signup Page, a new user can sign up for the Wannabe Healthy website by fi
 <br>
 
 <p align ="center">      
-     <img src="media/readme"  alt="" />    
+     <img src="assets/readme/images/registerpage.jpg" width="500" alt="Registration Page" />    
 </p>
 
 <br/>
@@ -659,7 +665,7 @@ A registered User can log in to the website by inputting the username and passwo
 <br>
 
 <p align ="center">      
-     <img src="media/readme"  alt="" />    
+     <img src="assets/readme/images/registerpage.jpg" width="500" alt="Login Page" />    
 </p>
 
 <br/> 
@@ -671,7 +677,7 @@ In the Logout Page, the User can confirm that they want to exit the website.
 <br>
 
 <p align ="center">      
-     <img src="media/readme/"  alt="" />    
+     <img src="assets/readme/images/registerpage.jpg" width="500" alt="Logout Page" />    
 </p>
 
 <br/>  
