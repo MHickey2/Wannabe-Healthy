@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-# from .views import handler404, handler500, handler403, handler405
 
 
 urlpatterns = [
@@ -28,9 +27,3 @@ urlpatterns = [
     path("recipes/", include("recipes.urls"), name="recipes-urls"),
     path('profiles/', include('profiles.urls'), name="profiles-urls"),
 ]
-
-# Custom Error Page Tags
-# handler404 = 'wannabe.views.error_404'
-# handler500 = 'wannabe.views.error_500'
-# handler403 = 'wannabe.views.error_403'
-# handler405 = 'wannabe.views.error_405'

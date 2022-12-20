@@ -66,7 +66,7 @@ The result can be seen below:
 <br/>
 
 3. Python Validation   <a name="python"></a>
-  Python testing was done without the use of Pep8 as the site was down, instead an extension was added which highlighted errors and showed them in the problems panel within gitpod. Most errors related to long lines, but there were some syntax errors.
+  Python testing was done without the use of Pep8 as the site was down, instead an extension was added which highlighted errors and showed them in the problems panel within gitpod. Most errors related to long lines, but there were some syntax errors which I rectified. I also used [Code Institute Python Linter](https://pep8ci.herokuapp.com/), just to be certain, and there was no errors (It does not like the end line, but when I remove it the gitpod linter asks for it to be inserted)
 
 
 4. Lighthouse Testing
