@@ -214,6 +214,13 @@ The imagery of the site focuses on a healthy theme, the images were souced from 
 
 There are also images sporadically throughout the site, The home page has an image of a healthy woman, conveying a person with a healthy lifestyle. The about page again, shows a healthy woman living her best life and the information panels show images focuses on the main themes within the site.
 
+There are also various icons used within the site, the icons were sourced at [](), and they were used as a graphical representation of pertinent information on the site, they were used in conjunction with Forms or headings and were a subtle way to incorporate imagery on a limited scale, examples can be found in the image below.
+
+ <br/>
+<p align="center">
+  <img src="" alt="Add Post Page Wireframe"/>
+</p>
+
 <br>
 
 ### 4. Website Structure    <a name="structure"></a>
@@ -238,9 +245,14 @@ The website follows the standard website structure. The Logo and the website nam
  - The LogIn Page, consists of a form where the user can login to the site.
  - The logout Page, consists of a form where the user can logout of the site.
 
+<br/>
+
 ### 5. Wireframes    <a name="wireframes"></a>
 
 The Wireframes for the site were created in Figma, I concentrated on the standard websize and the mobile size. The midlevel sizes were generally in keeping with the main websize but just on a smaller scale. The Wireframes can be found below:
+
+<details><summary>Figma Wireframes</summary>
+
 
 <details>
   <summary>1. Home Page Wireframes</summary>
@@ -369,6 +381,9 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 </p>
 </details>
 
+</details>
+
+<br>
 
  #### [Return to Table of Contents](#toc)
 ----
@@ -376,9 +391,12 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 ## 4. Database Diagram
 <br>
 
+<details>
+  <summary>Database ER Diagram</summary>
 <p align ="center">      
-     <img src="media/readme/"  alt="database diagram" />    
+     <img src="assets/readme/images/erd.png"  alt="database ER diagram" />    
 </p>
+</details>
 
 <br/> 
 
@@ -548,7 +566,7 @@ When you select a blog, you will be redirected to the blog detail page, this pag
 <br>
 
 <p align ="center">      
-     <img src="assets/readme/images/editform.jpg" width="600" alt="Post Detail Page" />    
+     <img src="assets/readme/images/blogdetail.jpg" width="600" alt="Post Detail Page" />    
 </p>
 
 <br/> 
@@ -556,6 +574,8 @@ When you select a blog, you will be redirected to the blog detail page, this pag
 ###  8. About Page    <a name="aboutpage"></a>
 
 The About Page again contains a brief synopsis of the site and contain information panels that display the main elements of the site. The accompanying links will take you to either the blog section or the recipe section of the site. I would hope to expand the project by adding an area for relaxation, but this is not in present iteration, so there are 2 links to same area in the meantime.
+
+
 <br>
 
 <p align ="center">      

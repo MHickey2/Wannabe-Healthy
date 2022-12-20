@@ -73,7 +73,7 @@
                                     <p class="textual">{{ recipe.description}}</p>
                                 </div>
                                 <div class="center">
-                                    <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-warning center">See Recipe</a>
+                                    <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-warning center border">See Recipe</a>
                                 </div>
                                 <br>
                                 <hr>
@@ -100,7 +100,7 @@
                 </div>
                 {% empty %}
                 <h3 class="nosearchresults col-md-3">oops, there are no results, try again or return to main page</h3>                                
-                <a href="{% url 'home' %}" class="btn btn-success">BACK</a>
+                <a href="{% url 'recipes' %}" class="btn btn-success">BACK</a>
                 <br>
                 {% endfor %}                  
             </div>

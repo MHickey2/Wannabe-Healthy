@@ -72,7 +72,7 @@ navbar {
 /*styling for Navigation items*/
 .nav-item,.nav-link {
     color: #a3d31c !important;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: .2em;
     font-family: 'Abril Fatface', cursive;
     margin-left: 8px;   
@@ -213,7 +213,7 @@ footer {
 
 /*Styling for excerpt in blogs*/
 .textual {
-    min-height: 100px;    
+    min-height: 110px;    
     text-align: center;
     padding: 10px;
 }
@@ -548,9 +548,10 @@ textarea {
 .image-flash3 {
     position: absolute;    
     min-width: 40%;
-    bottom:42%;
+    bottom: 30vh;
     left: 25px;
-    background-color: rgb(83, 212, 83, 0.7);   
+    background-color: rgb(83, 212, 83, 0.7); 
+      
 }
 
 .centeralign {
@@ -827,7 +828,7 @@ ol li::before {
 .likecom {
     color:#05420A;
     font-weight:bolder;
-    font-size: 20px;  
+    font-size: 16px;  
 }
 
 .inner {
@@ -855,6 +856,10 @@ ol li::before {
     height: auto;
 }
 
+.border {
+    border: 1px solid black;
+}
+
 .nosearchresults {
     margin: 15px;   
     color: green;
@@ -869,6 +874,7 @@ ol li::before {
 
 .btn-warning {
     align-items: center;
+    
 }
 
 
