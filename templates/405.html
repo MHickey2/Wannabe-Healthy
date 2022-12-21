@@ -6,16 +6,16 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 my-auto form-container text-center rounded mx-auto my-2 py-2">
-            <h1>Error 405: Method Not Allowed</h1>
-            <h2>The wizards says No. <i class="fa-solid fa-hand-sparkles"></i></h2>
-            <div>
-                {% cloudinary 'cat-hat_bgmwnu.jpg' width=350 height=400 crop="fill" %}
-            </div>
-            <div>
-                <a href="{% url 'home' %}" class="btn btn-md btn-navy my-2">
-                    Keep exploring here instead
-                </a>
-            </div>
+            <h2 class = "green">Error 405: Method Not allowed</h2>
+            <h3 class = "green">Sorry about That!  :( </h3>
+            <br>
+            <img class="img-fluid" alt="Zen Moment"
+            src="https://res.cloudinary.com/dspwticaf/image/upload/v1668886130/zenmoment_cdhzta.jpg" width="200" height="200"/>
+            <br>
+            <br>
+            <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+            <h4 class="green">Explore here instead</h4>
+            <br>            
         </div>
     </div>
 </div>

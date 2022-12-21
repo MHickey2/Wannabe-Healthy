@@ -5,6 +5,7 @@ from .views import AddPostView, EditPostView, DeletePostView
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
     path('search_blogs/', views.BlogSearchView.as_view(), name='search_blogs'),
+#     path('500.html/', views.test, name='500'),
     path('about.html/', views.about, name='about'),
     path('add_post/', views.AddPostView.as_view(), name='add_post'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),

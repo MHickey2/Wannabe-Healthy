@@ -120,6 +120,11 @@ def about(request):
     return render(request, 'about.html', {})
 
 
+# def test(request):
+#     """ A view to return the about page """
+#     return render(request, '500.html', {})
+
+
 class EditPostView(generic.UpdateView):
     model = Post
     template_name = "blog/edit_post.html"
