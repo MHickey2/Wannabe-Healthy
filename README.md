@@ -129,29 +129,62 @@ The user will be able to maintain a profile on the site and they can update thei
 
 ### 1. As a website User I can...<a name="websiteuser"></a>
 1. Navigate around the site and easily view the type of content available.
-2. View a collection of Blogs in the blog Section.
-3. Search the blog section for particular categories or by title content.
-4. Click on a blog item and view more indepth content of the selected blog.
-5. Register for an account to avail of full features of the site.
-6. View the number of likes on a blog.
-7. View comments left for different blogs in the collection.
-8. View a collection of Recipes in the Recipe Page.
-9. Search through recipes for particular categories or by name in title.
-10. Click on a Recipe to see full details of that recipe.
-11. View the number of likes on a Recipe.
-12. View any comments left on a Recipe. 
+[User Story: Create a Home Page for site #1](https://github.com/MHickey2/Wannabe-Healthy/issues/1)
 
+2. View a collection of Blogs in the blog Section.
+[User Story: View existing Posts #2](https://github.com/MHickey2/Wannabe-Healthy/issues/2)
+
+3. Search the blog section for particular categories or by title content.
+[User Story: Sort through Blogs #5](https://github.com/MHickey2/Wannabe-Healthy/issues/5)
+
+4. Click on a blog item and view more indepth content of the selected blog.
+[User Story: User can read individual Posts when selected #3](https://github.com/MHickey2/Wannabe-Healthy/issues/3)
+
+5. Register for an account to avail of full features of the site.
+[User Story: The user should be able to register for the site #7](https://github.com/MHickey2/Wannabe-Healthy/issues/7)
+
+6. View the number of likes on a blog.
+[User Story: User will want the ability to like posts #6](https://github.com/MHickey2/Wannabe-Healthy/issues/6)
+
+7.  View comments left for different blogs in the collection.
+[User Story: User can leave comments on Blogs #10](https://github.com/MHickey2/Wannabe-Healthy/issues/10)
+
+8. View a collection of Recipes in the Recipe Page.
+[User Story: Users can see Recipes in the site #15](https://github.com/MHickey2/Wannabe-Healthy/issues/15)
+
+9. Search through recipes for particular categories or by name in title.
+[https://github.com/MHickey2/Wannabe-Healthy/issues/21](https://github.com/MHickey2/Wannabe-Healthy/issues/21)
+
+10. Click on a Recipe to see full details of that recipe.
+[User Story: Users can see full details of individual recipes #16](https://github.com/MHickey2/Wannabe-Healthy/issues/16)
+
+11. View the number of likes on a Recipe.
+[User Story: User can like individual recipes #17](https://github.com/MHickey2/Wannabe-Healthy/issues/17)
+
+12. View any comments left on a Recipe. 
+[User Story: User will want to leave comment for individual Recipes #19](https://github.com/MHickey2/Wannabe-Healthy/issues/19)
   
   <br/>
 
 ### 2. As a logged in User I can... <a name="loggedinuser"></a> 
 
 1. I can add a new post or a recipe.
+User Story: The logged in User should be able to add a blog to the Site. #9(https://github.com/MHickey2/Wannabe-Healthy/issues/9)
+[User Story: User will want to add their own Recipes to the site #18](https://github.com/MHickey2/Wannabe-Healthy/issues/18)
+
 2. I can like/unlike a blog or recipe on the site.
-3. I can leave comments on particular blogs and recipes.
-4. I can update my Profile for the site by adding a Bio and Image.
-5. I can edit a Blog or Recipe that I have submitted to the site.
-6. I can delete a Recipe or Blog that I have submitted to the site.
+[User Story: User will want the ability to like posts #6](https://github.com/MHickey2/Wannabe-Healthy/issues/6)
+
+4. I can leave comments on particular blogs and recipes.
+[User Story: User can leave comments on Blogs #10](https://github.com/MHickey2/Wannabe-Healthy/issues/10)
+
+5. I can update my Profile for the site by adding a Bio and Image.
+[User Story: The logged in User should be able to add a blog to the Site. #9](https://github.com/MHickey2/Wannabe-Healthy/issues/9)
+
+6. I can edit a Blog or Recipe that I have submitted to the site.
+
+
+7. I can delete a Recipe or Blog that I have submitted to the site.
 
  
  <br/>
