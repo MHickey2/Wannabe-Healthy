@@ -46,7 +46,7 @@
                     <form role="search" action="{% url 'search_blogs' %}" method="get">
                         {% csrf_token %}
                         <div class="input-group">                                                     
-                            <input type="text" name="q" id="q" class="form-control" placeholder="Search Blogs by Category or name in Title">
+                            <input type="text" name="q" id="q" class="form-control" placeholder="Search Blogs by Category/Word">
                             <div class="input-group-btn">
                                 <button type="submit" class="btn btn-search btn btn-success">
                                     <span class="glyphicon glyphicon-search"></span>

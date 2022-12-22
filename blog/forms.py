@@ -17,8 +17,7 @@ class PostForm(forms.ModelForm):
 
         widgets = {
             'category': forms.TextInput(attrs={'class': 'form-control'}),
-            'title': forms.TextInput(attrs={'class': 'form-control',
-                                            'placeholder': 'Enter Title'}),
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
             'slug': forms.TextInput(attrs={'class': 'form-control'}),
             'excerpt': forms.TextInput(attrs={'class': 'form-control'}),
             'content': forms.TextInput(attrs={'class': 'form-control'}),

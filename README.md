@@ -175,16 +175,24 @@ User Story: The logged in User should be able to add a blog to the Site. #9(http
 2. I can like/unlike a blog or recipe on the site.
 [User Story: User will want the ability to like posts #6](https://github.com/MHickey2/Wannabe-Healthy/issues/6)
 
-4. I can leave comments on particular blogs and recipes.
+3. I can leave comments on particular blogs and recipes.
 [User Story: User can leave comments on Blogs #10](https://github.com/MHickey2/Wannabe-Healthy/issues/10)
 
-5. I can update my Profile for the site by adding a Bio and Image.
+4. I can update my Profile for the site by adding a Bio and Image.
 [User Story: The logged in User should be able to add a blog to the Site. #9](https://github.com/MHickey2/Wannabe-Healthy/issues/9)
 
-6. I can edit a Blog or Recipe that I have submitted to the site.
+5. I can edit a Blog or Recipe that I have submitted to the site.
+[User Story: User can edit the posts they have submitted #11](https://github.com/MHickey2/Wannabe-Healthy/issues/11)
+[User Story: User will want to edit/update their submitted recipes #20](https://github.com/MHickey2/Wannabe-Healthy/issues/20)
+
+6. I can delete a Recipe or Blog that I have submitted to the site.
+[User Story: User can delete a post that they have submitted #12](https://github.com/MHickey2/Wannabe-Healthy/issues/12)
+[User Story: User can Delete their own Recipes #22](https://github.com/MHickey2/Wannabe-Healthy/issues/22)
+
+7. I will have confirmation when I carry out actions in the site.
+[User Story: User will be kept informed of their activity within the site #14](https://github.com/MHickey2/Wannabe-Healthy/issues/14)
 
 
-7. I can delete a Recipe or Blog that I have submitted to the site.
 
  
  <br/>
@@ -196,6 +204,8 @@ User Story: The logged in User should be able to add a blog to the Site. #9(http
 3. Create a new user, recipes, blogs and categories.
 4. Delete user, blogs, recipes, categories and comments.
 5. Can approve user's comments.
+
+[User Story: Admin Access for Admin Features #4](https://github.com/MHickey2/Wannabe-Healthy/issues/4)
 
   <br/> 
 

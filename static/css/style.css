@@ -66,7 +66,7 @@ navbar {
 #logo {   
     width: 120px;
     height: auto;
-    padding: 10px;    
+    padding: 5px;    
 }
 
 /*styling for Navigation items*/
@@ -75,7 +75,7 @@ navbar {
     font-size: 20px;
     letter-spacing: .2em;
     font-family: 'Abril Fatface', cursive;
-    margin-left: 8px;   
+    margin-left: 6px;   
     font-weight: bold;
     text-transform: capitalize;
 }
@@ -545,14 +545,18 @@ textarea {
 }
 
 /*Flash for author on image in recipes*/
-.image-flash3 {
-    position: absolute;    
-    min-width: 40%;
-    bottom: 30vh;
-    left: 25px;
-    background-color: rgb(83, 212, 83, 0.7); 
+.image-flash3 {    
+    position: absolute; 
+    top: 200px;   
+    min-width: 40%;   
+    left: 15px;
+    background-color: rgb(83, 212, 83, 0.7);
+    text-align: center;
+    vertical-align: center;   
       
 }
+
+
 
 .centeralign {
     display: block;
@@ -818,8 +822,17 @@ ol li::before {
     min-height: 300px;   
     line-height: 1.5;
     padding: 5px;
-    text-align: center;    
+    text-align: center;
+      
 }
+
+.card-body4 {
+    min-height: 300px;   
+    line-height: 1.5;
+    padding: 5px;
+    text-align: center;        
+}
+
 
 .btn-danger {    
     font-weight: bold;
@@ -879,14 +892,49 @@ ol li::before {
 
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 991.98px){ 
+@media (max-width: 875px) and (min-width: 750px){ 
 
     .title {
         border-bottom: none; 
     }
+
+    .likecom {        
+        font-size: 12px;  
+    }
+ }
+
+ /* Medium devices (tablets, 768px and up) */
+ @media (max-width: 400px){ 
+
+    .nav-item,.nav-link {
+        color: #a3d31c !important;
+        font-size: 17px;
+        letter-spacing: .1em;
+        font-family: 'Abril Fatface', cursive;
+        margin-left: 2px;   
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+    
  }
 
 
+ /* XX-Large devices (larger desktops, 1400px and up)*/
+  /* @media screen and (min-width: 1400px) {
+    .container {
+      width: 1370px;
+    }
+  } */
+  /* @media screen and (min-width: 1600px) {
+    .container {
+      width: 1570px;
+    }
+  }
+  @media screen and (min-width: 1900px) {
+    .container {
+      width: 1870px;
+    }
+  } */
 
 
  
