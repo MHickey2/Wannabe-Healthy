@@ -3,6 +3,7 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
+<div id="top"></div>
 
 <!-- <main class="flex-shrink-0 main-bg"> -->
 <h3 class="green"><iconify-icon inline icon="dashicons:welcome-write-blog" class="greenicon"></iconify-icon>Category: {{ post.category }}</h3>
@@ -22,7 +23,7 @@
     </div>
 </div>
 <br>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body3">
@@ -69,7 +70,7 @@
 <br>
 <!--Testing for profile and bio of poster-->
 <section class="profilesection">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-2 d-flex justify-content-center">
                 {% if "placeholder" in profile.profile_pic.url %}
@@ -157,8 +158,11 @@
 {% endif %}
 
 <br>
-<a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+<div class="center">
+    <a href="{% url 'home' %}" class="btn btn-primary center">BACK</a>
+</div>
 <br>
-<br>
+<a id="top-button" href="#top" aria-label="Going to top of page" >Top of Screen &nbsp; <iconify-icon inline icon="mdi:arrow-up" width="16"></iconify-icon>
+</a> 
 
 {% endblock content %}

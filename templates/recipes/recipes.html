@@ -2,7 +2,7 @@
 {% block title %}WannabeHealthy/Recipe Page{% endblock %}
 {% block content %}
 
-
+<div id="top"></div>
 <h2 class="green"><iconify-icon icon="mdi:cook" class="greenicon"></iconify-icon>&nbsp;Recipe Collection</h2>
 
 <p class="col-lg-8 col-xl-6 justify-content-center" id="recipeintro">Browse through the recipes and find inspiration for diet changes.
@@ -19,14 +19,14 @@
 {% endif %}
 
 <br>
-<div class="container">
+<div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
                 <nav class="searchform">                
                     <form role="search" action="{% url 'search_recipes' %}" method="get">
                         {% csrf_token %}
                         <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search Recipes">
+                            <input type="text" name="q" class="form-control" placeholder="Search Recipes by Category/Word">
                             <div class="input-group-btn">
                                 <button type="submit" class="btn btn-search btn-success">
                                     <span class="glyphicon glyphicon-search"></span>
@@ -39,9 +39,6 @@
             </div>
         </div>
     </div>
-        
-
-
 
     <div class="container-fluid">
         <div class="row">
@@ -122,6 +119,7 @@
         {% endif %}
     </div>
 
-   
+    <a id="top-button" href="#top" aria-label="Going to top of page" >Top of Screen &nbsp; <iconify-icon inline icon="mdi:arrow-up" width="16"></iconify-icon>
+    </a> 
 
     {%endblock%}

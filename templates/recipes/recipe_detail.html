@@ -4,13 +4,14 @@
 {% load crispy_forms_tags %}
 
 <!-- <main class="flex-shrink-0 main-bg"></main> -->
+<div id="top"></div>
 
 <h3 class="recipe-category">
     <iconify-icon icon="akar-icons:utensils" class="greenicon"></iconify-icon>Category:&nbsp;{{ recipe.category }}
 </h3>
 <div>
     <hr>
-    <div class="container">
+    <div class="container-fluid align-self-center">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
@@ -22,9 +23,9 @@
                 {% if "placeholder" in recipe.featured_image.url %}
                 <img id="Default" type="image/jpg"
                     src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg"
-                    alt="{{ recipe.title }} generic" class="centeralign" alt="recipe image">
+                    alt="{{ recipe.title }} generic" class="centeralign img-fluid" alt="recipe image">
                 {% else %}
-                <img src=" {{ recipe.featured_image.url }}" class="centeralign" alt="{{ recipe.title }} image">
+                <img src=" {{ recipe.featured_image.url }}" class="centeralign img-fluid" alt="{{ recipe.title }} image">
                 {% endif %}
             </div>
         </div>
@@ -45,7 +46,7 @@
         <div class="card-text1"> {{ recipe.method | safe }} </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col card mb-4  mt-3 left  top">
 
@@ -86,7 +87,7 @@
         </div>
     </div>    
       <section class="profilesection">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-2 d-flex justify-content-center">
                     {% if "placeholder" in profile.profile_pic.url %}
@@ -180,10 +181,12 @@
 {% endif %}
 {% endif %}
 
-<a href="{% url 'recipes' %}" class="btn btn-primary">Back</a>
-
+<div class="center">
+    <a href="{% url 'recipes' %}" class="btn btn-primary center">BACK</a>
+</div>
 <br>
 
-<!-- </main> -->
+<a id="top-button" href="#top" aria-label="Going to top of page" >Top of Screen &nbsp; <iconify-icon inline icon="mdi:arrow-up" width="16"></iconify-icon>
+</a> 
 
 {% endblock content %}

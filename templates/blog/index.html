@@ -8,9 +8,10 @@
 
     
 <div id="outputDiv"></div>
+<div id="top"></div>
 
 <div class="d-flex ">
-    <div class="container align-self-center">
+    <div class="container-fluid align-self-center">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8 col-xl-6 text-center">
                 <h1 class="bloghead">Welcome to Wannabe Healthy</h1>
@@ -38,7 +39,7 @@
 {% endif %}
 <br>
 <br>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
             <nav class="searchform">
@@ -134,4 +135,8 @@
     </nav>
     {% endif %}
 </div>
+
+<a id="top-button" href="#top" aria-label="Going to top of page" >Top of Screen &nbsp; <iconify-icon inline icon="mdi:arrow-up" width="16"></iconify-icon>
+</a> 
+
 {%endblock%}
