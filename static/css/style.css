@@ -126,7 +126,14 @@ footer {
 
 .text {   
     font-size: 110%;
-    margin: 5vh;   
+    margin: 3vh;    
+}
+
+/*pic of happy woman in about*/
+.text1 {   
+    font-size: 110%;
+    text-align: center;
+    line-height: 1.5;  
 }
 
 /*Search form for blogs and recipes styling*/
@@ -243,19 +250,6 @@ footer {
     margin-top: 20px;    
 }
 
-/* Styling for heading for Post Details Page */
-/* .masthead {
-    margin: 20px;    
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
-    text-align: center;
-    padding-bottom: 40px;
-    border: 1px solid black;   
-} */
-
 /*Styling for Category Title*/
 .post-category {
     margin: 20px;      
@@ -342,7 +336,7 @@ a:hover {
 
 /* a, a:visited, a:hover, a:active {
     color: inherit;
-} */
+}  */
 
 /* Styling for like button*/
 .btn-like, .btn-comment {
@@ -594,6 +588,9 @@ textarea {
     font-family: 'Marhey', cursive;    
 }
 
+.panel {
+    line-height: 1.5;
+}
 /*Styling for comment section,it will depend on number of comments made*/
 .commentsection {
     height: fit-content;       
@@ -667,8 +664,7 @@ textarea {
 
 .btn-success, .btn-danger {
     padding: 10px;
-    color: white !important;
-    
+    color: white !important;   
 }
 
 .col-md-6 {
@@ -870,24 +866,23 @@ ol li::before {
 }
 
 .how-img {
-    width: 80%;
+    width: 400px;
     height: auto;
+   
 }
 
 .border {
     border: 1px solid black;
 }
 
-.nosearchresults {
-    margin: 15px;   
+.nosearchresults {      
     color: green;
     text-align: center;
     font-family: 'Marhey', cursive;
     color: rgb(223, 24, 24);
     display: block;
     margin-left: auto;
-    margin-right: auto;
-    
+    margin-right: auto;    
 }
 
 .btn-warning {
@@ -898,6 +893,10 @@ ol li::before {
 #top-button {
     color: green;
     font-size: 16px;
+}
+
+.smallbtn {
+    width: 100px;
 }
 
 
@@ -911,7 +910,34 @@ ol li::before {
     .likecom {        
         font-size: 12px;  
     }
+
+    .recipe-title  {        
+        height: 130px;
+    }
  }
+
+ @media (max-width: 768px) {
+
+    .textual {
+        height: 155px;    
+        text-align: center;
+        padding: 5px;
+    }
+
+    .likecom {        
+        font-size: 12px;  
+    }
+
+    .recipe-title  {        
+        height: 130px;
+    }
+
+    .cardy-body {
+       min-height: 460px; 
+    }
+    }
+
+    
 
  /* Medium devices (tablets, 768px and up) */
  /* @media (max-width: 400px){ 
@@ -926,7 +952,7 @@ ol li::before {
         text-transform: capitalize;
     } */
     
- }
+ 
 
 
  /* XX-Large devices (larger desktops, 1400px and up)*/

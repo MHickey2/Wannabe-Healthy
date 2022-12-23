@@ -3,27 +3,27 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-    <span class="welcometosite">Welcome back, {{ user.username }}</span>   
-    {% endif %}
+<span class="welcometosite">Welcome back, {{ user.username }}</span>
+{% endif %}
 
-    
+
 <div id="outputDiv"></div>
 <div id="top"></div>
 
 <div class="d-flex ">
     <div class="container-fluid align-self-center">
         <div class="row justify-content-center">
-            <div class="col-12 col-lg-8 col-xl-6 text-center">
+            <div class="col-12 col-xs-6 col-md-7 col-lg-8 col-xl-6 text-center">
                 <h1 class="bloghead">Welcome to Wannabe Healthy</h1>
-                <div class="lc-block mb-2">
+                <div class="lc-block mb-3">
                     <img class="img-fluid" alt="Healthy Woman"
-                        src="https://res.cloudinary.com/dspwticaf/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1664628439/Woman_Health_uoejs2.jpg" >
-
+                        src="https://res.cloudinary.com/dspwticaf/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1664628439/Woman_Health_uoejs2.jpg">
+                    <br>
                     <div class="rich">
                         <p class="text">We all aspire to have happy and healthy lives, but we can get caught
                             up in our hectic lifestyles and develop unhealthy habits. We want to change
                             but don't know how or where to start. In this website I hope to share
-                            blogs and healthy recipes to inspire you to make simple changes or at least 
+                            blogs and healthy recipes to inspire you to make simple changes or at least
                             provide you with a starting point for your own Healthy Lifestyle journey.
                         </p>
                     </div>
@@ -46,8 +46,9 @@
                 <div>
                     <form role="search" action="{% url 'search_blogs' %}" method="get">
                         {% csrf_token %}
-                        <div class="input-group">                                                     
-                            <input type="text" name="q" id="q" class="form-control" placeholder="Search Blogs by Category/Word">
+                        <div class="input-group">
+                            <input type="text" name="q" id="q" class="form-control"
+                                placeholder="Search Blogs by Category/Word">
                             <div class="input-group-btn">
                                 <button type="submit" class="btn btn-search btn btn-success">
                                     <span class="glyphicon glyphicon-search"></span>
@@ -69,7 +70,7 @@
             <div class="row">
                 {% for post in post_list %}
                 <div class="col-md-4 col-sm-6 postlook">
-                    <div class="card mb-4">
+                    <div class="card">
                         <div class="card-body1">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
@@ -77,7 +78,7 @@
                                     src="https://res.cloudinary.com/dspwticaf/image/upload/v1664552676/po7sj5nr75pw0p9maekl.jpg"
                                     alt="{{ post.title }} generic">
                                 {% else %}
-                                <img class="card-img-top img-fluid" src=" {{ post.featured_image.url }}" 
+                                <img class="card-img-top img-fluid" src=" {{ post.featured_image.url }}"
                                     alt="{{ post.title }} photo">
                                 {% endif %}
                                 <div class="image-flash1">
@@ -89,14 +90,15 @@
                             </div>
                             <a href="{% url 'post_detail' post.slug  %}">
                                 <h4 class="card-title">{{ post.title }}</h4>
-                                <p class="textual text-justify-center">{{ post.excerpt }}</p></a>                                
+                                <p class="textual text-justify-center">{{ post.excerpt }}</p>
+                            </a>
                             <hr>
-                            <p class="card-text h6 likecom">{{ post.created_on}} <iconify-icon
+                            <p class="card-text likecom">{{ post.created_on}} <iconify-icon
                                     icon="ant-design:heart-outlined" class="btn-like" width="20"></iconify-icon>
                                 {{ post.number_of_likes }} &nbsp;<iconify-icon inline icon="fa-regular:comments"
                                     width="23" class="btn-comment">
                                 </iconify-icon>&nbsp;{{ post.number_of_comments }}</p>
-                                <br>
+                            <br>
                             {% if user.is_authenticated %}
                             {% if user.id == post.author.id %}
                             <div class="buttongroup">
@@ -113,14 +115,14 @@
                 </div>
                 {% empty %}
                 <h3 class="nosearchresults col-md-3">oops, there are no results, try again or return to main page</h3>
-                                
-                    <a href="{% url 'home' %}" class="btn btn-success center">BACK</a>
-                    <br>                
+
+                <a href="{% url 'home' %}" class="btn btn-success">BACK</a>      
+                              
                 {% endfor %}
-            </div>           
-        </div>       
+            </div>
+        </div>
     </div>
-          
+
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
@@ -136,7 +138,8 @@
     {% endif %}
 </div>
 
-<a id="top-button" href="#top" aria-label="Going to top of page" >Top of Screen &nbsp; <iconify-icon inline icon="mdi:arrow-up" width="16"></iconify-icon>
-</a> 
+<a id="top-button" href="#top" aria-label="Going to top of page">Top of Screen &nbsp; <iconify-icon inline
+        icon="mdi:arrow-up" width="16"></iconify-icon>
+</a>
 
 {%endblock%}

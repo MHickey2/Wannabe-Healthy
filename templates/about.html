@@ -3,21 +3,23 @@
 {% block content %}
 
 <div id="top"></div>
-<h1 class="green"><iconify-icon icon="iconoir:yoga" class="greenicon"></iconify-icon>&nbsp;About Wannabe Healthy</h1>
+<h1 class="green">
+    <iconify-icon icon="iconoir:yoga" class="greenicon"></iconify-icon>&nbsp;About Wannabe Healthy
+</h1>
+<br>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-6">
-            <p class="float-left text">Wannabe Healthy is a fledgling site which includes health related topics. As a user you can review 
-                blogs and if you sign up, you can submit your own blogs and comment on and show appreciation for existing blogs.
-                You can also review our healthy recipe page to help you on your own health journey. Again you can
-                submit your own healthy recipes. Take some time to update your profile, and let people know who you are, and share
-                your aspirations for the site, and help to grow the Wannabe Healthy Community. So stay a while and find inspiration, remember a healthy choice today can 
-                influence your future wellbeing.
+        <div class="col-md-6 d-flex">
+            <p class="float-left text text-center">Wannabe Healthy is a fledgling site which includes health related topics.
+                As a user you can review blogs and if you sign up, you can submit your own blogs and comment on
+                and like existing blogs. You can also review our Recipe page to help you on your own health journey.
+                Again you can submit your own healthy recipes. Take some time to update your profile. So stay a while
+                and find inspiration, remember a healthy choice today can influence your future wellbeing.
             </p>
         </div>
-        <div class="col-md-6 ">
+        <div class="col-md-6">
             <br>
-            <img class="float-right how-img img-fluid mx-auto d-block"  alt="Happy Woman" 
+            <img class="float-right how-img img-fluid mx-auto d-block" alt="Happy Woman"
                 src="https://res.cloudinary.com/dspwticaf/image/upload/v1670938206/happy_ouealj.jpg">
         </div>
     </div>
@@ -27,16 +29,18 @@
 <h2 class="green">Factors in staying Healthy</h2>
 <br>
 <div class="row row-cols-1 row-cols-md-3 g-4">
-    
+
     <div class="col">
         <div class="card h-80">
             <div class="inner">
-            <img src="https://res.cloudinary.com/dspwticaf/image/upload/v1666622744/diet_poof9n.jpg" class="aboutpic"
-                alt="healthy eating image">
-            </div>    
+                <img src="https://res.cloudinary.com/dspwticaf/image/upload/v1666622744/diet_poof9n.jpg"
+                    class="aboutpic" alt="healthy eating image">
+            </div>
             <div class="card-body2">
-                <h3 class="card-title"><iconify-icon inline icon="mdi:food-apple" class="greenicon"></iconify-icon>&nbsp;Diet</h3>
-                <p class="">A healthy diet is essential for good health and nutrition. It protects you against
+                <h3 class="card-title">
+                    <iconify-icon inline icon="mdi:food-apple" class="greenicon"></iconify-icon>&nbsp;Diet
+                </h3>
+                <p class="panel">A healthy diet is essential for good health and nutrition. It protects you against
                     many diseases, such as heart disease, diabetes and cancer. Eating a variety
                     of foods and consuming less salt, sugars and saturated and industrially-produced trans-fats, are
                     essential for healthy diet. Diet choices can have a major impact on your wellbeing, see our Recipe
@@ -49,12 +53,15 @@
     <div class="col">
         <div class="card h-80">
             <div class="inner">
-            <img src="https://res.cloudinary.com/dspwticaf/image/upload/v1670941565/exercise1_mwvstm.jpg" class="aboutpic"
-                alt="exercise image">
+                <img src="https://res.cloudinary.com/dspwticaf/image/upload/v1670941565/exercise1_mwvstm.jpg"
+                    class="aboutpic" alt="exercise image">
             </div>
             <div class="card-body2">
-                <h3 class="card-title"><iconify-icon inline icon="healthicons:exercise-running" class="greenicon"></iconify-icon>&nbsp;Exercise</h3>
-                <p class="">Being physically active can improve your brain health, help manage weight, reduce
+                <h3 class="card-title">
+                    <iconify-icon inline icon="healthicons:exercise-running" class="greenicon"></iconify-icon>
+                    &nbsp;Exercise
+                </h3>
+                <p class="panel">Being physically active can improve your brain health, help manage weight, reduce
                     the risk of disease, strengthen bones and muscles, and improve your ability to do everyday
                     activities. Adults who sit less and do any amount of moderate-to-vigorous physical activity gain
                     some health benefits. Check out our Blog for Exercise suggestions or if you have tried any and want
@@ -66,12 +73,14 @@
     <div class="col">
         <div class="card h-80">
             <div class="inner">
-            <img src="https://res.cloudinary.com/dspwticaf/image/upload/v1666622745/rest_tqytni.jpg" class="aboutpic"
-                alt="rest image">
+                <img src="https://res.cloudinary.com/dspwticaf/image/upload/v1666622745/rest_tqytni.jpg"
+                    class="aboutpic" alt="rest image">
             </div>
             <div class="card-body2">
-                <h3 class="card-title"><iconify-icon inline icon="icon-park:sleep-two" class="greenicon"></iconify-icon>&nbsp;Rest</h3>
-                <p class="">Rest is vital for better mental health, increased concentration and memory, a
+                <h3 class="card-title">
+                    <iconify-icon inline icon="icon-park:sleep-two" class="greenicon"></iconify-icon>&nbsp;Rest
+                </h3>
+                <p class="panel">Rest is vital for better mental health, increased concentration and memory, a
                     healthier immune system, reduced stress, improved mood and even a better metabolism. Getting enough
                     sleep is important for recharging your body. Try to maintain and good Work Life balance and learn to
                     listen to your body, schedule in some downtime and prioritise what needs to be done. Check out our
@@ -83,11 +92,12 @@
 </div>
 <br>
 <div class="center">
-<a href="{% url 'home' %}" class="btn btn-success center">BACK</a>
+    <a href="{% url 'home' %}" class="btn btn-success center">BACK</a>
 </div>
 <br>
 
-<a id="top-button" href="#top" aria-label="Going to top of page" >Top of Screen &nbsp; <iconify-icon inline icon="mdi:arrow-up" width="16"></iconify-icon>
-</a> 
+<a id="top-button" href="#top" aria-label="Going to top of page">Top of Screen &nbsp; <iconify-icon inline
+        icon="mdi:arrow-up" width="16"></iconify-icon>
+</a>
 
 {%endblock%}
