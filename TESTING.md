@@ -11,8 +11,9 @@ Testing has taken place continuously throughout the development of the project. 
      2. [CSS Validator](#css)
      3. [Python](#python)
      4. [Lighthouse](#lighthouse)
-     5. [Contrast Checker](#contrastchecker)
-     6. [WAVE](#wave)
+     5. [Accessabilty](#accessability)
+     6. [Contrast Checker](#contrastchecker)
+     7. [WAVE](#wave)
 4. [Manual Testing](#manual)
 5. [User Story Testing](#userstorytesting)  
 
@@ -33,8 +34,17 @@ Testing has taken place continuously throughout the development of the project. 
 ----
 ## Responsive Testing<a name="responsivetesting"></a>
 
-   I regularly tested the responsiveness of the site using Google Chrome Developer tools, information on this can be found [here](https://developer.chrome.com/docs/devtools/). I also used Window Resizer and a Responsive Design Tester Application available in the Google Chrome Store. The devices I tested for are in the image below. 
-     
+   I regularly tested the responsiveness of the site using Google Chrome Developer tools, information on this can be found [here](https://developer.chrome.com/docs/devtools/). I also used Window Resizer and a Responsive Design Tester Application available in the Google Chrome Store. I also used the Am I responsive site to test the site and the image is below:
+
+   <br/>
+
+   <p align ="center">      
+      <img src="assets/readme/images/responsive.png" width="600" alt="AmIResponsive results"/>   
+   </p>
+
+   <br/> 
+
+
 #### [Return to Table of Contents](#toc)
 
 ----
@@ -42,14 +52,13 @@ Testing has taken place continuously throughout the development of the project. 
 
 1. W3C Validator <a name="w3c"></a>
 
-Using [https://validator.w3.org/](https://validator.w3.org/)   
-There are more issues in the Bug section in the [README.md](README.md). The results of the HTML validation can be seen below:
+Using [https://validator.w3.org/](https://validator.w3.org/) The results of the HTML validation can be seen below:
 
 
 <br/>
 
 <p align ="center">      
-     <img src="assets/readme/images/html validation.png"  alt="HTML Validation results"/>   
+     <img src="assets/readme/images/html validation.png"  width="700" alt="HTML Validation results"/>   
 </p>
 <br/>  
   
@@ -61,42 +70,62 @@ The result can be seen below:
 
 <br/>
 <p align ="center">      
-     <img src="assets/images/readme/"  alt="CSS Validation results"/>   
+     <img src="assets/readme/images/cssvalidation.png" width="700" alt="CSS Validation results"/>   
 </p>
 <br/>
 
-3. Python Validation   <a name="python"></a>
+1. Python Validation   <a name="python"></a>
   Python testing was done without the use of Pep8 as the site was down, instead an extension was added which highlighted errors and showed them in the problems panel within gitpod. Most errors related to long lines, but there were some syntax errors which I rectified. I also used [Code Institute Python Linter](https://pep8ci.herokuapp.com/), just to be certain, and there was no errors (It does not like the end line, but when I remove it the gitpod linter asks for it to be inserted)
 
 
-4. Lighthouse Testing
+4. Lighthouse Testing   <a name="lighthouse"></a>
 
 
 <p align ="center">      
-     <img src="assets/images/readme/images/"  alt="lighouse testing specs" />    
+     <img src="assets/images/readme/images/" width="700"  alt="lighouse testing specs" />    
 </p>
 <br/> 
 
-5. Contrast Checker  <a name="contrastchecker"></a>
+
+5. Accessability Testing   <a name="accessability"></a>
+
+
+<p align ="center">      
+     <img src="assets/readme/images/accessibilitytest.org.png" width="700" alt="accessabilty testing specs" />    
+</p>
+
+<br/> 
+
+6. Contrast Checker  <a name="contrastchecker"></a>
   
-  Using [https://color.a11y.com/](https://color.a11y.com/)  See images Below.
+  Using [https://color.a11y.com/](https://color.a11y.com/) on all pages, there were a couple of contrast problems, but changed colours of flash for authors in blogs and recipes and there are no erros. Just showing result for one page, but all pages showed the same results.  See images Below.
 
 <br/>
   <p align ="center">      
-     <img src="assets/images/readme/contrast.jpg"  alt="contrast results"/>   
+     <img src="assets/readme/images/colourcontrast.png"  width="700" alt="contrast results"/>   
   </p>
   
   
 
-6. Wave (Web Accesability Evaluation tool)   <a name="wave"></a>
+1. Wave (Web Accesability Evaluation tool)   <a name="wave"></a>
   
-  Using [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh), this is a web accesability tool developed by WebAIM.org. It provides visual feedback about the accessibility of your web content, it highlights any errors and gives you possible suggestions for improvements. 
+  Using [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh), this is a web accesability tool developed by WebAIM.org. It provides visual feedback about the accessibility of your web content, it highlights any errors and gives you possible suggestions for improvements. There was a couple of issues with missing form labels for search bars, but researched how to fix the issue and resolved the issue with a simple tip:
+
+    <label for="siteSearch" class="sr-only">Search</label>
+    <input type="text" name="search" id="siteSearch>
+    <input type="submit" value="Search">
+
+  There were issues in testing the profile page, as it is not iterable in a number of testing tools.  
 
   <br/>
+
   <p align ="center">      
      <img src="assets/images/readme/wave.jpg"  alt="wave test result"/>   
   </p>
   
+  <br>
+
+
  #### [Return to Table of Contents](#toc)
 ----
 

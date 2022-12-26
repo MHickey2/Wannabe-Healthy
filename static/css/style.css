@@ -188,7 +188,7 @@ footer {
     bottom: 5%;
     min-width: 30%;
     left: 15px;
-    background-color: rgb(83, 212, 83, 0.8);
+    background-color: rgb(9,68,9, 0.6);
 }
 
 /*Flash for category on image in blogs*/
@@ -548,7 +548,7 @@ textarea {
     top: 200px;   
     min-width: 40%;   
     left: 15px;
-    background-color: rgb(83, 212, 83, 0.7);
+    background-color:  rgb(9,68,9, 0.6);
     text-align: center;
     vertical-align: center;         
 }

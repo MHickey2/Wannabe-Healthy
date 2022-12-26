@@ -26,7 +26,8 @@
                     <form role="search" action="{% url 'search_recipes' %}" method="get">
                         {% csrf_token %}
                         <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search Recipes by Category/Word">
+                            <label for="q" class="sr-only">Search</label>
+                            <input type="text" name="q" id="q" class="form-control" placeholder="Search Recipes by Category/Word">
                             <div class="input-group-btn">
                                 <button type="submit" class="btn btn-search btn-success">
                                     <span class="glyphicon glyphicon-search"></span>
@@ -53,10 +54,10 @@
                                     {% if "placeholder" in recipe.featured_image.url %}
                                     <img class="card-img-top1 "
                                         src="https://res.cloudinary.com/dspwticaf/image/upload/v1670945104/genericfood_kmhyp0.jpg" 
-                                        alt="{{ recipe.title }} generic" >
+                                        alt="{{ recipe.title }} generic photo" >
                                     {% else %}
 
-                                    <img class="card-img-top1 " src=" {{ recipe.featured_image.url }}"  alt="{{ recipe.title }} image" >
+                                    <img class="card-img-top1 " src=" {{ recipe.featured_image.url }}"  alt="{{ recipe.title }} photo" >
                                     {% endif %}
                                     <div class="image-flash2">
                                         <h4 class="category"> {{ recipe.category }}</h4>

@@ -47,6 +47,7 @@
                     <form role="search" action="{% url 'search_blogs' %}" method="get">
                         {% csrf_token %}
                         <div class="input-group">
+                            <label for="q" class="sr-only">Search</label>
                             <input type="text" name="q" id="q" class="form-control"
                                 placeholder="Search Blogs by Category/Word">
                             <div class="input-group-btn">

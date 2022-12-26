@@ -839,23 +839,24 @@ In the Logout Page, the User can confirm that they want to exit the website.
 
 ### Technology Used:
 
--   [Am I Responsive](http://ami.responsivedesign.is/) was used to create the multi-device mock-up above.
+-   [Am I Responsive](http://ami.responsivedesign.is/) - was used to create the multi-device mock-up above.
 -   [Bootstrap v5.2.3](https://getbootstrap.com/)
--   [Git:](https://git-scm.com/) used for version control, updated and commited changes (this in turn updated in Heroku). 
--   [GitHub:](https://github.com/) is the respository for all the git pushes.
--   [Gitpod](https://gitpod.io/) was the IDE Editor.
--   [Heroku:](https://heroku.com) used to deploy the application.
--   [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)
--   [Markdown](https://markdown-guide.readthedocs.io/en/latest/)
+-   [Git:](https://git-scm.com/) - used for version control, updated and commited changes (this in turn updated in Heroku). 
+-   [GitHub:](https://github.com/) - is the respository for all the git pushes.
+-   [Gitpod](https://gitpod.io/) - was the IDE Editor.
+-   [Heroku:](https://heroku.com) - used to deploy the application.
+-   [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - Used for Testing Site
+-   [Markdown](https://markdown-guide.readthedocs.io/en/latest/) - Markdown Guide
 -   [Cloudinary](https://cloudinary.com/) - used for images for the site.
 -   [PostgreSQL](https://www.postgresql.org/) - Original Database - until Update of Heroku when migrations and a change of Database was required.
 -   [Elephant SQL](https://www.elephantsql.com/) – deployed project on Heroku uses an Elephant SQL database. 
 -   [Draw.io](https://drawio-app.com/) - used for the database diagram.
 -   [Iconify.Design](https://iconify.design/) - Icons used for the site.
 -   [LogoMaker](https://www.logomaker.com/) - For creating the Logo for the site.
--   [Favicon.io](https://favicon.io) for making the site favicon.
--   [tinyPNG](https://tinyjpg.com/) for image compression.
--   [Figma](https://www.figma.com/)- used for making the wireframes for the site.
+-   [Favicon.io](https://favicon.io) - for making the site favicon.
+-   [tinyPNG](https://tinyjpg.com/) - for image compression.
+-   [Figma](https://www.figma.com/) - used for making the wireframes for the site.
+-   [Accesibility Test](https://accessibilitytest.org/) - 
 
 ### Django Packages
 
