@@ -851,7 +851,8 @@ In the Logout Page, the User can confirm that they want to exit the website.
 -   [PostgreSQL](https://www.postgresql.org/) - Original Database - until Update of Heroku when migrations and a change of Database was required.
 -   [Elephant SQL](https://www.elephantsql.com/) – deployed project on Heroku uses an Elephant SQL database. 
 -   [Draw.io](https://drawio-app.com/) - used for the database diagram.
--   [Iconify.Design](https://iconify.design/) -Icons used for the site
+-   [Iconify.Design](https://iconify.design/) - Icons used for the site.
+-   [LogoMaker](https://www.logomaker.com/) - For creating the Logo for the site.
 -   [Favicon.io](https://favicon.io) for making the site favicon.
 -   [tinyPNG](https://tinyjpg.com/) for image compression.
 -   [Figma](https://www.figma.com/)- used for making the wireframes for the site.
@@ -863,8 +864,7 @@ In the Logout Page, the User can confirm that they want to exit the website.
 * [Dj_database_url](https://pypi.org/project/dj-database-url/) - To parse the database URL from the environment variables in Heroku
 * [Psycopg2](https://pypi.org/project/psycopg2/) - As an adaptor for Python and PostgreSQL databases
 * [Summernote](https://summernote.org/) - As a text editor for adding content
-* [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) - For authentication, registration, account
-   management
+* [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) - For authentication, registration, account management
 * [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - To style the forms used in the site
  
  <br>
@@ -882,17 +882,54 @@ Go to the [TESTING SECTION](TESTING.md)
 
  ## 10. Bugs and Issues  <a name="bugs"></a>
 
+ There have been various issues along the way, that I have resolved as they came up. 
+
 <br>
 
  ### Resolved <a name="resolved"></a>
 
+ When I first added profiles, I had the intention to include the profile image in the navbar when the user logged in, but when I used the code to allow this to happen, the image would not show. Up to this point I had not needed to to use content from one app within another, so that was a big issue. I talked with my mentor and I looked into the area of context processors, and added one within the blog app, but that did not fix the issue. Then after talking with Tutor Support I managed to resolve the issue, and the image showed up finally. Once I knew this was possible, I wanted to add Bio details of the user within in the blog detail and recipe detail pages.
 
+<br>
+
+<p align ="center">      
+     <img src="assets/readme/images/showprofilepic.png" width="500" alt="views code for profile pic " />    
+</p>
+
+<br>
+
+
+<p align ="center">      
+     <img src="assets/readme/images/navprofileimage.png" width="500" alt="base code for profile image" />    
+</p>
+
+<br>
+
+<p align ="center">      
+     <img src="assets/readme/images/profilepicnav.png" width="200" alt="profile pic in nav" />    
+</p>
  
  <br>
 
+ <p align ="center">      
+     <img src="assets/readme/images/picinblogdetail.png" width="600" alt="profile in blog detail page" />    
+</p>
+
+<br>
+
+There was one further issue I noticed when testing, if you made a comment and submitted it, the user image in the blog_detail(and recipe detail) profile section would disappear, but this was due to a syntax error, and when it was fixed the problem was resolved.
+
+I also had some issues when using the font awesome icons as some seemed unavailable due to restrictions of use, but used a different site for icons, and this has resolved that issue.
+
+When testing I found I had an issued with the favicon, and had not included the webmanifest site or the selection of icons for mobile sites, so added these and they seem to be working ok. 
+
+<br>
+
  ### Unresolved <a name="unresolved"></a>
 
- 
+ I did try near the end of the project to add the blogs and recipes that the user created to be included in the profile page, I experimented a little but decided to instead concentrate my focus on testing the functionality I had already achieved on the site, but have referred to this in [Future features](#7-future-implementation)
+
+ Initially I was going to use primary key instead of slug, as it was causing issues when I tried to change the name of title/slug of a blog, but instead left it as slug, it does update the blog successfully, but instead of returning you to the amended blog, it returns to you to the main blog page, but the amendments are includeded and if you select the blog, you can open the amended site to see full details.
 
 <br>
 
@@ -902,7 +939,7 @@ Go to the [TESTING SECTION](TESTING.md)
 
  ## 11. Deployment <a name="deployment"></a>
 
- The Project used Heroku for deployment. I used GitPod for development within the project and pushed to the GitHub Repository. This in turn updated the Project in Heroku. I used Debug = True, during development and other than testing, had it configured so that I could work both locally and could also test the deployed Project on an ongoing basis.
+ The Project used Heroku for deployment. I used GitPod for development within the project and pushed to the GitHub Repository. This in turn updated the Project in Heroku. I used DEBUG = 'DEV' in os.environ, during development and other than testing, had it configured so that I could work both locally and could also test the deployed Project on an ongoing basis.
 
  <br>
 
@@ -940,7 +977,7 @@ Code Institute
 
 ### Django Framework    <a name="djangoframework"></a>
 
-I used the Resources and Lessons within the Full Stack Frameworks Module to get familiar with the concepts involved in created the present Project. In particular I did the walkthroughs for 'Hello Django' and 'I Think Therefore I Blog', and I uaed the cheatsheet, [Django Blog Cheat Sheet](https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit), which helped me set up the basic Django Project.
+I used the Resources and Lessons within the Full Stack Frameworks Module to get familiar with the concepts involved in created the present Project. In particular I did the walkthroughs for 'Hello Django' and 'I Think Therefore I Blog', and I uaed the cheatsheet, [Django Blog Cheat Sheet](https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit), which helped me set up the basic Django Project. I also looked at the for the 'Boutique Ado' walkthrough, as when I was creating the profile app, I wanted to see how it was handled within this project, It also helped me solidify some concepts that I had not grasped in the previous walkthrough.
 
 <br>
 
@@ -955,7 +992,7 @@ Heroku
 in this case I added 'PORT' into the key field and added '8000' into the value field and click 'add'.
 - If you have credentials, you must create another config vars called 'CREDS' and you would paste the JSON into the value field.
 - You have to to the builldpacks section and click 'add buildpack'.
-- In this case I added 'Python' and 'saved changes, and did the same with 'Node'.
+- In this case I added 'Python' and saved changes.
 - Next you go to the Deploy tab and you select 'github' and confirm connection to your GitHub Account.
 - You search for your project repository and click to 'connect'.
 - Under the deploy options, you can chose automatic deploys, this allow you to automatically deploy each
@@ -983,15 +1020,17 @@ We received notifications that there was a change in their free plan and new cha
  ## Credits <a name="credits"></a>
 
 - All Recipes and Recipe Images came from [Lidl Recipes Ireland](https://recipes.lidl.ie/)
-- All images for the site, including blog images come from [Pexel]()
-- The logo and Favicon were built with online tools
-- All Blog content was self produced
- 
+- All images for the site, including blog images come from [Pexels](https://www.pexels.com/)
+- The logo and Favicon were built with the online tools: [LogoMaker](https://www.logomaker.com/) and 
+ [Favicon.io](https://favicon.io/)
+- All Blog content was self created, and was based on online research of various health related topics.
+- The Project began with the basic code used in the 'I think therefore I blog' walkthrough Project, but was modified according to my own needs within the Project. As the Project developed, I sought out various Tutorials that defined the CRUD capabilities and learned how to apply what I learned within the project framework. I used the following Tutorial in particular to see how to apply CRUD Functionality
+
+    [Create a Simple Blog with Python and Django with Codemy](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) 
      
 
  I also used the following online resources:
 
-- [Create a Simple Blog with Python and Django with Codemy](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
 - [Code Institute](https://codeinstitute.net/ie/)
 - [Slack](https://slack.com/intl/en-ie/) 
 - [Stack OverFlow](https://stackoverflow.com)
@@ -1004,6 +1043,10 @@ We received notifications that there was a change in their free plan and new cha
 ----
  ## Acknowledgements <a name="acknowledgements"></a>
 
+-  Thank you to my mentor Brian Macharia for your guidance and support.
+-  Thank you Kasia Bogucka for your support and help during my Technical Crisis.
+-  Thank you to everyone in Tutor Support who helped with issues with coding.
+-  Thank you to the Code Institute Support Team, for your assistance and support with my technical issues.
  
 
 <br>
