@@ -8,42 +8,31 @@
 {% block content %}
 
 
-<h1 class="green"><iconify-icon inline icon="mdi:register" class="green"></iconify-icon>&nbsp;{% trans "Sign Up" %}</h1>
+<h1 class="green">
+  <iconify-icon inline icon="mdi:register" class="green"></iconify-icon>&nbsp;{% trans "Sign Up" %}
+</h1>
 <h4 class="green">Welcome to Wannabe Healthy, please sign up</h4>
-
-      <p class="green">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
-      </p>
-
-      <br>
-
-      <div class="container-fluid" id="newpost">
-        <div class="row">
-          <div class="col-md-8 mt-3 offset-md-2 form-box">
-        </div>
-      </div>
-      
-
+<p class="green">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign
+    in</a>.{% endblocktrans %}
+</p>
+<br>
+<div class="container-fluid" id="newpost">
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2 form-box">
       <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" id="usrname" />
         {% endif %}
-        <button class="btn btn-success" type="submit">{% trans "Sign Up" %} &raquo;</button>
+        <button class="btn btn-success" type="submit" onclick="displayGreeting()">{% trans "Sign Up" %} &raquo;</button>
         <br>
       </form>
     </div>
   </div>
 </div>
-
 <div id="outputDiv"></div>
 
-<script>
-  function displayGreeting(event) {
-  event.preventDefault();
-  let usrname = document.getElementById('usrname').value;
-  document.getElementById('outputDiv').innerHTML = 'Hello ' + usrname + ', Welcome to WannabeHealthy Site' + '<br> ' + 'You are officially a WannabeHealthy member ' + usrname + '!';
-}
-</script>
+
 
 {% endblock %}

@@ -25,13 +25,15 @@
                     src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg"
                     alt="{{ recipe.title }} generic" class="centeralign img-fluid" alt="recipe image">
                 {% else %}
-                <img src=" {{ recipe.featured_image.url }}" class="centeralign img-fluid" alt="{{ recipe.title }} image">
+                <img src=" {{ recipe.featured_image.url }}" class="centeralign img-fluid"
+                    alt="{{ recipe.title }} image">
                 {% endif %}
             </div>
         </div>
 
         <div class="centeralign">
-            <h6 class="green"><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<strong>Cooking Time:</strong>
+            <h6 class="green"><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<strong>Cooking
+                    Time:</strong>
                 {{ recipe.cooking_time }}</h6>
         </div>
         <hr>
@@ -49,14 +51,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col card mb-4  mt-3 left  top">
-
                 <div class="row">
                     <div class="col-2">
-                        <strong>                        
-                            {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'recipe_likes' recipe.slug %}" method="POST">
-                                {% csrf_token %}
-                                {% if liked %}
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'recipe_likes' recipe.slug %}" method="POST">
+                            {% csrf_token %}
+                            {% if liked %}
                                 <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like">
                                     <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon>
                                 </button>
@@ -65,28 +65,29 @@
                                     <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon>
                                 </button>
                                 {% endif %}
-                            </form>
-                            {% else %}                               
-                            <!-- The number of likes goes before the closing strong tag -->
-                            <span class="text-secondary"><iconify-icon icon= "ant-design:heart-outlined" width="20"></iconify-icon>
-                                {% endif %}
+                        </form>
+                        {% else %}
+                        <!-- The number of likes goes before the closing strong tag -->
+                        <strong class="text-secondary">
+                            <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon>
+                            {% endif %}
                             <span class="text-secondary">{{ recipe.number_of_likes }} </span>
-                        </strong>
+                        
                     </div>
                     <div class="col-2">
                         {% with comments.count as total_comments %}
-                        <strong class="text-secondary">&nbsp;<iconify-icon inline icon="fa-regular:comments"
-                            width="23"></iconify-icon>
+                        <strong class="text-secondary">&nbsp;<iconify-icon inline icon="fa-regular:comments" width="23">
+                            </iconify-icon>
                             <!-- total_comments variable goes before the closing strong tag -->
-                            {{ total_comments }}                           
-                        </strong>                        
+                            <span class="text-secondary">{{ total_comments }} </span>
+                        </strong>
                         {% endwith %}
                     </div>
                 </div>
             </div>
         </div>
-    </div>    
-      <section class="profilesection">
+    </div>
+    <section class="profilesection">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-2 d-flex justify-content-center">
@@ -100,24 +101,24 @@
                             src="{{ profile.profile_pic.url }}" alt="user image">
                     </div>
                     {% endif %}
-    
+
                 </div>
-    
-    
+
+
                 <div class="col-md-4 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
                     <div>
                         <div class="form-group">
                             <h4 class="profile-title"> {{ profile.user }} </h4>
                             <label class="labelling">Bio:</label> {{ profile.bio }}
                         </div>
-    
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-         
+
+
 
     <div class="row">
         <div class="col">
@@ -186,7 +187,8 @@
 </div>
 <br>
 
-<a id="top-button" href="#top" aria-label="Going to top of page" >Top of Screen &nbsp; <iconify-icon inline icon="mdi:arrow-up" width="16"></iconify-icon>
-</a> 
+<a id="top-button" href="#top" aria-label="Going to top of page">Top of Screen &nbsp; <iconify-icon inline
+        icon="mdi:arrow-up" width="16"></iconify-icon>
+</a>
 
 {% endblock content %}

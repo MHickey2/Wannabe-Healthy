@@ -3,7 +3,7 @@
 {% block content %}
 
 <div id="top"></div>
-<h2 class="green"><iconify-icon icon="mdi:cook" class="greenicon"></iconify-icon>&nbsp;Recipe Collection</h2>
+<h2 class="green"><iconify-icon icon="mdi:cook" class="greenicon"></iconify-icon>&nbsp; Recipe Collection</h2>
 
 <p class="col-lg-8 col-xl-6 justify-content-center" id="recipeintro">Browse through the recipes and find inspiration for diet changes.
     It can be simple to adapt your present habits to include life enriching choices. Consider a vegetarian diet or start
@@ -39,7 +39,6 @@
             </div>
         </div>
     </div>
-
     <div class="container-fluid">
         <div class="row">
             <!-- Blog Entries Column -->
@@ -65,8 +64,8 @@
                                     <div class="image-flash3">
                                         <p class="author">Author: {{ recipe.author }}</p>
                                     </div>                                    
-                                    <h6 class="green"><strong>Difficulty Level: {{ recipe.difficulty }} |
-                                        Cooking Time: {{ recipe.cooking_time }}</h6></strong>
+                                    <h6 class="green"><strong>Difficulty Level:</strong> {{ recipe.difficulty }} |
+                                        <strong>Cooking Time:</strong> {{ recipe.cooking_time }}</h6>
                                     <p class="textual">{{ recipe.description}}</p>
                                 </div>
                                 <div class="center">
@@ -76,8 +75,8 @@
                                 <hr>
                                 <p class="card-text likecom">{{ recipe.created_on}} <iconify-icon
                                     icon="ant-design:heart-outlined" width="20" class="btn-like"></iconify-icon>
-                                {{ recipe.number_of_likes }} &nbsp;<iconify-icon inline icon="fa-regular:comments"
-                                    width="23" class="btn-comment"></iconify-icon>&nbsp;{{ recipe.number_of_comments }}</p>                               
+                                {{ recipe.number_of_likes }} &nbsp; <iconify-icon inline icon="fa-regular:comments"
+                                    width="23" class="btn-comment"></iconify-icon>&nbsp; {{ recipe.number_of_comments }}</p>                               
                                 
                                 {% if user.is_authenticated %}
                                 {% if user.id == recipe.author.id %}<div class="buttongroup">
