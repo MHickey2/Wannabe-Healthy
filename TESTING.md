@@ -1,7 +1,9 @@
+# Wannabe Healthy: Testing
+
 
 Back to the [README](README.md)
 
-Testing has taken place continuously throughout the development of the project. When faults were detected they were fixed on an ongoing basis. These were fixed locally and commited to github on an ongoing basis. Faults fixed and outstanding can be found in the README.md
+Testing has taken place continuously throughout the development of the project. When faults were detected they were fixed on an ongoing basis. These were fixed locally in GitPod and commited to github regularly. Faults fixed and outstanding can be found in the README.md Document
 
 # Table of Contents <a name="toc"></a>
 1. [Cross Browser Testing](#browsertesting)
@@ -34,7 +36,7 @@ Testing has taken place continuously throughout the development of the project. 
 ----
 ## Responsive Testing<a name="responsivetesting"></a>
 
-   I regularly tested the responsiveness of the site using Google Chrome Developer tools, information on this can be found [here](https://developer.chrome.com/docs/devtools/). I also used Window Resizer and a Responsive Design Tester Application available in the Google Chrome Store. I also used the Am I responsive site to test the site and the image is below:
+   I regularly tested the responsiveness of the site using Google Chrome Developer tools, information on this can be found [here](https://developer.chrome.com/docs/devtools/). I also used Window Resizer and a Responsive Design Tester Application available in the Google Chrome Store. I also used the Am I responsive site to test the site and the image below is from that Testing:
 
    <br/>
 
@@ -52,7 +54,7 @@ Testing has taken place continuously throughout the development of the project. 
 
 1. W3C Validator <a name="w3c"></a>
 
-Using [https://validator.w3.org/](https://validator.w3.org/) The results of the HTML validation can be seen below:
+Using [https://validator.w3.org/](https://validator.w3.org/) All Pages were tested with the validator, the results of the HTML validation can be seen below:
 
 
 <br/>
@@ -64,7 +66,6 @@ Using [https://validator.w3.org/](https://validator.w3.org/) The results of the 
   
 1. Jigsaw CSS Validator   <a name="css"></a>
  
-
 Using [https://jigsaw.w3.org/css-validator/](https://jigsaw.w3.org/css-validator/) 
 The result can be seen below:
 
@@ -77,17 +78,27 @@ The result can be seen below:
 1. Python Validation   <a name="python"></a>
   Python testing was done without the use of Pep8 as the site was down, instead an extension was added which highlighted errors and showed them in the problems panel within gitpod. Most errors related to long lines, but there were some syntax errors which I rectified. I also used [Code Institute Python Linter](https://pep8ci.herokuapp.com/), just to be certain, and there was no errors (It does not like the end line, but when I remove it the gitpod linter asks for it to be inserted)
 
+  <br/>
 
-4. Lighthouse Testing   <a name="lighthouse"></a>
+  <p align ="center">      
+     <img src="assets/readme/images/pep8.png" width="600" alt="python validation"/>   
+  </p>
+  
+  <br>
+
+
+2. Lighthouse Testing   <a name="lighthouse"></a>
+
+Tested all the pages, they were all mostly 100 for Accesability, Best Practise and SEO in the desktop, although I had issues with testing the profile page but did manage to do it in the end. Not as high in the mobile but still testing. Performance score tended to fluctuate even in incognito, but I have had issues within other projects in using lighthouse, and am not sure it's a true reflection of actual performance.
 
 
 <p align ="center">      
-     <img src="assets/images/readme/images/" width="700"  alt="lighouse testing specs" />    
+     <img src=assets/readme/images/lighthousescoreindex.png width="600"  alt="lighouse testing specs" />    
 </p>
 <br/> 
 
 
-5. Accessability Testing   <a name="accessability"></a>
+1. Accessability Testing   <a name="accessability"></a>
 
 
 <p align ="center">      
@@ -105,7 +116,7 @@ The result can be seen below:
      <img src="assets/readme/images/colourcontrast.png"  width="700" alt="contrast results"/>   
   </p>
   
-  
+  <br>
 
 1. Wave (Web Accesability Evaluation tool)   <a name="wave"></a>
   
@@ -115,12 +126,16 @@ The result can be seen below:
     <input type="text" name="search" id="siteSearch>
     <input type="submit" value="Search">
 
-  There were issues in testing the profile page, as it is not iterable in a number of testing tools.  
+  This seemed to work within GitPod but on the Heroku site it showed the word, so will continue to test.  
+
+  There were issues in testing the profile page, as it is not iterable in a number of testing tools. 
+
+  Results differed for different pages, there was no errors, but there were a few warnings, mainly about the order of headings, but decisions were made for the aesthtethics of the site and using all headings in order on the page was not possible. There was also an issue with the logo and home nav item linking to same address, but generallly I use the logo to return to main page as routine and the home page also needs to be included as it is necessary for the navigation of the site. 
 
   <br/>
 
   <p align ="center">      
-     <img src="assets/images/readme/wave.jpg"  alt="wave test result"/>   
+     <img src="assets/readme/images/wave.png"  alt="wave test result"/>   
   </p>
   
   <br>
@@ -238,7 +253,7 @@ The result can be seen below:
 
 11. View the number of likes on a Recipe.
 
-**Below individual recipe posts there is a heart icon and a number which relates to the number of like that the recipehas received. This can be seen on the home and the recipe_detail pages.**
+**Below individual recipe posts there is a heart icon and a number which relates to the number of like that the recipehas received. This can be seen on the recipes and the recipe_detail pages.**
 
 12.  View any comments left on a Recipe. 
 
@@ -267,11 +282,11 @@ The result can be seen below:
 
 5. I can edit a Blog or Recipe that I have submitted to the site.
 
-**As a logged in User, they have access to an edit button below their blog in the blog sections, this allows them to update the details of the blog in the edit_post page. When this form is submitted they will be redirected to the home page and the changes will be applied. There is also an edit button below their submitted recipes, and this will allow them to access the edit_recipe page. When this form is submitted they will be redirected to the recipes page and the changes will be applied.**
+**As a logged in User, they have access to an edit button below their blog in the blog sections, this allows them to update the details of the blog in the edit_post page. When this form is submitted they will be redirected to the home page and the changes will be applied. There is also an edit button below their submitted recipes, and this will allow them to access the edit_recipe page. When this form is submitted they will be redirected to the recipes page and the changes will be applied. If the user is logged in and has published a post/recipe they can also acces the edit button on the post_detail and recipe_detail page.**
 
 6. I can delete a Recipe or Blog that I have submitted to the site.
 
-**As a logged in User, they have access to an delete button below their blog in the blog section, this allows them to delete their blog in the delete_post page. When this form is submitted, their blog will be deleted.. There is also an delete button below their submitted recipes, and this will allow them to delete their recipe. When this form is submitted they will be redirected to the recipes page and the recipe will be deleted.**
+**As a logged in User, they have access to an delete button below their blog in the blog section, this allows them to delete their blog in the delete_post page. When this form is submitted, their blog will be deleted.. There is also an delete button below their submitted recipes, and this will allow them to delete their recipe. When this form is submitted they will be redirected to the recipes page and the recipe will be deleted. If the user is logged in and has published a post/recipe they can also acces the delete button on the post_detail and recipe_detail page.**
 <br>
 
 #### As a Superuser/Admin I want to...
@@ -284,9 +299,17 @@ The result can be seen below:
 
 **The Admin can either publish or draft a blog/recipe, if drafted, the addition will not be visible on the site, until the status has been changed to published.**
 
-3. Create a new user, recipes, blogs and categories.
-4. Delete user, blogs, recipes, categories and comments.
+3. Create a new user, recipes and blogs.
+
+**The Admin can create a new user, add a recipe or a blog to the site**
+
+4. Delete user, blogs, recipes and comments.
+
+**The Admin can delete a User, a Blog or a Recipe and can remove comments from Blogs and Recipes.**
+
 5. Can approve user's comments.
+
+**The Admin can approve a User's comments and when this occurs the comment will appear in the comment section of the blog/recipe on the site.**
 
 
 

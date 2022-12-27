@@ -905,6 +905,11 @@ ol li::before {
     width: 100px;
 }
 
+.sr-only {
+   display: none; 
+   visibility: hidden;
+}
+
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 875px) and (min-width: 750px){ 
@@ -954,7 +959,7 @@ ol li::before {
         margin-left: 2px;
         font-size: 18px;
         letter-spacing: .1em;
-}
+    }
     }
 
  /* Medium devices (tablets, 768px and up) */

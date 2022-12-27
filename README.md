@@ -65,6 +65,7 @@ Wannabe Healthy is the 4th Project for the Code Institute and it is a Full Stack
     - [18. Login Page   ](#18-login-page---)
     - [19. Logout Page   ](#19-logout-page---)
     - [20. Custom Error Pages  ](#20-custom-error-pages--)
+    - [21. Admin Panel  ](#21-admin-panel--)
       - [Return to Table of Contents](#return-to-table-of-contents-4)
   - [7. Future Implementation  ](#7-future-implementation--)
       - [Return to Table of Contents](#return-to-table-of-contents-5)
@@ -791,6 +792,8 @@ In the Logout Page, the User can confirm that they want to exit the website.
 
 ### 20. Custom Error Pages  <a name="error pages"></a>
 
+I have included custom Error Pages in the error folder within the templates folder(403,404,405,500), Below is the image from the 404 page, but they all look similar, barring the fault lines.
+
 <br>
 
 <p align ="center">      
@@ -799,6 +802,23 @@ In the Logout Page, the User can confirm that they want to exit the website.
 
 <br/> 
 
+### 21. Admin Panel  <a name="adminpanel"></a>
+
+The admin panel allows the admin to perform a wide range of functionalities within the site. The admin can add, delete, edit and approve blogs, recipes, users and profiles.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/readme/images/adminsignin.png" width="300" alt="Admin Panel" />    
+</p>
+
+<br>
+
+<p align ="center">      
+     <img src="assets/readme/images/adminpanel.png" width="900" alt="Admin Panel" />    
+</p>
+
+<br/> 
 
  #### [Return to Table of Contents](#toc)
 ----
@@ -856,7 +876,7 @@ In the Logout Page, the User can confirm that they want to exit the website.
 -   [Favicon.io](https://favicon.io) - for making the site favicon.
 -   [tinyPNG](https://tinyjpg.com/) - for image compression.
 -   [Figma](https://www.figma.com/) - used for making the wireframes for the site.
--   [Accesibility Test](https://accessibilitytest.org/) - 
+-   [Accesibility Test](https://accessibilitytest.org/) - free accessibility testing tool
 
 ### Django Packages
 
