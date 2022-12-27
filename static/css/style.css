@@ -621,6 +621,12 @@ textarea {
     color: white;     
 }
 
+.buttongroup1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;     
+}
+
 /*Styling for Buttons*/
 .btnstyle {
     width: 80px;    
@@ -932,12 +938,24 @@ ol li::before {
         height: 130px;
     }
 
-    .cardy-body {
+    .card-body {
        min-height: 460px; 
     }
     }
 
-    
+    @media (max-width: 450px) {
+     #logo {
+        width: 100px;
+        height: auto;
+     }
+
+     /*styling for Navigation items*/
+    .nav-item,.nav-link {
+        margin-left: 2px;
+        font-size: 18px;
+        letter-spacing: .1em;
+}
+    }
 
  /* Medium devices (tablets, 768px and up) */
  /* @media (max-width: 400px){ 

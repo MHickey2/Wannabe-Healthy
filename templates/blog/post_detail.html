@@ -25,35 +25,49 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body3">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
+            <div class="card-body3">                
                 <div class="card-text1">
                     {{ post.content | safe }}
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-2">
-                <strong>
-                {% if user.is_authenticated %}
-                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                    {% csrf_token %}
-                    {% if liked %}
-                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
-                        <iconify-icon icon="ant-design:heart-outlined" width="20" ></iconify-icon></button>
-                    {% else %}
-                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
-                        <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></button>
-                    {% endif %}
-                </form>
-                {% else %}                
-                <span class="text-secondary"><iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></span>
-                    {% endif %}
-                    <!-- The number of likes goes before the closing strong tag -->
-                    <span class="text-secondary">{{ post.number_of_likes }} </span>
-                </strong>
-            </div>
+
+{% if user.is_authenticated %}
+{% if user.id == post.author.id %}
+
+<div class="buttongroup1">
+
+<a href="{% url 'edit_post' post.slug  %}" class="btn btn-success btnstyle">Edit</a>
+
+<a href="{% url 'delete_post' post.slug  %}"class="btn btn-success btnstyle">Delete</a>
+<br>
+{% endif %}
+{% endif %}
+
+</div>
+<hr>
+
+            <div class="row">
+                <div class="col-2">
+                    <strong>
+                    {% if user.is_authenticated %}            
+                    <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                        {% csrf_token %}
+                        {% if liked %}
+                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
+                            <iconify-icon icon="ant-design:heart-outlined" width="20" ></iconify-icon></button>
+                        {% else %}
+                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
+                            <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></button>
+                        {% endif %}
+                    </form>
+                    {% else %}                
+                    <span class="text-secondary"><iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></span>
+                        {% endif %}
+                        <!-- The number of likes goes before the closing strong tag -->
+                        <span class="text-secondary">{{ post.number_of_likes }} </span>
+                    </strong>
+                </div>
             <div class="col-2">
                 {% with comments.count as total_comments %}
                 <strong class="text-secondary">&nbsp;<iconify-icon inline icon="fa-regular:comments"
@@ -66,7 +80,7 @@
         </div>
     </div>
 </div>
-<br>
+<hr>
 <!--Testing for profile and bio of poster-->
 <section class="profilesection">
     <div class="container-fluid">
@@ -145,16 +159,7 @@
     </div>
 </div>
 
-{% if user.is_authenticated %}
-{% if user.id == post.author.id %}
 
-
-<a href="{% url 'edit_post' post.slug  %}" class="btn-link">(Edit)</a>
-
-<a href="{% url 'delete_post' post.slug  %}" class="btn-link">(Delete)</a>
-
-{% endif %}
-{% endif %}
 
 <br>
 <div class="center">
