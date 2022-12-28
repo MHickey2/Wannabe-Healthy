@@ -558,9 +558,10 @@ textarea {
 .centeralign {
     display: block;
     margin-left: auto;
-    margin-right: auto;   
+    margin-right: auto; 
     width: 400px;
-    margin-top: 10px;
+    height: auto;   
+    margin-top: 8px;
     color: green;
     margin-bottom: 5px;
 }
@@ -663,6 +664,7 @@ textarea {
     background-color:rgba(0, 0, 0, 0.2)
 }
 
+/*Styling for bootstrap btns used throughout site*/
 .btn btn-primary {
     margin-left: 20px;
     font-weight: bold;
@@ -693,16 +695,6 @@ textarea {
 
 /* Forms */
 
-/* #form {
-    background-color: rgb(89, 168, 89);
-    border: 1px solid black;    
-    padding: 10px;   
-    width: 60vw;
-    opacity: .9;
-    margin-bottom: 10px; 
-    
-} */
-
 /* Styling for logout page */
 #logout {
     background-color: #5cd437;
@@ -726,7 +718,7 @@ textarea {
     border: 2px solid #a3d31c;
 }
 
-
+/*Styling for Profile image*/
   .profile-img {
     display: block; 
     margin-left: auto;
@@ -757,7 +749,7 @@ textarea {
 }
 
   /*-------------------------------------*/
-/* Styling for the content in the blogs */
+/* Styling for the blog content in the blogs */
 /*-----------------------------------*/
 
 /* Styling for unordered lists in blogs and Recipes */  
@@ -793,6 +785,7 @@ ol li::before {
     color: green;
 }
 
+/*Styling for text content in recipes*/
   .content {
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
@@ -800,7 +793,6 @@ ol li::before {
     font-size: 110%;
     text-align: left;
 }
-
 
   /*Styling for the icons with Headings on relevant pages*/
   .greenicon {
@@ -812,12 +804,7 @@ ol li::before {
     color: white !important;
 }
 
-   /* .img-fluid {
-    width: 90vw;
-    height: auto;
-    object-fit: cover; 
-}  */
-
+/*Styling for different card bodys in the site*/
 .card-body2 {
     min-height: 300px;
     text-align: center;
@@ -841,17 +828,18 @@ ol li::before {
     text-align: center;        
 }
 
-
 .btn-danger {    
     font-weight: bold;
 }
 
+/*Styling for the heart and comment sections*/
 .likecom {
     color:#05420A;
     font-weight:bolder;
-    font-size: 16px;  
+    font-size: 14px;  
 }
 
+/*Styling for the zoom effect in images*/
 .inner {
     overflow: hidden;
 }
@@ -874,14 +862,14 @@ ol li::before {
 
 .how-img {
     width: 400px;
-    height: auto;
-   
+    height: auto;   
 }
 
 .border {
     border: 1px solid black;
 }
 
+/*Styling for the results if there are no search results*/
 .nosearchresults {      
     color: green;
     text-align: center;
@@ -897,6 +885,7 @@ ol li::before {
     
 }
 
+/*Styling for the link on bottom of screens to take user to top of page*/
 #top-button {
     color: green;
     font-size: 16px;
@@ -906,14 +895,15 @@ ol li::before {
     width: 100px;
 }
 
+/*Wave wanted a label that wasnt needed so saw this fix*/
 .sr-only {
    display: none; 
    visibility: hidden;
 }
 
 
-/* Medium devices (tablets,ipads) */
-@media (max-width: 875px) and (min-width: 750px){ 
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 875px) { 
 
     .title {
         border-bottom: none; 
@@ -933,12 +923,11 @@ ol li::before {
     .textual {
         height: 155px;    
         text-align: center;
-        padding: 5px;   
-       
+        padding: 5px;       
     }
 
     .likecom {        
-        font-size: 12px;  
+        font-size: 11px;  
     }
 
     .recipe-title  {        
@@ -962,6 +951,7 @@ ol li::before {
         font-size: 18px;
         letter-spacing: .1em;
     }
+
     }
 
  

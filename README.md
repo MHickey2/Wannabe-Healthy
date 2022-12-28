@@ -87,6 +87,7 @@ Wannabe Healthy is the 4th Project for the Code Institute and it is a Full Stack
     - [Django Framework    ](#django-framework----)
     - [Deploying to Heroku ](#deploying-to-heroku-)
     - [Changes in Heroku  ](#changes-in-heroku--)
+    - [Final Deployment](#final-deployment)
       - [Return to Table of Contents](#return-to-table-of-contents-9)
   - [Credits ](#credits-)
       - [Return to Table of Contents](#return-to-table-of-contents-10)
@@ -903,6 +904,7 @@ The admin panel allows the admin/superuser to perform a wide range of functional
 -   [Figma](https://www.figma.com/) - used for making the wireframes for the site.
 -   [Code Institute Python Linter](https://pep8ci.herokuapp.com/) - used to validate Python in Project.
 -   [Accesibility Test](https://accessibilitytest.org/) - free accessibility testing tool
+-   [Dr Link Checker](https://www.drlinkcheck.com/) - used in conjunction with manual testing of links.
 
 ### Django Packages
 
@@ -934,6 +936,8 @@ Go to the [TESTING SECTION](TESTING.md)
 <br>
 
  ### Resolved <a name="resolved"></a>
+
+ <br>
 
  When I first added profiles, I had the intention to include the profile image in the navbar when the user logged in, but when I used the code to allow this to happen, the image would not show. Up to this point I had not needed to to use content from one app within another, so that was a big issue. I talked with my mentor and I looked into the area of context processors, and added one within the blog app, but that did not fix the issue. Then after talking with Tutor Support I managed to resolve the issue, and the image showed up finally. Once I knew this was possible, I wanted to add Bio details of the user within in the blog detail and recipe detail pages.
 
@@ -968,15 +972,34 @@ There was one further issue I noticed when testing, if you made a comment and su
 
 I also had some issues when using the font awesome icons as some seemed unavailable due to restrictions of use, but used a different site for icons, and this has resolved that issue.
 
-When testing I found I had an issued with the favicon, and had not included the webmanifest site or the selection of icons for mobile sites, so added these and they seem to be working ok. 
+When testing I found I had an issued with the favicon, and had not included the webmanifest site or the selection of icons for mobile sites, so added these and they seem to be working ok.
 
 <br>
 
  ### Unresolved <a name="unresolved"></a>
 
+ <br>
+
  I did try near the end of the project to add the blogs and recipes that the user created to be included in the profile page, I experimented a little but decided to instead concentrate my focus on testing the functionality I had already achieved on the site, but have referred to this in [Future features](#7-future-implementation)
 
  Initially I was going to use primary key instead of slug, as it was causing issues when I tried to change the name of title/slug of a blog, but instead left it as slug, it does update the blog successfully, but instead of returning you to the amended blog, it returns to you to the main blog page, but the amendments are includeded and if you select the blog, you can open the amended site to see full details.
+
+ I was going to display a greeting to the user when they registered for the site, but could not get it to work, but would hope to get it working in future iteration, for now I will contend with the message that is automatically displayed to the user when registering. If it was a form I had compiled myself, I would have felt more comfortable modifying the code, but did not want to cause an issue with the built in allauth system.  The code I was using follows:
+
+ <br>
+
+      <button class="btn btn-success" type="submit" onclick="displayGreeting()">{% trans "Sign Up" %} &raquo;</button>
+
+      <script>
+              function displayGreeting() {
+              //   event.preventDefault();
+                let usrname = document.getElementById('usrname').value;
+                document.getElementById('outputDiv').innerHTML = 'Hello ' + usrname + ', Welcome to WannabeHealthy Site' + '<br> ' +
+                  'You are officially a WannabeHealthy member ' + usrname + '!';
+              }
+      </script>
+
+<br>
 
 <br>
 
@@ -1060,6 +1083,13 @@ We received notifications that there was a change in their free plan and new cha
 [Changing Dynos](https://code-institute-students.github.io/deployment-docs/01-heroku-signup/heroku-03-converting-dynos) 
 
 <br>
+
+### Final Deployment 
+
+- When development is complete change the debug setting to: `DEBUG = False` in settings.py
+-  In this project the summernote editor was used so for this to work in Heroku, you need to add: `X_FRAME_OPTIONS = SAMEORIGIN `to Settings.py.
+- In Heroku settings, delete the config vars for `DISABLE_COLLECTSTATIC = 1` (I had disabled these earlier in the project development)
+- You can manually deploy your branch in the deploy section in Heroku, but I had automatic deployment chosen so the Site was updated everytime I pushed to GitHub.
 
 #### [Return to Table of Contents](#toc)
 ----

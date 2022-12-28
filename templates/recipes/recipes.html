@@ -77,7 +77,7 @@
                                 <p class="card-text likecom">{{ recipe.created_on}} <iconify-icon
                                     icon="ant-design:heart-outlined" width="20" class="btn-like"></iconify-icon>
                                 {{ recipe.number_of_likes }} &nbsp; <iconify-icon inline icon="fa-regular:comments"
-                                    width="23" class="btn-comment"></iconify-icon>&nbsp; {{ recipe.number_of_comments }}</p>                               
+                                    width="20" class="btn-comment"></iconify-icon>&nbsp; {{ recipe.number_of_comments }}</p>                               
                                 
                                 {% if user.is_authenticated %}
                                 {% if user.id == recipe.author.id %}<div class="buttongroup">

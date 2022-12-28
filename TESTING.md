@@ -16,6 +16,7 @@ Testing has taken place continuously throughout the development of the project. 
      5. [Accessabilty](#accessability)
      6. [Contrast Checker](#contrastchecker)
      7. [WAVE](#wave)
+     8. [Link Checker](#linkchecker)
 4. [Manual Testing](#manual)
 5. [User Story Testing](#userstorytesting)  
 
@@ -36,7 +37,7 @@ Testing has taken place continuously throughout the development of the project. 
 ----
 ## Responsive Testing<a name="responsivetesting"></a>
 
-   I regularly tested the responsiveness of the site using Google Chrome Developer tools, information on this can be found [here](https://developer.chrome.com/docs/devtools/). I also used Window Resizer and a Responsive Design Tester Application available in the Google Chrome Store. I also used the Am I responsive site to test the site and the image below is from that Testing:
+   I regularly tested the responsiveness of the site using Google Chrome Developer tools, information on this can be found [here](https://developer.chrome.com/docs/devtools/). I also used Window Resizer and a Responsive Design Tester Application available in the Google Chrome Store(was fairly good on all screens, but can be problematic with ipad mini). I also used the Am I responsive site to test the site and the image below is from that Testing:
 
    <br/>
 
@@ -99,7 +100,7 @@ Tested all the pages, they were all mostly 100 for Accesability, Best Practise a
 
 
 1. Accessability Testing   <a name="accessability"></a>
-
+Used this tool, [Accesibility Test](https://accessibilitytest.org/) which carries out a range of tests on the site and the score can be seen below:
 
 <p align ="center">      
      <img src="assets/readme/images/accessibilitytest.org.png" width="700" alt="accessabilty testing specs" />    
@@ -118,7 +119,7 @@ Tested all the pages, they were all mostly 100 for Accesability, Best Practise a
   
   <br>
 
-1. Wave (Web Accesability Evaluation tool)   <a name="wave"></a>
+7. Wave (Web Accesability Evaluation tool)   <a name="wave"></a>
   
   Using [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh), this is a web accesability tool developed by WebAIM.org. It provides visual feedback about the accessibility of your web content, it highlights any errors and gives you possible suggestions for improvements. There was a couple of issues with missing form labels for search bars, but researched how to fix the issue and resolved the issue with a simple tip:
 
@@ -136,6 +137,16 @@ Tested all the pages, they were all mostly 100 for Accesability, Best Practise a
 
   <p align ="center">      
      <img src="assets/readme/images/wave.png"  alt="wave test result"/>   
+  </p>
+  
+  <br>
+
+8. Link Checker   <a name="linkchecker"></a>
+
+<br/>
+
+  <p align ="center">      
+     <img src="assets/readme/images/linkchecker.png"  alt="linkchecker result"/>   
   </p>
   
   <br>
@@ -173,11 +184,14 @@ Tested all the pages, they were all mostly 100 for Accesability, Best Practise a
 - The profile image and bio of the blog author displays correctly in the post_detail page.  :heavy_check_mark:
 - In the home page, within each blog(that user has submitted) the edit button when used will open up the edit_post Form, when this form is submitted, any changes are updated within the blog post, and the user is redirected to the home page.  :heavy_check_mark:
 - In the home page, within each blog(that user has submitted) the delete button when used will open up the delete_post Form, the title of the post is displayed and the user is asked whether they are sure they want to delete the post,if this is confirmed the blog post will be deleted and the user will be redirected to the home page.   :heavy_check_mark:
+- In the home page the user can enter a search category or word and the results will be displayed.   :heavy_check_mark:
+- If there are no results, the user is given a message that there are no results to display.   :heavy_check_mark:
+- The user can use the back button to be redirected to the home page.    :heavy_check_mark:
 - The about page displays correctly.  :heavy_check_mark:
-- The add recipe button displays correctly for the logged in user.  :heavy_check_mark:
 - The recipes page displays the collection of recipes (6 recipes per page) and pagination is working to display those in excess of that number.  :heavy_check_mark:
+- The add recipe button displays correctly for the logged in user.  :heavy_check_mark:
 - The logged in user can see the edit and delete buttons for any recipe they have submitted.  :heavy_check_mark:
-- The 'see details' button directs the user to the recipe-detail page for each recipe.  :heavy_check_mark:
+- The 'see details' button within each recipe will direct the user to the recipe-detail page for each recipe.  :heavy_check_mark:
 - The recipe_detail page displays correctly.  :heavy_check_mark:
 - When the logged in user click the like button, they receive a message that they have liked a recipe, if they press again, they receive a message that they have unliked the recipe.  :heavy_check_mark:
 - The comment form displays for a logged in user, and if they submit a comment, they receive a message that their comment is awaiting approval of the admin. When this is approved it is displayed within the comment section.  :heavy_check_mark:
@@ -190,14 +204,13 @@ Tested all the pages, they were all mostly 100 for Accesability, Best Practise a
 - A Profile is created automatically when a User registers for the site.  :heavy_check_mark:
 - The username of the new user is displayed in the profile page.
 - A generic image is automatically generated until the user uploads an image of their own.  This can be displayed in the navbar profile image and blog/recipe detail pages, if user does not upload a new image of their own.  :heavy_check_mark:
-- When user uses edit button on profile page, the edit_profile form is displayed and the user can add bio details and an image. THe user is then redirected back to the profile page, to see these changes. :heavy_check_mark:
+- When user uses edit button on profile page, the edit_profile form is displayed and the user can add bio details and an image. The user is then redirected back to the profile page, to see these changes. :heavy_check_mark:
 - When the user uses the logout link the logout form is displayed and the user can logout, The user is asked whether they want to leave the site.  :heavy_check_mark:
 
 ### Admin Panel:
 - Managed to create, update and delete data in all models, during the entire project, and all seems to be working as expected when logged in as the admin.  :heavy_check_mark:
 - When a User comments on a post, Admin needs to approve before it is displayed on the site, this is working as expected, when logged in as the admin.  :heavy_check_mark:
 - All required fields need to be filled in when posting a new recipe and blog, and the user is advised on these requirements when filling these forms.  :heavy_check_mark:  
-
 
   
 #### [Return to Table of Contents](#toc)
@@ -310,7 +323,6 @@ Tested all the pages, they were all mostly 100 for Accesability, Best Practise a
 5. Can approve user's comments.
 
 **The Admin can approve a User's comments and when this occurs the comment will appear in the comment section of the blog/recipe on the site.**
-
 
 
 <br>

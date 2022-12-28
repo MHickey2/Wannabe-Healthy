@@ -78,7 +78,6 @@ class PostDetail(View):
                 "comment_form": comment_form,
                 "liked": liked,
                 "profile": profile
-
             },
         )
 
@@ -118,11 +117,6 @@ class AddPostView(generic.CreateView):
 def about(request):
     """ A view to return the about page """
     return render(request, 'about.html', {})
-
-
-# def test(request):
-#     """ A view to return the about page """
-#     return render(request, '500.html', {})
 
 
 class EditPostView(generic.UpdateView):

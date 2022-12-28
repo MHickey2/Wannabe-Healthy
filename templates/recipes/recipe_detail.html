@@ -53,7 +53,6 @@
 
     <div class="buttongroup1">
         <a href="{% url 'edit_recipe' recipe.slug  %}" class="btn btn-success btnstyle">Edit</a>
-
         <a href="{% url 'delete_recipe' recipe.slug  %}" class="btn btn-success btnstyle">Delete</a>
         <br>
         {% endif %}
@@ -62,8 +61,7 @@
     <hr>
 
     <div class="row">
-        <div class="col-2">
-            <strong>
+        <div class="col-2">            
                 {% if user.is_authenticated %}
                 <form class="d-inline" action="{% url 'recipe_likes' recipe.slug %}" method="POST">
                     {% csrf_token %}
@@ -82,8 +80,7 @@
                 <span class="text-secondary">
                     <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon>
                     {% endif %}
-                    <span class="text-secondary">{{ recipe.number_of_likes }} </span>
-            </strong>
+                    <span class="text-secondary">{{ recipe.number_of_likes }} </span>           
         </div>
         <div class="col-2">
             {% with comments.count as total_comments %}
@@ -170,7 +167,6 @@
         </div>
     </div>
 </div>
-
 <div class="center">
     <a href="{% url 'recipes' %}" class="btn btn-primary center">BACK</a>
 </div>
