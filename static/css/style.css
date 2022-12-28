@@ -527,7 +527,8 @@ textarea {
 .postlook1 {
     min-height: 480px;    
     padding-top: 25px;
-    border-radius: 25px;          
+    border-radius: 25px;
+           
 }
 
 /*Flash for category on image in recipes*/
@@ -911,7 +912,7 @@ ol li::before {
 }
 
 
-/* Medium devices (tablets, 768px and up) */
+/* Medium devices (tablets,ipads) */
 @media (max-width: 875px) and (min-width: 750px){ 
 
     .title {
@@ -932,7 +933,8 @@ ol li::before {
     .textual {
         height: 155px;    
         text-align: center;
-        padding: 5px;
+        padding: 5px;   
+       
     }
 
     .likecom {        
@@ -962,41 +964,4 @@ ol li::before {
     }
     }
 
- /* Medium devices (tablets, 768px and up) */
- /* @media (max-width: 400px){ 
-
-    .nav-item,.nav-link {
-        color: #a3d31c !important;
-        font-size: 17px;
-        letter-spacing: .1em;
-        font-family: 'Abril Fatface', cursive;
-        margin-left: 2px;   
-        font-weight: bold;
-        text-transform: capitalize;
-    } */
-    
  
-
-
- /* XX-Large devices (larger desktops, 1400px and up)*/
-  /* @media screen and (min-width: 1400px) {
-    .container {
-      width: 1370px;
-    }
-  } */
-  /* @media screen and (min-width: 1600px) {
-    .container {
-      width: 1570px;
-    }
-  }
-  @media screen and (min-width: 1900px) {
-    .container {
-      width: 1870px;
-    }
-  } */
-
-
- 
-
-
-

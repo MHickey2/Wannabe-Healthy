@@ -244,13 +244,37 @@ The colour scheme has primarily a green colour, research has shown that green ha
 
 ### 2. Typography    <a name="typography"></a>
 
-Google Fonts were used within the website. The 'Roboto' font is the main font used for the whole project, both for regular text and headings. Sans serif is the fallback font in case the other font is not available. See below for example of font in use.
+Google Fonts were used within the website. The 'Roboto' font is the main font used for the whole project, both for regular text and headings. Sans serif is the fallback font in case the other font is not available. See below for example of font in use. The font color is #313131, which is a good font to help counter eye strain.
 
-The font color is #313131, which is a good font to help counter eye strain.
+<br>
+<p align ="center">      
+   <img src="assets/readme/images/313131.png"  alt="general font for site" />        
+</p>
+
+<br>
 
 The main title for the site and the navbar links use the 'Abril Fatface' font, A font it displays both neutrality and a strong presence on the page which helps to attract reader attention with the measured tension of its curves, good color and high contrast.
 
+<br>
+<p align ="center">      
+   <img src="assets/readme/images/wannabetitle.png"  alt="wannabe title" />        
+</p>
+
+<br>
+
+<p align ="center">      
+   <img src="assets/readme/images/welcomefont.png"  alt="welcomefont" />        
+</p>
+
+<br>
+
 Other Fonts were used within the Recipe Details Section and the main headings use the 'Marhey' Font, as it gives a certain quirky touch to the Recipes, that gives the recipes their own unique styles.
+
+<br>
+
+<p align ="center">      
+   <img src="assets/readme/images/recipeheadings.png"  alt="recipeheadings" />        
+</p>
 
 
 <br>
@@ -258,15 +282,15 @@ Other Fonts were used within the Recipe Details Section and the main headings us
 
 ### 3. Imagery    <a name="imagery"></a>
 
-The Logo was created on a Logo Website, as the theme was health related, I used predominantly green in the logo iteself and the logo had a strong influence on the overall website colour theme going forward.
+The Logo was created with [LogoMaker](https://www.logomaker.com/), as the theme was health related, I used predominantly green in the logo iteself and the logo had a strong influence on the overall website colour theme going forward.
 
-The imagery of the site focuses on a healthy theme, the images were souced from the Pexels site and supplement either the blog or the recipe. The images are all self sourced, but the user can update images to supplement their own blog/recipe.
+The imagery of the site focuses on a healthy theme, the images were souced from the Pexels site and supplement either the blog or the recipe. The images are all self sourced, but the User can update images to supplement their own blogs/recipes for the site. The images for the site are hosted in [Cloudinary](https://cloudinary.com/).
 
 There are also images sporadically throughout the site, The home page has an image of a healthy woman, conveying a person with a healthy lifestyle. The about page again, shows a healthy woman living her best life and the information panels show images focuses on the main themes within the site.
 
-There are also various icons used within the site, the icons were sourced at [](), and they were used as a graphical representation of pertinent information on the site, they were used in conjunction with Forms or headings and were a subtle way to incorporate imagery on a limited scale, examples can be found in the image below.
+There are also various icons used within the site, the icons were sourced at [Iconify.Design](https://iconify.design/), and they were used as a graphical representation of pertinent information on the site, they were used in conjunction with Forms or headings and were a subtle way to incorporate imagery on a limited scale, examples can be found in the image below.
 
-I also created the favicon for the site.
+I also created the favicon for the site with [Favicon.io](https://favicon.io)
 
 <br>
 
@@ -306,8 +330,9 @@ The website follows the standard website structure. The Logo and the website nam
  - The Profile Page, which contains profile information on the registered User.
  - The Edit Profile Page, which contains a form that allows the User to add/update their profile information.
  - The Sign Up Page, consists of a form where a new user can register for the site.
- - The LogIn Page, consists of a form where the user can login to the site.
+ - The Login Page, consists of a form where the user can login to the site.
  - The logout Page, consists of a form where the user can logout of the site.
+ - There are also custom error pages for errors 403,404,405 and 500.
 
 <br/>
 
@@ -458,7 +483,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 <details>
   <summary>Database ER Diagram</summary>
 <p align ="center">      
-     <img src="assets/readme/images/erd.png"  alt="Database ER diagram" />    
+     <img src="assets/readme/images/databasediag.png"  alt="Database ER diagram" />    
 </p>
 </details>
 
@@ -621,7 +646,7 @@ As a logged in User you will be able to see the delete button below your submitt
 
 ### 7. Blog Detail Page      <a name="blogdetailpage"></a>
 
-When you select a blog, you will be redirected to the blog detail page, this page will show the full content for that specific blog. If you are a logged in user you can add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can also like/unlike the post. You will also be able to see the Profile Picture and Bio for the Author of the Post.
+When you select a blog, you will be redirected to the blog detail page, this page will show the full content for that specific blog. If you are a logged in user you can use the comment form to add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can see comments that have already been submitted for the Blog. You can also like/unlike the post. You will also be able to see the Profile Picture and Bio for the Author of the Post.
 
 <br>
 
@@ -719,7 +744,7 @@ As a logged in User you will be able to see the delete button below your submitt
 
 ###  14. Recipe Detail Page   <a name="recipedetailpage"></a>
 
-When you select a Recipe, you will be redirected to the Recipe detail page, this page will show the full content for that specific Recipe. If you are a logged in user you can add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can also like/unlike the Recipe. You can also see the Profile Picture and Bio for the Author of the Recipe.
+When you select a Recipe, you will be redirected to the Recipe detail page, this page will show the full content for that specific Recipe. If you are a logged in user you can use the comment form to add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can see comments that have been posted for the Recipe already. You can also like/unlike the Recipe. You can also see the Profile Picture and Bio for the Author of the Recipe.
 
 <br>
 
@@ -804,7 +829,7 @@ I have included custom Error Pages in the error folder within the templates fold
 
 ### 21. Admin Panel  <a name="adminpanel"></a>
 
-The admin panel allows the admin to perform a wide range of functionalities within the site. The admin can add, delete, edit and approve blogs, recipes, users and profiles.
+The admin panel allows the admin/superuser to perform a wide range of functionalities within the site. The admin can add, delete, edit  blogs, recipes, users and profiles. The admin can also approve comments for both blogs and recipes.
 
 <br>
 
@@ -876,6 +901,7 @@ The admin panel allows the admin to perform a wide range of functionalities with
 -   [Favicon.io](https://favicon.io) - for making the site favicon.
 -   [tinyPNG](https://tinyjpg.com/) - for image compression.
 -   [Figma](https://www.figma.com/) - used for making the wireframes for the site.
+-   [Code Institute Python Linter](https://pep8ci.herokuapp.com/) - used to validate Python in Project.
 -   [Accesibility Test](https://accessibilitytest.org/) - free accessibility testing tool
 
 ### Django Packages
