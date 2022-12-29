@@ -8,7 +8,7 @@
  
 # Introduction <a name="introduction"></a>
 
-Wannabe Healthy is the 4th Project for the Code Institute and it is a Full Stack Website using the Django Framework. The website's content deals with health related topics. It encompasses a Blog with various categories and a Recipe section which concentrates on health enhancing recipes.  When logged in a User can add, edit or delete their own Blogs/Recipes. A logged in User can like/unlike a post/recipe or add comments. A logged in User can also view and Update their own Profile with an uploaded image and Bio information. 
+Wannabe Healthy is my 4th Project for the Code Institute and it is a Full Stack Website using the Django Framework. The website's content deals with health related topics. It encompasses a Blog with various categories and a Recipe section which concentrates on health enhancing recipes.  When logged in a User can add, edit or delete their own Blogs/Recipes. A logged in User can like/unlike a post/recipe or add comments. A logged in User can also view and Update their own Profile with an uploaded image and Bio information. 
 
 <br/>
 
@@ -103,7 +103,7 @@ Wannabe Healthy is the 4th Project for the Code Institute and it is a Full Stack
 <br/> 
 
 ### 1. The Business Goals of the Website: <a name="businessgoals"></a>
-No commercial goals, but the site's goal is to to provide a resource for those seeking to improve their health and learn more about various health topics.
+No commercial goals, but the site's goal is to to provide a resource for those seeking to improve their health and learn more about various health topics and find healthy Recipes.
   
   <br/> 
 
@@ -121,14 +121,14 @@ No commercial goals, but the site's goal is to to provide a resource for those s
 
 ### Site User Profile
 
-The user is really anyone who wants to achieve a healthier lifestyle. They can not only view present blogs and recipes but can play more of an interactive role and contribute their own blogs and recipes.  In this way the site will grow organically, and will be open to evolving depending on siteuser's needs.
+The user is really anyone who wants to achieve a healthier lifestyle. They can not only view present blogs and recipes but can play more of an interactive role and contribute their own blogs and recipes.  In this way the site will grow organically, and will be open to evolving depending on the siteuser's needs.
 
 ### Site Goals
 
-- The site allows the user to understand the theme of the site easily and will be able to navigate through the content easily.
-- The user will be able to use the search facility to find specific blogs by category and title.
+- The site allows the User to understand the theme of the site easily and they will be able to navigate through the site content easily.
+- The user will be able to use the search facility to find specific blogs by category and word in title.
 - The user when logged in will be able to contribute to the site in regards to blogs and recipes, they will also be able to like and comment on individual blogs and recipes.
-- The user will be able to maintain a profile on the site and they can update their Profile details and will be able to interact with other user's over time.
+- The user will be able to maintain a profile on the site and they can update their Profile details and other Users will learn more about them as post/recipe authors, as the site develops this may enable friendships and relationships between users.
 
 <br>
 
@@ -201,7 +201,6 @@ The user is really anyone who wants to achieve a healthier lifestyle. They can n
 7. I will have confirmation when I carry out actions in the site.
 [User Story: User will be kept informed of their activity within the site #14](https://github.com/MHickey2/Wannabe-Healthy/issues/14)
 
-
  
  <br/>
 
@@ -245,7 +244,7 @@ The colour scheme has primarily a green colour, research has shown that green ha
 
 ### 2. Typography    <a name="typography"></a>
 
-Google Fonts were used within the website. The 'Roboto' font is the main font used for the whole project, both for regular text and headings. Sans serif is the fallback font in case the other font is not available. See below for example of font in use. The font color is #313131, which is a good font to help counter eye strain.
+Google Fonts were used within the website. The 'Roboto' font is the main font used for the whole project, both for regular text and headings. Sans serif is the fallback font in case the other font is not available. See below for example of font in use on the site. The font color is #313131, which is a good font to help counter eye strain.
 
 <br>
 <p align ="center">      
@@ -254,7 +253,7 @@ Google Fonts were used within the website. The 'Roboto' font is the main font us
 
 <br>
 
-The main title for the site and the navbar links use the 'Abril Fatface' font, A font it displays both neutrality and a strong presence on the page which helps to attract reader attention with the measured tension of its curves, good color and high contrast.
+The main title for the site and the navbar links use the 'Abril Fatface' font, as a font it displays both neutrality and a strong presence on the page which helps to attract reader attention with the measured tension of its curves, good color and high contrast.
 
 <br>
 <p align ="center">      
@@ -269,7 +268,7 @@ The main title for the site and the navbar links use the 'Abril Fatface' font, A
 
 <br>
 
-Other Fonts were used within the Recipe Details Section and the main headings use the 'Marhey' Font, as it gives a certain quirky touch to the Recipes, that gives the recipes their own unique styles.
+Other Fonts were used within the Recipe Details Section and the main headings use the 'Marhey' Font, as it gives a certain quirky touch to the Recipes, that gives the recipes their own unique style.
 
 <br>
 
@@ -285,9 +284,9 @@ Other Fonts were used within the Recipe Details Section and the main headings us
 
 The Logo was created with [LogoMaker](https://www.logomaker.com/), as the theme was health related, I used predominantly green in the logo iteself and the logo had a strong influence on the overall website colour theme going forward.
 
-The imagery of the site focuses on a healthy theme, the images were souced from the Pexels site and supplement either the blog or the recipe. The images are all self sourced, but the User can update images to supplement their own blogs/recipes for the site. The images for the site are hosted in [Cloudinary](https://cloudinary.com/).
+The imagery of the site focuses on a healthy theme, the images were souced from the Pexels site and supplement the blogs, the recipe images were sourced from LIDL as pexels had not got the images related to the individual recipes. The images are all self sourced, but the User can update images to supplement their own blogs/recipes for the site. The images for the site are hosted in [Cloudinary](https://cloudinary.com/).
 
-There are also images sporadically throughout the site, The home page has an image of a healthy woman, conveying a person with a healthy lifestyle. The about page again, shows a healthy woman living her best life and the information panels show images focuses on the main themes within the site.
+There are also images sporadically throughout the site, The home page has an image of a healthy woman, conveying a person with a healthy lifestyle. The about page again, shows a happy woman living her best life and the information panels show images focused on the main themes within the site.
 
 There are also various icons used within the site, the icons were sourced at [Iconify.Design](https://iconify.design/), and they were used as a graphical representation of pertinent information on the site, they were used in conjunction with Forms or headings and were a subtle way to incorporate imagery on a limited scale, examples can be found in the image below.
 
@@ -299,13 +298,14 @@ I also created the favicon for the site with [Favicon.io](https://favicon.io)
      <img src="assets/readme/images/logo.png" width="150" alt="Logo for Site" />    
 </p>
 
- 
 <br/>
+
 <p align="center">
   <img src="assets/readme/images/images.png" width="600" alt="Images for Site"/>
 </p>
 
 <br/>
+
 <p align="center">
   <img src="assets/readme/images/icons.png" width="600" alt="Icons for Site"/>
 </p>
@@ -317,13 +317,13 @@ I also created the favicon for the site with [Favicon.io](https://favicon.io)
 The website follows the standard website structure. The Logo and the website name are on the left hand side, and the naigation to the right, on the top of all pages. Within the Account Nav Link the user can either register or login to the site. When the user logs in they can see the Profile link and the logout button. The logged in user's image will also be visible. When the website is on smaller screens, there is a hamburger meu, with dropdown navigation items. The footer element is also available on all pages, with site information, contact details and social media icons.
  
  The website consists of the following Pages:
- - The Home Page, with an introduction to the site and holds the blog section and the search bar.
+ - The Home Page, with an introduction to the site and it holds the blog section and a search bar.
  - The Post Detail Page, that shows the information for individual blogs.
  - The Add Post Page, which is a form that allows the logged in User to add a blog.
  - The Edit Post Page, which is a form that allows the user to edit their own post.
  - The Delete Post Page, which is a form that allows the user to delete their own post.
  - The About Page, which gives more information on the site and specific panels that shows information on main topics.
- - The Recipe Page, with an introduction to Recipes and holds the recipe section and the search bar.
+ - The Recipe Page, with an introduction to Recipes and it holds the recipe section and a search bar.
  - The Recipe Detail Page, that shows the information for individual Recipes.
  - The Add Recipe Page, which is a form that allows the logged in User to add a Recipe.
  - The Edit Recipe Page, which is a form that allows the user to edit their own Recipe.
@@ -532,7 +532,7 @@ For a logged in user the naviation contains, home, about, recipes, profile and l
 
 <br/> 
 
-On smaller screens, there is a hamburger menu where the navigation items appear in a collapsable dropdown menu. The image is also included in the menu.
+On smaller screens, there is a hamburger menu where the navigation items appear in a collapsable dropdown menu. The image is also included in this menu.
 
 <br>
 
@@ -543,7 +543,7 @@ On smaller screens, there is a hamburger menu where the navigation items appear 
 <br/> 
 
 - The Footer:
-The Footer contains a blurb on the site, some contact details and social media icons, also the copyright information on the WannabeHealthy site. 
+The Footer contains a blurb on the site, some contact details and social media icons, also the copyright information on the Wannabe Healthy site. 
 
  <br>
 
@@ -568,7 +568,7 @@ the site, helping the user find out the theme of the site up front.
 
 ### 2. Blog Section      <a name="blogsection"></a>
 
-On the home page there is a blog section which holds a collection of blogs ordered with the most recent blog at the top. The pagination allows for the blogs to be distributed according to the number of blogs it contains.
+On the home page there is a blog section which holds a collection of blogs ordered with the most recent blog at the top. The pagination allows for the blogs to be distributed according to the number of blogs it contains (6 blogs per page).
 
 <br>
 
@@ -580,7 +580,7 @@ On the home page there is a blog section which holds a collection of blogs order
 
 ### 3. Blog Search   <a name="blogsearch"></a>
 
-The website user can use the search facility to find specific categories, and they can also search by a word in the title.If there are results, they will be displayed to the user and if not the user will be given the message that there are no results, they can either search again or they can return to the home page blog display.
+The website user can use the search facility to find specific categories ie Relaxation, Exercise, Diet and Health, and they can also search by a word in the title. If there are results, they will be displayed to the user and if not the user will be given the message that there are no results, they can either search again or they can return to the home page blog display.
 
 
 <p align ="center">      
@@ -647,7 +647,7 @@ As a logged in User you will be able to see the delete button below your submitt
 
 ### 7. Blog Detail Page      <a name="blogdetailpage"></a>
 
-When you select a blog, you will be redirected to the blog detail page, this page will show the full content for that specific blog. If you are a logged in user you can use the comment form to add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can see comments that have already been submitted for the Blog. You can also like/unlike the post. You will also be able to see the Profile Picture and Bio for the Author of the Post.
+When you select a blog, you will be redirected to the blog detail page, this page will show the full content for that specific blog. If you are a logged in user you can use the comment form to add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can see comments that have already been submitted for the Blog. You can also like/unlike the post. You will also be able to see the Profile Picture and Bio for the Author of the Post. If you are viewing a post that you submitted you will be able to see an edit and delete button below your post and you can use these buttons to edit or delete your post. (They will take you to the edit and delete form)
 
 <br>
 
@@ -659,7 +659,7 @@ When you select a blog, you will be redirected to the blog detail page, this pag
 
 ###  8. About Page    <a name="aboutpage"></a>
 
-The About Page again contains a brief synopsis of the site and contain information panels that display the main factors in statying Healthy. The accompanying links will take you to either the blog section or the recipe section of the site. I would hope to expand the project by adding an area for relaxation, but this is not in the present iteration, so there are 2 links to same area in the meantime. I could have had a link to the profile page, but if the user was not logged in, this page would not be available.
+The About Page again contains a brief synopsis of the site and contain information panels that display the main factors in staying Healthy. The accompanying links will take you to either the blog section or the recipe section of the site. I would hope to expand the project by adding an area for relaxation, but this is not in the present iteration, so there are 2 links to same section in the meantime. I could have had a link to the profile page, but if the user was not logged in, this page would not be available.
 
 
 <br>
@@ -682,7 +682,7 @@ At the top of the Recipes pages, there is a brief introduction to the Recipes fe
 
 <br/> 
 
-On the Recipes page there is a collection of Recipes ordered with the most recent Recipe at the top. The pagination allows for the Recipes to be distributed according to the number of recipes in the collection.
+On the Recipes page there is a collection of Recipes ordered with the most recent Recipe at the top. The pagination allows for the Recipes to be distributed according to the number of recipes in the collection.(6 per page)
 
 <p align ="center">      
      <img src="assets/readme/images/recipes.jpg" width="600" alt="Recipe Section" />    
@@ -733,7 +733,7 @@ As a logged in User you will be able to see the edit button below your submitted
 
 ###  13. Delete Recipe   <a name="deleterecipe"></a>
 
-As a logged in User you will be able to see the delete button below your submitted Recipe, when you use the delete button you will be redirected to the delete Recipe page, where you can delete your Recipe, when the form is completed you will be redirected to the Recipes page and your recipe will be deleted. The delete button will only be visible on recipes that the logged in User has submitted.
+As a logged in User you will be able to see the delete button below your submitted Recipe, when you use the delete button the delete Recipe page will be displayed, where you can delete your Recipe, when the form is completed you will be redirected to the Recipes page and your recipe will be deleted. The delete button will only be visible on recipes that the logged in User has submitted.
 
 <br>
 
@@ -757,7 +757,7 @@ When you select a Recipe, you will be redirected to the Recipe detail page, this
 
 ###  15. Profile Page   <a name="profilepage"></a>
 
-On the Profile Page, the User can have access to their own profile information. The profile will be automatically created when they register for the site. Initially the user will have a generic photo.
+On the Profile Page, the User has access to their own profile information. The profile will be automatically created when they register for the site. Initially the user will have a generic photo and their username displayed on the page.
 
 
 <br>
@@ -765,6 +765,8 @@ On the Profile Page, the User can have access to their own profile information. 
 <p align ="center">      
      <img src="assets/readme/images/profile page.jpg" width="500" alt="Profile Page" />    
 </p>
+
+<br/> 
 
 ###  16. Edit Profile  Page   <a name="editprofile"></a>
 
@@ -853,20 +855,17 @@ The admin panel allows the admin/superuser to perform a wide range of functional
 
  <br>
 
- The site in it's present form offers basic blog and recipe content, which is a good foundation but could be developed further to offer more options to the user. Within the blog area, I would like to add some features in future iterations such as adding favourites and highlighting the blogs that have received the most likes. 
+ The site in it's present form offers basic blog and recipe content, which is a good foundation but it could be developed further to offer more options to the user. Within the blog area, I would like to add some extra functionality such as adding favourites for Users and highlighting the blogs that have received the most likes. 
  
  In regards to the recipes, there are a number of extra options I would like to introduce including vegetarian, and vegan recipes, the present recipes are not categorised in this way. I would like to also enhance the site by including information on food allergies, highlighting which recipes would have known allergens for the safety of the user. There could also be a dish of the week, as an incentive to users to submit their best recipes.
  
- I would like to introuduce more interaction into the site, possibly using a forum where users can document their own experiences when adopting a vegetarian/vegan lifestyle. This would increase the social aspect of the site and would fully utilize the social media platforms fully. 
+ I would like to introuduce more interaction into the site, possibly using a forum where users can document their own experiences when adopting a vegetarian/vegan lifestyle. This would increase the social aspect of the site and would utilize the social media platforms fully. 
  
- The present profiles could be expanded to include more information, such as the user's own links so that users can also interact with each other outside of the site. I was going to add blogs and recipes that the user has created within the profile page, but have not included this within the present project scope.
+ The present profiles could be expanded to include more information, such as the user's own social media links so that users can interact with each other outside of the site. I was going to add blogs and recipes that the user has created within the profile page, but have not included this within the present project scope.
  
  At present there is no contact page and this would also be introduced, to encourage users to contact the web owner with messages, and it would be hoped their interaction would help the site owner to develop new ideas based on their suggestions. 
 
- The about page mentions relaxation as a factor, so I would like to add a section on the site dedicated to relaxation techniques and offering resources to the user in relation to stress relief and mindfulness.
- Within this area I could include video or audio resources for basic meditations that the user could try. I would also include links for further investigation, if they wanted to dig deeper into the subject area.
-
- 
+ The about page mentions relaxation as a factor, so I would like to add a section on the site dedicated to relaxation techniques and offering resources to the user in relation to stress relief and mindfulness.  Within this area I could include video or audio resources for basic meditations that the user could try. I would also include links for further investigation, if they wanted to dig deeper into this subject area.
 
 <br>
 
@@ -887,12 +886,12 @@ The admin panel allows the admin/superuser to perform a wide range of functional
 
 -   [Am I Responsive](http://ami.responsivedesign.is/) - was used to create the multi-device mock-up above.
 -   [Bootstrap v5.2.3](https://getbootstrap.com/)
--   [Git:](https://git-scm.com/) - used for version control, updated and commited changes (this in turn updated in Heroku). 
+-   [Git:](https://git-scm.com/) - used for version control, updated and commited changes (this in turn updated site in Heroku). 
 -   [GitHub:](https://github.com/) - is the respository for all the git pushes.
 -   [Gitpod](https://gitpod.io/) - was the IDE Editor.
 -   [Heroku:](https://heroku.com) - used to deploy the application.
--   [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - Used for Testing Site
--   [Markdown](https://markdown-guide.readthedocs.io/en/latest/) - Markdown Guide
+-   [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - Used for Testing Site.
+-   [Markdown](https://markdown-guide.readthedocs.io/en/latest/) - Markdown Guide.
 -   [Cloudinary](https://cloudinary.com/) - used for images for the site.
 -   [PostgreSQL](https://www.postgresql.org/) - Original Database - until Update of Heroku when migrations and a change of Database was required.
 -   [Elephant SQL](https://www.elephantsql.com/) – deployed project on Heroku uses an Elephant SQL database. 
@@ -903,18 +902,18 @@ The admin panel allows the admin/superuser to perform a wide range of functional
 -   [tinyPNG](https://tinyjpg.com/) - for image compression.
 -   [Figma](https://www.figma.com/) - used for making the wireframes for the site.
 -   [Code Institute Python Linter](https://pep8ci.herokuapp.com/) - used to validate Python in Project.
--   [Accesibility Test](https://accessibilitytest.org/) - free accessibility testing tool
+-   [Accesibility Test](https://accessibilitytest.org/) - free accessibility testing tool.
 -   [Dr Link Checker](https://www.drlinkcheck.com/) - used in conjunction with manual testing of links.
 
 ### Django Packages
 
-* [Gunicorn](https://gunicorn.org/) - As a server for Heroku
-* [Cloudinary](https://cloudinary.com/) - Was used to host the static files and media
-* [Dj_database_url](https://pypi.org/project/dj-database-url/) - To parse the database URL from the environment variables in Heroku
-* [Psycopg2](https://pypi.org/project/psycopg2/) - As an adaptor for Python and PostgreSQL databases
-* [Summernote](https://summernote.org/) - As a text editor for adding content
-* [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) - For authentication, registration, account management
-* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - To style the forms used in the site
+* [Gunicorn](https://gunicorn.org/) - As a server for Heroku.
+* [Cloudinary](https://cloudinary.com/) - Was used to host the static files and media.
+* [Dj_database_url](https://pypi.org/project/dj-database-url/) - To parse the database URL from the environment variables in Heroku.
+* [Psycopg2](https://pypi.org/project/psycopg2/) - As an adaptor for Python and PostgreSQL databases.
+* [Summernote](https://summernote.org/) - As a text editor for adding content to the site.
+* [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) - For authentication, registration, account management.
+* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - To style the forms used in the site.
  
  <br>
 
@@ -922,9 +921,11 @@ The admin panel allows the admin/superuser to perform a wide range of functional
 ----
 
 ## 9. Testing  <a name="testing"></a>
+
 <br>
 
-Go to the [TESTING SECTION](TESTING.md)
+
+Go to the [TESTING DOCUMENT](TESTING.md)
 
 #### [Return to Table of Contents](#toc)
 ----
@@ -939,7 +940,7 @@ Go to the [TESTING SECTION](TESTING.md)
 
  <br>
 
- When I first added profiles, I had the intention to include the profile image in the navbar when the user logged in, but when I used the code to allow this to happen, the image would not show. Up to this point I had not needed to to use content from one app within another, so that was a big issue. I talked with my mentor and I looked into the area of context processors, and added one within the blog app, but that did not fix the issue. Then after talking with Tutor Support I managed to resolve the issue, and the image showed up finally. Once I knew this was possible, I wanted to add Bio details of the user within in the blog detail and recipe detail pages.
+ When I first added profiles, I had the intention to include the profile image in the navbar when the user logged in, but when I used the code to allow this to happen, the image would not show. Up to this point I had not needed to to use content from one app within another, so that was a big issue. I talked with my mentor and I looked into the area of context processors, and added one within the blog app, but that did not fix the issue. Then after talking with Tutor Support I managed to resolve the issue, and the image showed up finally. Once I knew this was possible, I decided to add Bio details of the author within the blog detail and recipe detail pages, so Users can learn more details about their fellow users.
 
 <br>
 
@@ -970,11 +971,11 @@ Go to the [TESTING SECTION](TESTING.md)
 
 There was one further issue I noticed when testing, if you made a comment and submitted it, the user image in the blog_detail(and recipe detail) profile section would disappear, but this was due to a syntax error, and when it was fixed the problem was resolved.
 
-I also had some issues when using the font awesome icons as some seemed unavailable due to restrictions of use, but used a different site for icons, and this has resolved that issue.
+I also had some issues when using the font awesome icons as some seemed unavailable due to Font Awesome user restrictions, but used a different site for icons, and this has resolved the issue.
 
-When testing I found I had an issued with the favicon, and had not included the webmanifest site or the selection of icons for mobile sites, so added these and they seem to be working ok.
+When testing I found I had an issue with the favicon, and I had not included the webmanifest file or the selection of icons for mobile sites, so added these and they seem to be working ok.
 
-I did have an issue with the add a blog form, during testing I realised I did not have to include the slug field, as it was applying the title as a slug, so removed this field from the form and it's working regardless.
+I did have an issue with the add a blog form, during testing I realised I did not have to include the slug field, as it was applying the title as a slug, so removed this field from the form and it's still working.
 
 <br>
 
@@ -982,11 +983,11 @@ I did have an issue with the add a blog form, during testing I realised I did no
 
  <br>
 
- I did try near the end of the project to add the blogs and recipes that the user created to be included in the profile page, I experimented a little but decided to instead concentrate my focus on testing the functionality I had already achieved on the site, but have referred to this in [Future features](#7-future-implementation)
+ I did near the end of the project think of adding the blogs and recipes that the user created to be included in the profile page, I experimented a little but decided to instead concentrate my focus on testing the functionality I had already achieved on the site, but have referred to this in [Future features](#7-future-implementation).
 
- Initially I was going to use primary key instead of slug, as it was causing issues when I tried to change the name of title/slug of a blog, but instead left it as slug, it does update the blog successfully, but instead of returning you to the amended blog, it returns to you to the main blog page, but the amendments are includeded and if you select the blog, you can open the amended site to see full details.
+ Initially I was going to use primary key instead of slug, as it was causing issues when I tried to change the name of title/slug of a blog, but instead left it as slug, it does update the blog successfully, but instead of returning you to the amended blog, it returns to you to the main blog page, but the amendments are included and if you select the blog, you can open the amended site to see full details.
 
- I was going to display a greeting to the user when they registered for the site, but could not get it to work, but would hope to get it working in future iteration, for now I will contend with the message that is automatically displayed to the user when registering. If it was a form I had compiled myself, I would have felt more comfortable modifying the code, but did not want to cause an issue with the built in allauth system.  The code I was using follows:
+ I was going to display a greeting to the user when they registered for the site, but could not get it to work, but would hope to get it working in future iterations, for now I will contend with the message that is automatically displayed to the user when registering. If it was a form I had compiled myself, I would have felt more comfortable modifying the code, but did not want to cause an issue with the built in allauth authorization system.  The code I was using follows:
 
  <br>
 
@@ -1051,7 +1052,7 @@ Code Institute
 
 ### Django Framework    <a name="djangoframework"></a>
 
-I used the Resources and Lessons within the Full Stack Frameworks Module to get familiar with the concepts involved in created the present Project. In particular I did the walkthroughs for 'Hello Django' and 'I Think Therefore I Blog', and I uaed the cheatsheet, [Django Blog Cheat Sheet](https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit), which helped me set up the basic Django Project. I also looked at the for the 'Boutique Ado' walkthrough, as when I was creating the profile app, I wanted to see how it was handled within this project, It also helped me solidify some concepts that I had not grasped in the previous walkthrough.
+I used the Resources and Lessons within the Full Stack Frameworks Module to get familiar with the concepts involved in creating the present Project. In particular I did the walkthroughs for 'Hello Django' and 'I Think Therefore I Blog', and I used the cheatsheet, [Django Blog Cheat Sheet](https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit), which helped me set up the basic Django Project. I also looked at the 'Boutique Ado' walkthrough, as when I was creating the profile app, I wanted to see how it was handled within this project, It also helped me solidify some concepts that I had not grasped in the previous walkthrough.
 
 <br>
 
@@ -1070,7 +1071,7 @@ in this case I added 'PORT' into the key field and added '8000' into the value f
 - Next you go to the Deploy tab and you select 'github' and confirm connection to your GitHub Account.
 - You search for your project repository and click to 'connect'.
 - Under the deploy options, you can chose automatic deploys, this allow you to automatically deploy each
-time you push to your Repository.
+time you push to your Repository. (Option Taken)
 - To deploy, you would choose what branch you want to deploy and click on 'Deploy Branch'.
 - It takes a little time to build your app but when it is ready you can open your app by using the link provided.
 
@@ -1078,7 +1079,7 @@ time you push to your Repository.
 
 ### Changes in Heroku  <a name="herokuchanges"></a>
 
-We received notifications that there was a change in their free plan and new charges would be introduces so we had to make changes in how our project would be deployed. At this point I had already deployed the site on Heroku, so needed to heed the advice from Code Institute and use the student plan, that had previously been set up, to apply for student credits. When these were applied, I changed the current free tier dynos I had to Eco Dynos on the site and migrated existing databases from postgress to ElephantSQL. To ensure this was done successfully, I attended the CI online webinar and followed the instructions in the CI cheat sheets in the following links:
+We received notifications that there was a change in their free plan and new charges would be introduced so we had to make changes in how our project would be deployed. At this point I had already deployed the site on Heroku, so needed to heed the advice from Code Institute and use the student plan, that had previously been set up, to apply for student credits. When these were applied, I changed the current free tier dynos I had to Eco Dynos on the site and migrated existing databases from postgress to ElephantSQL. To ensure this was done successfully, I attended the CI online webinar and followed the instructions in the CI cheat sheets in the following links:
 
 [Sign up for ElephantSQL](https://code-institute-students.github.io/deployment-docs/02-elephantsql/elephantsql-01-sign-up)
   
@@ -1091,9 +1092,11 @@ We received notifications that there was a change in their free plan and new cha
 ### Final Deployment 
 
 - When development is complete change the debug setting to: `DEBUG = False` in settings.py
--  In this project the summernote editor was used so for this to work in Heroku, you need to add: `X_FRAME_OPTIONS = SAMEORIGIN `to Settings.py.
+-  In this project the summernote editor was used so for this to work in Heroku, so you need to add: `X_FRAME_OPTIONS = SAMEORIGIN ` to Settings.py.
 - In Heroku settings, delete the config vars for `DISABLE_COLLECTSTATIC = 1` (I had disabled these earlier in the project development)
 - You can manually deploy your branch in the deploy section in Heroku, but I had automatic deployment chosen so the Site was updated everytime I pushed to GitHub.
+
+<br>
 
 #### [Return to Table of Contents](#toc)
 ----
@@ -1104,8 +1107,9 @@ We received notifications that there was a change in their free plan and new cha
 - All images for the site, including blog images come from [Pexels](https://www.pexels.com/)
 - The logo and Favicon were built with the online tools: [LogoMaker](https://www.logomaker.com/) and 
  [Favicon.io](https://favicon.io/)
+- Read an article in medium on [Custom Error Pages](https://medium.com/@yildirimabdrhm/python-django-handling-custom-error-page-807087352bea) and used some code to implement error pages.
 - All Blog content was self created, and was based on online research of various health related topics.
-- The Project began with the basic code used in the 'I think therefore I blog' walkthrough Project, but was modified according to my own needs within the Project. As the Project developed, I sought out various Tutorials that defined the CRUD capabilities and learned how to apply what I learned within the project framework. I used the following Tutorial in particular to see how to apply CRUD Functionality
+- The Project began with the basic code used in the 'I think therefore I blog' walkthrough Project, but was modified according to my own needs within the Project. As the Project developed, I sought out various Tutorials that defined the CRUD capabilities and learned how to apply what I learned within the project framework. I used the following Tutorial in particular to apply CRUD Functionality with modifications along the way.
 
     [Create a Simple Blog with Python and Django with Codemy](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) 
      

@@ -54,7 +54,7 @@ img {
 }
 
 .navbar {
-    width: 100vw;
+    width: 100%;
 }
 
 /*hamburger for smaller screens*/
@@ -939,14 +939,14 @@ ol li::before {
 
     @media (max-width: 450px) {
      #logo {
-        width: 100px;
+        width: 90px;
         height: auto;
      }
 
      /*styling for Navigation items*/
     .nav-item,.nav-link {
         margin-left: 2px;
-        font-size: 18px;
+        font-size: 16px;
         letter-spacing: .1em;
     }
 
