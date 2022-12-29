@@ -974,6 +974,8 @@ I also had some issues when using the font awesome icons as some seemed unavaila
 
 When testing I found I had an issued with the favicon, and had not included the webmanifest site or the selection of icons for mobile sites, so added these and they seem to be working ok.
 
+I did have an issue with the add a blog form, during testing I realised I did not have to include the slug field, as it was applying the title as a slug, so removed this field from the form and it's working regardless.
+
 <br>
 
  ### Unresolved <a name="unresolved"></a>
@@ -1000,6 +1002,8 @@ When testing I found I had an issued with the favicon, and had not included the 
       </script>
 
 <br>
+
+One last bug relates to the images for the recipes. For the blog I was able to select set sizes from Pexel, but the recipes needed specific images that were not available in Pexels, so had to use the images from the LIDL website, and these were not uniform, so were a little more problematic to work with. Although I did test uploading larger pictures and it did seem to display them correctly.
 
 <br>
 

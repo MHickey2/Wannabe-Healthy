@@ -100,7 +100,7 @@ class PostLike(View):
 class AddPostView(generic.CreateView):
     model = Post
     template_name = "blog/add_post.html"
-    fields = ['category', 'title', 'slug', 'featured_image', 'excerpt',
+    fields = ['category', 'title', 'featured_image', 'excerpt',
               'content', 'status']
     success_url = reverse_lazy('home')
 

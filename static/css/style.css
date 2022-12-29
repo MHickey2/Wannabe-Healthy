@@ -274,8 +274,7 @@ footer {
 /*Styling for the subtitle of Recipe Detail page*/
 .post-subtitle1 {
     text-align: center;
-    color: rgb(5, 41, 20);
-    font-weight: 700;
+   
 }
 
 /*Styling for links on the site*/
@@ -398,8 +397,7 @@ a:hover {
 #newpost input,
 textarea  {
     width: 40vw;
-    line-height: 1.3vh;   
-    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+    /* line-height: 1.3vh;      */
     padding: 15px 15px;
     display: block;
     width: 100%; 
