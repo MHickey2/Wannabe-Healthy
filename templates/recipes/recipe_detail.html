@@ -42,10 +42,10 @@
         <p class="italic-bold">{{ recipe.description | safe }} </p>
         <hr>
         <h3 class="stylingtext">Ingredients:</h3>
-        <div class="card-text1"> {{ recipe.ingredients | safe }} </div>
+        <p class="card-text1"> {{ recipe.ingredients | safe }} </p>
         <hr>
         <h3 class="stylingtext">Method:</h3>
-        <div class="card-text1"> {{ recipe.method | safe }} </div>
+        <p class="card-text1"> {{ recipe.method | safe }} </p>
     </div>
 
     {% if user.is_authenticated %}

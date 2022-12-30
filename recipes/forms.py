@@ -17,8 +17,11 @@ class RecipeForm(forms.ModelForm):
 
         widgets = {
             'category': forms.TextInput(attrs={'class': 'form-control'}),
-            'title': forms.TextInput(attrs={'class': 'form-control',
-                                            'placeholder': 'Enter Title'}),
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'description': forms.TextInput(attrs={'class': 'form-control'}),
             'slug': forms.TextInput(attrs={'class': 'form-control'}),
+            'difficulty': forms.TextInput(attrs={'class': 'form-control'}),
+            'method': forms.TextInput(attrs={'class': 'form-control'}),
+            'ingredients': forms.TextInput(attrs={'class': 'form-control'}),
             'status': forms.TextInput(attrs={'class': 'form-control'}),
         }

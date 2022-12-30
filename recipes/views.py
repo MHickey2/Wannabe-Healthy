@@ -88,6 +88,8 @@ class RecipeLike(View):
         recipe = get_object_or_404(Recipe, slug=slug)
         if recipe.likes.filter(id=request.user.id).exists():
             recipe.likes.remove(request.user)
+            msg = 'Your have unliked this Recipe'
+            messages.add_message(self.request, messages.SUCCESS, msg)
         else:
             recipe.likes.add(request.user)
             msg = 'Your have liked this Recipe'

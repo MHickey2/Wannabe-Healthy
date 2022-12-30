@@ -182,3 +182,13 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+SUMMERNOTE_CONFIG = {
+    'toolbar': [
+            ['font', ['bold', 'underline', 'italic', 'clear', 'fontsize',
+                      'color']],
+            ['para', ['style', 'ul', 'ol', 'paragraph', 'height']],
+        ],
+    'height': 400,
+    'width': '100%',
+}
