@@ -34,6 +34,11 @@ img {
     height: auto;
     width: 100%;
 }
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
   
 /*-------------------------------------*/
 /*Navbar in base.html but on all pages*/
@@ -367,7 +372,7 @@ a:hover {
 .green {
     margin-top: 10px;
     color: green;
-    text-align: center;
+    text-align: center;    
 }
 
 /* Blog and recipe posts */
@@ -671,7 +676,8 @@ textarea {
 
 .btn-success, .btn-danger {
     padding: 10px;
-    color: white !important;   
+    color: white !important;
+    background-color:rgb(9, 68, 4) !important;   
 }
 
 .col-md-6 {
@@ -765,7 +771,7 @@ textarea {
 /* Styling for List items in blogs and Recipes */ 
 ul li, ol li {       
     font-weight:400;
-    font-size: 1rem;
+    font-size: 1.125rem;
     /* margin: 5px; */
 }
 
@@ -795,7 +801,9 @@ ol li::before {
   /*Styling for the icons with Headings on relevant pages*/
   .greenicon {
     color: green;
-    margin-top: 8px;       
+    margin-top: 8px;
+    font-size: .9em;
+           
 }
 
   .label-icon{
@@ -858,11 +866,11 @@ ol li::before {
     transform: scale(1.05);
 }
 
-/* .how-img {
+.how-img {
     width: 300px;
     height: auto;
     padding: 10px;   
-} */
+}
 
 .border {
     border: 1px solid black;
@@ -909,7 +917,7 @@ ol li::before {
     }
 
     .likecom {        
-        font-size: 0.75rem;  
+        font-size: 0.8rem;  
     }
 
     .recipe-title  {        
@@ -947,7 +955,7 @@ ol li::before {
      /*styling for Navigation items*/
     .nav-item,.nav-link {
         margin-left: 2px;
-        font-size: 1rem;
+        font-size: 1.125rem;
         letter-spacing: none;
     }
 
@@ -961,7 +969,7 @@ ol li::before {
 
         .nav-item,.nav-link {
             margin-left: 2px;
-            font-size: 0.9375rem;
+            font-size: 1.125rem;
             letter-spacing: none;
         }
 

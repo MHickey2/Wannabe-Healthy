@@ -158,9 +158,11 @@ Besides manually checking links on the site I used this tool as an extra measure
 
 ### 4. Manual Testing   <a name="manual"></a>
 
+Testing was carried out on a number of levels, so I have broken the manual testing into 2 sections, the first gives an overview of how the site works and whether it does what is expected. In the second section I have more specific testing of different elements within each page and the results I received in a more condensed version.
+
 
 <h3 align ="center">      
-    Feature being Tested and Result   
+    Manual Testing (Overview of how the Site works in general)   
 </h3>
 
 
@@ -211,10 +213,279 @@ Besides manually checking links on the site I used this tool as an extra measure
 ### Admin Panel:
 - Managed to create, update and delete data in all models, during the entire project, and all seems to be working as expected when logged in as the admin.  :heavy_check_mark:
 - When a User comments on a post, Admin needs to approve before it is displayed on the site, this is working as expected, when logged in as the admin.  :heavy_check_mark:
-- All required fields need to be filled in when posting a new recipe and blog, and the user is advised on these requirements when filling these forms.  :heavy_check_mark:  
+- All required fields need to be filled in when posting a new recipe and blog, and the user is advised on these requirements when filling these forms.  :heavy_check_mark: 
 
-  
-#### [Return to Table of Contents](#toc)
+<h3 align ="center">      
+    Manual Testing (More Specific Testing of Elements in the Pages)   
+</h3>
+
+<br>
+
+<details>
+  <summary>Manual Testing(part 2)</summary>
+
+<br>
+
+### Navigation (on all pages)
+
+<br>
+
+| Feature            |  Expect                       | Action   | Result    |
+| ------------------ | ----------------------------- | -------- | ----------|
+|  Logo              | Navigation Link               | Click On |   ✔       | 
+|  Home              | Navigation Link               | Click On |   ✔       |
+|  About             | Navigation Link               | Click On |   ✔       |
+|  Recipes           | Navigation Link               | Click On |   ✔       |
+|  Account           | Dropdown Menu                 | Click On |   ✔       |
+|  Sign Up           | Navigation Link               | Click On |   ✔       |
+|  log In            | Navigation Link               | Click On |   ✔       |
+|  Profile           | Navigation Link               | Click On |   ✔       |
+|  Log Out           | Navigation Link               | Click On |   ✔       |
+
+<br>
+
+### Footer  (on all Pages)
+
+
+| Feature           |  Expect                                   | Action   | Result   |
+| ------------------| ----------------------------------------- | -------- | ---------|
+| Icon Facebook    | Social Media Link - goes to external site | Click On |   ✔       |
+| Icon Twitter     | Social Media Link - goes to external site | Click On |   ✔       | 
+| Icon Instagram   | Social Media Link - goes to externalsite  | Click On |   ✔       |
+
+<br>
+
+Home Page
+
+| Feature             |  Expect                    | Action       | Result    |
+| --------------------| -------------------------- | --------     | ----------|
+| Sign in Message     | Displays Correctly         | Automatic    |    ✔      |                      
+| Add a Post Button   | Opens add Post Form        | Click On     |    ✔      |     
+| Edit Post Button    | Opens Edit Post Form       | Click On     |    ✔      |
+| Delete Post Button  | Opens Delete Post Form     | Click On     |    ✔      |
+| Like Heart & No     | Shows number of Likes      | Automatic    |    ✔      |
+| Comment & No        | Show number of Comments    | Automatic    |    ✔      |
+| Search Bar          | Search for Category/word   | Input Details|    ✔      |
+| If Results to Search| Results are Displayed      | Click On     |    ✔      |
+| If no Results       | Message Shown to Advise    | Click On     |    ✔      |
+| Next(Pagination)    | Go to Next Page of Blogs   | Click On     |    ✔      |
+| Prev(Pagination)    | Go to Previous Page        | Click On     |    ✔      |
+| Top Button          | Go to Top of Screen        | Click On     |    ✔      |
+| Zoom Effect on Blogs| Zoom Effect                | Hover        |    ✔      |
+| Choose a Blog       | Go to Post_Detail Page     | Click On     |    ✔      |
+
+<br>
+
+Post Detail Page
+
+| Feature                 |  Expect                    | Action       | Result    |
+| --------------------    | -------------------------- | --------     | ----------|
+| Category of Blog        | Displays Correctly         | Automatic    |    ✔      |
+| Blog is featured        | Displays Correctly         | Automatic    |    ✔      |
+| Edit Button shows       | Displays if User is author | Automatic    |    ✔      |
+| Edit Button             | Opens the Edit_Blog Form   | Click On     |    ✔      |
+| Delete Button shows     | Displays if User is author | Automatic    |    ✔      |
+| Delete Button           | Opens the Delete_Blog Form | Click On     |    ✔      |
+| Like Heart & No         | Shows number of Likes      | Automatic    |    ✔      |
+| Comment & No            | Show number of Comments    | Automatic    |    ✔      |
+| Can like/unlike         | Shows an extra like/unlike | If logged in |    ✔      |
+| Author Profile displayed| Displays Correctly         | Automatic    |    ✔      |
+| Comments are displayed  | Displays Correctly         | If logged in |    ✔      |
+| Comment Form shown      | Displays Correctly         | If logged in |    ✔      |
+| Submit Comment Button   | Submit a comment           | If logged in |    ✔      |
+| Back Button             | Go to Home Page            | Click On     |    ✔      |     
+
+<br>
+
+Add A Post Form Page
+
+| Feature             |  Expect                     | Action    | Result|
+| --------------------| --------------------------  | --------  | ------|
+| Category Field      | Shows Categories            | Click On  |   ✔   |
+| Input Fields        | Accepts input               | Input     |   ✔   |
+| Image Upload        | Uploads Image               | Click On  |   ✔   |
+| Status Field        | Shows Options               | Click On  |   ✔   |
+| Add Post Button     | Adds Post                   | Click On  |   ✔   |
+| Back Button         | Go to Home Page             | Click On  |   ✔   | 
+
+<br>
+
+Edit A Post Form Page
+
+| Feature             |  Expect                     | Action    | Result|
+| --------------------| --------------------------  | --------  | ------| 
+| Category Field      | Shows Categories            | Click On  |   ✔   |
+| Input Fields        | Accepts input               | Input     |   ✔   |
+| Image Upload        | Uploads Image               | Click On  |   ✔   |
+| Status Field        | Shows Options               | Click On  |   ✔   |
+| Edit Post Button    | Adds Post                   | Click On  |   ✔   |
+| Back Button         | Go to Home Page             | Click On  |   ✔   | 
+
+<br>
+
+Delete a Post Form Page
+
+| Feature             |  Expect              | Action    | Result|
+| --------------------| -------------------- | --------  | ------| 
+| Blog Name           | Displayed to User    | Automatic |   ✔   |
+| Delete Button       | Deletes the Blog     | Click On  |   ✔   |
+| Back Button         | Go to Home Page      | Click On  |   ✔   | 
+
+<br>
+
+About Page
+
+| Feature                 |  Expect                      | Action      | Result  |
+| --------------------    | --------------------------   | --------    | ------  | 
+| See Recipes Buttons(2)  | Go to Recipes Page           | Click On    |   ✔    |
+| See Blog Button         | Go to Home Page              | Click On    |   ✔    |
+| Top Button              | Go to Top of Screen          | Click On    |   ✔    |
+| Zoom Effect in Pics     | Zoom Effect                  | Hover       |   ✔    |
+| Back Button             | Go to Home Page              | Click On    |   ✔    | 
+
+<br>
+
+Recipes Page
+
+| Feature               |  Expect                    | Action       | Result    |
+| --------------------  | -------------------------- | --------     | ----------|                      
+| Add a Recipe Button   | Opens add Recipe Form      | Click On     |    ✔      |     
+| Edit Recipe Button    | Opens Edit Recipe Form     | Click On     |    ✔      |
+| Delete Recipe Button  | Opens Delete Recipe Form   | Click On     |    ✔      |
+| Like Heart & No       | Shows number of Likes      | Automatic    |    ✔      |
+| Comment & No          | Show number of Comments    | Automatic    |    ✔      |
+| Search Bar            | Search for Category/word   | Input Details|    ✔      |
+| If Results to Search  | Results are Displayed      | Click On     |    ✔      |
+| If no Results         | Message Shown to Advise    | Click On     |    ✔      |
+| Next(Pagination)      | Go to Next Page of Recipes | Click On     |    ✔      |
+| Prev(Pagination)      | Go to Previous Page        | Click On     |    ✔      |
+| Top Button            | Go to Top of Screen        | Click On     |    ✔      |
+| Zoom Effect on Recipes| Zoom Effect                | Hover        |    ✔      |
+| Select Recipe Button  | Go to Recipe_Detail Page   | Click On     |    ✔      |
+
+
+<br>
+
+Recipe Detail Page
+
+| Feature                 |  Expect                    | Action       | Result    |
+| --------------------    | -------------------------- | --------     | ----------|
+| Category of Recipe      | Displays Correctly         | Automatic    |    ✔      |
+| Recipe is featured      | Displays Correctly         | Automatic    |    ✔      |
+| Edit Button shows       | Displays if User is author | Automatic    |    ✔      |
+| Edit Button             | Opens the Edit_Recipe Form | Click On     |    ✔      |
+| Delete Button shows     | Displays if User is author | Automatic    |    ✔      |
+| Delete Button           | Opens the Delete_Blog Form | Click On     |    ✔      |
+| Like Heart & No         | Shows number of Likes      | Automatic    |    ✔      |
+| Comment & No            | Show number of Comments    | Automatic    |    ✔      |
+| Can like/unlike         | Shows an extra like/unlike | If logged in |    ✔      |
+| Author Profile displayed| Displays Correctly         | Automatic    |    ✔      |
+| Comments are displayed  | Displays Correctly         | If logged in |    ✔      |
+| Comment Form shown      | Displays Correctly         | If logged in |    ✔      |
+| Submit Comment Button   | Submit a comment           | If logged in |    ✔      |
+| Back Button             | Go to Recipes Page         | Click On     |    ✔      |     
+
+<br>
+
+Add A Recipe Form Page
+
+| Feature             |  Expect                     | Action    | Result|
+| --------------------| --------------------------  | --------  | ------|
+| Category Field      | Shows Categories            | Click On  |   ✔   |
+| Input Fields        | Accepts input               | Input     |   ✔   |
+| Image Upload        | Uploads Image               | Click On  |   ✔   |
+| Difficulty Level    | Shows Options               | Click On  |   ✔   |
+| Status Field        | Shows Options               | Click On  |   ✔   |
+| Add Recipe Button   | Adds Recipe                 | Click On  |   ✔   |
+| Back Button         | Go to Recipes Page          | Click On  |   ✔   | 
+
+<br>
+
+Edit A Recipe Form Page
+
+| Feature             |  Expect                     | Action    | Result|
+| --------------------| --------------------------  | --------  | ------| 
+| Category Field      | Shows Categories            | Click On  |   ✔   |
+| Input Fields        | Accepts input               | Input     |   ✔   |
+| Image Upload        | Uploads Image               | Click On  |   ✔   |
+| Difficulty Level    | Shows Options               | Click On  |   ✔   |
+| Status Field        | Shows Options               | Click On  |   ✔   |
+| Edit Recipe Button  | Adds Recipe                 | Click On  |   ✔   |
+| Back Button         | Go to Recipes Page          | Click On  |   ✔   | 
+
+<br>
+
+Delete a Recipe Form Page
+
+| Feature             |  Expect              | Action    | Result|
+| --------------------| -------------------- | --------  | ------| 
+| Recipe Name         | Displayed to User    | Automatic |   ✔   |
+| Delete Button       | Deletes the Recipe   | Click On  |   ✔   |
+| Back Button         | Go to Recipes Page   | Click On  |   ✔   | 
+
+<br>
+
+Profile Page
+
+| Feature             |  Expect                  | Action    | Result|
+| --------------------| --------------------     | --------  | ------| 
+| Username            | Displayed to User        | Automatic |   ✔   |
+| Userimage           | Displays generic image   | Automatic |   ✔   |
+| Userbio             | Displays to User         | Automatic |   ✔   | 
+| Edit Profile Button | Opens Edit Profile Form  | Click On  |   ✔   |
+
+<br>
+
+Edit Profile Page
+
+| Feature             |  Expect                  | Action    | Result|
+| --------------------| --------------------     | --------  | ------| 
+| Image Upload        | Uploads Image            | Click On  |   ✔   |
+| Userbio             | Accepts Input            | Input     |   ✔   | 
+| Update Button       | Updates User Information | Click On  |   ✔   |
+| Back Button         | Go to Profile Page       | Click On  |   ✔   | 
+
+
+<br>
+
+Sign Up Page
+
+
+| Feature             |  Expect                        | Action    | Result    |
+| --------------------| ----------------------------   | --------- | ----------|
+|  Input Fields       | Accept input                   |  Input    |   ✔       |
+|  Sign Up Button     | Register for Site              | Click On  |   ✔       |
+|  Link to Login      | Go to Login Page               | Click On  |   ✔       |
+| Profile for Site    | User gets Profile if registered| Automatic |   ✔       |
+
+<br>
+
+Login Page
+
+
+| Feature             |  Expect                      | Action    | Result    |
+| --------------------| ---------------------------- | --------- | ----------|
+|  Input Fields       | Accept Input                 |  Input    |   ✔       |
+|  Log In Button      | Log in to Site               | Click On  |   ✔       |
+|  Sign Up Link       | Go to SignUp Page            | Click On  |   ✔       |
+
+<br>
+
+
+Sign Out Page
+
+
+| Feature             |  Expect                          | Action    | Result    |
+| --------------------| ----------------------------     | --------- | ----------|
+|  Sign Out Button    | Sign Out and return to home page | Click On  |   ✔       |
+
+<br>
+
+</details>
+
+<br>
+
+### [Return to Table of Contents](#toc)
 ----
 
 <br>
@@ -227,51 +498,51 @@ Besides manually checking links on the site I used this tool as an extra measure
 
 1. Navigate around the site and easily view the type of content available.
 
-**The Navbar is available on each page of the wbsite, it contains links to all areas in the site. There is introductory text on the home page, which clearly indicates the theme of the site, and the type of information that will be available within the site.**
+- The Navbar is available on each page of the wbsite, it contains links to all areas in the site. There is introductory text on the home page, which clearly indicates the theme of the site, and the type of information that will be available within the site.
 
 2. View a collection of Blogs in the blog Section.
 
-**The Home page contains a collection of blogs and they are classified in a selection of categories. The Categories are Diet, Health, Relaxation and Exercise. There is pagination included, so extra blogs are displayed(6 blogs per page) on next page.**
+- The Home page contains a collection of blogs and they are classified in a selection of categories. The Categories are Diet, Health, Relaxation and Exercise. There is pagination included, so extra blogs are displayed(6 blogs per page) on next page.
 
 3. Search the blog section for particular categories or by title content.
 
-**Above the blogs, there is a search bar where the User can search by category type, or a word within a blog title. If there are no search results for a specific search, a message is displayed to the user, telling them no result was found and they are given an option to try again or return to the main home page.**
+- Above the blogs, there is a search bar where the User can search by category type, or a word within a blog title. If there are no search results for a specific search, a message is displayed to the user, telling them no result was found and they are given an option to try again or return to the main home page.
 
 4. Click on a blog item and view more indepth content of the selected blog.
 
-**When a User clicks on a blog, they are taken to the post_detail page, where they can see the full details of the Blog.The page will display a blog image, the blog content and the bio details for the Post author.**
+- When a User clicks on a blog, they are taken to the post_detail page, where they can see the full details of the Blog.The page will display a blog image, the blog content and the bio details for the Post author.
 
-1. Register for an account to avail of full features of the site.
+5. Register for an account to avail of full features of the site.
 
-**When a User registers on the site, they have access to full functionality within the site.  They are able to add,edit or delete a blog or recipe. They can like/unlike a blog/recipe, They can leave a comment for a blog/recipe. They will have their own Profile on the site and they can add/update the details within their own profile.**
+- When a User registers on the site, they have access to full functionality within the site.  They are able to add,edit or delete a blog or recipe. They can like/unlike a blog/recipe, They can leave a comment for a blog/recipe. They will have their own Profile on the site and they can add/update the details within their own profile.
 
 6. View the number of likes on a blog.
 
-**Below individual blog posts there is a heart icon and a number which relates to the number of likes that the blog has received. This can be seen on the home and the post_detail pages.**
+- Below individual blog posts there is a heart icon and a number which relates to the number of likes that the blog has received. This can be seen on the home and the post_detail pages.
 
 7. View comments left for different blogs in the collection.
 
-**The general User can see comments that have been added to any blog, when not logged in.** 
+- The general User can see comments that have been added to any blog, when not logged in. 
 
-1. View a collection of Recipes in the Recipe Page.
+8. View a collection of Recipes in the Recipe Page.
 
-**The Recipes page contains a collection of Recipes and they are classified in a number of categories including Breakfast, Lunch, Dinner, Desserts and Soups/Salad. There are 6 Recipes per page and pagination enables recipes to be displayed on the next page.**
+- The Recipes page contains a collection of Recipes and they are classified in a number of categories including Breakfast, Lunch, Dinner, Desserts and Soups/Salad. There are 6 Recipes per page and pagination enables recipes to be displayed on the next page.
 
 9. Search through recipes for particular categories or by name in title.
 
-**Above the recipes, there is a search bar where the User can search by category type, or a word within a Recipe title. If there are no search results for a specific search, a message is displayed to the user, telling them no result was found and they are given an option to try again or return to the recipes page.**
+- Above the recipes, there is a search bar where the User can search by category type, or a word within a Recipe title. If there are no search results for a specific search, a message is displayed to the user, telling them no result was found and they are given an option to try again or return to the recipes page.
 
 10. Click on a Recipe to see full details of that recipe.
 
-**When a User clicks on the 'see detail' button, they are taken to the recipe_detail page, where they can see the full recipe on a seperate page. The page will display a recipe image, the recipe and the bio details for the Recipe author.**
+- When a User clicks on the 'see detail' button, they are taken to the recipe_detail page, where they can see the full recipe on a seperate page. The page will display a recipe image, the recipe and the bio details for the Recipe author.
 
 11. View the number of likes on a Recipe.
 
-**Below individual recipe posts there is a heart icon and a number which relates to the number of like that the recipe has received. This can be seen on the recipes and the recipe_detail pages.**
+- Below individual recipe posts there is a heart icon and a number which relates to the number of like that the recipe has received. This can be seen on the recipes and the recipe_detail pages.
 
 12.  View any comments left on a Recipe. 
 
-**The general User can see comments that have been added to any recipe, when not logged in. A** 
+- The general User can see comments that have been added to any recipe, when not logged in. 
 
 <br>
 
@@ -279,27 +550,27 @@ Besides manually checking links on the site I used this tool as an extra measure
 
 1. I can add a new post or a recipe.
 
-**When logged in, a User can see the button for adding a blog, this is only visible to the logged in user. The User can either publish or draft a blog/recipe, if drafted, the blog will not be visible, until the status has been changed to published.**
+- When logged in, a User can see the button for adding a blog, this is only visible to the logged in user. The User can either publish or draft a blog/recipe, if drafted, the blog will not be visible, until the status has been changed to published.
 
 2. I can like/unlike a blog or recipe on the site.
 
-**As a logged in User you can like or unlike a blog or recipe and this will added to the number of like that the blog/recipe has.**
+- As a logged in User you can like or unlike a blog or recipe and this will added to the number of like that the blog/recipe has. 
 
-1. I can leave comments on particular blogs and recipes.
+3. I can leave comments on particular blogs and recipes.
 
-**As a logged in User you will be able to see the comment submission form under the blog/recipe in the post_detail page and the recipe_detail page. You can submit a comment, but it will not be added until the admin approves it, this is to ensure any comment is suitable for inclusion.**
+- As a logged in User you will be able to see the comment submission form under the blog/recipe in the post_detail page and the recipe_detail page. You can submit a comment, but it will not be added until the admin approves it, this is to ensure any comment is suitable for inclusion.
 
 4. I can update my Profile for the site by adding a Bio and Image.
 
-**As a logged in User, the profile link is available within the navbar and their profile image will be displayed to the right of the nav links in the navbar. They will be able to access the profile page and review the profile details. They will also be able to access the edit_profile page and be able to update their bio details and upload an image.**
+- As a logged in User, the profile link is available within the navbar and their profile image will be displayed to the right of the nav links in the navbar. They will be able to access the profile page and review the profile details. They will also be able to access the edit_profile page and be able to update their bio details and upload an image.
 
 5. I can edit a Blog or Recipe that I have submitted to the site.
 
-**As a logged in User, they have access to an edit button below their blog in the blog sections, this allows them to update the details of the blog in the edit_post page. When this form is submitted they will be redirected to the home page and the changes will be applied. There is also an edit button below their submitted recipes, and this will allow them to access the edit_recipe page. When this form is submitted they will be redirected to the recipes page and the changes will be applied. If the user is logged in and has published a post/recipe they can also access the edit button on the post_detail and recipe_detail page.**
+- As a logged in User, they have access to an edit button below their blog in the blog sections, this allows them to update the details of the blog in the edit_post page. When this form is submitted they will be redirected to the home page and the changes will be applied. There is also an edit button below their submitted recipes, and this will allow them to access the edit_recipe page. When this form is submitted they will be redirected to the recipes page and the changes will be applied. If the user is logged in and has published a post/recipe they can also access the edit button on the post_detail and recipe_detail page.
 
 6. I can delete a Recipe or Blog that I have submitted to the site.
 
-**As a logged in User, they have access to the delete button below their blog in the blog section, this allows them to delete their blog in the delete_post page. When this form is submitted, their blog will be deleted.. There is also a delete button below their submitted recipes, and this will allow them to delete their recipe. When this form is submitted they will be redirected to the recipes page and the recipe will be deleted. If the user is logged in and has published a post/recipe they can also access the delete button on the post_detail and recipe_detail page.**
+- As a logged in User, they have access to the delete button below their blog in the blog section, this allows them to delete their blog in the delete_post page. When this form is submitted, their blog will be deleted.. There is also a delete button below their submitted recipes, and this will allow them to delete their recipe. When this form is submitted they will be redirected to the recipes page and the recipe will be deleted. If the user is logged in and has published a post/recipe they can also access the delete button on the post_detail and recipe_detail page.
 
 <br>
 
@@ -307,23 +578,23 @@ Besides manually checking links on the site I used this tool as an extra measure
 
 1. Create and publish a new blog or recipe.
 
-**As an Admin you can publish a new blog or recipe for the site, initially before building the frontend this was how blogs were added to the site, but now any logged in user can add blogs or recipes.**
+- As an Admin you can publish a new blog or recipe for the site, initially before building the frontend this was how blogs were added to the site, but now any logged in user can add blogs or recipes.
 
 2. Create draft recipes and blog posts that can be finalised later.
 
-**The Admin can either publish or draft a blog/recipe, if drafted, the blog or recipe will not be visible on the site, until the status has been changed to published. Currently the admin/superuser only has the functionality to create draft posts, but they can change the status of any draft post created by a user in the frontend.**
+- The Admin can either publish or draft a blog/recipe, if drafted, the blog or recipe will not be visible on the site, until the status has been changed to published. Currently the admin/superuser only has the functionality to create draft posts, but they can change the status of any draft post created by a user in the frontend.
 
 3. Create a new user, recipes and blogs.
 
-**The Admin can create a new user, add a recipe or a blog to the site. As an extra function they can also add profiles, as the profile app was created last, as an admin I created profiles for users who had registered before the profile creation when registering was enabled.**
+- The Admin can create a new user, add a recipe or a blog to the site. As an extra function they can also add profiles, as the profile app was created last, as an admin I created profiles for users who had registered before the profile creation when registering was enabled.
 
 4. Delete user, blogs, recipes and comments.
 
-**The Admin can delete a User, a Blog or a Recipe and can remove comments from Blogs and Recipes.**
+- The Admin can delete a User, a Blog or a Recipe and can remove comments from Blogs and Recipes.
 
 5. Can approve user's comments.
 
-**The Admin can approve a User's comments and when this occurs the comment will appear in the comment section of the blog/recipe detail pages on the site.**
+- The Admin can approve a User's comments and when this occurs the comment will appear in the comment section of the blog/recipe detail pages on the site.
 
 
 <br>

@@ -54,27 +54,26 @@
                     <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                         {% csrf_token %}
                         {% if liked %}
-                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
+                        <button type="submit" name="blogpost_id" aria-label="blogpost_id" value="{{post.slug}}" class="btn-like">
                             <iconify-icon icon="ant-design:heart-outlined" width="20" ></iconify-icon></button>
                         {% else %}
-                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
+                        <button type="submit" name="blogpost_id" aria-label="blogpost_id" value="{{post.slug}}" class="btn-like">
                             <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></button>
                         {% endif %}
                     </form>
                     {% else %}                
-                    <span class="text-secondary"><iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></span>
+                    <span class="text-secondary"><iconify-icon inline icon="ant-design:heart-outlined" width="20"></iconify-icon></span>
                         {% endif %}
-                        <!-- The number of likes goes before the closing strong tag -->
+                        <strong>
                         <span class="text-secondary">{{ post.number_of_likes }} </span>
-                   
+                        </strong>                   
                 </div>
             <div class="col-2">
                 {% with comments.count as total_comments %}
-                <strong class="text-secondary">&nbsp;<iconify-icon inline icon="fa-regular:comments"
-                    width="20"></iconify-icon>
-                    <!-- total_comments variable goes before the closing strong tag -->
-                     <!-- Our total_comments variable goes before the closing strong tag -->
-                     {{ total_comments }}</strong>
+                <span class="text-secondary">&nbsp;<iconify-icon inline icon="fa-regular:comments" width="20"></iconify-icon></span>                    
+                    <strong>
+                        <span class="text-secondary">{{ total_comments }}</span>
+                    </strong>    
                      {% endwith %}                    
             </div>
         </div>
@@ -124,7 +123,7 @@
                 <p class="font-weight-bold">
                     <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                     {{ comment.name }}
-                    <span class="font-weight-bold" style="color: rgb(13, 153, 13); font-weight: 400;">
+                    <span class="font-weight-bold" style="color: rgb(7, 124, 7); font-weight: 600;">
                         <!-- The comment's created date goes here -->
                         {{ comment.created_on }}
                     </span> wrote:
