@@ -15,7 +15,8 @@ html * {
     font-family: 'Roboto', sans-serif;    
     font-weight: 400; 
     color: #313131; 
-    scroll-behavior: smooth;    
+    scroll-behavior: smooth;
+    font-size: 16px;    
 }
 
 /*testin*/
@@ -104,8 +105,7 @@ footer {
 /* Styling for Welcome Message */
 .welcometosite {
     color: darkgreen;
-    font-style: italic;
-    font-size: 110%;
+    font-style: italic;    
     font-weight: bold;
 }
 
@@ -858,10 +858,11 @@ ol li::before {
     transform: scale(1.05);
 }
 
-.how-img {
-    width: 400px;
-    height: auto;   
-}
+/* .how-img {
+    width: 300px;
+    height: auto;
+    padding: 10px;   
+} */
 
 .border {
     border: 1px solid black;
@@ -947,9 +948,32 @@ ol li::before {
     .nav-item,.nav-link {
         margin-left: 2px;
         font-size: 16px;
-        letter-spacing: .1em;
+        letter-spacing: none;
+    }
+
+    html {
+        font-size: 14px;
     }
 
     }
 
- 
+    @media (min-width: 320px) and (max-width: 449) { 
+
+        .nav-item,.nav-link {
+            margin-left: 2px;
+            font-size: 15px;
+            letter-spacing: none;
+        }
+
+        #logo {   
+            width: 80px;
+            height: auto;
+            padding: 10px;    
+        }
+
+        html {
+            font-size: 14px;
+        }
+
+
+     }
