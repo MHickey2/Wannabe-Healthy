@@ -16,7 +16,7 @@ html * {
     font-weight: 400; 
     color: #313131; 
     scroll-behavior: smooth;
-    font-size: 16px;    
+    font-size: 1rem;    
 }
 
 /*testin*/
@@ -73,7 +73,7 @@ img {
 /*styling for Navigation items*/
 .nav-item,.nav-link {
     color: #a3d31c !important;
-    font-size: 20px;
+    font-size: 1.125rem;
     letter-spacing: .2em;
     font-family: 'Abril Fatface', cursive;
     margin-left: 4px;   
@@ -125,13 +125,13 @@ footer {
 }
 
 .text {   
-    font-size: 110%;
+    font-size: 1.125rem;
     margin: 3vh;    
 }
 
 /*pic of happy woman in about*/
 .text1 {   
-    font-size: 110%;
+    font-size: 1.125rem; 
     text-align: center;
     line-height: 1.5;  
 }
@@ -467,7 +467,7 @@ textarea {
     margin-top: 20px;   
     color: white;
     line-height: 1.5;
-    font-size: 110%;
+    font-size: 1.125rem;
     text-align: center;
     color: darkgreen;    
 }
@@ -631,7 +631,7 @@ textarea {
 .btnstyle {
     width: 80px;    
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /*Styling for buttons in about page to blog and recipes in information panels*/
@@ -765,7 +765,7 @@ textarea {
 /* Styling for List items in blogs and Recipes */ 
 ul li, ol li {       
     font-weight:400;
-    font-size: 110%;
+    font-size: 1rem;
     /* margin: 5px; */
 }
 
@@ -788,7 +788,7 @@ ol li::before {
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
     color: #313131;
-    font-size: 110%;
+    font-size: 1rem;
     text-align: left;
 }
 
@@ -834,7 +834,7 @@ ol li::before {
 .likecom {
     color:#05420A;
     font-weight:bolder;
-    font-size: 14px;  
+    font-size: 1rem;  
 }
 
 /*Styling for the zoom effect in images*/
@@ -887,7 +887,7 @@ ol li::before {
 /*Styling for the link on bottom of screens to take user to top of page*/
 #top-button {
     color: green;
-    font-size: 16px;
+    font-size: 1.125rem;
 }
 
 .smallbtn {
@@ -909,7 +909,7 @@ ol li::before {
     }
 
     .likecom {        
-        font-size: 12px;  
+        font-size: 0.75rem;  
     }
 
     .recipe-title  {        
@@ -926,7 +926,7 @@ ol li::before {
     }
 
     .likecom {        
-        font-size: 11px;  
+        font-size: 0.8rem;  
     }
 
     .recipe-title  {        
@@ -947,12 +947,12 @@ ol li::before {
      /*styling for Navigation items*/
     .nav-item,.nav-link {
         margin-left: 2px;
-        font-size: 16px;
+        font-size: 1rem;
         letter-spacing: none;
     }
 
     html {
-        font-size: 14px;
+        font-size: 0.9375rem;
     }
 
     }
@@ -961,7 +961,7 @@ ol li::before {
 
         .nav-item,.nav-link {
             margin-left: 2px;
-            font-size: 15px;
+            font-size: 0.9375rem;
             letter-spacing: none;
         }
 
@@ -972,7 +972,7 @@ ol li::before {
         }
 
         html {
-            font-size: 14px;
+            font-size: 0.9375rem;
         }
 
 
