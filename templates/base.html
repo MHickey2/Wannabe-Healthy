@@ -197,17 +197,9 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function() {
-            $("#myeditor").summernote({
-                placeholder: "Write your content here",
-                height: 200,
-            });
+        $(document).ready(function(){
+          $('.summernote').summernote({height: 300});
         });
-      
-        function showContent() {
-            document.getElementById("myContent").innerHTML = 
-            $("#myeditor").summernote("code");
-        }
-        </script>
+        </script>    
 </body>
 </html>

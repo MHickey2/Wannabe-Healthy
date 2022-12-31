@@ -16,11 +16,9 @@
                         <br>
                         <form class="form text-muted" method="POST" action="{% url 'add_recipe' %}"
                             enctype="multipart/form-data">
-
                             {% csrf_token %}
                             {{ form | crispy }}
-                            <br>
-                            <br>
+                            <br>                            
                             <button class="btn btn-primary" type="submit">Add Post</button>
                         </form>
                     </div>

@@ -1,8 +1,8 @@
 from .models import Comment
 from .models import Post
 from django import forms
-# from django.forms import ModelForm
-from django_summernote.widgets import SummernoteWidget
+from django.forms import ModelForm, TextInput
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 
 class CommentForm(forms.ModelForm):
@@ -23,6 +23,10 @@ class PostForm(forms.ModelForm):
 
         def __init__(self, *args, **kwargs):
             super(PostForm, self).__init__(*args, **kwargs)
+            
+            
+            
+            
         # widgets = {
         #     'category': forms.TextInput(attrs={'class': 'form-control'}),
         #     'title': TextInput(attrs={'class': 'form-control'}),

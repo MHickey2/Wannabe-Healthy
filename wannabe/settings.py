@@ -30,7 +30,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = 'DEV' in os.environ
+# DEBUG = 'DEV' in os.environ
 DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
@@ -193,7 +193,7 @@ SUMMERNOTE_CONFIG = {
         # https://summernote.org/deep-dive/#custom-toolbar-popover
         'toolbar': [
             ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear', 'strikethrough', 'superscript', 'subscript']],
+            ['font', ['bold', 'underline', 'clear', 'strikethrough', 'superscript', 'subscript']],  # noqa
             ['fontname', ['fontname']],
             ['fontsize', ['fontsize']],
             ['forecolor', ['forecolor']],

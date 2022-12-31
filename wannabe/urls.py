@@ -22,8 +22,8 @@ from .views import handler404, handler500, handler403, handler405
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("blog.urls"), name="blog-urls"),
     path('summernote/', include('django_summernote.urls')),
+    path("", include("blog.urls"), name="blog-urls"),
     path("accounts/", include("allauth.urls")),
     path("recipes/", include("recipes.urls"), name="recipes-urls"),
     path('profiles/', include('profiles.urls'), name="profiles-urls"),
