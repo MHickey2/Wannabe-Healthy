@@ -9,6 +9,7 @@ from django.views.generic import DeleteView
 from django.contrib import messages
 from django.db.models import Q
 from .models import Post
+from .models import Comment
 from profiles .models import Profile
 from .forms import CommentForm
 from .forms import PostForm

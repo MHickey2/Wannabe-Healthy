@@ -1,7 +1,7 @@
 from .models import Comment
 from .models import Post
 from django import forms
-from django.forms import ModelForm, TextInput
+# from django.forms import ModelForm
 from django_summernote.widgets import SummernoteWidget
 
 
@@ -18,7 +18,7 @@ class PostForm(forms.ModelForm):
                   'content', 'status')
 
         widgets = {
-            'content': SummernoteWidget(),
+              'content': SummernoteWidget(),
         }
 
         def __init__(self, *args, **kwargs):
