@@ -100,9 +100,8 @@ class PostLike(View):
 
 class AddPostView(generic.CreateView):
     model = Post
-    template_name = "blog/add_post.html"
-    fields = ['category', 'title', 'featured_image', 'excerpt',
-              'content', 'status']
+    form_class = PostForm
+    template_name = 'blog/add_post.html'    
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
@@ -122,9 +121,8 @@ def about(request):
 
 class EditPostView(generic.UpdateView):
     model = Post
-    template_name = "blog/edit_post.html"
-    fields = ['category', 'title', 'featured_image', 'excerpt',  'content',
-              'status']
+    form_class = PostForm
+    template_name = 'blog/edit_post.html'
 
     def get_success_url(self):
         """ Allows the Poster to edit their blog and see the changes """

@@ -99,9 +99,8 @@ class RecipeLike(View):
 
 class AddRecipeView(generic.CreateView):
     model = Recipe
-    template_name = "recipes/add_recipe.html"
-    fields = ['category', 'title', 'featured_image', 'description',
-              'difficulty', 'cooking_time', 'ingredients', 'method', 'status']
+    form_class = RecipeForm
+    template_name = 'recipes/add_recipe.html'   
     success_url = reverse_lazy('recipes')
 
     def form_valid(self, form):

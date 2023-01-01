@@ -14,8 +14,8 @@ class CommentForm(forms.ModelForm):
 class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
-        fields = ('category', 'title', 'description', 'slug', 'difficulty',
-                  'method', 'ingredients', 'featured_image', 'likes', 'status')
+        fields = ('category', 'title', 'featured_image', 'description', 'difficulty',  # noqa
+                  'method', 'ingredients', 'status')
 
         widgets = {
             'method': SummernoteWidget(),
@@ -25,13 +25,4 @@ class RecipeForm(forms.ModelForm):
         def __init__(self, *args, **kwargs):
             super(RecipeForm, self).__init__(*args, **kwargs)
 
-        # widgets = {
-        #     'category': forms.TextInput(attrs={'class': 'form-control'}),
-        #     'title': forms.TextInput(attrs={'class': 'form-control'}),
-        #     'description': forms.TextInput(attrs={'class': 'form-control'}),
-        #     'slug': forms.TextInput(attrs={'class': 'form-control'}),
-        #     'difficulty': forms.TextInput(attrs={'class': 'form-control'}),
-        #     'method': forms.TextInput(attrs={'class': 'form-control'}),
-        #     'ingredients': forms.TextInput(attrs={'class': 'form-control'}),
-        #     'status': forms.TextInput(attrs={'class': 'form-control'}),
-        # }
+        
