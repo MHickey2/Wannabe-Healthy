@@ -550,7 +550,7 @@ Sign Out Page
 
 1. I can add a new post or a recipe.
 
-- When logged in, a User can see the button for adding a blog, this is only visible to the logged in user. The User can either publish or draft a blog/recipe, if drafted, the blog will not be visible, until the status has been changed to published.
+- When logged in, a User can see the button for adding a blog, this is only visible to the logged in user. The User can either publish or draft a blog/recipe, if drafted, the blog will not be visible, until the status has been changed to published. Within the Form there is a Text Editor so that the User can format their Posts/Recipes.
 
 2. I can like/unlike a blog or recipe on the site.
 

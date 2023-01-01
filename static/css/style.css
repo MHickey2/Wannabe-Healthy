@@ -243,7 +243,6 @@ footer {
     border-radius: 15px;
 }
 
-/* ? */
 .block {
     margin-bottom: 20px;
 }
@@ -251,6 +250,14 @@ footer {
 /*-------------------------------------*/
 /* Styling for the About Page */
 /*-----------------------------------*/
+
+/*Styling for the top image in the about page*/
+.how-img {
+    width: 300px;
+    height: auto;
+    /* padding: 10px; */
+}
+
 
 /*Styling for about page images for information panels*/
 .aboutpic {
@@ -261,6 +268,10 @@ footer {
     margin-right: auto;
     margin-top: 20px;
 }
+
+/*-------------------------------------*/
+/* Styling for the Post Detail Page */
+/*-----------------------------------*/
 
 /*Styling for Category Title*/
 .post-category {
@@ -347,14 +358,14 @@ a:hover {
 /* Styling for like button*/
 .btn-like,
 .btn-comment {
-    color: rgb(65, 224, 65);
+    color: rgb(10, 121, 10);
     border: none;
     background: transparent;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: rgb(5, 97, 5);
+    color: rgb(16, 94, 16);
     border: none;
 }
 
@@ -362,9 +373,7 @@ a:hover {
     color: white;
 }
 
-.image-container {
-    /* width: 300px;
-    height: 200px; */
+.image-container {    
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -378,8 +387,8 @@ a:hover {
 }
 
 /* Blog and recipe posts */
-#newpost {
-    background-color: #5cd437;
+#newpost {    
+    background-color:  rgba(54, 243, 7, 0.5); 
     border: 1px solid black;
     width: 70vw;
     opacity: .9;
@@ -387,17 +396,18 @@ a:hover {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 15px 15px;
     min-height: 520px;
-    border-radius: 15px;
+    
 }
 
-#newpost1 {
-    background-color: rgb(89, 168, 89);
+#newpost1 {      
+    background-color:   rgba(54, 243, 7, 0.5); 
     border: 1px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 10px;
     width: 60vw;
     opacity: .9;
     margin-bottom: 20px;
-    border-radius: 15px;
+    
 }
 
 /*Styling for input and textareas for forms*/
@@ -408,8 +418,8 @@ textarea {
     display: block;
     width: 100%;
     margin-left: 5px;
-    background-color: lightcyan;
-    border-radius: 15px;
+    background-color: rgb(247, 250, 250);
+    
 }
 
 /*Styling for checkbox in form*/
@@ -863,11 +873,6 @@ ol li::before {
     transform: scale(1.05);
 }
 
-.how-img {
-    width: 300px;
-    height: auto;
-    padding: 10px;
-}
 
 .border {
     border: 1px solid black;

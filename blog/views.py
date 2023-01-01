@@ -101,7 +101,7 @@ class PostLike(View):
 class AddPostView(generic.CreateView):
     model = Post
     form_class = PostForm
-    template_name = 'blog/add_post.html'    
+    template_name = 'blog/add_post.html'
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):

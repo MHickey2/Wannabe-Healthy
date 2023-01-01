@@ -180,6 +180,7 @@ The user is really anyone who wants to achieve a healthier lifestyle. They can n
 1. I can add a new post or a recipe.
 [User Story: The logged in User should be able to add a blog to the Site. #9](https://github.com/MHickey2/Wannabe-Healthy/issues/9)
 [User Story: User will want to add their own Recipes to the site #18](https://github.com/MHickey2/Wannabe-Healthy/issues/18)
+[User can use a Text Editor when adding/editing their Blog/Recipe #23](https://github.com/MHickey2/Wannabe-Healthy/issues/23)
 
 2. I can like/unlike a blog or recipe on the site.
 [User Story: User will want the ability to like posts #6](https://github.com/MHickey2/Wannabe-Healthy/issues/6)
@@ -597,7 +598,7 @@ The website user can use the search facility to find specific categories ie Rela
 
 ###  4. Add Blog     <a name="addblog"></a>
 
-As a logged in User you can add a blog to the site, when you press on the add blog link it will take you to the add blog page, when this form is completed you will be redirected to the home page, where your new blog will be displayed.
+As a logged in User you can add a blog to the site, when you press on the add blog link it will take you to the add blog page, when this form is completed you will be redirected to the home page, where your new blog will be displayed. The form has a summernote editor so they can add styling to their content.
 
 <br>
 
@@ -709,7 +710,7 @@ The website user can use the search facility to find specific categories ie Brea
 
 ###  11. Add Recipe   <a name="addrecipe"></a>
 
-As a logged in User you can add a Recipe to the site, when you press on the add a Recipe button, it will take you to the 'Add Recipe page', when this form is completed the User will be redirected to the Recipes page, where the new Recipe will be displayed.
+As a logged in User you can add a Recipe to the site, when you press on the add a Recipe button, it will take you to the 'Add Recipe page', when this form is completed the User will be redirected to the Recipes page, where the new Recipe will be displayed. The form has a summernote editor for styling the method and ingredients section of the Recipe.
 
 <br>
 
@@ -977,6 +978,17 @@ When testing I found I had an issue with the favicon, and I had not included the
 
 I did have an issue with the add a blog form, during testing I realised I did not have to include the slug field, as it was applying the title as a slug, so removed this field from the form and it's still working.
 
+In last minute testing I realised that the user would have no access for styling their post and blog entries, throughout the project I have been using HTML and CSS to add posts/recipes, but I can't expect Users to need to know this in order to submit content, so looked intro introducing the summernote functionality in the front end, which proved problematic and took a while to sort out. When I finally got the editor showing, the icons were not showing, so I went to a previous commit, and starting process again and it worked. So I have now added this in the add Post and Edit Post in regards to content and in the add Recipe and Edit Recipe in regards to Ingredients and Method. As a result of this working I had to modify the forms so they appeared like the text editor, found that the easier direction than having to style the summernote editor, and am happier with the forms as they are now. The following is an image of the updated Add Post Form:
+
+<br>
+
+ <p align ="center">      
+     <img src="assets/readme/images/addpost.jpg" width="500" alt="Updated Add Post Form" />    
+</p>
+
+<br>
+
+
 <br>
 
  ### Unresolved <a name="unresolved"></a>
@@ -1130,6 +1142,7 @@ We received notifications that there was a change in their free plan and new cha
 
 -  Thank you to my mentor Brian Macharia for your guidance and support.
 -  Thank you Kasia Bogucka for your support and help during my Technical Crisis.
+-  Thank you Tara Helberg for helping me to figure out the inclusion of the Summernote Editor in the forms.
 -  Thank you to everyone in Tutor Support who helped with issues with coding.
 -  Thank you to the Code Institute Support Team, for your assistance and support with my technical issues.
  

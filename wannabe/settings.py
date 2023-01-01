@@ -30,8 +30,8 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEV' in os.environ
-# DEBUG = False
+# DEBUG = 'DEV' in os.environ
+DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -183,7 +183,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-# SUMMERNOTE_THEME = 'bs5'
+SUMMERNOTE_THEME = 'bs5'
 
 SUMMERNOTE_CONFIG = {
     'iframe': True,
@@ -193,17 +193,14 @@ SUMMERNOTE_CONFIG = {
         # https://summernote.org/deep-dive/#custom-toolbar-popover
         'toolbar': [
             ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear', 'strikethrough', 'superscript', 'subscript']],  # noqa
+            ['font', ['bold', 'underline', 'clear']],
             ['fontname', ['fontname']],
             ['fontsize', ['fontsize']],
-            ['forecolor', ['forecolor']],
             ['color', ['color']],
             ['para', ['ul', 'ol', 'paragraph']],
             ['table', ['table']],
-            ['insert', ['link', 'picture', 'video']],
-            ['view', ['fullscreen', 'codeview', 'help']],
         ],
-        'height': '400',
+        'height': '300',
         'width': '100%',
     }
 }
