@@ -23,9 +23,9 @@
                 {% if "placeholder" in recipe.featured_image.url %}
                 <img id="Default" type="image/jpg"
                     src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg"
-                    alt="{{ recipe.title }} generic" class="centeralign img-fluid" alt="recipe image">
+                    alt="{{ recipe.title }} generic" id="centerimage1" alt="recipe image">
                 {% else %}
-                <img src=" {{ recipe.featured_image.url }}" class="centeralign img-fluid"
+                <img src=" {{ recipe.featured_image.url }}" id="centerimage1" 
                     alt="{{ recipe.title }} image">
                 {% endif %}
             </div>
@@ -173,7 +173,7 @@
 </div>
 <br>
 <a id="top-button" href="#top" aria-label="Going to top of page">Top of Screen &nbsp; <iconify-icon inline
-        icon="mdi:arrow-up" width="16"></iconify-icon>
+        icon="mdi:arrow-up" class="greenicon" width="18"></iconify-icon>
 </a>
 
 {% endblock content %}

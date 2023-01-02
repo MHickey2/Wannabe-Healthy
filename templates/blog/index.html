@@ -104,18 +104,25 @@
                                 <a href="{% url 'delete_post' post.slug %}" class="btn btn-danger btnstyle">Delete</a>
                             </div>
                             <br>
+                            
                             {% endif %}
-                            {% endif %}
-                        </div>
-                    </div>
-                    {% if forloop.counter|divisibleby:3 %}
-                    {% endif %}
+                            {% endif %}                            
+                        </div>                        
+                    </div>                    
+                    {% if forloop.counter|divisibleby:3 %}                    
+                    {% endif %}                    
                 </div>
-                {% empty %}
-                <h3 class="nosearchresults col-md-3">oops, there are no results, try again or return to main page</h3>                               
-                <a href="{% url 'home' %}" aria-label="Going back to home page" class="btn btn-success center">BACK</a>
-                                               
-                {% endfor %}
+                
+                {% empty %}                
+                <h3 class="nosearchresults col-md-3">oops, there are no results, try again or return to main page</h3>
+                <br>
+                <div class="center">                                             
+                <a href="{% url 'home' %}" aria-label="Going back to home page" class="btn btn-primary" id="center">BACK</a>
+                <br>
+                <br>
+                </div>                                                          
+                {% endfor %}                
+                <br>
             </div>
         </div>        
     </div>   
@@ -136,7 +143,7 @@
 </div>
 
 <a id="top-button" href="#top" aria-label="Going to top of page">Top of Screen &nbsp; <iconify-icon inline
-        icon="mdi:arrow-up" width="16"></iconify-icon>
+        icon="mdi:arrow-up" class="greenicon" width="18"></iconify-icon>
 </a>
 
 {%endblock%}
