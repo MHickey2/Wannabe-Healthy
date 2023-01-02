@@ -10,7 +10,7 @@ class RecipeAdmin(SummernoteModelAdmin):
     search_fields = ['title', 'method']
     list_filter = ('status', 'created_on')
     prepopulated_fields = {'slug': ('title',)}
-    summernote_fields = ('method',)
+    summernote_fields = ('method', 'ingredients')
 
 
 @admin.register(Comment)

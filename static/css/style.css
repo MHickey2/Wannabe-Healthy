@@ -79,7 +79,7 @@ h1 {
 .nav-item,
 .nav-link {
     color: #a3d31c !important;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     letter-spacing: .2em;
     font-family: 'Abril Fatface', cursive;
     margin-left: 4px;
@@ -131,8 +131,9 @@ footer {
 }
 
 .text {
-    font-size: 1rem;
+    font-size: 1.125rem;
     margin: 3vh;
+    color: darkgreen;
 }
 
 /*pic of happy woman in about*/
@@ -233,6 +234,7 @@ footer {
     min-height: 120px;
     text-align: center;
     padding: 10px;
+    font-size: 1rem;
 }
 
 /*Styling for blog look*/
@@ -531,7 +533,7 @@ textarea {
 }
 
 .card-text {
-    color: black;
+    color: #313131;
 }
 
 /*Styling for how the recipes are formatted in collection*/
@@ -576,11 +578,6 @@ textarea {
     margin-bottom: 5px;
 }
 
-/*Styling for font color in button*/
-.btn btn-danger,
-.btn-warning {
-    color: black;
-}
 
 /*-------------------------------------*/
 /* Styling for the Recipe Detail Page */
@@ -687,11 +684,10 @@ textarea {
     background-color: lightblue !important;
 }
 
-.btn-success,
-.btn-danger {
+.btn-success {
     padding: 10px;
     color: white !important;
-    background-color: rgb(9, 68, 4) !important;
+    /* background-color: rgb(9, 68, 4) !important; */    
 }
 
 .col-md-6 {
@@ -846,6 +842,7 @@ ol li::before {
 
 .btn-danger {
     font-weight: bold;
+    color: white !important;
 }
 
 /*Styling for the heart and comment sections*/
@@ -880,6 +877,10 @@ ol li::before {
     border: 1px solid black;
 }
 
+.text-secondary {
+    color: green;
+}
+
 /*Styling for the results if there are no search results*/
 .nosearchresults {
     margin-top: 5px;
@@ -895,6 +896,16 @@ ol li::before {
 
 .btn-warning {
     align-items: center;
+}
+
+.redwriting {
+    color: red;
+}
+
+.wbackground {
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;    
 }
 
 /*Styling for the link on bottom of screens to take user to top of page*/
@@ -934,7 +945,7 @@ ol li::before {
     .textual {
         height: 155px;
         text-align: center;
-        padding: 5px;
+        padding: 5px;        
     }
 
     .likecom {
@@ -963,9 +974,9 @@ ol li::before {
         font-size: 1.125rem;
     }
 
-    html {
+    /* html {
         font-size: 0.9375rem;
-    }
+    } */
 }
 
 @media (min-width: 320px) and (max-width: 449px) {
@@ -982,7 +993,7 @@ ol li::before {
         padding: 10px;
     }
 
-    html {
+    /* html {
         font-size: 0.9375rem;
-    }
+    } */
 }

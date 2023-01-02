@@ -38,7 +38,7 @@
 
 <a href="{% url 'edit_post' post.slug  %}" class="btn btn-success btnstyle">Edit</a>
 
-<a href="{% url 'delete_post' post.slug  %}"class="btn btn-success btnstyle">Delete</a>
+<a href="{% url 'delete_post' post.slug  %}"class="btn btn-danger btnstyle">Delete</a>
 <br>
 {% endif %}
 {% endif %}
@@ -60,7 +60,7 @@
                         {% endif %}
                     </form>
                     {% else %}                
-                    <span class="text-secondary"><iconify-icon inline icon="ant-design:heart-outlined" width="20"></iconify-icon></span>
+                    <span class="text-secondary"><iconify-icon inline icon="ant-design:heart-outlined" class="btn-like" width="20"></iconify-icon></span>
                         {% endif %}
                         <strong>
                         <span class="text-secondary">{{ post.number_of_likes }} </span>
@@ -68,7 +68,7 @@
                 </div>
             <div class="col-2">
                 {% with comments.count as total_comments %}
-                <span class="text-secondary">&nbsp;<iconify-icon inline icon="fa-regular:comments" width="20"></iconify-icon></span>                    
+                <span class="text-secondary"><iconify-icon inline icon="fa-regular:comments"  width="20"></iconify-icon></span>                    
                     <strong>
                         <span class="text-secondary">{{ total_comments }}</span>
                     </strong>    
@@ -115,11 +115,10 @@
     <div class="col-md-8 card mb-4  mt-3">
         <h3 class="green">Comments:</h3>
         <div class="commentsection">
-            <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+            <!-- loop inside the empty control tags to iterate through each comment in comments -->
             {% for comment in comments %}
             <div class="comments" style="padding: 10px;">
-                <p class="font-weight-bold">
-                    <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+                <p class="font-weight-bold">                  
                     {{ comment.name }}
                     <span class="font-weight-bold" style="color: rgb(7, 124, 7); font-weight: 600;">
                         <!-- The comment's created date goes here -->
@@ -129,7 +128,7 @@
                 <!-- The body of the comment goes before the | -->
                 {{ comment.body | linebreaks }}
             </div>
-            <!-- Our for loop ends here -->
+            <!-- for loop ends here -->
             {% endfor %}
         </div>
     </div>

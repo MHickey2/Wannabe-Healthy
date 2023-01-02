@@ -75,7 +75,7 @@
                                 <br>
                                 <hr>
                                 <p class="card-text likecom">{{ recipe.created_on}} <iconify-icon
-                                    icon="ant-design:heart-outlined" width="20" class="btn-like"></iconify-icon>
+                                    icon="ant-design:heart-outlined" class="btn-like" width="20" ></iconify-icon>
                                 {{ recipe.number_of_likes }} &nbsp; <iconify-icon inline icon="fa-regular:comments"
                                     width="20" class="btn-comment"></iconify-icon>&nbsp; {{ recipe.number_of_comments }}</p>                               
                                 
@@ -99,7 +99,7 @@
                 <h3 class="nosearchresults col-md-3">oops, there are no results, try again or return to main page</h3>              
                 <br>
                 <div class="center">                                             
-                <a href="{% url 'recipes' %}" aria-label="Going back to Recipes page" class="btn btn-primary" id="center">BACK</a>
+                <a href="{% url 'recipes' %}" aria-label="Going back to Recipes page" class="btn btn-primary btn-sm" id="center">BACK</a>
                 <br>
                 <br>
                 {% endfor %}                  
