@@ -48,10 +48,10 @@ Wannabe Healthy is my 4th Project for the Code Institute and it is a Full Stack 
     - [1. Home Page   ](#1-home-page---)
     - [2. Blog Section      ](#2-blog-section------)
     - [3. Blog Search   ](#3-blog-search---)
-    - [4. Add Blog     ](#4-add-blog-----)
-    - [5. Edit Blog     ](#5-edit-blog-----)
-    - [6. Delete Blog     ](#6-delete-blog-----)
-    - [7. Blog Detail Page      ](#7-blog-detail-page------)
+    - [4. Add Post     ](#4-add-post-----)
+    - [5. Edit Post     ](#5-edit-post-----)
+    - [6. Delete Post     ](#6-delete-post-----)
+    - [7. Post Detail Page      ](#7-post-detail-page------)
     - [8. About Page    ](#8-about-page----)
     - [9. Recipes Page   ](#9-recipes-page---)
     - [10. Recipes Search   ](#10-recipes-search---)
@@ -358,7 +358,9 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 
 
 <details>
+
   <summary>1. Home Page Wireframes</summary>
+  <br/>
   <p align="center">
      <img src="assets/readme/wireframes/Home Page Wireframes.png"  alt="Home Page Wireframe" />    
 </p>
@@ -389,7 +391,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 </details>
 
 <details>
-  <summary>4. Post Detail Page</summary>
+  <summary>5. Post Detail Page</summary>
   <br/>
 <p align="center">
   <img src="assets/readme/wireframes/Post Detail Wireframes.png" alt="Post Detail Page Wireframe" />
@@ -397,7 +399,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 </details>
 
 <details>
-  <summary>4. About Page</summary>
+  <summary>6. About Page</summary>
   <br/>
 <p align="center">
   <img src="assets/readme/wireframes/About Page Wireframes.png" alt="About Page Wireframe" />
@@ -405,7 +407,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 </details>
 
 <details>
-  <summary>4. Recipes Page</summary>
+  <summary>7. Recipes Page</summary>
   <br/>
 <p align="center">
   <img src="assets/readme/wireframes/Recipes Page Wireframes.png" alt="Recipes Page Wireframe" />
@@ -413,7 +415,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 </details>
 
 <details>
-  <summary>4. Add Recipe Page</summary>
+  <summary>8. Add Recipe Page</summary>
   <br/>
 <p align="center">
   <img src="assets/readme/wireframes/Add Recipe Page Wireframes.png" alt="Add Recipe Page Wireframe" />
@@ -421,7 +423,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 </details>
 
 <details>
-  <summary>4. Edit Recipe Page</summary>
+  <summary>9. Edit Recipe Page</summary>
   <br/>
 <p align="center">
   <img src="assets/readme/wireframes/Edit Recipe Page Wireframes.png" alt="Edit Recipe Page Wireframe" />
@@ -429,7 +431,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 </details>
 
 <details>
-  <summary>4. Delete Recipe Page</summary>
+  <summary>10. Delete Recipe Page</summary>
   <br/>
 <p align="center">
   <img src="assets/readme/wireframes/Delete Recipe Page Wireframes.png" alt="Delete Recipe Page Wireframe" />
@@ -437,7 +439,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 </details>
 
 <details>
-  <summary>4. Recipe Detail Page</summary>
+  <summary>11. Recipe Detail Page</summary>
   <br/>
 <p align="center">
   <img src="assets/readme/wireframes/Recipe Detail Page Wireframes.png" alt="Recipe Detail Page Wireframe" />
@@ -445,7 +447,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 </details>
 
 <details>
-  <summary>4. Profile Page</summary>
+  <summary>12. Profile Page</summary>
   <br/>
 <p align="center">
   <img src="assets/readme/wireframes/Profile Page Wireframes.png" alt="Profile Page Wireframe" />
@@ -453,7 +455,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 </details>
 
 <details>
-  <summary>4. Edit Profile Page</summary>
+  <summary>13. Edit Profile Page</summary>
   <br/>
 <p align="center">
   <img src="assets/readme/wireframes/Edit Profile Page Wireframes.png" alt="Edit Profile Page Wireframe" />
@@ -461,7 +463,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 </details>
 
 <details>
-  <summary>4. Registration Page</summary>
+  <summary>14. Registration Page</summary>
 
   <br/>
 <p align="center">
@@ -470,7 +472,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 </details>
 
 <details>
-  <summary>4. Login Page</summary>
+  <summary>15. Login Page</summary>
 
   <br/>
 <p align="center">
@@ -479,7 +481,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 </details>
 
 <details>
-  <summary>4. Logout Page</summary>
+  <summary>16. Logout Page</summary>
   <br/>
 <p align="center">
   <img src="assets/readme/wireframes/Logout Page Wireframes.png" alt="Logout Page Wireframe" />
@@ -611,7 +613,7 @@ The website user can use the search facility to find specific categories ie Rela
 
 <br/> 
 
-###  4. Add Blog     <a name="addblog"></a>
+###  4. Add Post     <a name="addpost"></a>
 
 As a logged in User you can add a blog to the site, when you press on the add blog link it will take you to the add blog page, when this form is completed you will be redirected to the home page, where your new blog will be displayed. The form has a summernote editor so the user can add styling to their content.
 
@@ -629,7 +631,7 @@ As a logged in User you can add a blog to the site, when you press on the add bl
 
 <br/> 
 
-### 5. Edit Blog     <a name="editblog"></a>
+### 5. Edit Post     <a name="editpost"></a>
 
 As a logged in User you will be able to see the edit button below your submitted blogs, when you use the edit button you will be redirected to the edit blog page, where you can update your blog, when the form is completed the user will be redirected to the home page. The edit button will only be visible on posts that the logged in User has submitted.
 
@@ -648,7 +650,7 @@ As a logged in User you will be able to see the edit button below your submitted
 <br/> 
 
 
-###  6. Delete Blog     <a name="deleteblog"></a>
+###  6. Delete Post     <a name="deletepost"></a>
 
 As a logged in User you will be able to see the delete button below your submitted blogs, when you use the delete button you will be redirected to the delete blog page, where you can delete your blog, when the form is completed you will be redirected to the home page and your blog will be deleted. The delete button will only be visible on blogs that the logged in User has submitted.
 
@@ -661,7 +663,7 @@ As a logged in User you will be able to see the delete button below your submitt
 
 <br/>
 
-### 7. Blog Detail Page      <a name="blogdetailpage"></a>
+### 7. Post Detail Page      <a name="postdetailpage"></a>
 
 When you select a blog, you will be redirected to the post detail page, this page will show the full content for that specific blog. If you are a logged in user you can use the comment form to add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can see comments that have already been submitted for the Blog. You can also like/unlike the post. You will also be able to see the Profile Picture and Bio for the Author of the Post. If you are viewing a post that you submitted you will be able to see an edit and delete button below your post and you can use these buttons to edit or delete your post. (They will take you to the edit and delete form)
 
@@ -705,7 +707,8 @@ On the Recipes page there is a collection of Recipes ordered with the most recen
 </p>
 
 <br/> 
-###  10. Recipes Search   <a name="recipessearch"></a>
+
+### 10. Recipes Search   <a name="recipessearch"></a>
 
 The website user can use the search facility to find specific categories ie Breakfast, Lunch, Dinner, Dessert and Soup/Salad. You can also search according to a specific word in the title. If there are results, they will be displayed to the user and if not the user will be given the message that there are no results, they can either search again or they can return to the main recipes page.
 
