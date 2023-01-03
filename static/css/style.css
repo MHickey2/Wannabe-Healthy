@@ -854,11 +854,12 @@ ol li::before {
 
 /*Styling for the zoom effect in images*/
 .inner {
-    overflow: hidden;
+    overflow: hidden;    
 }
 
 .inner img {
     transition: all .3s ease;
+    backface-visibility: hidden; 
 }
 
 .inner:hover img {
@@ -867,10 +868,12 @@ ol li::before {
 
 .card-body1:hover {
     transform: scale(1.05);
+     
 }
 
 .card-body:hover {
     transform: scale(1.05);
+    
 }
 
 .border {

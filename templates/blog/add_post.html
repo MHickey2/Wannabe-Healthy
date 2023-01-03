@@ -4,6 +4,8 @@
 
 {% load crispy_forms_tags %}
 
+{% if user.is_authenticated %}
+
 <h1 class="green"><iconify-icon icon="material-symbols:add-circle-outline" class="greenicon"></iconify-icon>&nbsp;Add a Post:</h1>
 <p class="green">Ensure to complete all fields</p>          
 
@@ -26,9 +28,17 @@
         </div>
     </div>
 </div>
+
+{% else %}
+<br>
+       <h4 class="green">Sorry, you are not allowed to add a Post</h4>
+    {% endif %}   
+
 <div class="center">
     <a href="{% url 'home' %}" class="btn btn-primary">BACK</a>
 </div>
 <br>
+
+
 
 {%endblock%}

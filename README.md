@@ -1132,6 +1132,7 @@ We received notifications that there was a change in their free plan and new cha
 - [Slack](https://slack.com/intl/en-ie/) 
 - [Stack OverFlow](https://stackoverflow.com)
 - [YouTube](https://www.youtube.com/)
+- [Card Zoom Hover Effect video on YouTube](https://www.youtube.com/watch?v=KAHjf1Xj0SU)
 - [W3Schools.com](https://www.w3schools.com/)
 
 <br>
