@@ -87,6 +87,16 @@ h1 {
     text-transform: capitalize;
 }
 
+.dropdown-item {
+    color: #a3d31c !important;
+    font-size: 1.125rem;
+    letter-spacing: .2em;
+    font-family: 'Abril Fatface', cursive;
+    background-color: black !important;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
 /*Styling for Footer on all pages*/
 footer {
     position: relative;
@@ -224,7 +234,7 @@ footer {
 }
 
 /*Styling for excerpt in blog*/
-.card-text1 {    
+.card-text1 {
     line-height: 1.5;
     margin: 5px;
 }
@@ -256,7 +266,7 @@ footer {
 /*Styling for the top image in the about page*/
 .how-img {
     width: 300px;
-    height: auto;   
+    height: auto;
 }
 
 
@@ -374,7 +384,7 @@ a:hover {
     color: white;
 }
 
-.image-container {    
+.image-container {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -388,36 +398,36 @@ a:hover {
 }
 
 /* Blog and recipe posts */
-#newpost {    
-    background-color:  rgba(54, 243, 7, 0.5); 
+#newpost {
+    background-color: rgba(54, 243, 7, 0.5);
     border: 1px solid black;
     width: 70vw;
     opacity: .9;
     margin-bottom: 20px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 15px 15px;
-    min-height: 520px;    
+    min-height: 520px;
 }
 
-#newpost1 {      
-    background-color:   rgba(54, 243, 7, 0.5); 
+#newpost1 {
+    background-color: rgba(54, 243, 7, 0.5);
     border: 1px solid black;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 10px;
     width: 60vw;
     opacity: .9;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
 }
 
 /*Styling for input and textareas for forms*/
 #newpost input,
 textarea {
-    width: 40vw;   
+    width: 40vw;
     padding: 15px 15px;
     display: block;
     width: 100%;
     margin-left: 5px;
-    background-color: rgb(247, 250, 250);    
+    background-color: rgb(247, 250, 250);
 }
 
 /*Styling for checkbox in form*/
@@ -588,8 +598,8 @@ textarea {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 350px;
-    height: 250px;
+    width: 300px;
+    height: 200px;
 }
 
 /*Styling for recipe details headings*/
@@ -687,7 +697,7 @@ textarea {
 .btn-success {
     padding: 10px;
     color: white !important;
-    /* background-color: rgb(9, 68, 4) !important; */    
+    /* background-color: rgb(9, 68, 4) !important; */
 }
 
 .col-md-6 {
@@ -711,13 +721,13 @@ textarea {
 
 /* Styling for logout page */
 #logout {
-    background-color:  rgba(54, 243, 7, 0.5);
+    background-color: rgba(54, 243, 7, 0.5);
     border: 1px solid black;
     width: 50vw;
     opacity: .9;
     margin-bottom: 20px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    padding: 10px;    
+    padding: 10px;
     margin-top: 20px;
 }
 
@@ -781,7 +791,7 @@ textarea {
 ul li,
 ol li {
     font-weight: 400;
-    font-size: 1rem;    
+    font-size: 1rem;
 }
 
 ol {
@@ -830,7 +840,7 @@ ol li::before {
 .card-body3 {
     min-height: 300px;
     line-height: 1.5;
-    padding: 5px;    
+    padding: 5px;
 }
 
 .card-body4 {
@@ -854,12 +864,12 @@ ol li::before {
 
 /*Styling for the zoom effect in images*/
 .inner {
-    overflow: hidden;    
+    overflow: hidden;
 }
 
 .inner img {
     transition: all .3s ease;
-    backface-visibility: hidden; 
+    backface-visibility: hidden;
 }
 
 .inner:hover img {
@@ -868,12 +878,12 @@ ol li::before {
 
 .card-body1:hover {
     transform: scale(1.05);
-     
+
 }
 
 .card-body:hover {
     transform: scale(1.05);
-    
+
 }
 
 .border {
@@ -908,7 +918,7 @@ ol li::before {
 .wbackground {
     background-color: white;
     border: 1px solid black;
-    padding: 10px;    
+    padding: 10px;
 }
 
 /*Styling for the link on bottom of screens to take user to top of page*/
@@ -948,11 +958,11 @@ ol li::before {
     .textual {
         height: 155px;
         text-align: center;
-        padding: 5px;        
+        padding: 5px;
     }
 
     .likecom {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .recipe-title {
@@ -977,9 +987,6 @@ ol li::before {
         font-size: 1.125rem;
     }
 
-    /* html {
-        font-size: 0.9375rem;
-    } */
 }
 
 @media (min-width: 320px) and (max-width: 449px) {
@@ -990,13 +997,17 @@ ol li::before {
         font-size: 1.125rem;
     }
 
+    .likecom {
+        font-size: 0.8rem;
+    }
+
     #logo {
         width: 80px;
         height: auto;
         padding: 10px;
     }
 
-    /* html {
+    html {
         font-size: 0.9375rem;
-    } */
+    }
 }

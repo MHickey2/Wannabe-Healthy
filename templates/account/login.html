@@ -8,14 +8,13 @@
 
 {% block content %}
 
-<h3 class="green"><iconify-icon inline icon="ic:round-login" class="green"></iconify-icon>&nbsp;{% trans "Sign In" %}</h3>
-
-<h6 class="green">{% blocktrans %}Welcome back to Wannabe Healthy. To leave a comment or like a post, please log in.
-  <br>If you
-  have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
-  first.{% endblocktrans %}</h6>
+<h3 class="green">
+  <iconify-icon inline icon="ic:round-login" class="greenicon"></iconify-icon>&nbsp;{% trans "Login" %}
+</h3>
+<h4 class="green">{% blocktrans %}Welcome back to Wannabe Healthy.</h4> 
+  <p class="green">If you have not created an account yet, then <a href="{{ signup_url }}">Sign up</a>
+  first.{% endblocktrans %}</p>
 <br>
-
 <div class="container-fluid" id="newpost">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2 form-box">

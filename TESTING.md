@@ -306,6 +306,7 @@ Add A Post Form Page
 | Image Upload        | Uploads Image               | Click On  |   ✔   |
 | Status Field        | Shows Options               | Click On  |   ✔   |
 | Add Post Button     | Adds Post                   | Click On  |   ✔   |
+| Summernote Editor   | Toolbar Works               | Click On  |   ✔   |
 | Back Button         | Go to Home Page             | Click On  |   ✔   | 
 
 <br>
@@ -318,6 +319,7 @@ Edit A Post Form Page
 | Input Fields        | Accepts input               | Input     |   ✔   |
 | Image Upload        | Uploads Image               | Click On  |   ✔   |
 | Status Field        | Shows Options               | Click On  |   ✔   |
+| Summernote Editor   | Toolbar Works               | Click On  |   ✔   |
 | Edit Post Button    | Adds Post                   | Click On  |   ✔   |
 | Back Button         | Go to Home Page             | Click On  |   ✔   | 
 
@@ -396,6 +398,7 @@ Add A Recipe Form Page
 | Image Upload        | Uploads Image               | Click On  |   ✔   |
 | Difficulty Level    | Shows Options               | Click On  |   ✔   |
 | Status Field        | Shows Options               | Click On  |   ✔   |
+| Summernote Editor(2)| Toolbar Works               | Click On  |   ✔   |
 | Add Recipe Button   | Adds Recipe                 | Click On  |   ✔   |
 | Back Button         | Go to Recipes Page          | Click On  |   ✔   | 
 
@@ -409,6 +412,7 @@ Edit A Recipe Form Page
 | Input Fields        | Accepts input               | Input     |   ✔   |
 | Image Upload        | Uploads Image               | Click On  |   ✔   |
 | Difficulty Level    | Shows Options               | Click On  |   ✔   |
+| Summernote Editor(2)| Toolbar Works               | Click On  |   ✔   |
 | Status Field        | Shows Options               | Click On  |   ✔   |
 | Edit Recipe Button  | Adds Recipe                 | Click On  |   ✔   |
 | Back Button         | Go to Recipes Page          | Click On  |   ✔   | 

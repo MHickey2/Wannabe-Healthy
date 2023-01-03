@@ -5,164 +5,168 @@
 
 <div id="top"></div>
 
-<!-- <main class="flex-shrink-0 main-bg"> -->
-<h3 class="green"><iconify-icon inline icon="dashicons:welcome-write-blog" class="greenicon"></iconify-icon>Category: {{ post.category }}</h3>
+<h3 class="green">
+    <iconify-icon inline icon="dashicons:welcome-write-blog" class="greenicon"></iconify-icon>Category:
+    {{ post.category }}
+</h3>
 <div>
     <!-- Post title goes in these h1 tags -->
     <h1 class="post-title">{{ post.title }}</h1>
     <!-- Post author goes before the | the post's created date goes after -->
     <h6 class="post-subtitle1 text-muted">{{ post.author }} | {{ post.created_on }}</h6>
     <br>
-        <!-- The featured image URL goes in the src attribute -->
-        {% if "placeholder" in post.featured_image.url %}
-        <img type="image/jpg" src="https://res.cloudinary.com/dspwticaf/image/upload/v1664552676/po7sj5nr75pw0p9maekl.jpg"
-             alt="{{ post.title }} generic" id="centerimage" >
-        
-        {% else %}
-        <img src=" {{ post.featured_image.url }}" id="centerimage"  alt="{{ post.title }} photo">
-        {% endif %}    
+    <!-- The featured image URL goes in the src attribute -->
+    {% if "placeholder" in post.featured_image.url %}
+    <img src="https://res.cloudinary.com/dspwticaf/image/upload/v1664552676/po7sj5nr75pw0p9maekl.jpg"
+        alt="{{ post.title }} generic" id="centerimage">
+
+    {% else %}
+    <img src=" {{ post.featured_image.url }}" id="centerimage" alt="{{ post.title }} photo">
+    {% endif %}
 </div>
 <br>
 <div class="container-fluid">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body3">                
+            <div class="card-body3">
                 <div class="content">{{ post.content | safe }}</div>
             </div>
         </div>
 
-{% if user.is_authenticated %}
-{% if user.id == post.author.id %}
+        {% if user.is_authenticated %}
+        {% if user.id == post.author.id %}
 
-<div class="buttongroup1">
+        <div class="buttongroup1">
+            <a href="{% url 'edit_post' post.slug  %}" class="btn btn-success btnstyle">Edit</a>
+            <a href="{% url 'delete_post' post.slug  %}" class="btn btn-danger btnstyle">Delete</a>
+            <br>
+            {% endif %}
+            {% endif %}
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-2">
 
-<a href="{% url 'edit_post' post.slug  %}" class="btn btn-success btnstyle">Edit</a>
-
-<a href="{% url 'delete_post' post.slug  %}"class="btn btn-danger btnstyle">Delete</a>
-<br>
-{% endif %}
-{% endif %}
-
-</div>
-<hr>
-            <div class="row">
-                <div class="col-2">
-                    
-                    {% if user.is_authenticated %}            
-                    <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                        {% csrf_token %}
-                        {% if liked %}
-                        <button type="submit" name="blogpost_id" aria-label="blogpost_id" value="{{post.slug}}" class="btn-like">
-                            <iconify-icon icon="ant-design:heart-outlined" width="20" ></iconify-icon></button>
-                        {% else %}
-                        <button type="submit" name="blogpost_id" aria-label="blogpost_id" value="{{post.slug}}" class="btn-like">
-                            <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon></button>
-                        {% endif %}
-                    </form>
-                    {% else %}                
-                    <span class="text-secondary"><iconify-icon inline icon="ant-design:heart-outlined" class="btn-like" width="20"></iconify-icon></span>
-                        {% endif %}
-                        <strong>
-                        <span class="text-secondary">{{ post.number_of_likes }} </span>
-                        </strong>                   
-                </div>
+                {% if user.is_authenticated %}
+                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                    {% csrf_token %}
+                    {% if liked %}
+                    <button type="submit" name="blogpost_id" aria-label="blogpost_id" value="{{post.slug}}"
+                        class="btn-like">
+                        <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon>
+                    </button>
+                    {% else %}
+                    <button type="submit" name="blogpost_id" aria-label="blogpost_id" value="{{post.slug}}"
+                        class="btn-like">
+                        <iconify-icon icon="ant-design:heart-outlined" width="20"></iconify-icon>
+                    </button>
+                    {% endif %}
+                </form>
+                {% else %}
+                <span class="text-secondary">
+                    <iconify-icon inline icon="ant-design:heart-outlined" class="btn-like" width="20"></iconify-icon>
+                </span>
+                {% endif %}
+                <strong>
+                    <span class="text-secondary">{{ post.number_of_likes }} </span>
+                </strong>
+            </div>
             <div class="col-2">
                 {% with comments.count as total_comments %}
-                <span class="text-secondary"><iconify-icon inline icon="fa-regular:comments"  width="20"></iconify-icon></span>                    
-                    <strong>
-                        <span class="text-secondary">{{ total_comments }}</span>
-                    </strong>    
-                     {% endwith %}                    
+                <span class="text-secondary">
+                    <iconify-icon inline icon="fa-regular:comments" width="20"></iconify-icon>
+                </span>
+                <strong>
+                    <span class="text-secondary">{{ total_comments }}</span>
+                </strong>
+                {% endwith %}
             </div>
         </div>
     </div>
 
-<hr>
-<!--Testing for profile and bio of poster-->
-<section class="profilesection">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-2 d-flex justify-content-center">
-                {% if "placeholder" in profile.profile_pic.url %}
-                <div class="poster"> <img class="rounded-circle account-img img-radius" id="profile-img1"
-                        src="https://res.cloudinary.com/dspwticaf/image/upload/v1667936304/generic-profile_optkrd.jpg"
-                        alt="default image">
+    <hr>
+    <!--Profile section for the author of the Post-->
+    <section class="profilesection">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 d-flex justify-content-center">
+                    {% if "placeholder" in profile.profile_pic.url %}
+                    <div class="poster"> <img class="rounded-circle account-img img-radius" id="profile-img1"
+                            src="https://res.cloudinary.com/dspwticaf/image/upload/v1667936304/generic-profile_optkrd.jpg"
+                            alt="default image">
+                    </div>
+                    {% else %}
+                    <div class="poster"> <img class="rounded-circle account-img img-radius" id="profile-img1"
+                            src="{{ profile.profile_pic.url }}" alt="user image">
+                    </div>
+                    {% endif %}
                 </div>
-                {% else %}
-                <div class="poster"> <img class="rounded-circle account-img img-radius" id="profile-img1"
-                        src="{{ profile.profile_pic.url }}" alt="user image">
-                </div>
-                {% endif %}
-            </div>
-            <div class="col-md-4 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
-                <div>
-                    <div class="form-group">
-                        <h4 class="profile-title"> {{ profile.user }} </h4>
-                        <label class="labelling">Bio:</label> {{ profile.bio }}
+                <div class="col-md-4 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
+                    <div>
+                        <div class="form-group">
+                            <h4 class="profile-title"> {{ profile.user }} </h4>
+                            <label class="labelling">Bio:</label> {{ profile.bio }}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<div class="row">
-    <div class="col">
-        <hr>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-8 card mb-4  mt-3">
-        <h3 class="green">Comments:</h3>
-        <div class="commentsection">
-            <!-- loop inside the empty control tags to iterate through each comment in comments -->
-            {% for comment in comments %}
-            <div class="comments" style="padding: 10px;">
-                <p class="font-weight-bold">                  
-                    {{ comment.name }}
-                    <span class="font-weight-bold" style="color: rgb(7, 124, 7); font-weight: 600;">
-                        <!-- The comment's created date goes here -->
-                        {{ comment.created_on }}
-                    </span> wrote:
-                </p>
-                <!-- The body of the comment goes before the | -->
-                {{ comment.body | linebreaks }}
-            </div>
-            <!-- for loop ends here -->
-            {% endfor %}
+    </section>
+    <div class="row">
+        <div class="col">
+            <hr>
         </div>
     </div>
-    <div class="col-md-4 card mb-4  mt-3 ">
-        <div class="card-body4">
-            {% if commented %}
-            <div class="alert alert-success" role="alert">
-                Your comment is awaiting approval
+    <div class="row">
+        <div class="col-md-8 card mb-4  mt-3">
+            <h3 class="green">Comments:</h3>
+            <div class="commentsection">
+                <!-- loop inside the empty control tags to iterate through each comment in comments -->
+                {% for comment in comments %}
+                <div class="comments" style="padding: 10px;">
+                    <p class="font-weight-bold">
+                        {{ comment.name }}
+                        <span class="font-weight-bold" style="color: rgb(7, 124, 7); font-weight: 600;">
+                            <!-- The comment's created date goes here -->
+                            {{ comment.created_on }}
+                        </span> wrote:
+                    </p>
+                    <!-- The body of the comment goes before the | -->
+                    {{ comment.body | linebreaks }}
+                </div>
+                <!-- for loop ends here -->
+                {% endfor %}
             </div>
-            {% else %}
-            {% if user.is_authenticated %}
+        </div>
+        <div class="col-md-4 card mb-4  mt-3 ">
+            <div class="card-body4">
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    Your comment is awaiting approval
+                </div>
+                {% else %}
+                {% if user.is_authenticated %}
 
-            <h3>Leave a comment:</h3>
-            <p>Posting as: {{ user.username }}</p>
-            <form method="post" style="margin-top: 1.3em;">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <br>
-                <button type="submit" class="btn btn-success">Submit</button>
-            </form>
-            {% endif %}
-            {% endif %}
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <br>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+                {% endif %}
+                {% endif %}
+            </div>
         </div>
     </div>
-</div>
+    <br>
+    <div class="center">
+        <a href="{% url 'home' %}" class="btn btn-primary center">BACK</a>
+    </div>
+    <br>
+    <a id="top-button" href="#top" aria-label="Going to top of page">Top of Screen &nbsp; <iconify-icon inline
+            icon="mdi:arrow-up" class="greenicon" width="18"></iconify-icon>
+    </a>
 
-
-
-<br>
-<div class="center">
-    <a href="{% url 'home' %}" class="btn btn-primary center">BACK</a>
-</div>
-<br>
-<a id="top-button" href="#top" aria-label="Going to top of page" >Top of Screen &nbsp; <iconify-icon inline icon="mdi:arrow-up" class="greenicon" width="18"></iconify-icon>
-</a> 
-
-{% endblock content %}
+    {% endblock content %}

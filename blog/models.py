@@ -17,8 +17,8 @@ category_choices = (
 
 class Post(models.Model):
     category = models.CharField(max_length=50, choices=category_choices)
-    title = models.CharField(max_length=200, unique=True, blank=False,)
-    slug = models.SlugField(max_length=200, unique=True, blank=False,)
+    title = models.CharField(max_length=60, unique=True, blank=False,)
+    slug = models.SlugField(max_length=60, unique=True, blank=False,)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )

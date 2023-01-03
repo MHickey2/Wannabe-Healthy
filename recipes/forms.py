@@ -17,6 +17,8 @@ class RecipeForm(forms.ModelForm):
                   'ingredients', 'method', 'status')
 
         widgets = {
+            'title': forms.TextInput(attrs={'placeholder': 'Enter your Title'}),  # noqa
+            'description': forms.TextInput(attrs={'placeholder': 'Enter a short Description'}),  # noqa
             'method': SummernoteWidget(),
             'ingredients': SummernoteWidget(),
         }

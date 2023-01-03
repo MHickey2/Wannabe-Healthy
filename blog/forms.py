@@ -18,7 +18,9 @@ class PostForm(forms.ModelForm):
                   'content', 'status')
 
         widgets = {
-              'content': SummernoteWidget(),
+             'title': forms.TextInput(attrs={'placeholder': 'Enter your Title'}),  # noqa
+             'excerpt': forms.TextInput(attrs={'placeholder': 'Enter a short Excerpt'}),  # noqa
+             'content': SummernoteWidget(),
         }
 
         def __init__(self, *args, **kwargs):

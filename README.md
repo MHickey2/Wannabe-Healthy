@@ -26,9 +26,9 @@ Wannabe Healthy is my 4th Project for the Code Institute and it is a Full Stack 
   - [1. UX Strategy ](#1-ux-strategy-)
     - [1. The Business Goals of the Website: ](#1-the-business-goals-of-the-website-)
     - [2. The Target Customer: ](#2-the-target-customer-)
+    - [3. Site User Profile](#3-site-user-profile)
+    - [4.  Site Goals](#4--site-goals)
       - [Return to Table of Contents](#return-to-table-of-contents)
-    - [Site User Profile](#site-user-profile)
-    - [Site Goals](#site-goals)
   - [2. User Stories  ](#2-user-stories--)
       - [As a website User I can...](#as-a-website-user-i-can)
       - [As a logged in User I can... ](#as-a-logged-in-user-i-can-)
@@ -66,6 +66,7 @@ Wannabe Healthy is my 4th Project for the Code Institute and it is a Full Stack 
     - [19. Logout Page   ](#19-logout-page---)
     - [20. Custom Error Pages  ](#20-custom-error-pages--)
     - [21. Admin Panel  ](#21-admin-panel--)
+    - [22. Security Measures  ](#22-security-measures--)
       - [Return to Table of Contents](#return-to-table-of-contents-4)
   - [7. Future Implementation  ](#7-future-implementation--)
       - [Return to Table of Contents](#return-to-table-of-contents-5)
@@ -103,7 +104,7 @@ Wannabe Healthy is my 4th Project for the Code Institute and it is a Full Stack 
 <br/> 
 
 ### 1. The Business Goals of the Website: <a name="businessgoals"></a>
-No commercial goals, but the site's goal is to to provide a resource for those seeking to improve their health and learn more about various health topics and find healthy Recipes.
+No commercial goals, but the site's goal is to to provide a resource for those seeking to improve their health and learn more about various health topics and they can also browse healthy Recipes.
   
   <br/> 
 
@@ -115,22 +116,24 @@ No commercial goals, but the site's goal is to to provide a resource for those s
 
  <br/>  
 
+### 3. Site User Profile
+
+The user is really anyone who wants to achieve a healthier lifestyle. They can not only view present blogs and recipes but can play more of an active role and contribute their own blogs and recipes.  In this way the site will grow organically, and will be open to evolving depending on the siteuser's needs.
+
+<br/>
+
+### 4.  Site Goals
+
+- The site allows the User to understand the theme of the site and be able to navigate through the site content easily.
+- The user will be able to use the search facility to find specific blogs by category or word in title.
+- The user when logged in will be able to contribute to the site in regards to blogs and recipes, they will also be able to like and comment on individual blogs and recipes.
+- The user will be able to maintain a profile on the site and can update their Profile details, with this information other Users will learn more about them as post/recipe authors, as the site develops this may enable friendships and relationships between users.
+
+<br>
+
  #### [Return to Table of Contents](#toc)
 
 ----
-
-### Site User Profile
-
-The user is really anyone who wants to achieve a healthier lifestyle. They can not only view present blogs and recipes but can play more of an interactive role and contribute their own blogs and recipes.  In this way the site will grow organically, and will be open to evolving depending on the siteuser's needs.
-
-### Site Goals
-
-- The site allows the User to understand the theme of the site easily and they will be able to navigate through the site content easily.
-- The user will be able to use the search facility to find specific blogs by category and word in title.
-- The user when logged in will be able to contribute to the site in regards to blogs and recipes, they will also be able to like and comment on individual blogs and recipes.
-- The user will be able to maintain a profile on the site and they can update their Profile details and other Users will learn more about them as post/recipe authors, as the site develops this may enable friendships and relationships between users.
-
-<br>
 
 ## 2. User Stories  <a name="userstories"></a>
 
@@ -178,9 +181,12 @@ The user is really anyone who wants to achieve a healthier lifestyle. They can n
 ####  As a logged in User I can... <a name="loggedinuser"></a> 
 
 1. I can add a new post or a recipe.
-[User Story: The logged in User should be able to add a blog to the Site. #9](https://github.com/MHickey2/Wannabe-Healthy/issues/9)
-[User Story: User will want to add their own Recipes to the site #18](https://github.com/MHickey2/Wannabe-Healthy/issues/18)
-[User can use a Text Editor when adding/editing their Blog/Recipe #23](https://github.com/MHickey2/Wannabe-Healthy/issues/23)
+   
+    [User Story: The logged in User should be able to add a blog to the Site. #9](https://github.com/MHickey2/Wannabe-Healthy/issues/9)
+
+    [User Story: User will want to add their own Recipes to the site #18](https://github.com/MHickey2/Wannabe-Healthy/issues/18)
+
+    [User can use a Text Editor when adding/editing their Blog/Recipe #23](https://github.com/MHickey2/Wannabe-Healthy/issues/23)
 
 2. I can like/unlike a blog or recipe on the site.
 [User Story: User will want the ability to like posts #6](https://github.com/MHickey2/Wannabe-Healthy/issues/6)
@@ -193,10 +199,12 @@ The user is really anyone who wants to achieve a healthier lifestyle. They can n
 
 5. I can edit a Blog or Recipe that I have submitted to the site.
 [User Story: User can edit the posts they have submitted #11](https://github.com/MHickey2/Wannabe-Healthy/issues/11)
+
 [User Story: User will want to edit/update their submitted recipes #20](https://github.com/MHickey2/Wannabe-Healthy/issues/20)
 
 6. I can delete a Recipe or Blog that I have submitted to the site.
 [User Story: User can delete a post that they have submitted #12](https://github.com/MHickey2/Wannabe-Healthy/issues/12)
+
 [User Story: User can Delete their own Recipes #22](https://github.com/MHickey2/Wannabe-Healthy/issues/22)
 
 7. I will have confirmation when I carry out actions in the site.
@@ -214,6 +222,10 @@ The user is really anyone who wants to achieve a healthier lifestyle. They can n
 5. Can approve user's comments.
 
 [User Story: Admin Access for Admin Features #4](https://github.com/MHickey2/Wannabe-Healthy/issues/4)
+
+The Admin can do the full range of admin functionality within the admin panel.
+
+User Story Testing can be found in the [TESING.md](TESTING.md)
 
   <br/> 
 
@@ -283,13 +295,13 @@ Other Fonts were used within the Recipe Details Section and the main headings us
 
 ### 3. Imagery    <a name="imagery"></a>
 
-The Logo was created with [LogoMaker](https://www.logomaker.com/), as the theme was health related, I used predominantly green in the logo iteself and the logo had a strong influence on the overall website colour theme going forward.
+The Logo was created with [LogoMaker](https://www.logomaker.com/), as the theme was health related, I used predominantly green in the logo iteself and the logo had a strong influence on the overall website colour scheme going forward.
 
-The imagery of the site focuses on a healthy theme, the images were souced from the Pexels site and supplement the blogs, the recipe images were sourced from LIDL as pexels had not got the images related to the individual recipes. The images are all self sourced, but the User can update images to supplement their own blogs/recipes for the site. The images for the site are hosted in [Cloudinary](https://cloudinary.com/).
+The imagery of the site focuses on a health theme, the images were souced from the Pexels site and supplement the blogs, the recipe images were sourced from LIDL, as pexels had not got the images related to the individual recipes. The images are all self sourced, but the User can update images to supplement their own blogs/recipes. The images for the site are hosted in [Cloudinary](https://cloudinary.com/).
 
-There are also images sporadically throughout the site, The home page has an image of a healthy woman, conveying a person with a healthy lifestyle. The about page again, shows a happy woman living her best life and the information panels show images focused on the main themes within the site.
+There are also images sporadically placed throughout the site, The home page has an image of a healthy woman, conveying a person with a great lifestyle. The about page again, shows a happy woman living her best life and the information panels show images focused on the main themes within the site.
 
-There are also various icons used within the site, the icons were sourced at [Iconify.Design](https://iconify.design/), and they were used as a graphical representation of pertinent information on the site, they were used in conjunction with Forms or headings and were a subtle way to incorporate imagery on a limited scale, examples can be found in the image below.
+There are also various icons used within the site, the icons were sourced at [Iconify.Design](https://iconify.design/), and they were used as a graphical representation for pertinent information on the site, they were used in conjunction with Forms or headings and were a subtle way to incorporate imagery on a limited scale, examples can be found in the image below.
 
 I also created the favicon for the site with [Favicon.io](https://favicon.io)
 
@@ -315,7 +327,7 @@ I also created the favicon for the site with [Favicon.io](https://favicon.io)
 
 ### 4. Website Structure    <a name="structure"></a>
 
-The website follows the standard website structure. The Logo and the website name are on the left hand side, and the naigation to the right, on the top of all pages. Within the Account Nav Link the user can either register or login to the site. When the user logs in they can see the Profile link and the logout button. The logged in user's image will also be visible. When the website is on smaller screens, there is a hamburger meu, with dropdown navigation items. The footer element is also available on all pages, with site information, contact details and social media icons.
+The website follows the standard website structure. The Logo and the website name are on the left hand side, and the naigation to the right, on the top of all pages. Within the Account Nav Link the user can either Signup or login to the site. When the user logs in they can see the Profile link and the logout button. The logged in user's image will also be visible. When the website is on smaller screens, there is a hamburger meu, with dropdown navigation items. The footer element is also available on all pages, with site information, contact details and social media icons.
  
  The website consists of the following Pages:
  - The Home Page, with an introduction to the site and it holds the blog section and a search bar.
@@ -450,6 +462,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 
 <details>
   <summary>4. Registration Page</summary>
+
   <br/>
 <p align="center">
   <img src="assets/readme/wireframes/Registration Page Wireframes.png" alt="Registration Page Wireframe" />
@@ -458,6 +471,7 @@ The Wireframes for the site were created in Figma, I concentrated on the standar
 
 <details>
   <summary>4. Login Page</summary>
+
   <br/>
 <p align="center">
   <img src="assets/readme/wireframes/Login Page Wireframes.png" alt="Login Page Wireframe" />
@@ -516,6 +530,7 @@ The logo was the first asset I created, and I developed it with a view of promot
 - The Navigation Bar:
 
 The navigation exists in different forms, for a general user the navigation contains home, about, recipes and an account dropdown with register and login options. 
+
   <br>
 
 <p align ="center">      
@@ -598,7 +613,7 @@ The website user can use the search facility to find specific categories ie Rela
 
 ###  4. Add Blog     <a name="addblog"></a>
 
-As a logged in User you can add a blog to the site, when you press on the add blog link it will take you to the add blog page, when this form is completed you will be redirected to the home page, where your new blog will be displayed. The form has a summernote editor so they can add styling to their content.
+As a logged in User you can add a blog to the site, when you press on the add blog link it will take you to the add blog page, when this form is completed you will be redirected to the home page, where your new blog will be displayed. The form has a summernote editor so the user can add styling to their content.
 
 <br>
 
@@ -648,7 +663,7 @@ As a logged in User you will be able to see the delete button below your submitt
 
 ### 7. Blog Detail Page      <a name="blogdetailpage"></a>
 
-When you select a blog, you will be redirected to the blog detail page, this page will show the full content for that specific blog. If you are a logged in user you can use the comment form to add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can see comments that have already been submitted for the Blog. You can also like/unlike the post. You will also be able to see the Profile Picture and Bio for the Author of the Post. If you are viewing a post that you submitted you will be able to see an edit and delete button below your post and you can use these buttons to edit or delete your post. (They will take you to the edit and delete form)
+When you select a blog, you will be redirected to the post detail page, this page will show the full content for that specific blog. If you are a logged in user you can use the comment form to add a comment. This comment will have to be approved by the admin before it will be displayed on the site. You can see comments that have already been submitted for the Blog. You can also like/unlike the post. You will also be able to see the Profile Picture and Bio for the Author of the Post. If you are viewing a post that you submitted you will be able to see an edit and delete button below your post and you can use these buttons to edit or delete your post. (They will take you to the edit and delete form)
 
 <br>
 
@@ -673,7 +688,7 @@ The About Page again contains a brief synopsis of the site and contain informati
 
 ###  9. Recipes Page   <a name="recipespage"></a>
 
-At the top of the Recipes pages, there is a brief introduction to the Recipes feature. 
+At the top of the Recipes pages, there is a brief introduction to the Recipes feature, keeping the user informed as they work their way through the site. 
 
 <br>
 
@@ -692,7 +707,7 @@ On the Recipes page there is a collection of Recipes ordered with the most recen
 <br/> 
 ###  10. Recipes Search   <a name="recipessearch"></a>
 
-The website user can use the search facility to find specific categories ie Breakfast, Lunch, Dinner, Dessert and Soup/Salad. You can also search according to a specific word in the title. If there are results, they will be displayed to the user and if not the user will be given the message that there are no results, they can either search again or they can return to the recipes page.
+The website user can use the search facility to find specific categories ie Breakfast, Lunch, Dinner, Dessert and Soup/Salad. You can also search according to a specific word in the title. If there are results, they will be displayed to the user and if not the user will be given the message that there are no results, they can either search again or they can return to the main recipes page.
 
 <br>
 
@@ -734,7 +749,7 @@ As a logged in User you will be able to see the edit button below your submitted
 
 ###  13. Delete Recipe   <a name="deleterecipe"></a>
 
-As a logged in User you will be able to see the delete button below your submitted Recipe, when you use the delete button the delete Recipe page will be displayed, where you can delete your Recipe, when the form is completed you will be redirected to the Recipes page and your recipe will be deleted. The delete button will only be visible on recipes that the logged in User has submitted.
+As a logged in User you will be able to see the delete button below your submitted Recipe, when you use the delete button, the delete Recipe page will be displayed, where you can delete your Recipe, when the form is completed you will be redirected to the Recipes page and your recipe will be deleted. The delete button will only be visible on recipes that the logged in User has submitted.
 
 <br>
 
@@ -758,7 +773,7 @@ When you select a Recipe, you will be redirected to the Recipe detail page, this
 
 ###  15. Profile Page   <a name="profilepage"></a>
 
-On the Profile Page, the User has access to their own profile information. The profile will be automatically created when they register for the site. Initially the user will have a generic photo and their username displayed on the page.
+On the Profile Page, the User has access to their own profile information. The profile will be automatically created when they register for the site. Initially the user will have a generic photo and their username displayed on the page, and an empty Bio. There is an edit button on page that will allow them to update their Profile information.
 
 
 <br>
@@ -796,7 +811,7 @@ On the Signup Page, a new user can sign up for the Wannabe Healthy website by fi
 
 ###  18. Login Page   <a name="loginpage"></a>
 
-A registered User can log in to the website by inputting their username and password and they will have full access to all the features of the site. 
+A registered User can log in to the website by inputting their username and password and they will have full access to all the features within the site. 
 
 
 <br>
@@ -849,6 +864,19 @@ The admin panel allows the admin/superuser to perform a wide range of functional
 
 <br/> 
 
+### 22. Security Measures  <a name="security"></a>
+
+To ensure security on the site, only logged in users can access certain features on the site. A logged in user can add posts/recipes, but this feature is not visile to a non logged-in user. As an extra protection if a user tries to use 'add_recipe' or 'add_post' in the address, they will be denied access. Only a post/recipe author can edit/delete their post/recipe, anyone else will be denied access for this functionality. Only the Admin/Superuser can access the admin Panel(would need sign in credentials).The Database URL and secret key are stored in the env.py file to prevent unwanted connections to the Database and this was set at an earlier stages of development. Cross-Site Request Forgery (CSRF) Tokens are used on all Forms within the App for added protection.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/readme/images/sorry.png"  alt="Can't Access Message" />    
+</p>
+
+<br/> 
+
+
  #### [Return to Table of Contents](#toc)
 ----
 
@@ -860,7 +888,7 @@ The admin panel allows the admin/superuser to perform a wide range of functional
  
  In regards to the recipes, there are a number of extra options I would like to introduce including vegetarian, and vegan recipes, the present recipes are not categorised in this way. I would like to also enhance the site by including information on food allergies, highlighting which recipes would have known allergens for the safety of the user. There could also be a dish of the week, as an incentive to users to submit their best recipes.
  
- I would like to introuduce more interaction into the site, possibly using a forum where users can document their own experiences when adopting a vegetarian/vegan lifestyle. This would increase the social aspect of the site and would utilize the social media platforms fully. 
+ I would like to introuduce more interaction into the site, possibly using a forum where users can document their own experiences when adopting a vegetarian/vegan lifestyle. This would increase the social aspect of the site and would utilize the social media platforms more fully. 
  
  The present profiles could be expanded to include more information, such as the user's own social media links so that users can interact with each other outside of the site. I was going to add blogs and recipes that the user has created within the profile page, but have not included this within the present project scope.
  
@@ -925,7 +953,6 @@ The admin panel allows the admin/superuser to perform a wide range of functional
 
 <br>
 
-
 Go to the [TESTING DOCUMENT](TESTING.md)
 
 #### [Return to Table of Contents](#toc)
@@ -941,7 +968,7 @@ Go to the [TESTING DOCUMENT](TESTING.md)
 
  <br>
 
- When I first added profiles, I had the intention to include the profile image in the navbar when the user logged in, but when I used the code to allow this to happen, the image would not show. Up to this point I had not needed to to use content from one app within another, so that was a big issue. I talked with my mentor and I looked into the area of context processors, and added one within the blog app, but that did not fix the issue. Then after talking with Tutor Support I managed to resolve the issue, and the image showed up finally. Once I knew this was possible, I decided to add Bio details of the author within the blog detail and recipe detail pages, so Users can learn more details about their fellow users.
+ When I first added profiles, I had the intention to include the profile image in the navbar when the user logged in, but when I used the code to allow this to happen, the image would not show. Up to this point I had not needed to to use content from one app within another, so that was a big issue. I talked with my mentor and I looked into the area of context processors, and added one within the blog app, but that did not fix the issue. Then after talking with Tutor Support I managed to resolve the issue, and the image showed up finally. Once I knew this was possible, I decided to add Bio details of the author within the pos detail and recipe detail pages, so users can learn more about their fellow users.
 
 <br>
 
@@ -970,15 +997,15 @@ Go to the [TESTING DOCUMENT](TESTING.md)
 
 <br>
 
-There was one further issue I noticed when testing, if you made a comment and submitted it, the user image in the blog_detail(and recipe detail) profile section would disappear, but this was due to a syntax error, and when it was fixed the problem was resolved.
+There was one further issue I noticed when testing, if you made a comment and submitted it, the user image in the post_detail(and recipe detail) profile section would disappear, but this was due to a syntax error, and when it was fixed the problem was resolved.
 
 I also had some issues when using the font awesome icons as some seemed unavailable due to Font Awesome user restrictions, but used a different site for icons, and this has resolved the issue.
 
 When testing I found I had an issue with the favicon, and I had not included the webmanifest file or the selection of icons for mobile sites, so added these and they seem to be working ok.
 
-I did have an issue with the add a blog form, during testing I realised I did not have to include the slug field, as it was applying the title as a slug, so removed this field from the form and it's still working.
+I did have an issue with the add a blog form, during testing I realised I did not have to include the slug field, as it was applying the title as a slug, so removed this field from the form and it's working ok.
 
-In last minute testing I realised that the user would have no access for styling their post and blog entries, throughout the project I have been using HTML and CSS to add posts/recipes, but I can't expect Users to need to know this in order to submit content, so looked intro introducing the summernote functionality in the front end, which proved problematic and took a while to sort out. When I finally got the editor showing, the icons were not showing, so I went to a previous commit, and starting process again and it worked. So I have now added this in the add Post and Edit Post in regards to content and in the add Recipe and Edit Recipe in regards to Ingredients and Method. As a result of this working I had to modify the forms so they appeared like the text editor, found that the easier direction than having to style the summernote editor, and am happier with the forms as they are now. The following is an image of the updated Add Post Form:
+In last minute testing I realised that the user would have no access for styling their post and blog entries, throughout the project I have been using HTML and CSS to add posts/recipes, but I can't expect Users to need to know this in order to submit content, so looked into introducing the summernote functionality in the front end, which proved problematic and took a while to sort out. When I finally got the editor showing, the icons were not showing, so I went to a previous commit, and starting process again and it worked. So I have now added this in the add Post and Edit Post in regards to content and in the add Recipe and Edit Recipe in regards to Ingredients and Method. As a result of this working I had to modify the forms so they appeared like the text editor, found that the easier direction than having to style the summernote editor, and am happy with the forms as they are now. The following is an image of the updated Add Post Form:
 
 <br>
 
@@ -987,6 +1014,9 @@ In last minute testing I realised that the user would have no access for styling
 </p>
 
 <br>
+
+In last minute testing I realised the user could add a post/recipe without being logged in, by adding it to the address bar, but modified this now so this cannot happen, also modified the edit and delete forms to prevent the same happening.
+Although it's not technically a bug, I modified the size of title in the blog and recipe models, as I did not want user to add titles that are too long. I also was going to add created on in the profiles, but did not, because i did not want all the profiles, to appear like they were created at the same time, and even if I had chosen that option if i had tried to sort them, they ould have all had the same date, but in the next projectI would include this at an earlier stage in development.
 
 
 <br>
@@ -997,7 +1027,7 @@ In last minute testing I realised that the user would have no access for styling
 
  I did near the end of the project think of adding the blogs and recipes that the user created to be included in the profile page, I experimented a little but decided to instead concentrate my focus on testing the functionality I had already achieved on the site, but have referred to this in [Future features](#7-future-implementation).
 
- Initially I was going to use primary key instead of slug, as it was causing issues when I tried to change the name of title/slug of a blog, but instead left it as slug, it does update the blog successfully, but instead of returning you to the amended blog, it returns to you to the main blog page, but the amendments are included and if you select the blog, you can open the amended site to see full details.
+ Initially I was going to use primary key instead of slug, as it was causing issues when I tried to change the name of title/slug of a blog, but instead left it as slug, it does update the blog successfully, but instead of returning you to the amended blog, it returns to you to the main blog page, but the amendments are included and if you select the blog, you can open the amended site to see full details in the post_detail page. 
 
  I was going to display a greeting to the user when they registered for the site, but could not get it to work, but would hope to get it working in future iterations, for now I will contend with the message that is automatically displayed to the user when registering. If it was a form I had compiled myself, I would have felt more comfortable modifying the code, but did not want to cause an issue with the built in allauth authorization system.  The code I was using follows:
 
@@ -1016,7 +1046,7 @@ In last minute testing I realised that the user would have no access for styling
 
 <br>
 
-One last bug relates to the images for the recipes. For the blog I was able to select set sizes from Pexel, but the recipes needed specific images that were not available in Pexels, so had to use the images from the LIDL website, and these were not uniform, so were a little more problematic to work with. Although I did test uploading larger pictures and it did seem to display them correctly.
+One last bug relates to the images for the recipes. For the blog I was able to select set sizes from Pexel, but the recipes needed specific images that were not available in Pexels, so had to use the images from the LIDL website, and these were not uniform, so were a little more problematic to work with. Although I did test uploading larger pictures and it did seem to display them correctly. There is always some uncertaintlly however when it comes to users uploading images of different formats.
 
 <br>
 
@@ -1026,7 +1056,7 @@ One last bug relates to the images for the recipes. For the blog I was able to s
 
  ## 11. Deployment <a name="deployment"></a>
 
- The Project used Heroku for deployment. I used GitPod for development within the project and pushed to the GitHub Repository. This in turn updated the Project in Heroku. I used DEBUG = 'DEV' in os.environ, during development and other than testing, had it configured so that I could work both locally and could also test the deployed Project on an ongoing basis.
+ The Project used Heroku for deployment. I used GitPod for development within the project and pushed to the GitHub Repository. This in turn updated the Project in Heroku. I used DEBUG = 'DEV' in os.environ, during development and other than when testing, had it configured so that I could work both locally and could also test the deployed Project on an ongoing basis.
 
  <br>
 

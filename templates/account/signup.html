@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}WannabeHealthy/Register Page{% endblock %}
+{% block title %}WannabeHealthy/Signup Page{% endblock %}
 
 {% load i18n %}
 
@@ -8,11 +8,11 @@
 {% block content %}
 
 
-<h1 class="green">
-  <iconify-icon inline icon="mdi:register" class="green"></iconify-icon>&nbsp;{% trans "Sign Up" %}
-</h1>
+<h3 class="green">
+  <iconify-icon inline icon="mdi:register" class="greenicon"></iconify-icon>&nbsp;{% trans "Sign Up" %}
+</h3>
 <h4 class="green">Welcome to Wannabe Healthy, please sign up</h4>
-<p class="green">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign
+<p class="green">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">Sign
     in</a>.{% endblocktrans %}
 </p>
 <br>
@@ -25,7 +25,7 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" id="usrname" />
         {% endif %}
-        <button class="btn btn-success" type="submit" onclick="displayGreeting()">{% trans "Sign Up" %} &raquo;</button>
+        <button class="btn btn-success" type="submit">{% trans "Sign Up" %} &raquo;</button>
         <br>
       </form>
     </div>

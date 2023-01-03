@@ -21,23 +21,20 @@
             </div>
             <div class>
                 {% if "placeholder" in recipe.featured_image.url %}
-                <img id="Default" type="image/jpg"
-                    src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg"
-                    alt="{{ recipe.title }} generic" id="centerimage1" alt="recipe image">
+                <img src="https://res.cloudinary.com/dspwticaf/image/upload/v1667219575/pexels-angele-j-128402_uqxcg2.jpg"
+                    alt="{{ recipe.title }} generic" id="centerimage1" >
                 {% else %}
                 <img src=" {{ recipe.featured_image.url }}" id="centerimage1" 
                     alt="{{ recipe.title }} image">
                 {% endif %}
             </div>
         </div>
-
         <div class="centeralign">
             <h6 class="green"><strong>Difficulty Level:</strong> {{ recipe.difficulty }} | &nbsp;<strong>Cooking
                     Time:</strong>
                 {{ recipe.cooking_time }}</h6>
         </div>
         <hr>
-
         <h3 class="stylingtext">Description:</h3>
         <p class="italic-bold">{{ recipe.description | safe }} </p>
         <hr>
@@ -93,6 +90,7 @@
         </div>
     </div>
     <hr>
+    <!--Profile section for the author of the Recipe-->
     <section class="profilesection">
         <div class="container-fluid">
             <div class="row">
